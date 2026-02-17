@@ -1,0 +1,754 @@
+{
+  "header": {
+    "nav": {
+      "about": "À propos",
+      "features": "Fonctionnalités",
+      "useCases": "Cas d'usage",
+      "pricing": "Tarifs",
+      "faq": "FAQ",
+      "blog": "Blog"
+    },
+    "cta": "Demander une démo"
+  },
+  "hero": {
+    "badge": "L'IA qui apprend votre métier",
+    "title": "Des chatbots intelligents qui <highlight>évoluent</highlight> avec votre entreprise",
+    "subtitle": "Transformez chaque interaction en opportunité de croissance. Automatisez votre service client et votre supply chain avec des chatbots personnalisés qui comprennent vraiment votre métier.",
+    "stats": {
+      "adoption": { "value": "85%", "label": "Adoption IA en France" },
+      "availability": { "value": "24/7", "label": "Disponibilité" },
+      "cost": { "value": "-60%", "label": "Coûts de support" }
+    },
+    "ctaPrimary": "Demander une démo gratuite",
+    "ctaSecondary": "Voir les tarifs",
+    "trustHosting": "Données hébergées en France",
+    "trustRgpd": "Conforme RGPD",
+    "chatAssistant": "H'appi Assistant",
+    "chatOnline": "En ligne",
+    "chatMsg1": "Bonjour ! Je suis l'assistant H'appi. Comment puis-je vous aider aujourd'hui ?",
+    "chatMsg2": "Où en est ma commande #FR12345 ?",
+    "chatMsg3": "Votre commande #FR12345 est actuellement en transit. Livraison prévue demain entre 9h et 12h. 📦",
+    "floatResolution": "Taux de résolution",
+    "floatResolutionValue": "94%",
+    "floatResponse": "Temps de réponse",
+    "floatResponseValue": "<2s"
+  },
+  "problemSolution": {
+    "title": "Le problème que nous résolvons",
+    "subtitle": "53% des entreprises françaises placent l'expérience client comme priorité n°1, mais les outils actuels ne sont pas à la hauteur.",
+    "withoutTitle": "Sans H'appi",
+    "withTitle": "Avec H'appi",
+    "problems": [
+      "Temps d'attente trop long pour les clients",
+      "Surcharge des équipes avec des demandes répétitives",
+      "Pas de visibilité en temps réel sur la supply chain",
+      "Chatbots génériques qui frustrent plus qu'ils n'aident",
+      "Coûts de service client en constante augmentation"
+    ],
+    "solutions": [
+      "Réponses instantanées 24/7, personnalisées à votre métier",
+      "Automatisation intelligente qui libère vos équipes",
+      "Suivi en temps réel des commandes et livraisons",
+      "IA qui apprend votre terminologie et vos processus",
+      "Réduction des coûts de support jusqu'à 60%"
+    ],
+    "cta": "Découvrir comment H'appi fonctionne"
+  },
+  "features": {
+    "badge": "Fonctionnalités",
+    "title": "Tout ce dont vous avez besoin pour <highlight>transformer</highlight> votre service",
+    "subtitle": "Une plateforme complète de chatbots IA, conçue pour les entreprises françaises qui veulent allier technologie et excellence humaine.",
+    "items": [
+      { "title": "IA qui apprend votre métier", "description": "Nos chatbots comprennent votre terminologie sectorielle (CX, Supply Chain) et s'adaptent à vos processus métier spécifiques." },
+      { "title": "Déploiement rapide", "description": "Opérationnel en quelques jours, pas en mois. Intégration simple avec vos outils existants (CRM, ERP, bases de données)." },
+      { "title": "Analytics et insights IA", "description": "KPIs en temps réel : taux de résolution, satisfaction client, temps de réponse. Des insights prédictifs pour anticiper les besoins." },
+      { "title": "Omnicanal natif", "description": "Déployez sur votre site web, WhatsApp, Messenger, Teams et plus encore. Une expérience cohérente sur tous les canaux." },
+      { "title": "RGPD & Made in France", "description": "Données hébergées en France, conformité RGPD totale. Sécurité et souveraineté des données garanties." },
+      { "title": "Évolution continue", "description": "Le chatbot apprend de chaque interaction et développe de nouvelles fonctionnalités SaaS : analytics, prédictions, optimisations." }
+    ]
+  },
+  "useCases": {
+    "badge": "Cas d'usage",
+    "title": "Deux expertises, une seule <highlight>plateforme</highlight>",
+    "subtitle": "H'appi se spécialise dans deux domaines clés où les chatbots créent le plus de valeur pour votre entreprise.",
+    "tabCx": "Expérience Client (CX)",
+    "tabSupply": "Supply Chain",
+    "cx": [
+      { "title": "Support client automatisé 24/7", "description": "Répondez instantanément aux demandes les plus fréquentes : suivi de commande, FAQ, assistance produit. Vos clients sont satisfaits, vos équipes sont libérées." },
+      { "title": "Qualification et routage intelligent", "description": "Pré-qualifiez les demandes avant de les router vers le bon service. Optimisez l'efficacité de vos conseillers en leur transmettant uniquement les cas complexes." },
+      { "title": "Onboarding clients automatisé", "description": "Guidez vos nouveaux clients à travers vos services avec un assistant conversationnel personnalisé qui s'adapte à leur profil." },
+      { "title": "Recommandations personnalisées", "description": "En s'intégrant à votre CRM, le chatbot reconnaît vos clients et leur propose des recommandations hyper-personnalisées basées sur leur historique." }
+    ],
+    "supply": [
+      { "title": "Suivi et traçabilité en temps réel", "description": "Vos clients et partenaires interrogent le bot sur la localisation d'un colis, les délais estimés, sans mobiliser un agent humain." },
+      { "title": "Gestion d'inventaire et stock", "description": "Intégration avec vos systèmes WMS pour fournir des informations en temps réel sur les stocks, emplacements et délais de réapprovisionnement." },
+      { "title": "Notifications proactives", "description": "Alertes automatiques en cas de retard, exception logistique ou changement de statut. Anticipez les problèmes avant qu'ils n'impactent vos clients." },
+      { "title": "Coordination des livraisons", "description": "Planification intelligente des créneaux de livraison, gestion des reprogrammations et optimisation des tournées en temps réel." }
+    ],
+    "stats": {
+      "automated": { "value": "85%", "label": "d'interactions automatisées" },
+      "supplyUses": { "value": "13", "label": "cas d'usage Supply Chain" },
+      "pmeAI": { "value": "31%", "label": "de PME utilisent déjà l'IA" },
+      "cxPriority": { "value": "53%", "label": "CX = priorité n°1" }
+    }
+  },
+  "pricing": {
+    "badge": "Tarifs",
+    "title": "Un plan adapté à <highlight>chaque entreprise</highlight>",
+    "subtitle": "Commencez gratuitement, évoluez à votre rythme. Aucun engagement, annulable à tout moment.",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "discount": "-20%",
+    "popular": "Populaire",
+    "perMonth": "/ mois",
+    "billedYearly": "Facturé {price}€ / an",
+    "customPrice": "Sur devis",
+    "taxNote": "Tous les prix sont en euros HT. TVA applicable selon votre pays.",
+    "plans": [
+      {
+        "name": "Gratuit",
+        "description": "Idéal pour découvrir H'appi",
+        "features": ["100 conversations / mois", "1 canal (site web)", "Chatbot de base", "Support communautaire", "Branding H'appi visible"],
+        "cta": "Commencer gratuitement"
+      },
+      {
+        "name": "Starter",
+        "description": "Pour les PME en croissance",
+        "features": ["1 000 conversations / mois", "3 canaux (web, WhatsApp, Messenger)", "Personnalisation basique", "Support email", "Analytics de base"],
+        "cta": "Essai gratuit 14 jours"
+      },
+      {
+        "name": "Professional",
+        "description": "La solution complète pour scaler",
+        "features": ["10 000 conversations / mois", "Tous canaux illimités", "Workflows CX & Supply Chain", "Intégration CRM / ERP", "Support prioritaire", "Analytics avancés + Insights IA"],
+        "cta": "Essai gratuit 14 jours"
+      },
+      {
+        "name": "Enterprise",
+        "description": "Sur-mesure pour les grandes entreprises",
+        "features": ["Conversations illimitées", "Chatbots multiples", "Développement sur-mesure", "Déploiement on-premise possible", "Account manager dédié", "SLA garantis"],
+        "cta": "Contacter l'équipe"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Témoignages",
+    "title": "Ils nous font <highlight>confiance</highlight>",
+    "subtitle": "Découvrez comment des entreprises françaises transforment leur expérience client et leur supply chain avec H'appi.",
+    "items": [
+      { "name": "Marie Dubois", "role": "Directrice CX", "company": "RetailPlus", "content": "H'appi a transformé notre service client. En 3 mois, notre taux de résolution au premier contact est passé de 45% à 87%. Nos équipes se concentrent enfin sur les cas vraiment complexes.", "avatar": "MD" },
+      { "name": "Thomas Laurent", "role": "Responsable Supply Chain", "company": "LogiTrans", "content": "Le chatbot Supply Chain de H'appi gère 80% des demandes de suivi de nos clients. Le temps de réponse est passé de 4 heures à moins de 2 secondes. Un gain énorme !", "avatar": "TL" },
+      { "name": "Sophie Martin", "role": "CEO", "company": "E-ShopFR", "content": "En tant que PME, nous n'avions pas les ressources pour un service client 24/7. H'appi nous a permis d'offrir cette disponibilité sans recruter. Le ROI est impressionnant.", "avatar": "SM" }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur H'appi",
+    "items": [
+      { "question": "Combien de temps faut-il pour déployer H'appi ?", "answer": "Le déploiement de base prend entre 3 et 7 jours selon la complexité de vos besoins. Notre équipe vous accompagne à chaque étape, de la configuration à la mise en ligne. Le plan Gratuit peut être activé en quelques minutes." },
+      { "question": "H'appi remplace-t-il mes agents de support ?", "answer": "Non, et c'est notre philosophie fondamentale. H'appi augmente vos équipes en gérant les demandes répétitives (jusqu'à 80% du volume). Vos agents se concentrent sur les cas complexes et à forte valeur ajoutée. 51% des entreprises cherchent à concilier humain et technologie, et c'est exactement notre approche." },
+      { "question": "Mes données sont-elles sécurisées ?", "answer": "Absolument. Toutes les données sont hébergées en France, dans des datacenters certifiés. Nous sommes 100% conformes au RGPD. Aucune donnée n'est partagée avec des tiers. Pour les plans Enterprise, un déploiement on-premise est possible." },
+      { "question": "Quelles intégrations sont disponibles ?", "answer": "H'appi s'intègre nativement avec les principaux CRM (Salesforce, HubSpot), ERP (SAP, Oracle), outils de messaging (WhatsApp, Messenger, Teams) et plateformes e-commerce (Shopify, WooCommerce). Des API ouvertes permettent des intégrations personnalisées." },
+      { "question": "Comment fonctionne l'IA de H'appi ?", "answer": "Nos chatbots utilisent l'IA générative et le traitement du langage naturel (NLP) pour comprendre les intentions de vos clients. Le système apprend continuellement de chaque interaction pour améliorer ses réponses. Des templates sectoriels (CX, Supply Chain) sont disponibles dès la configuration." },
+      { "question": "Puis-je tester avant de m'engager ?", "answer": "Oui ! Notre plan Gratuit vous permet de tester H'appi avec 100 conversations par mois, sans engagement et sans carte bancaire. Les plans Starter et Professional offrent un essai gratuit de 14 jours avec toutes les fonctionnalités." },
+      { "question": "Quel est le taux de résolution moyen ?", "answer": "Nos clients observent en moyenne un taux de résolution automatique de 85 à 94% sur les demandes de niveau 1. Ce taux s'améliore continuellement grâce à l'apprentissage de l'IA. Le temps de réponse moyen est inférieur à 2 secondes." }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à transformer votre expérience client ?",
+    "subtitle": "Rejoignez les entreprises qui font confiance à H'appi pour automatiser leur service client et leur supply chain. Démarrez gratuitement, sans engagement.",
+    "ctaPrimary": "Demander une démo gratuite",
+    "ctaSecondary": "Commencer gratuitement",
+    "note": "Pas de carte bancaire requise. Essai gratuit de 14 jours."
+  },
+  "footer": {
+    "tagline": "Des chatbots intelligents qui évoluent avec votre entreprise. L'IA doit augmenter l'humain, pas le remplacer.",
+    "columns": {
+      "produit": {
+        "title": "Produit",
+        "links": [
+          { "label": "Fonctionnalités", "href": "/fonctionnalites" },
+          { "label": "Cas d'usage", "href": "/cas-usage" },
+          { "label": "Tarifs", "href": "/tarifs" },
+          { "label": "FAQ", "href": "/faq" }
+        ]
+      },
+      "solutions": {
+        "title": "Solutions",
+        "links": [
+          { "label": "Expérience Client (CX)", "href": "/cas-usage" },
+          { "label": "Supply Chain", "href": "/cas-usage" },
+          { "label": "E-commerce", "href": "/cas-usage" },
+          { "label": "Services B2B", "href": "/cas-usage" }
+        ]
+      },
+      "entreprise": {
+        "title": "Entreprise",
+        "links": [
+          { "label": "À propos", "href": "/a-propos" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Carrières", "href": "/a-propos/rejoindre" },
+          { "label": "Contact", "href": "/a-propos/rejoindre#contact" }
+        ]
+      },
+      "legal": {
+        "title": "Légal",
+        "links": [
+          { "label": "Mentions légales", "href": "#" },
+          { "label": "Politique de confidentialité", "href": "#" },
+          { "label": "CGV", "href": "#" },
+          { "label": "RGPD", "href": "#" }
+        ]
+      }
+    },
+    "copyright": "H'appi. Tous droits réservés. Made in France.",
+    "badge": "Données hébergées en France - Conforme RGPD"
+  },
+  "featuresPage": {
+    "badge": "Fonctionnalités",
+    "title": "Une plateforme complète pour <highlight>transformer</highlight> votre service",
+    "subtitle": "H'appi combine IA générative, personnalisation sectorielle et conformité RGPD pour offrir une solution de chatbot adaptée aux entreprises françaises.",
+    "whyTitle": "Pourquoi choisir H'appi ?",
+    "customization": {
+      "title": "Personnalisation sectorielle unique",
+      "description": "Contrairement aux plateformes génériques, H'appi crée des chatbots avec une connaissance métier intégrée dès la conception. La terminologie CX, les processus Supply Chain, les workflows spécifiques à votre secteur sont compris nativement.",
+      "items": [
+        "Templates sectoriels prêts à l'emploi (e-commerce, services B2B, logistique)",
+        "Apprentissage continu de votre vocabulaire métier",
+        "Adaptation aux processus internes de chaque client"
+      ],
+      "statValue": "85%",
+      "statLabel": "des interactions de service client automatisées en France en 2025"
+    },
+    "integration": {
+      "title": "Intégration avec votre écosystème",
+      "description1": "H'appi s'intègre nativement avec les principaux CRM, ERP, outils de messaging et plateformes e-commerce. La vision 360° du client devient enfin une réalité grâce à des connecteurs pré-configurés.",
+      "description2": "Les entreprises déploient en moyenne 4 outils de mesure de performance CX. H'appi centralise ces données pour offrir des KPIs clairs : taux de résolution, satisfaction client, temps de réponse moyen.",
+      "integrationsTitle": "Intégrations disponibles"
+    },
+    "hybrid": {
+      "title": "L'approche hybride humain-IA",
+      "description1": "51% des entreprises cherchent à concilier contact humain et technologie. H'appi est conçu pour augmenter vos équipes, pas les remplacer. Le chatbot gère les demandes répétitives (jusqu'à 80% du volume) et transfère les cas complexes à vos conseillers avec tout le contexte nécessaire.",
+      "description2": "Résultat : vos agents sont plus efficaces, vos clients sont mieux servis, et vos coûts de support diminuent.",
+      "stat1": { "value": "51%", "label": "veulent concilier humain et technologie" },
+      "stat2": { "value": "36%", "label": "privilégient l'humain" },
+      "stat3": { "value": "9%", "label": "misent tout sur la technologie" }
+    }
+  },
+  "useCasesPage": {
+    "badge": "Cas d'usage",
+    "title": "Deux expertises, une seule <highlight>plateforme</highlight>",
+    "subtitle": "H'appi se spécialise dans l'Expérience Client et la Supply Chain, les deux domaines où les chatbots créent le plus de valeur pour votre entreprise.",
+    "cxTitle": "Expérience Client",
+    "cxDescription": "L'adoption de l'IA dans le service client est passée de 10% en 2020 à 85% en 2025 en France. Les entreprises qui n'automatisent pas leur CX prennent du retard.",
+    "cxCases": [
+      { "title": "Réservation de rendez-vous", "description": "Le chatbot gère la prise de rendez-vous automatisée, vérifie les disponibilités et envoie des confirmations." },
+      { "title": "Gestion des réclamations niveau 1", "description": "Qualification automatique des réclamations, résolution des cas simples et escalade intelligente vers vos conseillers." },
+      { "title": "Recommandations produits", "description": "Grâce à l'intégration CRM, le chatbot propose des recommandations personnalisées basées sur l'historique d'achat." },
+      { "title": "Assistance après-vente", "description": "Support technique automatisé, guides de dépannage interactifs, gestion des retours et échanges." },
+      { "title": "Onboarding de nouveaux clients", "description": "Accompagnement personnalisé des nouveaux clients à travers vos services, adapté à leur profil et besoins." }
+    ],
+    "supplyTitle": "Supply Chain",
+    "supplyDescription": "L'IA générative en logistique offre 13 cas d'usage identifiés en France, de la prédiction de la demande à l'optimisation des routes. H'appi intègre ces capacités dans ses chatbots.",
+    "supplyCases": [
+      { "title": "Tracking multi-transporteurs", "description": "Suivi unifié des commandes quel que soit le transporteur. Vos clients ont une vue claire et instantanée." },
+      { "title": "Notifications proactives de retard", "description": "Alertes automatiques avant même que le client ne demande. Anticipez les frustrations et proposez des solutions." },
+      { "title": "Gestion des exceptions logistiques", "description": "Résolution automatisée des incidents courants : colis endommagé, adresse incorrecte, absence du destinataire." },
+      { "title": "Coordination fournisseurs/distributeurs", "description": "Communication automatisée avec votre réseau de partenaires pour fluidifier les échanges d'information." },
+      { "title": "Support douanier et documentation", "description": "Assistance sur les procédures douanières, documentation requise et réglementations pour la logistique internationale." }
+    ]
+  },
+  "pricingPage": {
+    "badge": "Tarifs",
+    "title": "Un plan adapté à <highlight>chaque entreprise</highlight>",
+    "subtitle": "Commencez gratuitement, évoluez à votre rythme. Aucun engagement, annulable à tout moment. Réduction de 20% sur les plans annuels.",
+    "comparisonTitle": "Comparaison détaillée des plans",
+    "tableHeader": "Fonctionnalité",
+    "tableRows": [
+      ["Conversations / mois", "100", "1 000", "10 000", "Illimité"],
+      ["Canaux", "1 (web)", "3", "Illimité", "Illimité"],
+      ["Chatbots", "1", "1", "3", "Illimité"],
+      ["Personnalisation", "Basique", "Couleurs, logo", "Workflows avancés", "Sur-mesure"],
+      ["Intégration CRM/ERP", "-", "-", "Oui", "Oui"],
+      ["Analytics", "Basiques", "Basiques", "Avancés + IA", "Avancés + IA"],
+      ["Support", "Communauté", "Email", "Prioritaire", "Account manager"],
+      ["Templates sectoriels", "-", "2", "Tous", "Tous + custom"],
+      ["Branding H'appi", "Visible", "Optionnel", "Masqué", "Masqué"],
+      ["SLA", "-", "-", "99.5%", "Personnalisé"],
+      ["Déploiement on-premise", "-", "-", "-", "Disponible"]
+    ],
+    "whyTitle": "Pourquoi ce modèle tarifaire ?",
+    "whySections": [
+      { "title": "Freemium accessible", "description": "Le plan gratuit vous permet de tester H'appi sans risque. Les coûts marginaux d'un chatbot SaaS sont faibles, ce qui nous permet de proposer un accès gratuit viable." },
+      { "title": "Croissance alignée", "description": "La tarification basée sur les conversations aligne votre investissement sur votre usage réel. Plus vous grandissez, plus la valeur de H'appi augmente pour vous." },
+      { "title": "Réduction annuelle", "description": "L'engagement annuel offre une réduction de 20%, améliorant la prévisibilité de vos coûts tout en vous faisant économiser significativement." }
+    ]
+  },
+  "faqPage": {
+    "badge": "FAQ",
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur H'appi. Vous ne trouvez pas votre réponse ? Contactez-nous directement.",
+    "resourcesTitle": "Ressources complémentaires",
+    "resources": [
+      { "title": "Documentation", "description": "Guides complets, tutoriels et documentation technique pour tirer le meilleur parti de H'appi." },
+      { "title": "Webinaires", "description": "Sessions en direct avec nos experts pour découvrir les meilleures pratiques en IA conversationnelle." },
+      { "title": "Support", "description": "Notre équipe est disponible pour répondre à toutes vos questions. Contact email, chat ou téléphone." }
+    ]
+  },
+  "aboutPage": {
+    "badge": "À propos de H'appi",
+    "heroTitle1": "Applications sur-mesure.",
+    "heroTitle2": "Intelligence évolutive.",
+    "heroTitle3": "Prix révolutionnaires.",
+    "heroSubtitle": "H'appi est née d'une conviction simple : le digital sur-mesure ne devrait pas coûter une fortune. Nous créons des solutions qui vous ressemblent et qui évoluent pour devenir votre avantage compétitif.",
+    "keyNumbers": [
+      { "value": "50-70%", "label": "Moins cher que le marché" },
+      { "value": "1 000", "label": "Entreprises visées d'ici 2030" },
+      { "value": "2026", "label": "Fondée par des passionnés" },
+      { "value": "100%", "label": "Code propriétaire pour vous" }
+    ],
+    "promiseQuote": "Chez H'appi, nous croyons que l'IA doit augmenter l'humain, pas le remplacer. Nos solutions personnalisées apprennent votre métier pour offrir une expérience exceptionnelle tout en libérant vos équipes.",
+    "badges": ["Sur-mesure radical", "Intelligence évolutive", "Prix disruptifs", "RGPD & Made in France"],
+    "exploreTitle": "Explorez notre histoire",
+    "exploreSubtitle": "Cliquez sur une section pour en savoir plus",
+    "sections": [
+      { "title": "Vision & Mission", "description": "Pourquoi H'appi existe, où nous allons, et comment nous comptons changer les règles du jeu du digital sur-mesure." },
+      { "title": "Nos 8 Valeurs", "description": "Sur-mesure radical, prix justes, transparence totale, agilité... Les principes qui guident chacune de nos décisions." },
+      { "title": "Stratégie & Prix", "description": "Comment nous offrons des solutions 50 à 70% moins chères que le marché, et notre modèle d'upsell intelligent en 4 phases." },
+      { "title": "Rejoindre H'appi", "description": "Entreprise, talent tech ou partenaire : découvrez comment faire partie de l'aventure H'appi." }
+    ],
+    "briefTitle": "En bref",
+    "briefP1": "Fondée en 2026 par une équipe d'ingénieurs passionnés, H'appi révolutionne les prix du digital sur-mesure grâce à des infrastructures cloud nouvelle génération, une stack open-source moderne et une organisation lean.",
+    "briefP2": "Aujourd'hui, nous accompagnons des entreprises dans leur transformation digitale avec une promesse simple :",
+    "briefHighlight": "sur-mesure, accessible, évolutif.",
+    "briefCta": "Découvrir notre vision"
+  },
+  "visionPage": {
+    "title": "Notre Vision & <highlight>Notre Mission</highlight>",
+    "subtitle": "Pourquoi nous existons, où nous allons, et les 5 piliers sur lesquels nous construisons l'avenir du digital sur-mesure."
+  },
+  "valeursPage": {
+    "title": "Nos Valeurs <highlight>Fondamentales</highlight>",
+    "subtitle": "8 principes non négociables qui guident chaque décision, chaque ligne de code et chaque interaction avec nos clients."
+  },
+  "strategiePage": {
+    "title": "Stratégie Tarifaire & <highlight>Modèle d'Upsell</highlight>",
+    "subtitle": "Comment nous cassons les prix du marché IT sans compromis sur la qualité, et comment vos applications deviennent des plateformes d'intelligence métier."
+  },
+  "rejoindrePage": {
+    "title": "Rejoignez l'Aventure <highlight>H'appi</highlight>",
+    "subtitle": "Que vous soyez une entreprise, un talent tech ou un partenaire potentiel, il y a une place pour vous dans l'histoire H'appi."
+  },
+  "vision": {
+    "title": "Notre Vision",
+    "headline": "Démocratiser l'accès aux solutions digitales sur-mesure et à l'intelligence d'affaires pour toutes les entreprises.",
+    "paragraph1": "Chez H'appi, nous imaginons un monde où chaque entreprise, quelle que soit sa taille, peut s'offrir des applications, chatbots et sites web personnalisés sans exploser son budget ni dépendre des géants de la tech. Notre vision est de <strong>briser le monopole des solutions standardisées et des prix prohibitifs</strong> imposés par les multinationales IT.",
+    "paragraph2": "Nous croyons que le digital sur-mesure ne doit plus être un luxe réservé aux grands groupes. Avec H'appi, une PME peut avoir une application aussi performante qu'une multinationale, un site web aussi beau qu'une licorne de la Silicon Valley, et un chatbot aussi intelligent que celui des leaders du marché... <strong>pour une fraction du prix habituel.</strong>",
+    "paragraph3": "Mais notre ambition va plus loin. Nous voulons que vos solutions digitales deviennent des <strong>moteurs de croissance intelligente</strong>. Grâce aux données d'interaction collectées par vos bots et applications, nous transformons votre investissement initial en un écosystème SaaS évolutif qui génère des insights métier concrets dans les domaines de l'expérience client (CX) et de la supply chain.",
+    "objective2030": {
+      "title": "Objectif 2030",
+      "description": "Permettre à <bold>1 000 entreprises</bold> de s'émanciper des solutions standardisées et des prix exorbitants, tout en transformant leurs applications en véritables centres d'intelligence métier."
+    },
+    "missionTitle": "Notre Mission",
+    "missionHeadline": "Créer des applications, chatbots et sites web sur-mesure qui évoluent en plateformes d'intelligence métier.",
+    "missionIntro": "Concrètement, chez H'appi, nous agissons sur 5 piliers fondamentaux pour transformer la manière dont les entreprises accèdent au digital sur-mesure."
+  },
+  "missionPillars": {
+    "pillars": [
+      {
+        "number": "01",
+        "title": "Construisons Vos Solutions Digitales Sur-Mesure",
+        "intro": "Nous ne vendons pas de templates. Nous ne proposons pas de solutions \"clé en main\" génériques. Chaque projet H'appi est unique car votre entreprise est unique.",
+        "items": [
+          { "label": "Applications web et mobile", "desc": "Développées selon votre vision, vos processus métier, votre identité visuelle" },
+          { "label": "Chatbots intelligents", "desc": "Conçus pour parler votre langue, comprendre votre secteur, et interagir naturellement avec vos clients" },
+          { "label": "Sites web professionnels", "desc": "Du site vitrine au portail e-commerce, toujours personnalisés, performants et optimisés SEO" }
+        ],
+        "footnote": "Chaque projet commence par une phase d'immersion profonde dans votre métier. Nous prenons le temps de comprendre vos besoins, vos utilisateurs, vos contraintes. Ensuite, nous concevons et développons une solution qui vous ressemble vraiment."
+      },
+      {
+        "number": "02",
+        "title": "Transformons Vos Applications en Moteurs d'Intelligence Métier",
+        "intro": "Votre différence fondamentale : vos solutions H'appi ne sont pas statiques. Une fois déployées et en interaction avec vos utilisateurs, nous collectons des données précieuses (avec consentement RGPD) pour développer des fonctionnalités SaaS avancées.",
+        "subSections": [
+          {
+            "title": "Modules CX (Expérience Client)",
+            "items": ["Analytics comportementaux : comprendre le parcours et les pain points", "Personnalisation intelligente : recommandations automatiques", "Prédiction du churn : identifier les clients à risque", "Satisfaction en temps réel : mesure NPS et CSAT automatique", "Automatisation du support : réponses basées sur la base de connaissances"]
+          },
+          {
+            "title": "Modules Supply Chain",
+            "items": ["Prévision de la demande : anticipation des volumes", "Optimisation des stocks : alertes de réapprovisionnement", "Tracking avancé : visibilité complète sur vos flux", "Coordination multi-acteurs : synchronisation fournisseurs/distributeurs", "Analytics opérationnels : tableaux de bord temps réel"]
+          }
+        ],
+        "footnote": "Vous commencez avec une application ou un bot sur-mesure à tarif optimisé. Après quelques mois, nous vous proposons d'activer ces modules SaaS qui transforment votre solution en véritable plateforme d'intelligence métier. Vous payez uniquement ce dont vous avez besoin."
+      },
+      {
+        "number": "03",
+        "title": "Révolutionnons les Prix du Marché",
+        "intro": "Nous avons fait un choix stratégique radical : refuser l'inflation tarifaire des géants de l'IT.",
+        "items": [
+          { "label": "Cloud nouvelle génération", "desc": "Performances équivalentes aux AWS/Azure/GCP pour 40 à 60% moins cher" },
+          { "label": "Outils open-source de qualité", "desc": "Technologies robustes et éprouvées plutôt que des licences propriétaires coûteuses" },
+          { "label": "Architecture optimisée", "desc": "Architectures légères et performantes, réduisant drastiquement les coûts d'hébergement" }
+        ],
+        "footnote": "Résultat : une solution H'appi coûte 50 à 70% moins cher qu'une solution équivalente sur des infrastructures traditionnelles, sans aucun compromis sur la qualité."
+      },
+      {
+        "number": "04",
+        "title": "Accompagnons Votre Croissance sur le Long Terme",
+        "intro": "Nous ne sommes pas juste un prestataire qui livre un produit et disparaît. H'appi devient votre partenaire tech sur la durée.",
+        "items": [
+          { "label": "Support technique réactif", "desc": "Personnalisé et humain" },
+          { "label": "Mises à jour régulières", "desc": "Améliorations continues de votre solution" },
+          { "label": "Formation de vos équipes", "desc": "Pour une prise en main autonome" },
+          { "label": "Évolution continue", "desc": "Votre solution grandit avec vous" },
+          { "label": "Proposition proactive", "desc": "Nouvelles fonctionnalités basées sur vos usages réels" }
+        ]
+      },
+      {
+        "number": "05",
+        "title": "Garantissons Conformité, Sécurité et Transparence",
+        "intro": "Toutes nos solutions sont hébergées en Europe, conformes RGPD, et bénéficient des plus hauts standards de sécurité.",
+        "footnote": "Vos données et celles de vos clients sont protégées avec le même niveau d'exigence que les plus grandes entreprises, mais à des coûts accessibles."
+      }
+    ]
+  },
+  "objectives": {
+    "title": "Nos Objectifs",
+    "subtitle": "Une feuille de route ambitieuse mais réaliste",
+    "midTerm": {
+      "title": "Moyen Terme (2028-2030)",
+      "goals": [
+      { "category": "Expansion de l'Offre SaaS", "items": ["Marketplace de modules CX et Supply Chain activables en un clic", "Intégrations natives avec 50+ outils métier (CRM, ERP, logistique)", "Templates sectoriels pour accélérer les déploiements"] },
+      { "category": "Croissance Géographique", "items": ["Conquête des marchés européens et nord-américains", "Partenariats stratégiques avec 20+ agences digitales internationales", "Réseau de revendeurs pour démultiplier l'impact"] },
+      { "category": "Excellence Technique et Tarifaire", "items": ["Maintien de l'avantage prix grâce à l'automatisation", "NPS (Net Promoter Score) de 70+", "Référence sur les infrastructures cloud optimisées"] },
+      { "category": "Impact et Communauté", "items": ["Communauté de 3 000+ entrepreneurs et décideurs tech", "100+ guides et ressources gratuites publiés", "200+ développeurs juniors formés aux pratiques lean"] }
+    ]
+    }
+  },
+  "values": {
+    "badge": "Nos Valeurs",
+    "title": "Nos Valeurs <highlight>Fondamentales</highlight>",
+    "subtitle": "8 principes qui guident chacune de nos décisions",
+    "inPractice": "En pratique :",
+    "items": [
+      { "title": "Sur-Mesure Radical", "quote": "Votre entreprise est unique. Vos solutions digitales doivent l'être aussi.", "description": "Nous refusons catégoriquement les templates génériques. Chaque ligne de code est pensée pour VOTRE métier, VOS utilisateurs, VOS objectifs.", "practice": "Avant de développer, nous passons plusieurs jours à comprendre votre entreprise. Nous créons un cahier des charges co-construit avec vous. Tout au long du développement, vous êtes impliqué avec des démos régulières." },
+      { "title": "Prix Justes et Transparents", "quote": "Le digital sur-mesure ne doit plus être un privilège de riches.", "description": "Nous avons bâti H'appi sur une conviction forte : les prix pratiqués par l'industrie IT sont injustifiés. Les mêmes compétences peuvent coûter 50 à 70% moins cher.", "practice": "Devis détaillés avec chaque ligne expliquée. Prix disruptifs grâce à nos infrastructures optimisées. Paiement flexible adapté aux PME. Garantie satisfaction incluse." },
+      { "title": "Croissance Évolutive", "quote": "Votre solution d'aujourd'hui devient votre plateforme d'intelligence métier de demain.", "description": "Nous ne créons pas des solutions figées. Nous construisons des fondations solides qui évoluent avec votre entreprise.", "practice": "Phase 1 : App sur-mesure. Phase 2 : Collecte de données. Phase 3 : Recommandations personnalisées. Phase 4 : Activation de modules SaaS à la carte." },
+      { "title": "Agilité et Rapidité", "quote": "Attendre 6 mois pour une application n'est plus acceptable.", "description": "Les cycles traditionnels sont interminables. Nous livrons des prototypes fonctionnels 60% plus rapidement que les prestataires traditionnels.", "practice": "Kick-off sous 48h. Première version fonctionnelle en 2-3 semaines. Itérations de 1-2 semaines. Livraison continue plutôt qu'un \"big bang\" final." },
+      { "title": "Partenariat Long Terme", "quote": "Nous ne sommes pas un prestataire, nous sommes votre équipe tech externalisée.", "description": "Trop de projets digitaux échouent parce que le prestataire livre et disparaît. Chez H'appi, nous restons à vos côtés.", "practice": "Chaque client a un interlocuteur dédié. Support réactif en jours ouvrés. Maintenance proactive. Conseils stratégiques réguliers. Pas de ticket anonyme, une vraie relation humaine." },
+      { "title": "Sécurité Sans Compromis", "quote": "Prix accessibles ne signifie pas compromis sur la sécurité.", "description": "Même si nous révolutionnons les prix, nous n'économisons jamais sur la sécurité et la conformité.", "practice": "Hébergement européen. Chiffrement de bout en bout. Sauvegardes automatiques quotidiennes. Audits de sécurité trimestriels. Partenaires certifiés ISO 27001, SOC 2." },
+      { "title": "Transparence Radicale", "quote": "Vous avez le droit de savoir où va chaque euro dépensé.", "description": "L'opacité tarifaire est un fléau de l'industrie IT. Chez H'appi, nous pratiquons la transparence totale.", "practice": "Devis détaillés en langage clair. Code source accessible (vous êtes propriétaire à 100%). Technologies ouvertes. Reporting hebdomadaire avec temps passés." },
+      { "title": "Excellence Internationale, Prix Compétitifs", "quote": "La meilleure qualité technique aux prix les plus accessibles.", "description": "Nous combinons expertise de haut niveau + infrastructures cloud optimisées + organisation lean pour offrir qualité professionnelle et tarifs disruptifs.", "practice": "Équipe internationale avec les meilleures technologies. Coûts optimisés grâce à nos choix d'infrastructure. Nous facturons la valeur réelle créée, pas le prestige d'un logo." }
+    ]
+  },
+  "promise": {
+    "title": "Notre Promesse",
+    "quote": "Chez H'appi, nous créons des solutions digitales qui vous ressemblent, à des prix qui cassent les codes du marché, et qui évoluent pour devenir votre avantage compétitif.",
+    "intro": "Chaque ligne de code, chaque design, chaque fonctionnalité est guidée par trois questions :",
+    "questions": [
+      { "q": "Est-ce vraiment sur-mesure ?", "detail": "Pas de copier-coller, pas de template générique" },
+      { "q": "Est-ce vraiment accessible ?", "detail": "Prix révolutionnaire, transparence totale, paiement flexible" },
+      { "q": "Est-ce que ça va créer de la valeur métier ?", "detail": "Pas de gadget, uniquement des fonctionnalités à ROI positif" }
+    ],
+    "conclusion": "Si la réponse est trois fois oui, nous le faisons. Sinon, nous ne le faisons pas."
+  },
+  "pricingStrategy": {
+    "badge": "Stratégie Tarifaire",
+    "title": "Comment nous <highlight>révolutionnons</highlight> les prix",
+    "problem": {
+      "title": "Le Problème de l'Industrie IT Traditionnelle",
+      "subtitle": "Les agences et ESN traditionnelles vous facturent :",
+      "items": [
+        "Infrastructures cloud surcotées (AWS/Azure/GCP avec marges confortables)",
+        "Licences propriétaires (Oracle, Microsoft, SAP... des milliers €/mois)",
+        "Organisation lourde (commerciaux, chefs de projet, consultants...)",
+        "Processus bureaucratiques (semaines de réunions et validations)"
+      ],
+      "result": "Résultat : seulement 30 à 40% du budget va au développement réel."
+    },
+    "solution": {
+      "title": "La Solution H'appi : Lean, Smart, Accessible",
+      "pillars": [
+        { "title": "Infrastructures Cloud Nouvelle Génération", "description": "Au lieu des tarifs premium des grands clouds, nous travaillons avec des fournisseurs innovants offrant les mêmes performances pour 40 à 60% moins cher.", "saving": "Réduction de 60 à 80% des coûts d'infrastructure" },
+        { "title": "Stack Technologique Open-Source et Moderne", "description": "PostgreSQL, Node.js, Python, React, Next.js... Aucune licence, communauté active, mises à jour régulières.", "saving": "Élimination complète des coûts de licences (20-30% du budget traditionnel)" },
+        { "title": "Organisation Lean et Équipe Réduite", "description": "Pas de commercial à 20% de marge. Pas de chef de projet sans valeur ajoutée directe. Développeurs experts, designer UX/UI intégré, direction technique impliquée.", "saving": "40 à 50% sur les coûts de main d'oeuvre" },
+        { "title": "Automatisation et Réutilisation Intelligente", "description": "Composants réutilisables, CI/CD automatisé, templates sectoriels. Nous capitalisons sur notre expérience.", "saving": "20 à 30% de temps de développement économisé" }
+      ]
+    },
+    "comparison": {
+      "title": "Résultat : Prix Révolutionnaires",
+      "colType": "Type de Prestation",
+      "colSavings": "Écart vs Marché",
+      "colBenefit": "Avantage Client",
+      "rows": [
+        { "type": "Site web sur-mesure", "savings": "-50 à -70%", "benefit": "Investissement divisé par 2 à 3" },
+        { "type": "Chatbot intelligent personnalisé", "savings": "-50 à -65%", "benefit": "Accessible aux PME" },
+        { "type": "Application web métier", "savings": "-55 à -70%", "benefit": "Budget libéré pour le marketing" },
+        { "type": "Application mobile (iOS + Android)", "savings": "-50 à -60%", "benefit": "ROI plus rapide" },
+        { "type": "Modules SaaS (upsell mensuel)", "savings": "-60 à -75%", "benefit": "Coûts récurrents maîtrisés" }
+      ],
+      "footnote": "Même qualité, voire supérieure, grâce à notre expertise technique et nos choix technologiques modernes."
+    }
+  },
+  "upsellModel": {
+    "badge": "Notre Modèle",
+    "title": "De l'Application aux <highlight>Insights Métier</highlight>",
+    "subtitle": "Un modèle d'upsell intelligent en 4 phases",
+    "phases": [
+      { "title": "Phase 1 : Création Sur-Mesure", "subtitle": "Votre Investissement Initial", "description": "Application web/mobile, chatbot intelligent ou site web professionnel. Tarif optimisé (50-70% sous le marché), qualité premium, livraison rapide." },
+      { "title": "Phase 2 : Collecte de Données", "subtitle": "Automatique et RGPD-Compliant", "description": "Données comportementales, interactions bot, données métier et performance. Tout en respectant le RGPD : consentement, anonymisation, droit à l'effacement." },
+      { "title": "Phase 3 : Analyse et Recommandations", "subtitle": "Gratuit", "description": "Après 3 à 6 mois, rapport détaillé avec comportements identifiés, problématiques détectées, opportunités d'optimisation et recommandations personnalisées." },
+      { "title": "Phase 4 : Activation des Modules SaaS", "subtitle": "Upsell à la Carte", "description": "Choisissez uniquement les modules CX et Supply Chain qui créent de la valeur pour vous. Sans engagement long terme, facturation mensuelle flexible." }
+    ],
+    "example": {
+      "title": "Exemple concret pour un e-commerce :",
+      "content": "Analyse sur 6 mois : 2 347 interactions bot, 73% de questions sur le statut de commande, 18% sur les retours produits. Nous recommandons d'activer le <strong>Module CX - Tracking Intelligent</strong> qui automatisera ces réponses et vous permettra de réduire de 60% les sollicitations du support."
+    },
+    "winWin": {
+      "title": "Pourquoi ce modèle est gagnant-gagnant",
+      "forYou": {
+        "title": "Pour vous",
+        "items": ["Investissement initial réduit", "Pas d'engagement sur les modules", "Valeur prouvée sur VOS données", "ROI mesurable pour chaque module", "Évolution progressive à votre rythme"]
+      },
+      "forUs": {
+        "title": "Pour nous",
+        "items": ["Relation long terme avec nos clients", "Revenus récurrents pour investir dans l'innovation", "Incités à créer de vrais outils utiles", "Expertise sectorielle renforcée à chaque projet"]
+      }
+    }
+  },
+  "join": {
+    "title": "Rejoignez l'Aventure <highlight>H'appi</highlight>",
+    "enterprise": {
+      "title": "Vous êtes une Entreprise ?",
+      "description1": "Vous en avez assez des solutions standardisées, des devis exorbitants, des prestataires qui disparaissent et des infrastructures cloud qui explosent votre budget ?",
+      "description2": "Parlons de votre projet. Solution sur-mesure, tarif révolutionnaire, accompagnement long terme.",
+      "cta": "Demandez un devis gratuit",
+      "ctaNote": "Réponse sous 48h avec estimation transparente"
+    },
+    "talent": {
+      "title": "Vous êtes un Talent Tech ?",
+      "description": "Nous recherchons des passionnés qui partagent nos valeurs de sur-mesure, de prix justes et d'innovation technique.",
+      "positionsLabel": "Postes ouverts :",
+      "positions": ["Développeurs Full-Stack (Node.js, React, Python)", "Développeurs Mobile (React Native, Flutter)", "Designers UX/UI", "Data Scientists (CX & Supply Chain)", "Growth Marketers"],
+      "perks": "Projets variés, stack moderne, autonomie, remote possible, rémunération compétitive + intéressement."
+    },
+    "partner": {
+      "title": "Vous êtes un Partenaire ?",
+      "description": "Agence digitale, startup cloud, consultant indépendant ou investisseur : construisons ensemble.",
+      "typesLabel": "Partenariats possibles :",
+      "types": ["Apport d'affaires", "Co-développement", "Intégration technologique", "Investissement"],
+      "cta": "Parlons partenariat"
+    },
+    "history": {
+      "title": "Notre Histoire (En Bref)",
+      "paragraph1": "H'appi est née d'une frustration simple mais profonde : <strong>pourquoi le digital sur-mesure coûte-t-il si cher alors que les technologies sont de plus en plus accessibles ?</strong>",
+      "paragraph2": "Fondée en 2026 par une équipe d'ingénieurs passionnés et d'entrepreneurs pragmatiques, H'appi s'est donnée pour mission de révolutionner les prix du marché sans compromis sur la qualité, en s'appuyant sur :",
+      "pillars": [
+        "Infrastructures cloud nouvelle génération (40-60% moins cher)",
+        "Stack open-source moderne (zéro coûts de licences)",
+        "Organisation lean (équipe réduite et efficace)",
+        "Modèle upsell intelligent (revenus récurrents sur la valeur)"
+      ],
+      "conclusion": "L'aventure ne fait que commencer. Et vous pouvez en faire partie."
+    },
+    "contact": {
+      "title": "Parlons de Votre Projet",
+      "subtitle": "Prêt à créer l'application, le chatbot ou le site web qui va propulser votre entreprise ? Nous répondons rapidement, avec transparence, par des humains qui connaissent vraiment le sujet.",
+      "channels": [
+        { "label": "Email", "value": "contact@happi.ai" },
+        { "label": "Site web", "value": "www.happi.ai" },
+        { "label": "Chat en direct", "value": "Discutez avec notre équipe" },
+        { "label": "RDV découverte", "value": "30 min gratuites" }
+      ],
+      "closing": "Ensemble, créons des solutions qui vous ressemblent.<br/>Ensemble, révolutionnons les prix du marché.<br/>Ensemble, transformons vos données en intelligence métier.<br/><highlight>Ensemble, faisons grandir H'appi.</highlight>"
+    }
+  },
+  "blog": {
+    "badge": "Le Blog H'appi",
+    "title": "Insights, guides et <highlight>tendances</highlight>",
+    "subtitle": "Ressources pour les entreprises qui veulent tirer le meilleur de l'IA, des chatbots et du digital sur-mesure.",
+    "featured": "Article mis en avant",
+    "allArticles": "Tous les articles",
+    "noArticles": "Aucun article dans cette catégorie pour le moment.",
+    "newsletterTitle": "Restez informé",
+    "newsletterSubtitle": "Recevez nos analyses mensuelles sur l'IA, les chatbots et le digital sur-mesure directement dans votre boîte mail.",
+    "newsletterPlaceholder": "votre@email.com",
+    "newsletterCta": "S'inscrire",
+    "newsletterNote": "Pas de spam. Désinscription en un clic. Conforme RGPD.",
+    "categories": ["Tous", "Produit", "Guide", "Tendances", "Conformité"]
+  },
+  "blogArticle": {
+    "backToBlog": "Blog",
+    "readTime": "de lecture",
+    "share": "Partager",
+    "toc": "Sommaire",
+    "sources": "Sources",
+    "sidebarCta": {
+      "title": "Envie d'en savoir plus ?",
+      "description": "Découvrez comment H'appi peut transformer votre entreprise.",
+      "cta": "Demander une démo"
+    },
+    "relatedArticles": "Articles similaires",
+    "readArticle": "Lire l'article"
+  },
+  "blogData": {
+    "articles": [
+      { "title": "Chatbot H'appi : comment nous personnalisons chaque bot selon votre métier", "excerpt": "Découvrez pourquoi les chatbots génériques frustrent vos clients et comment la personnalisation sectorielle transforme l'expérience client avec un taux de satisfaction de 92%.", "category": "Produit", "date": "12 février 2026", "readTime": "8 min", "author": "Équipe H'appi", "authorRole": "Product & Engineering" },
+      { "title": "Application sur-mesure vs solution standardisée : comment choisir ?", "excerpt": "Comparaison détaillée des deux approches avec tableau comparatif, cas d'usage et guide de décision pour faire le bon choix selon votre situation.", "category": "Guide", "date": "5 février 2026", "readTime": "10 min", "author": "Équipe H'appi", "authorRole": "Strategy & Consulting" },
+      { "title": "IA générative en 2026 : les 5 avancées qui changent les chatbots", "excerpt": "Support proactif, intelligence émotionnelle, multimodalité... Les innovations concrètes qui transforment les chatbots en véritables assistants stratégiques.", "category": "Tendances", "date": "28 janvier 2026", "readTime": "7 min", "author": "Équipe H'appi", "authorRole": "Research & Innovation" },
+      { "title": "Chatbots et RGPD : guide complet de conformité pour la France et l'Europe", "excerpt": "RGPD + AI Act : tout ce que vous devez savoir pour déployer un chatbot conforme. Checklist actionnable et obligations détaillées.", "category": "Conformité", "date": "20 janvier 2026", "readTime": "12 min", "author": "Équipe H'appi", "authorRole": "Legal & Compliance" }
+    ]
+  },
+  "metadata": {
+    "home": { "title": "H'appi - Chatbots Intelligents pour CX et Supply Chain", "description": "Des chatbots intelligents qui évoluent avec votre entreprise. Transformez chaque interaction en opportunité de croissance." },
+    "features": { "title": "Fonctionnalités - H'appi | Chatbots IA pour CX et Supply Chain", "description": "Découvrez toutes les fonctionnalités de H'appi : IA sectorielle, déploiement rapide, analytics, omnicanal, RGPD et évolution continue." },
+    "useCases": { "title": "Cas d'usage - H'appi | CX et Supply Chain", "description": "Découvrez les cas d'usage concrets de H'appi : support client automatisé, suivi de commandes, gestion d'inventaire, coordination logistique." },
+    "pricing": { "title": "Tarifs - H'appi | Plans adaptés à chaque entreprise", "description": "Découvrez nos plans tarifaires : Gratuit, Starter (49€/mois), Professional (149€/mois) et Enterprise. Commencez gratuitement." },
+    "faq": { "title": "FAQ - H'appi | Questions fréquentes", "description": "Toutes les réponses à vos questions sur H'appi : déploiement, sécurité, intégrations, IA, tarifs et plus encore." },
+    "about": { "title": "À propos - H'appi | Vision, Mission et Valeurs", "description": "Découvrez la vision de H'appi : démocratiser le digital sur-mesure, révolutionner les prix du marché IT et transformer vos applications en plateformes d'intelligence métier." },
+    "vision": { "title": "Vision & Mission - H'appi", "description": "Découvrez la vision de H'appi : démocratiser le digital sur-mesure et transformer vos applications en plateformes d'intelligence métier." },
+    "valeurs": { "title": "Nos Valeurs - H'appi", "description": "8 valeurs fondamentales qui guident H'appi : sur-mesure radical, prix justes, transparence, agilité, partenariat long terme et sécurité sans compromis." },
+    "strategie": { "title": "Stratégie & Prix - H'appi", "description": "Comment H'appi offre des solutions 50 à 70% moins chères que le marché grâce aux infrastructures cloud nouvelle génération et à son modèle d'upsell intelligent." },
+    "rejoindre": { "title": "Rejoindre H'appi - Entreprises, Talents et Partenaires", "description": "Entreprise cherchant un partenaire tech, talent développeur ou designer, partenaire potentiel : découvrez comment rejoindre l'aventure H'appi." }
+  },
+  "aboutSubNav": {
+    "overview": "Vue d'ensemble",
+    "links": ["Vision & Mission", "Nos Valeurs", "Stratégie & Prix", "Rejoindre H'appi"]
+  },
+  "pageFonctionnalites": {
+    "badge": "Fonctionnalités",
+    "title": "Une plateforme complète pour <highlight>transformer</highlight> votre service",
+    "subtitle": "H'appi combine IA générative, personnalisation sectorielle et conformité RGPD pour offrir une solution de chatbot adaptée aux entreprises françaises.",
+    "whyTitle": "Pourquoi choisir H'appi ?",
+    "details": [
+      {
+        "title": "Personnalisation sectorielle unique",
+        "description": "Contrairement aux plateformes génériques, H'appi crée des chatbots avec une connaissance métier intégrée dès la conception. La terminologie CX, les processus Supply Chain, les workflows spécifiques à votre secteur sont compris nativement.",
+        "items": ["Templates sectoriels prêts à l'emploi (e-commerce, services B2B, logistique)", "Apprentissage continu de votre vocabulaire métier", "Adaptation aux processus internes de chaque client"],
+        "statValue": "85%",
+        "statLabel": "des interactions de service client automatisées en France en 2025"
+      },
+      {
+        "title": "Intégration avec votre écosystème",
+        "description1": "H'appi s'intègre nativement avec les principaux CRM, ERP, outils de messaging et plateformes e-commerce. La vision 360° du client devient enfin une réalité grâce à des connecteurs pré-configurés.",
+        "description2": "Les entreprises déploient en moyenne 4 outils de mesure de performance CX. H'appi centralise ces données pour offrir des KPIs clairs : taux de résolution, satisfaction client, temps de réponse moyen.",
+        "integrationsTitle": "Intégrations disponibles"
+      },
+      {
+        "title": "L'approche hybride humain-IA",
+        "description1": "51% des entreprises cherchent à concilier contact humain et technologie. H'appi est conçu pour augmenter vos équipes, pas les remplacer. Le chatbot gère les demandes répétitives (jusqu'à 80% du volume) et transfère les cas complexes à vos conseillers avec tout le contexte nécessaire.",
+        "description2": "Résultat : vos agents sont plus efficaces, vos clients sont mieux servis, et vos coûts de support diminuent.",
+        "stats": [
+          { "value": "51%", "label": "veulent concilier humain et technologie" },
+          { "value": "36%", "label": "privilégient l'humain" },
+          { "value": "9%", "label": "misent tout sur la technologie" }
+        ]
+      }
+    ]
+  },
+  "pageCasUsage": {
+    "badge": "Cas d'usage",
+    "title": "Deux expertises, une seule <highlight>plateforme</highlight>",
+    "subtitle": "H'appi se spécialise dans l'Expérience Client et la Supply Chain, les deux domaines où les chatbots créent le plus de valeur pour votre entreprise.",
+    "cxTitle": "Expérience Client",
+    "cxDescription": "L'adoption de l'IA dans le service client est passée de 10% en 2020 à 85% en 2025 en France. Les entreprises qui n'automatisent pas leur CX prennent du retard.",
+    "cxItems": [
+      { "title": "Réservation de rendez-vous", "description": "Le chatbot gère la prise de rendez-vous automatisée, vérifie les disponibilités et envoie des confirmations." },
+      { "title": "Gestion des réclamations niveau 1", "description": "Qualification automatique des réclamations, résolution des cas simples et escalade intelligente vers vos conseillers." },
+      { "title": "Recommandations produits", "description": "Grâce à l'intégration CRM, le chatbot propose des recommandations personnalisées basées sur l'historique d'achat." },
+      { "title": "Assistance après-vente", "description": "Support technique automatisé, guides de dépannage interactifs, gestion des retours et échanges." },
+      { "title": "Onboarding de nouveaux clients", "description": "Accompagnement personnalisé des nouveaux clients à travers vos services, adapté à leur profil et besoins." }
+    ],
+    "supplyTitle": "Supply Chain",
+    "supplyDescription": "L'IA générative en logistique offre 13 cas d'usage identifiés en France, de la prédiction de la demande à l'optimisation des routes. H'appi intègre ces capacités dans ses chatbots.",
+    "supplyItems": [
+      { "title": "Tracking multi-transporteurs", "description": "Suivi unifié des commandes quel que soit le transporteur. Vos clients ont une vue claire et instantanée." },
+      { "title": "Notifications proactives de retard", "description": "Alertes automatiques avant même que le client ne demande. Anticipez les frustrations et proposez des solutions." },
+      { "title": "Gestion des exceptions logistiques", "description": "Résolution automatisée des incidents courants : colis endommagé, adresse incorrecte, absence du destinataire." },
+      { "title": "Coordination fournisseurs/distributeurs", "description": "Communication automatisée avec votre réseau de partenaires pour fluidifier les échanges d'information." },
+      { "title": "Support douanier et documentation", "description": "Assistance sur les procédures douanières, documentation requise et réglementations pour la logistique internationale." }
+    ]
+  },
+  "pageTarifs": {
+    "badge": "Tarifs",
+    "title": "Un plan adapté à <highlight>chaque entreprise</highlight>",
+    "subtitle": "Commencez gratuitement, évoluez à votre rythme. Aucun engagement, annulable à tout moment. Réduction de 20% sur les plans annuels.",
+    "comparisonTitle": "Comparaison détaillée des plans",
+    "comparisonHeaders": ["Fonctionnalité", "Gratuit", "Starter", "Professional", "Enterprise"],
+    "comparisonRows": [
+      ["Conversations / mois", "100", "1 000", "10 000", "Illimité"],
+      ["Canaux", "1 (web)", "3", "Illimité", "Illimité"],
+      ["Chatbots", "1", "1", "3", "Illimité"],
+      ["Personnalisation", "Basique", "Couleurs, logo", "Workflows avancés", "Sur-mesure"],
+      ["Intégration CRM/ERP", "-", "-", "Oui", "Oui"],
+      ["Analytics", "Basiques", "Basiques", "Avancés + IA", "Avancés + IA"],
+      ["Support", "Communauté", "Email", "Prioritaire", "Account manager"],
+      ["Templates sectoriels", "-", "2", "Tous", "Tous + custom"],
+      ["Branding H'appi", "Visible", "Optionnel", "Masqué", "Masqué"],
+      ["SLA", "-", "-", "99.5%", "Personnalisé"],
+      ["Déploiement on-premise", "-", "-", "-", "Disponible"]
+    ],
+    "whyTitle": "Pourquoi ce modèle tarifaire ?",
+    "whyItems": [
+      { "title": "Freemium accessible", "description": "Le plan gratuit vous permet de tester H'appi sans risque. Les coûts marginaux d'un chatbot SaaS sont faibles, ce qui nous permet de proposer un accès gratuit viable." },
+      { "title": "Croissance alignée", "description": "La tarification basée sur les conversations aligne votre investissement sur votre usage réel. Plus vous grandissez, plus la valeur de H'appi augmente pour vous." },
+      { "title": "Réduction annuelle", "description": "L'engagement annuel offre une réduction de 20%, améliorant la prévisibilité de vos coûts tout en vous faisant économiser significativement." }
+    ]
+  },
+  "pageFaq": {
+    "badge": "FAQ",
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur H'appi. Vous ne trouvez pas votre réponse ? Contactez-nous directement.",
+    "resourcesTitle": "Ressources complémentaires",
+    "resources": [
+      { "title": "Documentation", "description": "Guides complets, tutoriels et documentation technique pour tirer le meilleur parti de H'appi." },
+      { "title": "Webinaires", "description": "Sessions en direct avec nos experts pour découvrir les meilleures pratiques en IA conversationnelle." },
+      { "title": "Support", "description": "Notre équipe est disponible pour répondre à toutes vos questions. Contact email, chat ou téléphone." }
+    ]
+  },
+  "pageAbout": {
+    "badge": "À propos de H'appi",
+    "titleLine1": "Applications sur-mesure.",
+    "titleLine2": "Intelligence évolutive.",
+    "titleLine3": "<highlight>Prix révolutionnaires.</highlight>",
+    "subtitle": "H'appi est née d'une conviction simple : le digital sur-mesure ne devrait pas coûter une fortune. Nous créons des solutions qui vous ressemblent et qui évoluent pour devenir votre avantage compétitif.",
+    "keyNumbers": [
+      { "value": "50-70%", "label": "Moins cher que le marché" },
+      { "value": "1 000", "label": "Entreprises visées d'ici 2030" },
+      { "value": "2026", "label": "Fondée par des passionnés" },
+      { "value": "100%", "label": "Code propriétaire pour vous" }
+    ],
+    "quote": "Chez H'appi, nous croyons que l'IA doit augmenter l'humain, pas le remplacer. Nos solutions personnalisées apprennent votre métier pour offrir une expérience exceptionnelle tout en libérant vos équipes.",
+    "tags": ["Sur-mesure radical", "Intelligence évolutive", "Prix disruptifs", "RGPD & Made in France"],
+    "exploreTitle": "Explorez notre histoire",
+    "exploreSubtitle": "Cliquez sur une section pour en savoir plus",
+    "sections": [
+      { "title": "Vision & Mission", "description": "Pourquoi H'appi existe, où nous allons, et comment nous comptons changer les règles du jeu du digital sur-mesure." },
+      { "title": "Nos 8 Valeurs", "description": "Sur-mesure radical, prix justes, transparence totale, agilité... Les principes qui guident chacune de nos décisions." },
+      { "title": "Stratégie & Prix", "description": "Comment nous offrons des solutions 50 à 70% moins chères que le marché, et notre modèle d'upsell intelligent en 4 phases." },
+      { "title": "Rejoindre H'appi", "description": "Entreprise, talent tech ou partenaire : découvrez comment faire partie de l'aventure H'appi." }
+    ],
+    "historyTitle": "En bref",
+    "historyP1": "Fondée en 2026 par une équipe d'ingénieurs passionnés, H'appi révolutionne les prix du digital sur-mesure grâce à des infrastructures cloud nouvelle génération, une stack open-source moderne et une organisation lean.",
+    "historyP2": "Aujourd'hui, nous accompagnons des entreprises dans leur transformation digitale avec une promesse simple : <strong>sur-mesure, accessible, évolutif.</strong>",
+    "historyCta": "Découvrir notre vision"
+  },
+  "pageVision": {
+    "title": "Notre Vision & <highlight>Notre Mission</highlight>",
+    "subtitle": "Pourquoi nous existons, où nous allons, et les 5 piliers sur lesquels nous construisons l'avenir du digital sur-mesure."
+  },
+  "pageValeurs": {
+    "title": "Nos Valeurs <highlight>Fondamentales</highlight>",
+    "subtitle": "8 principes non négociables qui guident chaque décision, chaque ligne de code et chaque interaction avec nos clients."
+  },
+  "pageStrategie": {
+    "title": "Stratégie Tarifaire & <highlight>Modèle d'Upsell</highlight>",
+    "subtitle": "Comment nous cassons les prix du marché IT sans compromis sur la qualité, et comment vos applications deviennent des plateformes d'intelligence métier."
+  },
+  "pageRejoindre": {
+    "title": "Rejoignez l'Aventure <highlight>H'appi</highlight>",
+    "subtitle": "Que vous soyez une entreprise, un talent tech ou un partenaire potentiel, il y a une place pour vous dans l'histoire H'appi."
+  }
+}

@@ -1,13 +1,19 @@
+'use client';
+
 import { Building2, Code2, Users, Mail, Globe, MessageCircle, CalendarDays } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function JoinSection() {
+  const t = useTranslations('join');
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-gray">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-happi-dark mb-4">
-            Rejoignez l'Aventure{' '}
-            <span className="gradient-text">H'appi</span>
+            {t.rich('title', {
+              highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
+            })}
           </h2>
         </div>
 
@@ -18,26 +24,23 @@ export default function JoinSection() {
               <Building2 className="text-happi-blue" size={28} />
             </div>
             <h3 className="text-xl font-bold text-happi-dark mb-4">
-              Vous êtes une Entreprise ?
+              {t('enterprise.title')}
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Vous en avez assez des solutions standardisées, des devis
-              exorbitants, des prestataires qui disparaissent et des
-              infrastructures cloud qui explosent votre budget ?
+              {t('enterprise.description1')}
             </p>
             <p className="text-gray-600 text-sm mb-6">
-              Parlons de votre projet. Solution sur-mesure, tarif
-              révolutionnaire, accompagnement long terme.
+              {t('enterprise.description2')}
             </p>
             <div className="space-y-2">
               <a
                 href="#contact"
                 className="block w-full text-center bg-happi-blue text-white py-3 rounded-lg hover:bg-opacity-90 transition-all font-medium text-sm"
               >
-                Demandez un devis gratuit
+                {t('enterprise.cta')}
               </a>
               <p className="text-xs text-gray-400 text-center">
-                Réponse sous 48h avec estimation transparente
+                {t('enterprise.ctaNote')}
               </p>
             </div>
           </div>
@@ -48,25 +51,21 @@ export default function JoinSection() {
               <Code2 className="text-happi-green" size={28} />
             </div>
             <h3 className="text-xl font-bold text-happi-dark mb-4">
-              Vous êtes un Talent Tech ?
+              {t('talent.title')}
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Nous recherchons des passionnés qui partagent nos valeurs de
-              sur-mesure, de prix justes et d'innovation technique.
+              {t('talent.description')}
             </p>
             <div className="space-y-2 text-sm text-gray-600 mb-6">
-              <p className="font-medium text-happi-dark">Postes ouverts :</p>
+              <p className="font-medium text-happi-dark">{t('talent.positionsLabel')}</p>
               <ul className="space-y-1">
-                <li>- Développeurs Full-Stack (Node.js, React, Python)</li>
-                <li>- Développeurs Mobile (React Native, Flutter)</li>
-                <li>- Designers UX/UI</li>
-                <li>- Data Scientists (CX & Supply Chain)</li>
-                <li>- Growth Marketers</li>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <li key={i}>- {t(`talent.positions.${i}`)}</li>
+                ))}
               </ul>
             </div>
             <div className="bg-happi-gray rounded-lg p-3 text-xs text-gray-500">
-              Projets variés, stack moderne, autonomie, remote possible,
-              rémunération compétitive + intéressement.
+              {t('talent.perks')}
             </div>
           </div>
 
@@ -76,28 +75,26 @@ export default function JoinSection() {
               <Users className="text-happi-yellow" size={28} />
             </div>
             <h3 className="text-xl font-bold text-happi-dark mb-4">
-              Vous êtes un Partenaire ?
+              {t('partner.title')}
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Agence digitale, startup cloud, consultant indépendant ou
-              investisseur : construisons ensemble.
+              {t('partner.description')}
             </p>
             <div className="space-y-2 text-sm text-gray-600 mb-6">
               <p className="font-medium text-happi-dark">
-                Partenariats possibles :
+                {t('partner.typesLabel')}
               </p>
               <ul className="space-y-1">
-                <li>- Apport d'affaires</li>
-                <li>- Co-développement</li>
-                <li>- Intégration technologique</li>
-                <li>- Investissement</li>
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <li key={i}>- {t(`partner.types.${i}`)}</li>
+                ))}
               </ul>
             </div>
             <a
               href="#contact"
               className="block w-full text-center border-2 border-happi-blue text-happi-blue py-3 rounded-lg hover:bg-happi-blue hover:text-white transition-all font-medium text-sm"
             >
-              Parlons partenariat
+              {t('partner.cta')}
             </a>
           </div>
         </div>
@@ -105,28 +102,18 @@ export default function JoinSection() {
         {/* Histoire */}
         <div className="bg-white rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
           <h3 className="text-2xl font-bold text-happi-dark mb-6">
-            Notre Histoire (En Bref)
+            {t('history.title')}
           </h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            H'appi est née d'une frustration simple mais profonde :{' '}
-            <strong className="text-happi-dark">
-              pourquoi le digital sur-mesure coûte-t-il si cher alors que les
-              technologies sont de plus en plus accessibles ?
-            </strong>
+            {t.rich('history.paragraph1', {
+              strong: (chunks) => <strong className="text-happi-dark">{chunks}</strong>,
+            })}
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Fondée en 2026 par une équipe d'ingénieurs passionnés et
-            d'entrepreneurs pragmatiques, H'appi s'est donnée pour mission de
-            révolutionner les prix du marché sans compromis sur la qualité, en
-            s'appuyant sur :
+            {t('history.paragraph2')}
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-6">
-            {[
-              'Infrastructures cloud nouvelle génération (40-60% moins cher)',
-              'Stack open-source moderne (zéro coûts de licences)',
-              'Organisation lean (équipe réduite et efficace)',
-              'Modèle upsell intelligent (revenus récurrents sur la valeur)',
-            ].map((item, i) => (
+            {Array.from({ length: 4 }).map((_, i) => (
               <div
                 key={i}
                 className="flex items-start space-x-3 bg-happi-gray rounded-lg p-4"
@@ -142,12 +129,12 @@ export default function JoinSection() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="text-sm text-gray-600">{item}</span>
+                <span className="text-sm text-gray-600">{t(`history.pillars.${i}`)}</span>
               </div>
             ))}
           </div>
           <p className="text-happi-dark font-semibold">
-            L'aventure ne fait que commencer. Et vous pouvez en faire partie.
+            {t('history.conclusion')}
           </p>
         </div>
 
@@ -157,44 +144,27 @@ export default function JoinSection() {
           className="bg-gradient-to-r from-happi-blue to-happi-green rounded-2xl p-8 md:p-12 text-white text-center"
         >
           <h3 className="text-3xl font-bold mb-4">
-            Parlons de Votre Projet
+            {t('contact.title')}
           </h3>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Prêt à créer l'application, le chatbot ou le site web qui va
-            propulser votre entreprise ? Nous répondons rapidement, avec
-            transparence, par des humains qui connaissent vraiment le sujet.
+            {t('contact.subtitle')}
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-              <Mail className="mx-auto mb-2" size={24} />
-              <p className="text-sm font-medium">Email</p>
-              <p className="text-xs text-white/80">contact@happi.ai</p>
-            </div>
-            <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-              <Globe className="mx-auto mb-2" size={24} />
-              <p className="text-sm font-medium">Site web</p>
-              <p className="text-xs text-white/80">www.happi.ai</p>
-            </div>
-            <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-              <MessageCircle className="mx-auto mb-2" size={24} />
-              <p className="text-sm font-medium">Chat en direct</p>
-              <p className="text-xs text-white/80">Discutez avec notre équipe</p>
-            </div>
-            <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-              <CalendarDays className="mx-auto mb-2" size={24} />
-              <p className="text-sm font-medium">RDV découverte</p>
-              <p className="text-xs text-white/80">30 min gratuites</p>
-            </div>
+            {[Mail, Globe, MessageCircle, CalendarDays].map((Icon, i) => (
+              <div key={i} className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <Icon className="mx-auto mb-2" size={24} />
+                <p className="text-sm font-medium">{t(`contact.channels.${i}.label`)}</p>
+                <p className="text-xs text-white/80">{t(`contact.channels.${i}.value`)}</p>
+              </div>
+            ))}
           </div>
 
           <p className="text-lg font-semibold text-white/90 leading-relaxed max-w-2xl mx-auto">
-            Ensemble, créons des solutions qui vous ressemblent.<br />
-            Ensemble, révolutionnons les prix du marché.<br />
-            Ensemble, transformons vos données en intelligence métier.<br />
-            <span className="text-happi-yellow font-bold">
-              Ensemble, faisons grandir H'appi.
-            </span>
+            {t.rich('contact.closing', {
+              highlight: (chunks) => <span className="text-happi-yellow font-bold">{chunks}</span>,
+              br: () => <br />,
+            })}
           </p>
         </div>
       </div>

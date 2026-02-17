@@ -1,22 +1,7 @@
 'use client';
 
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const problems = [
-  'Temps d\'attente trop long pour les clients',
-  'Surcharge des équipes avec des demandes répétitives',
-  'Pas de visibilité en temps réel sur la supply chain',
-  'Chatbots génériques qui frustrent plus qu\'ils n\'aident',
-  'Coûts de service client en constante augmentation',
-];
-
-const solutions = [
-  'Réponses instantanées 24/7, personnalisées à votre métier',
-  'Automatisation intelligente qui libère vos équipes',
-  'Suivi en temps réel des commandes et livraisons',
-  'IA qui apprend votre terminologie et vos processus',
-  'Réduction des coûts de support jusqu\'à 60%',
-];
+import { useTranslations } from 'next-intl';
 
 function XIcon({ className, size }: { className?: string; size?: number }) {
   return (
@@ -38,16 +23,17 @@ function XIcon({ className, size }: { className?: string; size?: number }) {
 }
 
 export default function ProblemSolution() {
+  const t = useTranslations('problemSolution');
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-happi-dark mb-4">
-            Le problème que nous résolvons
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            53% des entreprises françaises placent l'expérience client comme
-            priorité n°1, mais les outils actuels ne sont pas à la hauteur.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -58,13 +44,13 @@ export default function ProblemSolution() {
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
                 <XIcon className="text-red-500" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-red-700">Sans H'appi</h3>
+              <h3 className="text-2xl font-bold text-red-700">{t('withoutTitle')}</h3>
             </div>
             <ul className="space-y-4">
-              {problems.map((problem, index) => (
+              {Array.from({ length: 5 }).map((_, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <XIcon className="text-red-400 mt-1 flex-shrink-0" size={20} />
-                  <span className="text-gray-700">{problem}</span>
+                  <span className="text-gray-700">{t(`problems.${index}`)}</span>
                 </li>
               ))}
             </ul>
@@ -76,16 +62,16 @@ export default function ProblemSolution() {
               <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                 <CheckCircle className="text-happi-green" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-green-700">Avec H'appi</h3>
+              <h3 className="text-2xl font-bold text-green-700">{t('withTitle')}</h3>
             </div>
             <ul className="space-y-4">
-              {solutions.map((solution, index) => (
+              {Array.from({ length: 5 }).map((_, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <CheckCircle
                     className="text-happi-green mt-1 flex-shrink-0"
                     size={20}
                   />
-                  <span className="text-gray-700">{solution}</span>
+                  <span className="text-gray-700">{t(`solutions.${index}`)}</span>
                 </li>
               ))}
             </ul>
@@ -97,7 +83,7 @@ export default function ProblemSolution() {
             href="#features"
             className="inline-flex items-center text-happi-blue font-medium hover:underline text-lg"
           >
-            Découvrir comment H'appi fonctionne
+            {t('cta')}
             <ArrowRight className="ml-2" size={20} />
           </a>
         </div>

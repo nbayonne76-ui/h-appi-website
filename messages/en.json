@@ -1,0 +1,754 @@
+{
+  "header": {
+    "nav": {
+      "about": "About",
+      "features": "Features",
+      "useCases": "Use Cases",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "blog": "Blog"
+    },
+    "cta": "Request a Demo"
+  },
+  "hero": {
+    "badge": "AI that learns your business",
+    "title": "Intelligent chatbots that <highlight>evolve</highlight> with your company",
+    "subtitle": "Transform every interaction into a growth opportunity. Automate your customer service and supply chain with personalized chatbots that truly understand your business.",
+    "stats": {
+      "adoption": { "value": "85%", "label": "AI Adoption in France" },
+      "availability": { "value": "24/7", "label": "Availability" },
+      "cost": { "value": "-60%", "label": "Support Costs" }
+    },
+    "ctaPrimary": "Request a free demo",
+    "ctaSecondary": "See pricing",
+    "trustHosting": "Data hosted in France",
+    "trustRgpd": "GDPR compliant",
+    "chatAssistant": "H'appi Assistant",
+    "chatOnline": "Online",
+    "chatMsg1": "Hello! I'm the H'appi assistant. How can I help you today?",
+    "chatMsg2": "What's the status of my order #FR12345?",
+    "chatMsg3": "Your order #FR12345 is currently in transit. Delivery expected tomorrow between 9am and 12pm. 📦",
+    "floatResolution": "Resolution rate",
+    "floatResolutionValue": "94%",
+    "floatResponse": "Response time",
+    "floatResponseValue": "<2s"
+  },
+  "problemSolution": {
+    "title": "The problem we solve",
+    "subtitle": "53% of French companies rank customer experience as their #1 priority, but current tools fall short.",
+    "withoutTitle": "Without H'appi",
+    "withTitle": "With H'appi",
+    "problems": [
+      "Long wait times for customers",
+      "Teams overwhelmed by repetitive requests",
+      "No real-time visibility on the supply chain",
+      "Generic chatbots that frustrate more than they help",
+      "Constantly rising customer service costs"
+    ],
+    "solutions": [
+      "Instant 24/7 responses, personalized to your business",
+      "Smart automation that frees up your teams",
+      "Real-time order and delivery tracking",
+      "AI that learns your terminology and processes",
+      "Up to 60% reduction in support costs"
+    ],
+    "cta": "Discover how H'appi works"
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Everything you need to <highlight>transform</highlight> your service",
+    "subtitle": "A complete AI chatbot platform, designed for French businesses that want to combine technology and human excellence.",
+    "items": [
+      { "title": "AI that learns your business", "description": "Our chatbots understand your industry-specific terminology (CX, Supply Chain) and adapt to your specific business processes." },
+      { "title": "Fast deployment", "description": "Operational in days, not months. Simple integration with your existing tools (CRM, ERP, databases)." },
+      { "title": "AI analytics & insights", "description": "Real-time KPIs: resolution rate, customer satisfaction, response time. Predictive insights to anticipate needs." },
+      { "title": "Native omnichannel", "description": "Deploy on your website, WhatsApp, Messenger, Teams and more. A consistent experience across all channels." },
+      { "title": "GDPR & Made in France", "description": "Data hosted in France, full GDPR compliance. Data security and sovereignty guaranteed." },
+      { "title": "Continuous evolution", "description": "The chatbot learns from every interaction and develops new SaaS features: analytics, predictions, optimizations." }
+    ]
+  },
+  "useCases": {
+    "badge": "Use Cases",
+    "title": "Two expertises, one single <highlight>platform</highlight>",
+    "subtitle": "H'appi specializes in two key areas where chatbots create the most value for your business.",
+    "tabCx": "Customer Experience (CX)",
+    "tabSupply": "Supply Chain",
+    "cx": [
+      { "title": "24/7 automated customer support", "description": "Instantly respond to the most frequent requests: order tracking, FAQ, product assistance. Your customers are satisfied, your teams are freed up." },
+      { "title": "Smart qualification & routing", "description": "Pre-qualify requests before routing them to the right department. Optimize your advisors' efficiency by only forwarding complex cases." },
+      { "title": "Automated client onboarding", "description": "Guide your new customers through your services with a personalized conversational assistant that adapts to their profile." },
+      { "title": "Personalized recommendations", "description": "By integrating with your CRM, the chatbot recognizes your customers and offers hyper-personalized recommendations based on their history." }
+    ],
+    "supply": [
+      { "title": "Real-time tracking & traceability", "description": "Your customers and partners query the bot about package location, estimated delivery times, without mobilizing a human agent." },
+      { "title": "Inventory & stock management", "description": "Integration with your WMS systems to provide real-time information on stock levels, locations and replenishment timelines." },
+      { "title": "Proactive notifications", "description": "Automatic alerts for delays, logistics exceptions or status changes. Anticipate problems before they impact your customers." },
+      { "title": "Delivery coordination", "description": "Smart delivery slot planning, rescheduling management and real-time route optimization." }
+    ],
+    "stats": {
+      "automated": { "value": "85%", "label": "of interactions automated" },
+      "supplyUses": { "value": "13", "label": "Supply Chain use cases" },
+      "pmeAI": { "value": "31%", "label": "of SMEs already use AI" },
+      "cxPriority": { "value": "53%", "label": "CX = #1 priority" }
+    }
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "A plan for <highlight>every company</highlight>",
+    "subtitle": "Start for free, scale at your pace. No commitment, cancel anytime.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "discount": "-20%",
+    "popular": "Popular",
+    "perMonth": "/ month",
+    "billedYearly": "Billed {price}€ / year",
+    "customPrice": "Custom pricing",
+    "taxNote": "All prices in euros excl. tax. VAT applicable per your country.",
+    "plans": [
+      {
+        "name": "Free",
+        "description": "Ideal to discover H'appi",
+        "features": ["100 conversations / month", "1 channel (website)", "Basic chatbot", "Community support", "H'appi branding visible"],
+        "cta": "Get started for free"
+      },
+      {
+        "name": "Starter",
+        "description": "For growing SMEs",
+        "features": ["1,000 conversations / month", "3 channels (web, WhatsApp, Messenger)", "Basic customization", "Email support", "Basic analytics"],
+        "cta": "14-day free trial"
+      },
+      {
+        "name": "Professional",
+        "description": "The complete solution to scale",
+        "features": ["10,000 conversations / month", "All channels unlimited", "CX & Supply Chain workflows", "CRM / ERP integration", "Priority support", "Advanced analytics + AI insights"],
+        "cta": "14-day free trial"
+      },
+      {
+        "name": "Enterprise",
+        "description": "Custom-built for large companies",
+        "features": ["Unlimited conversations", "Multiple chatbots", "Custom development", "On-premise deployment available", "Dedicated account manager", "Guaranteed SLAs"],
+        "cta": "Contact our team"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "They <highlight>trust</highlight> us",
+    "subtitle": "Discover how French companies are transforming their customer experience and supply chain with H'appi.",
+    "items": [
+      { "name": "Marie Dubois", "role": "CX Director", "company": "RetailPlus", "content": "H'appi transformed our customer service. In 3 months, our first-contact resolution rate went from 45% to 87%. Our teams can finally focus on truly complex cases.", "avatar": "MD" },
+      { "name": "Thomas Laurent", "role": "Supply Chain Manager", "company": "LogiTrans", "content": "H'appi's Supply Chain chatbot handles 80% of our customer tracking requests. Response time went from 4 hours to under 2 seconds. A huge gain!", "avatar": "TL" },
+      { "name": "Sophie Martin", "role": "CEO", "company": "E-ShopFR", "content": "As an SME, we didn't have the resources for 24/7 customer service. H'appi allowed us to offer this availability without hiring. The ROI is impressive.", "avatar": "SM" }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about H'appi",
+    "items": [
+      { "question": "How long does it take to deploy H'appi?", "answer": "Basic deployment takes between 3 and 7 days depending on the complexity of your needs. Our team guides you every step of the way, from setup to going live. The Free plan can be activated in minutes." },
+      { "question": "Does H'appi replace my support agents?", "answer": "No, and that's our core philosophy. H'appi augments your teams by handling repetitive requests (up to 80% of volume). Your agents focus on complex, high-value cases. 51% of companies seek to balance human and technology, and that's exactly our approach." },
+      { "question": "Is my data secure?", "answer": "Absolutely. All data is hosted in France, in certified data centers. We are 100% GDPR compliant. No data is shared with third parties. For Enterprise plans, on-premise deployment is available." },
+      { "question": "What integrations are available?", "answer": "H'appi natively integrates with major CRMs (Salesforce, HubSpot), ERPs (SAP, Oracle), messaging tools (WhatsApp, Messenger, Teams) and e-commerce platforms (Shopify, WooCommerce). Open APIs enable custom integrations." },
+      { "question": "How does H'appi's AI work?", "answer": "Our chatbots use generative AI and natural language processing (NLP) to understand your customers' intentions. The system continuously learns from every interaction to improve its responses. Industry templates (CX, Supply Chain) are available from setup." },
+      { "question": "Can I try before committing?", "answer": "Yes! Our Free plan lets you test H'appi with 100 conversations per month, no commitment and no credit card required. Starter and Professional plans offer a 14-day free trial with all features." },
+      { "question": "What is the average resolution rate?", "answer": "Our clients observe an average automatic resolution rate of 85 to 94% on level 1 requests. This rate continuously improves through AI learning. The average response time is under 2 seconds." }
+    ]
+  },
+  "cta": {
+    "title": "Ready to transform your customer experience?",
+    "subtitle": "Join the companies that trust H'appi to automate their customer service and supply chain. Get started for free, no commitment.",
+    "ctaPrimary": "Request a free demo",
+    "ctaSecondary": "Get started for free",
+    "note": "No credit card required. 14-day free trial."
+  },
+  "footer": {
+    "tagline": "Intelligent chatbots that evolve with your company. AI should augment humans, not replace them.",
+    "columns": {
+      "produit": {
+        "title": "Product",
+        "links": [
+          { "label": "Features", "href": "/fonctionnalites" },
+          { "label": "Use Cases", "href": "/cas-usage" },
+          { "label": "Pricing", "href": "/tarifs" },
+          { "label": "FAQ", "href": "/faq" }
+        ]
+      },
+      "solutions": {
+        "title": "Solutions",
+        "links": [
+          { "label": "Customer Experience (CX)", "href": "/cas-usage" },
+          { "label": "Supply Chain", "href": "/cas-usage" },
+          { "label": "E-commerce", "href": "/cas-usage" },
+          { "label": "B2B Services", "href": "/cas-usage" }
+        ]
+      },
+      "entreprise": {
+        "title": "Company",
+        "links": [
+          { "label": "About", "href": "/a-propos" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Careers", "href": "/a-propos/rejoindre" },
+          { "label": "Contact", "href": "/a-propos/rejoindre#contact" }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": [
+          { "label": "Legal Notice", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" },
+          { "label": "Terms of Service", "href": "#" },
+          { "label": "GDPR", "href": "#" }
+        ]
+      }
+    },
+    "copyright": "H'appi. All rights reserved. Made in France.",
+    "badge": "Data hosted in France - GDPR compliant"
+  },
+  "featuresPage": {
+    "badge": "Features",
+    "title": "A complete platform to <highlight>transform</highlight> your service",
+    "subtitle": "H'appi combines generative AI, industry customization and GDPR compliance to offer a chatbot solution tailored to French businesses.",
+    "whyTitle": "Why choose H'appi?",
+    "customization": {
+      "title": "Unique industry customization",
+      "description": "Unlike generic platforms, H'appi creates chatbots with built-in industry knowledge from day one. CX terminology, Supply Chain processes, workflows specific to your sector are natively understood.",
+      "items": [
+        "Ready-to-use industry templates (e-commerce, B2B services, logistics)",
+        "Continuous learning of your business vocabulary",
+        "Adaptation to each client's internal processes"
+      ],
+      "statValue": "85%",
+      "statLabel": "of customer service interactions automated in France in 2025"
+    },
+    "integration": {
+      "title": "Integration with your ecosystem",
+      "description1": "H'appi natively integrates with major CRMs, ERPs, messaging tools and e-commerce platforms. A 360° customer view finally becomes reality thanks to pre-configured connectors.",
+      "description2": "Companies deploy an average of 4 CX performance measurement tools. H'appi centralizes this data to offer clear KPIs: resolution rate, customer satisfaction, average response time.",
+      "integrationsTitle": "Available integrations"
+    },
+    "hybrid": {
+      "title": "The human-AI hybrid approach",
+      "description1": "51% of companies seek to balance human contact and technology. H'appi is designed to augment your teams, not replace them. The chatbot handles repetitive requests (up to 80% of volume) and transfers complex cases to your advisors with all necessary context.",
+      "description2": "Result: your agents are more efficient, your customers are better served, and your support costs decrease.",
+      "stat1": { "value": "51%", "label": "want to balance human and technology" },
+      "stat2": { "value": "36%", "label": "prioritize human contact" },
+      "stat3": { "value": "9%", "label": "bet everything on technology" }
+    }
+  },
+  "useCasesPage": {
+    "badge": "Use Cases",
+    "title": "Two expertises, one single <highlight>platform</highlight>",
+    "subtitle": "H'appi specializes in Customer Experience and Supply Chain, the two areas where chatbots create the most value for your business.",
+    "cxTitle": "Customer Experience",
+    "cxDescription": "AI adoption in customer service went from 10% in 2020 to 85% in 2025 in France. Companies that don't automate their CX are falling behind.",
+    "cxCases": [
+      { "title": "Appointment booking", "description": "The chatbot manages automated appointment scheduling, checks availability and sends confirmations." },
+      { "title": "Level 1 claims management", "description": "Automatic claim qualification, resolution of simple cases and smart escalation to your advisors." },
+      { "title": "Product recommendations", "description": "Through CRM integration, the chatbot offers personalized recommendations based on purchase history." },
+      { "title": "After-sales support", "description": "Automated technical support, interactive troubleshooting guides, returns and exchange management." },
+      { "title": "New client onboarding", "description": "Personalized guidance for new customers through your services, adapted to their profile and needs." }
+    ],
+    "supplyTitle": "Supply Chain",
+    "supplyDescription": "Generative AI in logistics offers 13 identified use cases in France, from demand forecasting to route optimization. H'appi integrates these capabilities into its chatbots.",
+    "supplyCases": [
+      { "title": "Multi-carrier tracking", "description": "Unified order tracking regardless of carrier. Your customers get a clear and instant view." },
+      { "title": "Proactive delay notifications", "description": "Automatic alerts before the customer even asks. Anticipate frustrations and offer solutions." },
+      { "title": "Logistics exception management", "description": "Automated resolution of common incidents: damaged package, incorrect address, recipient absent." },
+      { "title": "Supplier/distributor coordination", "description": "Automated communication with your partner network to streamline information exchange." },
+      { "title": "Customs & documentation support", "description": "Assistance with customs procedures, required documentation and regulations for international logistics." }
+    ]
+  },
+  "pricingPage": {
+    "badge": "Pricing",
+    "title": "A plan for <highlight>every company</highlight>",
+    "subtitle": "Start for free, scale at your pace. No commitment, cancel anytime. 20% discount on annual plans.",
+    "comparisonTitle": "Detailed plan comparison",
+    "tableHeader": "Feature",
+    "tableRows": [
+      ["Conversations / month", "100", "1,000", "10,000", "Unlimited"],
+      ["Channels", "1 (web)", "3", "Unlimited", "Unlimited"],
+      ["Chatbots", "1", "1", "3", "Unlimited"],
+      ["Customization", "Basic", "Colors, logo", "Advanced workflows", "Custom-built"],
+      ["CRM/ERP Integration", "-", "-", "Yes", "Yes"],
+      ["Analytics", "Basic", "Basic", "Advanced + AI", "Advanced + AI"],
+      ["Support", "Community", "Email", "Priority", "Account manager"],
+      ["Industry templates", "-", "2", "All", "All + custom"],
+      ["H'appi branding", "Visible", "Optional", "Hidden", "Hidden"],
+      ["SLA", "-", "-", "99.5%", "Custom"],
+      ["On-premise deployment", "-", "-", "-", "Available"]
+    ],
+    "whyTitle": "Why this pricing model?",
+    "whySections": [
+      { "title": "Accessible freemium", "description": "The free plan lets you test H'appi risk-free. The marginal costs of a SaaS chatbot are low, allowing us to offer a viable free tier." },
+      { "title": "Aligned growth", "description": "Conversation-based pricing aligns your investment with your actual usage. The more you grow, the more value H'appi delivers." },
+      { "title": "Annual discount", "description": "Annual commitment offers a 20% discount, improving cost predictability while saving you significantly." }
+    ]
+  },
+  "faqPage": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about H'appi. Can't find your answer? Contact us directly.",
+    "resourcesTitle": "Additional resources",
+    "resources": [
+      { "title": "Documentation", "description": "Complete guides, tutorials and technical documentation to get the most out of H'appi." },
+      { "title": "Webinars", "description": "Live sessions with our experts to discover best practices in conversational AI." },
+      { "title": "Support", "description": "Our team is available to answer all your questions. Contact by email, chat or phone." }
+    ]
+  },
+  "aboutPage": {
+    "badge": "About H'appi",
+    "heroTitle1": "Custom-built applications.",
+    "heroTitle2": "Evolving intelligence.",
+    "heroTitle3": "Revolutionary pricing.",
+    "heroSubtitle": "H'appi was born from a simple conviction: custom digital solutions shouldn't cost a fortune. We create solutions that reflect you and evolve to become your competitive advantage.",
+    "keyNumbers": [
+      { "value": "50-70%", "label": "Cheaper than the market" },
+      { "value": "1,000", "label": "Companies targeted by 2030" },
+      { "value": "2026", "label": "Founded by passionate engineers" },
+      { "value": "100%", "label": "Proprietary code for you" }
+    ],
+    "promiseQuote": "At H'appi, we believe AI should augment humans, not replace them. Our personalized solutions learn your business to deliver an exceptional experience while freeing up your teams.",
+    "badges": ["Radical customization", "Evolving intelligence", "Disruptive pricing", "GDPR & Made in France"],
+    "exploreTitle": "Explore our story",
+    "exploreSubtitle": "Click on a section to learn more",
+    "sections": [
+      { "title": "Vision & Mission", "description": "Why H'appi exists, where we're going, and how we plan to change the rules of custom digital." },
+      { "title": "Our 8 Values", "description": "Radical customization, fair pricing, total transparency, agility... The principles that guide our every decision." },
+      { "title": "Strategy & Pricing", "description": "How we offer solutions 50 to 70% cheaper than the market, and our smart 4-phase upsell model." },
+      { "title": "Join H'appi", "description": "Company, tech talent or partner: discover how to be part of the H'appi adventure." }
+    ],
+    "briefTitle": "In brief",
+    "briefP1": "Founded in 2026 by a team of passionate engineers, H'appi revolutionizes custom digital pricing through next-generation cloud infrastructure, a modern open-source stack and a lean organization.",
+    "briefP2": "Today, we support companies in their digital transformation with a simple promise:",
+    "briefHighlight": "custom-built, accessible, scalable.",
+    "briefCta": "Discover our vision"
+  },
+  "visionPage": {
+    "title": "Our Vision & <highlight>Our Mission</highlight>",
+    "subtitle": "Why we exist, where we're going, and the 5 pillars on which we're building the future of custom digital."
+  },
+  "valeursPage": {
+    "title": "Our Core <highlight>Values</highlight>",
+    "subtitle": "8 non-negotiable principles that guide every decision, every line of code and every interaction with our clients."
+  },
+  "strategiePage": {
+    "title": "Pricing Strategy & <highlight>Upsell Model</highlight>",
+    "subtitle": "How we break IT market prices without compromising quality, and how your applications become business intelligence platforms."
+  },
+  "rejoindrePage": {
+    "title": "Join the <highlight>H'appi</highlight> Adventure",
+    "subtitle": "Whether you're a company, a tech talent or a potential partner, there's a place for you in the H'appi story."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "headline": "Democratize access to custom digital solutions and business intelligence for all companies.",
+    "paragraph1": "At H'appi, we envision a world where every company, regardless of size, can afford personalized applications, chatbots and websites without blowing their budget or depending on tech giants. Our vision is to <strong>break the monopoly of standardized solutions and prohibitive prices</strong> imposed by IT multinationals.",
+    "paragraph2": "We believe custom digital should no longer be a luxury reserved for large corporations. With H'appi, an SME can have an application as powerful as a multinational's, a website as beautiful as a Silicon Valley unicorn's, and a chatbot as smart as market leaders'... <strong>for a fraction of the usual price.</strong>",
+    "paragraph3": "But our ambition goes further. We want your digital solutions to become <strong>smart growth engines</strong>. Through interaction data collected by your bots and applications, we transform your initial investment into a scalable SaaS ecosystem that generates concrete business insights in customer experience (CX) and supply chain.",
+    "objective2030": {
+      "title": "2030 Objective",
+      "description": "Enable <bold>1,000 companies</bold> to break free from standardized solutions and exorbitant prices, while transforming their applications into true business intelligence centers."
+    },
+    "missionTitle": "Our Mission",
+    "missionHeadline": "Create custom applications, chatbots and websites that evolve into business intelligence platforms.",
+    "missionIntro": "Concretely, at H'appi, we act on 5 fundamental pillars to transform how companies access custom digital."
+  },
+  "missionPillars": {
+    "pillars": [
+      {
+        "number": "01",
+        "title": "We Build Your Custom Digital Solutions",
+        "intro": "We don't sell templates. We don't offer generic \"turnkey\" solutions. Every H'appi project is unique because your company is unique.",
+        "items": [
+          { "label": "Web and mobile applications", "desc": "Developed according to your vision, your business processes, your visual identity" },
+          { "label": "Intelligent chatbots", "desc": "Designed to speak your language, understand your industry, and interact naturally with your customers" },
+          { "label": "Professional websites", "desc": "From showcase sites to e-commerce portals, always customized, high-performing and SEO-optimized" }
+        ],
+        "footnote": "Every project starts with a deep immersion phase in your business. We take the time to understand your needs, your users, your constraints. Then we design and develop a solution that truly reflects you."
+      },
+      {
+        "number": "02",
+        "title": "We Transform Your Applications into Business Intelligence Engines",
+        "intro": "Your fundamental differentiator: your H'appi solutions are not static. Once deployed and interacting with your users, we collect valuable data (with GDPR consent) to develop advanced SaaS features.",
+        "subSections": [
+          {
+            "title": "CX Modules (Customer Experience)",
+            "items": ["Behavioral analytics: understand the journey and pain points", "Smart personalization: automatic recommendations", "Churn prediction: identify at-risk customers", "Real-time satisfaction: automatic NPS and CSAT measurement", "Support automation: knowledge base-powered responses"]
+          },
+          {
+            "title": "Supply Chain Modules",
+            "items": ["Demand forecasting: volume anticipation", "Stock optimization: replenishment alerts", "Advanced tracking: complete visibility on your flows", "Multi-stakeholder coordination: supplier/distributor synchronization", "Operational analytics: real-time dashboards"]
+          }
+        ],
+        "footnote": "You start with a custom application or bot at an optimized price. After a few months, we offer to activate these SaaS modules that transform your solution into a true business intelligence platform. You only pay for what you need."
+      },
+      {
+        "number": "03",
+        "title": "We Revolutionize Market Prices",
+        "intro": "We made a radical strategic choice: refuse the pricing inflation of IT giants.",
+        "items": [
+          { "label": "Next-gen cloud infrastructure", "desc": "Equivalent performance to AWS/Azure/GCP for 40 to 60% less" },
+          { "label": "Quality open-source tools", "desc": "Robust and proven technologies rather than expensive proprietary licenses" },
+          { "label": "Optimized architecture", "desc": "Lightweight and high-performing architectures, drastically reducing hosting costs" }
+        ],
+        "footnote": "Result: an H'appi solution costs 50 to 70% less than an equivalent solution on traditional infrastructure, with zero compromise on quality."
+      },
+      {
+        "number": "04",
+        "title": "We Support Your Long-Term Growth",
+        "intro": "We're not just a vendor who delivers a product and disappears. H'appi becomes your long-term tech partner.",
+        "items": [
+          { "label": "Responsive technical support", "desc": "Personalized and human" },
+          { "label": "Regular updates", "desc": "Continuous improvements to your solution" },
+          { "label": "Team training", "desc": "For autonomous usage" },
+          { "label": "Continuous evolution", "desc": "Your solution grows with you" },
+          { "label": "Proactive suggestions", "desc": "New features based on your actual usage" }
+        ]
+      },
+      {
+        "number": "05",
+        "title": "We Guarantee Compliance, Security and Transparency",
+        "intro": "All our solutions are hosted in Europe, GDPR compliant, and benefit from the highest security standards.",
+        "footnote": "Your data and your customers' data are protected with the same level of rigor as the largest companies, but at accessible prices."
+      }
+    ]
+  },
+  "objectives": {
+    "title": "Our Objectives",
+    "subtitle": "An ambitious but realistic roadmap",
+    "midTerm": {
+      "title": "Mid-Term (2028-2030)",
+      "goals": [
+        { "category": "SaaS Offering Expansion", "items": ["Marketplace of CX and Supply Chain modules activatable in one click", "Native integrations with 50+ business tools (CRM, ERP, logistics)", "Industry templates to accelerate deployments"] },
+        { "category": "Geographic Growth", "items": ["Conquering European and North American markets", "Strategic partnerships with 20+ international digital agencies", "Reseller network to multiply impact"] },
+        { "category": "Technical and Pricing Excellence", "items": ["Maintaining price advantage through automation", "NPS (Net Promoter Score) of 70+", "Reference for optimized cloud infrastructure"] },
+        { "category": "Impact and Community", "items": ["Community of 3,000+ entrepreneurs and tech decision-makers", "100+ free guides and resources published", "200+ junior developers trained in lean practices"] }
+      ]
+    }
+  },
+  "values": {
+    "badge": "Our Values",
+    "title": "Our Core <highlight>Values</highlight>",
+    "subtitle": "8 principles that guide our every decision",
+    "inPractice": "In practice:",
+    "items": [
+      { "title": "Radical Customization", "quote": "Your company is unique. Your digital solutions should be too.", "description": "We categorically refuse generic templates. Every line of code is designed for YOUR business, YOUR users, YOUR goals.", "practice": "Before developing, we spend several days understanding your company. We create a co-built specification with you. Throughout development, you're involved with regular demos." },
+      { "title": "Fair and Transparent Pricing", "quote": "Custom digital should no longer be a privilege for the wealthy.", "description": "We built H'appi on a strong conviction: the prices charged by the IT industry are unjustified. The same skills can cost 50 to 70% less.", "practice": "Detailed quotes with every line explained. Disruptive pricing through our optimized infrastructure. Flexible payment adapted to SMEs. Satisfaction guarantee included." },
+      { "title": "Scalable Growth", "quote": "Today's solution becomes tomorrow's business intelligence platform.", "description": "We don't create static solutions. We build solid foundations that evolve with your company.", "practice": "Phase 1: Custom app. Phase 2: Data collection. Phase 3: Personalized recommendations. Phase 4: Activation of à la carte SaaS modules." },
+      { "title": "Agility and Speed", "quote": "Waiting 6 months for an application is no longer acceptable.", "description": "Traditional cycles are endless. We deliver functional prototypes 60% faster than traditional providers.", "practice": "Kick-off within 48h. First functional version in 2-3 weeks. 1-2 week iterations. Continuous delivery rather than a \"big bang\" final." },
+      { "title": "Long-Term Partnership", "quote": "We're not a vendor, we're your outsourced tech team.", "description": "Too many digital projects fail because the provider delivers and disappears. At H'appi, we stay by your side.", "practice": "Every client has a dedicated contact. Responsive support during business days. Proactive maintenance. Regular strategic advice. No anonymous ticket, a real human relationship." },
+      { "title": "Uncompromising Security", "quote": "Accessible prices don't mean compromised security.", "description": "Even as we revolutionize prices, we never cut corners on security and compliance.", "practice": "European hosting. End-to-end encryption. Daily automatic backups. Quarterly security audits. ISO 27001, SOC 2 certified partners." },
+      { "title": "Radical Transparency", "quote": "You have the right to know where every euro spent goes.", "description": "Pricing opacity is a plague of the IT industry. At H'appi, we practice total transparency.", "practice": "Detailed quotes in plain language. Accessible source code (you own 100%). Open technologies. Weekly reporting with time spent." },
+      { "title": "International Excellence, Competitive Pricing", "quote": "The best technical quality at the most accessible prices.", "description": "We combine high-level expertise + optimized cloud infrastructure + lean organization to offer professional quality and disruptive pricing.", "practice": "International team with the best technologies. Costs optimized through our infrastructure choices. We charge for the real value created, not the prestige of a logo." }
+    ]
+  },
+  "promise": {
+    "title": "Our Promise",
+    "quote": "At H'appi, we create digital solutions that reflect you, at prices that break market codes, and that evolve to become your competitive advantage.",
+    "intro": "Every line of code, every design, every feature is guided by three questions:",
+    "questions": [
+      { "q": "Is it truly custom?", "detail": "No copy-paste, no generic template" },
+      { "q": "Is it truly accessible?", "detail": "Revolutionary pricing, total transparency, flexible payment" },
+      { "q": "Will it create business value?", "detail": "No gimmicks, only features with positive ROI" }
+    ],
+    "conclusion": "If the answer is yes three times, we do it. Otherwise, we don't."
+  },
+  "pricingStrategy": {
+    "badge": "Pricing Strategy",
+    "title": "How we <highlight>revolutionize</highlight> prices",
+    "problem": {
+      "title": "The Traditional IT Industry Problem",
+      "subtitle": "Traditional agencies and IT service companies charge you for:",
+      "items": [
+        "Overpriced cloud infrastructure (AWS/Azure/GCP with comfortable margins)",
+        "Proprietary licenses (Oracle, Microsoft, SAP... thousands €/month)",
+        "Heavy organization (salespeople, project managers, consultants...)",
+        "Bureaucratic processes (weeks of meetings and approvals)"
+      ],
+      "result": "Result: only 30 to 40% of the budget goes to actual development."
+    },
+    "solution": {
+      "title": "The H'appi Solution: Lean, Smart, Accessible",
+      "pillars": [
+        { "title": "Next-Generation Cloud Infrastructure", "description": "Instead of premium pricing from major clouds, we work with innovative providers offering the same performance for 40 to 60% less.", "saving": "60 to 80% reduction in infrastructure costs" },
+        { "title": "Modern Open-Source Tech Stack", "description": "PostgreSQL, Node.js, Python, React, Next.js... No licenses, active community, regular updates.", "saving": "Complete elimination of license costs (20-30% of traditional budget)" },
+        { "title": "Lean Organization and Small Team", "description": "No salesperson with 20% margin. No project manager without direct added value. Expert developers, integrated UX/UI designer, involved technical leadership.", "saving": "40 to 50% on labor costs" },
+        { "title": "Smart Automation and Reuse", "description": "Reusable components, automated CI/CD, industry templates. We capitalize on our experience.", "saving": "20 to 30% development time saved" }
+      ]
+    },
+    "comparison": {
+      "title": "Result: Revolutionary Prices",
+      "colType": "Service Type",
+      "colSavings": "Gap vs Market",
+      "colBenefit": "Client Benefit",
+      "rows": [
+        { "type": "Custom website", "savings": "-50 to -70%", "benefit": "Investment divided by 2 to 3" },
+        { "type": "Personalized intelligent chatbot", "savings": "-50 to -65%", "benefit": "Accessible to SMEs" },
+        { "type": "Business web application", "savings": "-55 to -70%", "benefit": "Budget freed for marketing" },
+        { "type": "Mobile application (iOS + Android)", "savings": "-50 to -60%", "benefit": "Faster ROI" },
+        { "type": "SaaS modules (monthly upsell)", "savings": "-60 to -75%", "benefit": "Controlled recurring costs" }
+      ],
+      "footnote": "Same quality, or even superior, thanks to our technical expertise and modern technology choices."
+    }
+  },
+  "upsellModel": {
+    "badge": "Our Model",
+    "title": "From Application to <highlight>Business Insights</highlight>",
+    "subtitle": "A smart 4-phase upsell model",
+    "phases": [
+      { "title": "Custom Creation", "subtitle": "Your Initial Investment", "description": "Web/mobile application, intelligent chatbot or professional website. Optimized pricing (50-70% below market), premium quality, fast delivery." },
+      { "title": "Data Collection", "subtitle": "Automatic and GDPR-Compliant", "description": "Behavioral data, bot interactions, business data and performance. All while respecting GDPR: consent, anonymization, right to deletion." },
+      { "title": "Analysis and Recommendations", "subtitle": "Free", "description": "After 3 to 6 months, detailed report with identified behaviors, detected issues, optimization opportunities and personalized recommendations." },
+      { "title": "SaaS Module Activation", "subtitle": "À La Carte Upsell", "description": "Choose only the CX and Supply Chain modules that create value for you. No long-term commitment, flexible monthly billing." }
+    ],
+    "example": {
+      "title": "Concrete example for an e-commerce:",
+      "content": "6-month analysis: 2,347 bot interactions, 73% of questions about order status, 18% about product returns. We recommend activating the <strong>CX Module - Smart Tracking</strong> which will automate these responses and reduce support requests by 60%."
+    },
+    "winWin": {
+      "title": "Why this model is win-win",
+      "forYou": {
+        "title": "For you",
+        "items": ["Reduced initial investment", "No commitment on modules", "Value proven on YOUR data", "Measurable ROI for each module", "Progressive evolution at your pace"]
+      },
+      "forUs": {
+        "title": "For us",
+        "items": ["Long-term relationship with our clients", "Recurring revenue to invest in innovation", "Incentivized to create truly useful tools", "Industry expertise strengthened with each project"]
+      }
+    }
+  },
+  "join": {
+    "title": "Join the <highlight>H'appi</highlight> Adventure",
+    "enterprise": {
+      "title": "Are you a Company?",
+      "description1": "Tired of standardized solutions, outrageous quotes, providers who disappear and cloud infrastructure that blows your budget?",
+      "description2": "Let's talk about your project. Custom solution, revolutionary pricing, long-term support.",
+      "cta": "Request a free quote",
+      "ctaNote": "Response within 48h with transparent estimate"
+    },
+    "talent": {
+      "title": "Are you a Tech Talent?",
+      "description": "We're looking for passionate people who share our values of customization, fair pricing and technical innovation.",
+      "positionsLabel": "Open positions:",
+      "positions": ["Full-Stack Developers (Node.js, React, Python)", "Mobile Developers (React Native, Flutter)", "UX/UI Designers", "Data Scientists (CX & Supply Chain)", "Growth Marketers"],
+      "perks": "Varied projects, modern stack, autonomy, remote possible, competitive compensation + profit sharing."
+    },
+    "partner": {
+      "title": "Are you a Partner?",
+      "description": "Digital agency, cloud startup, independent consultant or investor: let's build together.",
+      "typesLabel": "Possible partnerships:",
+      "types": ["Business referrals", "Co-development", "Technology integration", "Investment"],
+      "cta": "Let's talk partnership"
+    },
+    "history": {
+      "title": "Our Story (In Brief)",
+      "paragraph1": "H'appi was born from a simple but deep frustration: <strong>why does custom digital cost so much when technologies are increasingly accessible?</strong>",
+      "paragraph2": "Founded in 2026 by a team of passionate engineers and pragmatic entrepreneurs, H'appi set out to revolutionize market prices without compromising quality, building on:",
+      "pillars": [
+        "Next-generation cloud infrastructure (40-60% cheaper)",
+        "Modern open-source stack (zero license costs)",
+        "Lean organization (small and efficient team)",
+        "Smart upsell model (recurring revenue on value)"
+      ],
+      "conclusion": "The adventure is just beginning. And you can be part of it."
+    },
+    "contact": {
+      "title": "Let's Talk About Your Project",
+      "subtitle": "Ready to create the application, chatbot or website that will propel your business? We respond quickly, transparently, by humans who truly know the subject.",
+      "channels": [
+        { "label": "Email", "value": "contact@happi.ai" },
+        { "label": "Website", "value": "www.happi.ai" },
+        { "label": "Live chat", "value": "Chat with our team" },
+        { "label": "Discovery call", "value": "30 free minutes" }
+      ],
+      "closing": "Together, let's create solutions that reflect you.\n<highlight>Together, let's revolutionize market prices.</highlight>\n<br></br>Together, let's transform your data into business intelligence.\n<highlight>Together, let's grow H'appi.</highlight>"
+    }
+  },
+  "blog": {
+    "badge": "The H'appi Blog",
+    "title": "Insights, guides and <highlight>trends</highlight>",
+    "subtitle": "Resources for companies that want to get the most out of AI, chatbots and custom digital.",
+    "featured": "Featured article",
+    "allArticles": "All articles",
+    "noArticles": "No articles in this category yet.",
+    "newsletterTitle": "Stay informed",
+    "newsletterSubtitle": "Receive our monthly insights on AI, chatbots and custom digital directly in your inbox.",
+    "newsletterPlaceholder": "your@email.com",
+    "newsletterCta": "Subscribe",
+    "newsletterNote": "No spam. Unsubscribe in one click. GDPR compliant.",
+    "categories": ["All", "Product", "Guide", "Trends", "Compliance"]
+  },
+  "blogArticle": {
+    "backToBlog": "Blog",
+    "readTime": "read",
+    "share": "Share",
+    "toc": "Table of Contents",
+    "sources": "Sources",
+    "sidebarCta": {
+      "title": "Want to learn more?",
+      "description": "Discover how H'appi can transform your business.",
+      "cta": "Request a demo"
+    },
+    "relatedArticles": "Related articles",
+    "readArticle": "Read article"
+  },
+  "blogData": {
+    "articles": [
+      { "title": "H'appi Chatbot: how we customize each bot for your business", "excerpt": "Discover why generic chatbots frustrate your customers and how industry customization transforms the customer experience with a 92% satisfaction rate.", "category": "Product", "date": "February 12, 2026", "readTime": "8 min", "author": "H'appi Team", "authorRole": "Product & Engineering" },
+      { "title": "Custom application vs standardized solution: how to choose?", "excerpt": "Detailed comparison of both approaches with comparison table, use cases and decision guide to make the right choice for your situation.", "category": "Guide", "date": "February 5, 2026", "readTime": "10 min", "author": "H'appi Team", "authorRole": "Strategy & Consulting" },
+      { "title": "Generative AI in 2026: 5 advances changing chatbots", "excerpt": "Proactive support, emotional intelligence, multimodality... The concrete innovations transforming chatbots into true strategic assistants.", "category": "Trends", "date": "January 28, 2026", "readTime": "7 min", "author": "H'appi Team", "authorRole": "Research & Innovation" },
+      { "title": "Chatbots and GDPR: complete compliance guide for France and Europe", "excerpt": "GDPR + AI Act: everything you need to know to deploy a compliant chatbot. Actionable checklist and detailed obligations.", "category": "Compliance", "date": "January 20, 2026", "readTime": "12 min", "author": "H'appi Team", "authorRole": "Legal & Compliance" }
+    ]
+  },
+  "metadata": {
+    "home": { "title": "H'appi - Intelligent Chatbots for CX and Supply Chain", "description": "Intelligent chatbots that evolve with your company. Transform every interaction into a growth opportunity." },
+    "features": { "title": "Features - H'appi | AI Chatbots for CX and Supply Chain", "description": "Discover all H'appi features: industry AI, fast deployment, analytics, omnichannel, GDPR and continuous evolution." },
+    "useCases": { "title": "Use Cases - H'appi | CX and Supply Chain", "description": "Discover H'appi's concrete use cases: automated customer support, order tracking, inventory management, logistics coordination." },
+    "pricing": { "title": "Pricing - H'appi | Plans for Every Company", "description": "Discover our pricing plans: Free, Starter (€49/month), Professional (€149/month) and Enterprise. Get started for free." },
+    "faq": { "title": "FAQ - H'appi | Frequently Asked Questions", "description": "All the answers to your questions about H'appi: deployment, security, integrations, AI, pricing and more." },
+    "about": { "title": "About - H'appi | Vision, Mission and Values", "description": "Discover H'appi's vision: democratize custom digital, revolutionize IT market prices and transform your applications into business intelligence platforms." },
+    "vision": { "title": "Vision & Mission - H'appi", "description": "Discover H'appi's vision: democratize custom digital and transform your applications into business intelligence platforms." },
+    "valeurs": { "title": "Our Values - H'appi", "description": "8 core values that guide H'appi: radical customization, fair pricing, transparency, agility, long-term partnership and uncompromising security." },
+    "strategie": { "title": "Strategy & Pricing - H'appi", "description": "How H'appi offers solutions 50 to 70% cheaper than the market through next-generation cloud infrastructure and its smart upsell model." },
+    "rejoindre": { "title": "Join H'appi - Companies, Talents and Partners", "description": "Company looking for a tech partner, developer or designer talent, potential partner: discover how to join the H'appi adventure." }
+  },
+  "aboutSubNav": {
+    "overview": "Overview",
+    "links": ["Vision & Mission", "Our Values", "Strategy & Pricing", "Join H'appi"]
+  },
+  "pageFonctionnalites": {
+    "badge": "Features",
+    "title": "A complete platform to <highlight>transform</highlight> your service",
+    "subtitle": "H'appi combines generative AI, industry customization and GDPR compliance to offer a chatbot solution tailored to French businesses.",
+    "whyTitle": "Why choose H'appi?",
+    "details": [
+      {
+        "title": "Unique industry customization",
+        "description": "Unlike generic platforms, H'appi creates chatbots with built-in industry knowledge from the design phase. CX terminology, Supply Chain processes, sector-specific workflows are natively understood.",
+        "items": ["Ready-to-use industry templates (e-commerce, B2B services, logistics)", "Continuous learning of your business vocabulary", "Adaptation to each client's internal processes"],
+        "statValue": "85%",
+        "statLabel": "of customer service interactions automated in France in 2025"
+      },
+      {
+        "title": "Integration with your ecosystem",
+        "description1": "H'appi natively integrates with major CRMs, ERPs, messaging tools and e-commerce platforms. The 360° customer view finally becomes a reality thanks to pre-configured connectors.",
+        "description2": "Companies deploy an average of 4 CX performance measurement tools. H'appi centralizes this data to deliver clear KPIs: resolution rate, customer satisfaction, average response time.",
+        "integrationsTitle": "Available integrations"
+      },
+      {
+        "title": "The hybrid human-AI approach",
+        "description1": "51% of companies seek to balance human contact and technology. H'appi is designed to augment your teams, not replace them. The chatbot handles repetitive requests (up to 80% of volume) and transfers complex cases to your advisors with all the necessary context.",
+        "description2": "Result: your agents are more efficient, your customers are better served, and your support costs decrease.",
+        "stats": [
+          { "value": "51%", "label": "want to balance human and technology" },
+          { "value": "36%", "label": "prioritize human contact" },
+          { "value": "9%", "label": "bet everything on technology" }
+        ]
+      }
+    ]
+  },
+  "pageCasUsage": {
+    "badge": "Use Cases",
+    "title": "Two expertises, one single <highlight>platform</highlight>",
+    "subtitle": "H'appi specializes in Customer Experience and Supply Chain, the two areas where chatbots create the most value for your business.",
+    "cxTitle": "Customer Experience",
+    "cxDescription": "AI adoption in customer service grew from 10% in 2020 to 85% in 2025 in France. Companies that don't automate their CX are falling behind.",
+    "cxItems": [
+      { "title": "Appointment booking", "description": "The chatbot handles automated appointment scheduling, checks availability and sends confirmations." },
+      { "title": "Level 1 complaint management", "description": "Automatic complaint qualification, resolution of simple cases and smart escalation to your advisors." },
+      { "title": "Product recommendations", "description": "Through CRM integration, the chatbot offers personalized recommendations based on purchase history." },
+      { "title": "After-sales support", "description": "Automated technical support, interactive troubleshooting guides, returns and exchanges management." },
+      { "title": "New customer onboarding", "description": "Personalized guidance for new customers through your services, adapted to their profile and needs." }
+    ],
+    "supplyTitle": "Supply Chain",
+    "supplyDescription": "Generative AI in logistics offers 13 identified use cases in France, from demand prediction to route optimization. H'appi integrates these capabilities into its chatbots.",
+    "supplyItems": [
+      { "title": "Multi-carrier tracking", "description": "Unified order tracking regardless of carrier. Your customers get a clear and instant view." },
+      { "title": "Proactive delay notifications", "description": "Automatic alerts before the customer even asks. Anticipate frustrations and propose solutions." },
+      { "title": "Logistics exception management", "description": "Automated resolution of common incidents: damaged package, incorrect address, absent recipient." },
+      { "title": "Supplier/distributor coordination", "description": "Automated communication with your partner network to streamline information exchange." },
+      { "title": "Customs support and documentation", "description": "Assistance with customs procedures, required documentation and regulations for international logistics." }
+    ]
+  },
+  "pageTarifs": {
+    "badge": "Pricing",
+    "title": "A plan for <highlight>every company</highlight>",
+    "subtitle": "Start for free, scale at your pace. No commitment, cancel anytime. 20% discount on annual plans.",
+    "comparisonTitle": "Detailed plan comparison",
+    "comparisonHeaders": ["Feature", "Free", "Starter", "Professional", "Enterprise"],
+    "comparisonRows": [
+      ["Conversations / month", "100", "1,000", "10,000", "Unlimited"],
+      ["Channels", "1 (web)", "3", "Unlimited", "Unlimited"],
+      ["Chatbots", "1", "1", "3", "Unlimited"],
+      ["Customization", "Basic", "Colors, logo", "Advanced workflows", "Custom"],
+      ["CRM/ERP Integration", "-", "-", "Yes", "Yes"],
+      ["Analytics", "Basic", "Basic", "Advanced + AI", "Advanced + AI"],
+      ["Support", "Community", "Email", "Priority", "Account manager"],
+      ["Industry templates", "-", "2", "All", "All + custom"],
+      ["H'appi branding", "Visible", "Optional", "Hidden", "Hidden"],
+      ["SLA", "-", "-", "99.5%", "Custom"],
+      ["On-premise deployment", "-", "-", "-", "Available"]
+    ],
+    "whyTitle": "Why this pricing model?",
+    "whyItems": [
+      { "title": "Accessible freemium", "description": "The free plan lets you test H'appi risk-free. The marginal costs of a SaaS chatbot are low, allowing us to offer a viable free tier." },
+      { "title": "Aligned growth", "description": "Conversation-based pricing aligns your investment with actual usage. The more you grow, the more value H'appi delivers." },
+      { "title": "Annual discount", "description": "Annual commitment offers a 20% discount, improving cost predictability while saving you significantly." }
+    ]
+  },
+  "pageFaq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about H'appi. Can't find your answer? Contact us directly.",
+    "resourcesTitle": "Additional Resources",
+    "resources": [
+      { "title": "Documentation", "description": "Complete guides, tutorials and technical documentation to get the most out of H'appi." },
+      { "title": "Webinars", "description": "Live sessions with our experts to discover best practices in conversational AI." },
+      { "title": "Support", "description": "Our team is available to answer all your questions. Contact by email, chat or phone." }
+    ]
+  },
+  "pageAbout": {
+    "badge": "About H'appi",
+    "titleLine1": "Custom applications.",
+    "titleLine2": "Evolving intelligence.",
+    "titleLine3": "<highlight>Revolutionary prices.</highlight>",
+    "subtitle": "H'appi was born from a simple conviction: custom digital shouldn't cost a fortune. We create solutions that reflect you and evolve to become your competitive advantage.",
+    "keyNumbers": [
+      { "value": "50-70%", "label": "Cheaper than the market" },
+      { "value": "1,000", "label": "Companies targeted by 2030" },
+      { "value": "2026", "label": "Founded by passionate people" },
+      { "value": "100%", "label": "Proprietary code for you" }
+    ],
+    "quote": "At H'appi, we believe AI should augment humans, not replace them. Our personalized solutions learn your business to deliver an exceptional experience while freeing up your teams.",
+    "tags": ["Radical customization", "Evolving intelligence", "Disruptive prices", "GDPR & Made in France"],
+    "exploreTitle": "Explore our story",
+    "exploreSubtitle": "Click a section to learn more",
+    "sections": [
+      { "title": "Vision & Mission", "description": "Why H'appi exists, where we're going, and how we plan to change the rules of custom digital." },
+      { "title": "Our 8 Values", "description": "Radical customization, fair pricing, total transparency, agility... The principles that guide our every decision." },
+      { "title": "Strategy & Pricing", "description": "How we offer solutions 50 to 70% cheaper than the market, and our smart 4-phase upsell model." },
+      { "title": "Join H'appi", "description": "Company, tech talent or partner: discover how to be part of the H'appi adventure." }
+    ],
+    "historyTitle": "In brief",
+    "historyP1": "Founded in 2026 by a team of passionate engineers, H'appi revolutionizes custom digital pricing through next-generation cloud infrastructure, a modern open-source stack and a lean organization.",
+    "historyP2": "Today, we support companies in their digital transformation with a simple promise: <strong>custom, accessible, scalable.</strong>",
+    "historyCta": "Discover our vision"
+  },
+  "pageVision": {
+    "title": "Our Vision & <highlight>Our Mission</highlight>",
+    "subtitle": "Why we exist, where we're going, and the 5 pillars on which we're building the future of custom digital."
+  },
+  "pageValeurs": {
+    "title": "Our Core <highlight>Values</highlight>",
+    "subtitle": "8 non-negotiable principles that guide every decision, every line of code and every interaction with our clients."
+  },
+  "pageStrategie": {
+    "title": "Pricing Strategy & <highlight>Upsell Model</highlight>",
+    "subtitle": "How we break IT market prices without compromising quality, and how your applications become business intelligence platforms."
+  },
+  "pageRejoindre": {
+    "title": "Join the <highlight>H'appi</highlight> Adventure",
+    "subtitle": "Whether you're a company, a tech talent or a potential partner, there's a place for you in the H'appi story."
+  }
+}

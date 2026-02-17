@@ -1,8 +1,11 @@
 'use client';
 
 import { MessageCircle, Sparkles, TrendingUp } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('hero');
+
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 gradient-bg">
       <div className="max-w-7xl mx-auto">
@@ -12,35 +15,33 @@ export default function Hero() {
             <div className="inline-flex items-center space-x-2 bg-happi-blue/10 px-4 py-2 rounded-full">
               <Sparkles className="text-happi-blue" size={20} />
               <span className="text-sm font-medium text-happi-blue">
-                L'IA qui apprend votre métier
+                {t('badge')}
               </span>
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Des chatbots intelligents qui{' '}
-              <span className="gradient-text">évoluent</span> avec votre
-              entreprise
+              {t.rich('title', {
+                highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
+              })}
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed">
-              Transformez chaque interaction en opportunité de croissance.
-              Automatisez votre service client et votre supply chain avec des
-              chatbots personnalisés qui comprennent vraiment votre métier.
+              {t('subtitle')}
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-6">
               <div>
-                <div className="text-3xl font-bold text-happi-blue">85%</div>
-                <div className="text-sm text-gray-600">Adoption IA en France</div>
+                <div className="text-3xl font-bold text-happi-blue">{t('stats.adoption.value')}</div>
+                <div className="text-sm text-gray-600">{t('stats.adoption.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-happi-green">24/7</div>
-                <div className="text-sm text-gray-600">Disponibilité</div>
+                <div className="text-3xl font-bold text-happi-green">{t('stats.availability.value')}</div>
+                <div className="text-sm text-gray-600">{t('stats.availability.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-happi-yellow">-60%</div>
-                <div className="text-sm text-gray-600">Coûts de support</div>
+                <div className="text-3xl font-bold text-happi-yellow">{t('stats.cost.value')}</div>
+                <div className="text-sm text-gray-600">{t('stats.cost.label')}</div>
               </div>
             </div>
 
@@ -51,14 +52,14 @@ export default function Hero() {
                 className="inline-flex items-center justify-center px-8 py-4 bg-happi-blue text-white rounded-lg hover:bg-opacity-90 transition-all hover:shadow-xl font-medium text-lg"
               >
                 <MessageCircle className="mr-2" size={20} />
-                Demander une démo gratuite
+                {t('ctaPrimary')}
               </a>
               <a
                 href="#pricing"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-happi-blue text-happi-blue rounded-lg hover:bg-happi-blue hover:text-white transition-all font-medium text-lg"
               >
                 <TrendingUp className="mr-2" size={20} />
-                Voir les tarifs
+                {t('ctaSecondary')}
               </a>
             </div>
 
@@ -76,7 +77,7 @@ export default function Hero() {
                     clipRule="evenodd"
                   />
                 </svg>
-                Données hébergées en France
+                {t('trustHosting')}
               </div>
               <div className="flex items-center">
                 <svg
@@ -90,7 +91,7 @@ export default function Hero() {
                     clipRule="evenodd"
                   />
                 </svg>
-                Conforme RGPD
+                {t('trustRgpd')}
               </div>
             </div>
           </div>
@@ -105,10 +106,10 @@ export default function Hero() {
                     <MessageCircle className="text-white" size={24} />
                   </div>
                   <div>
-                    <div className="font-semibold">H'appi Assistant</div>
+                    <div className="font-semibold">{t('chatAssistant')}</div>
                     <div className="text-sm text-green-500 flex items-center">
                       <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      En ligne
+                      {t('chatOnline')}
                     </div>
                   </div>
                 </div>
@@ -118,8 +119,7 @@ export default function Hero() {
                   <div className="flex">
                     <div className="bg-happi-blue/10 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
                       <p className="text-sm">
-                        Bonjour ! Je suis l'assistant H'appi. Comment puis-je
-                        vous aider aujourd'hui ?
+                        {t('chatMsg1')}
                       </p>
                     </div>
                   </div>
@@ -127,7 +127,7 @@ export default function Hero() {
                   <div className="flex justify-end">
                     <div className="bg-happi-green/10 rounded-2xl rounded-tr-none px-4 py-3 max-w-[80%]">
                       <p className="text-sm">
-                        Où en est ma commande #FR12345 ?
+                        {t('chatMsg2')}
                       </p>
                     </div>
                   </div>
@@ -135,8 +135,7 @@ export default function Hero() {
                   <div className="flex">
                     <div className="bg-happi-blue/10 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
                       <p className="text-sm">
-                        Votre commande #FR12345 est actuellement en transit.
-                        Livraison prévue demain entre 9h et 12h. 📦
+                        {t('chatMsg3')}
                       </p>
                     </div>
                   </div>
@@ -163,17 +162,17 @@ export default function Hero() {
               {/* Floating Stats */}
               <div className="absolute -top-6 -right-6 bg-white rounded-lg shadow-lg p-4 border border-gray-100">
                 <div className="text-xs text-gray-500 mb-1">
-                  Taux de résolution
+                  {t('floatResolution')}
                 </div>
-                <div className="text-2xl font-bold text-happi-green">94%</div>
+                <div className="text-2xl font-bold text-happi-green">{t('floatResolutionValue')}</div>
               </div>
 
               <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-lg p-4 border border-gray-100">
                 <div className="text-xs text-gray-500 mb-1">
-                  Temps de réponse
+                  {t('floatResponse')}
                 </div>
                 <div className="text-2xl font-bold text-happi-blue">
-                  &lt;2s
+                  {t('floatResponseValue')}
                 </div>
               </div>
             </div>

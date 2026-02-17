@@ -1,3 +1,6 @@
+import frMessages from '@/messages/fr.json';
+import enMessages from '@/messages/en.json';
+
 export type Article = {
   slug: string;
   title: string;
@@ -11,74 +14,52 @@ export type Article = {
   featured?: boolean;
 };
 
-export const articles: Article[] = [
-  {
-    slug: 'chatbot-personnalisation-metier',
-    title:
-      'Chatbot H\'appi : comment nous personnalisons chaque bot selon votre métier',
-    excerpt:
-      'Découvrez pourquoi les chatbots génériques frustrent vos clients et comment la personnalisation sectorielle transforme l\'expérience client avec un taux de satisfaction de 92%.',
-    category: 'Produit',
-    categoryColor: 'bg-happi-blue/10 text-happi-blue',
-    date: '12 février 2026',
-    readTime: '8 min',
-    author: 'Équipe H\'appi',
-    authorRole: 'Product & Engineering',
-    featured: true,
-  },
-  {
-    slug: 'application-sur-mesure-vs-standardisee',
-    title:
-      'Application sur-mesure vs solution standardisée : comment choisir ?',
-    excerpt:
-      'Comparaison détaillée des deux approches avec tableau comparatif, cas d\'usage et guide de décision pour faire le bon choix selon votre situation.',
-    category: 'Guide',
-    categoryColor: 'bg-happi-green/10 text-happi-green',
-    date: '5 février 2026',
-    readTime: '10 min',
-    author: 'Équipe H\'appi',
-    authorRole: 'Strategy & Consulting',
-  },
-  {
-    slug: 'ia-generative-2026-tendances',
-    title:
-      'IA générative en 2026 : les 5 avancées qui changent les chatbots',
-    excerpt:
-      'Support proactif, intelligence émotionnelle, multimodalité... Les innovations concrètes qui transforment les chatbots en véritables assistants stratégiques.',
-    category: 'Tendances',
-    categoryColor: 'bg-purple-100 text-purple-700',
-    date: '28 janvier 2026',
-    readTime: '7 min',
-    author: 'Équipe H\'appi',
-    authorRole: 'Research & Innovation',
-  },
-  {
-    slug: 'chatbots-rgpd-conformite-guide',
-    title:
-      'Chatbots et RGPD : guide complet de conformité pour la France et l\'Europe',
-    excerpt:
-      'RGPD + AI Act : tout ce que vous devez savoir pour déployer un chatbot conforme. Checklist actionnable et obligations détaillées.',
-    category: 'Conformité',
-    categoryColor: 'bg-red-50 text-red-600',
-    date: '20 janvier 2026',
-    readTime: '12 min',
-    author: 'Équipe H\'appi',
-    authorRole: 'Legal & Compliance',
-  },
+const slugs = [
+  'chatbot-personnalisation-metier',
+  'application-sur-mesure-vs-standardisee',
+  'ia-generative-2026-tendances',
+  'chatbots-rgpd-conformite-guide',
 ];
 
-export const categories = [
-  'Tous',
-  'Produit',
-  'Guide',
-  'Tendances',
-  'Conformité',
-];
+const categoryColors: Record<string, string> = {
+  Produit: 'bg-happi-blue/10 text-happi-blue',
+  Product: 'bg-happi-blue/10 text-happi-blue',
+  Guide: 'bg-happi-green/10 text-happi-green',
+  Tendances: 'bg-purple-100 text-purple-700',
+  Trends: 'bg-purple-100 text-purple-700',
+  Conformité: 'bg-red-50 text-red-600',
+  Compliance: 'bg-red-50 text-red-600',
+};
 
-export function getArticleBySlug(slug: string): Article | undefined {
-  return articles.find((a) => a.slug === slug);
+const messages: Record<string, typeof frMessages> = {
+  fr: frMessages,
+  en: enMessages,
+};
+
+export function getArticles(locale: string): Article[] {
+  const data = (messages[locale] || messages.fr).blogData.articles;
+  return data.map((item, index) => ({
+    slug: slugs[index],
+    title: item.title,
+    excerpt: item.excerpt,
+    category: item.category,
+    categoryColor: categoryColors[item.category] || 'bg-gray-100 text-gray-700',
+    date: item.date,
+    readTime: item.readTime,
+    author: item.author,
+    authorRole: item.authorRole,
+    featured: index === 0,
+  }));
 }
 
-export function getRelatedArticles(currentSlug: string): Article[] {
-  return articles.filter((a) => a.slug !== currentSlug).slice(0, 2);
+export function getCategories(locale: string): string[] {
+  return (messages[locale] || messages.fr).blog.categories;
+}
+
+export function getArticleBySlug(locale: string, slug: string): Article | undefined {
+  return getArticles(locale).find((a) => a.slug === slug);
+}
+
+export function getRelatedArticles(locale: string, currentSlug: string): Article[] {
+  return getArticles(locale).filter((a) => a.slug !== currentSlug).slice(0, 2);
 }

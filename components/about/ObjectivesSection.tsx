@@ -1,62 +1,22 @@
-import { Rocket, TrendingUp } from 'lucide-react';
+'use client';
 
-const shortTerm = {
-  title: 'Court Terme (2026-2027)',
-  icon: Rocket,
-  color: 'happi-blue',
-};
+import { TrendingUp } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
-const midTerm = {
-  title: 'Moyen Terme (2028-2030)',
-  icon: TrendingUp,
-  color: 'happi-green',
-};
-
-const midTermGoals = [
-  {
-    category: 'Expansion de l\'Offre SaaS',
-    items: [
-      'Marketplace de modules CX et Supply Chain activables en un clic',
-      'Intégrations natives avec 50+ outils métier (CRM, ERP, logistique)',
-      'Templates sectoriels pour accélérer les déploiements',
-    ],
-  },
-  {
-    category: 'Croissance Géographique',
-    items: [
-      'Conquête des marchés européens et nord-américains',
-      'Partenariats stratégiques avec 20+ agences digitales internationales',
-      'Réseau de revendeurs pour démultiplier l\'impact',
-    ],
-  },
-  {
-    category: 'Excellence Technique et Tarifaire',
-    items: [
-      'Maintien de l\'avantage prix grâce à l\'automatisation',
-      'NPS (Net Promoter Score) de 70+',
-      'Référence sur les infrastructures cloud optimisées',
-    ],
-  },
-  {
-    category: 'Impact et Communauté',
-    items: [
-      'Communauté de 3 000+ entrepreneurs et décideurs tech',
-      '100+ guides et ressources gratuites publiés',
-      '200+ développeurs juniors formés aux pratiques lean',
-    ],
-  },
-];
+const goalItemCounts = [3, 3, 3, 3];
 
 export default function ObjectivesSection() {
+  const t = useTranslations('objectives');
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-happi-dark mb-4">
-            Nos Objectifs
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-600">
-            Une feuille de route ambitieuse mais réaliste
+            {t('subtitle')}
           </p>
         </div>
 
@@ -68,21 +28,21 @@ export default function ObjectivesSection() {
                 <TrendingUp className="text-happi-green" size={24} />
               </div>
               <h3 className="text-2xl font-bold text-happi-dark">
-                {midTerm.title}
+                {t('midTerm.title')}
               </h3>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {midTermGoals.map((goal, index) => (
+              {Array.from({ length: 4 }).map((_, goalIdx) => (
                 <div
-                  key={index}
+                  key={goalIdx}
                   className="bg-happi-gray rounded-xl p-6 border border-gray-100"
                 >
                   <h4 className="font-bold text-happi-dark mb-4">
-                    {goal.category}
+                    {t(`midTerm.goals.${goalIdx}.category`)}
                   </h4>
                   <ul className="space-y-3">
-                    {goal.items.map((item, i) => (
+                    {Array.from({ length: goalItemCounts[goalIdx] }).map((_, i) => (
                       <li
                         key={i}
                         className="flex items-start space-x-3 text-sm"
@@ -98,7 +58,7 @@ export default function ObjectivesSection() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span className="text-gray-600">{item}</span>
+                        <span className="text-gray-600">{t(`midTerm.goals.${goalIdx}.items.${i}`)}</span>
                       </li>
                     ))}
                   </ul>

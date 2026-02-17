@@ -1,5 +1,8 @@
-import Link from 'next/link';
+'use client';
+
+import { Link } from '@/i18n/navigation';
 import { Clock, ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import type { Article } from '@/lib/blog-data';
 
 export default function ArticleCard({
@@ -9,6 +12,8 @@ export default function ArticleCard({
   article: Article;
   featured?: boolean;
 }) {
+  const t = useTranslations('blogArticle');
+
   return (
     <Link
       href={`/blog/${article.slug}`}
@@ -28,7 +33,7 @@ export default function ArticleCard({
           </span>
           <div className="flex items-center space-x-1 text-gray-400 text-xs">
             <Clock size={12} />
-            <span>{article.readTime} de lecture</span>
+            <span>{article.readTime} {t('readTime')}</span>
           </div>
         </div>
 
@@ -51,7 +56,7 @@ export default function ArticleCard({
         <div className="flex items-center justify-between">
           <div className="text-xs text-gray-400">{article.date}</div>
           <span className="flex items-center text-happi-blue text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-            Lire l'article
+            {t('readArticle')}
             <ArrowRight
               size={14}
               className="ml-1 group-hover:translate-x-1 transition-transform"

@@ -1,8 +1,11 @@
-import Link from 'next/link';
+'use client';
+
+import { Link } from '@/i18n/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ArticleCard from '@/components/blog/ArticleCard';
 import { ArrowLeft, Clock, Calendar, User, Share2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import type { Article } from '@/lib/blog-data';
 
 type Source = {
@@ -24,6 +27,8 @@ export default function ArticleLayout({
   relatedArticles: Article[];
   children: React.ReactNode;
 }) {
+  const t = useTranslations('blogArticle');
+
   return (
     <>
       <Header />
@@ -73,14 +78,14 @@ export default function ArticleLayout({
               </div>
               <div className="flex items-center space-x-2">
                 <Clock size={16} />
-                <span>{article.readTime} de lecture</span>
+                <span>{article.readTime} {t('readTime')}</span>
               </div>
               <button
                 className="flex items-center space-x-2 text-happi-blue hover:underline ml-auto"
-                aria-label="Partager"
+                aria-label={t('share')}
               >
                 <Share2 size={16} />
-                <span>Partager</span>
+                <span>{t('share')}</span>
               </button>
             </div>
           </div>
@@ -99,7 +104,7 @@ export default function ArticleLayout({
               {/* Table of Contents */}
               <div className="bg-happi-gray rounded-2xl p-6">
                 <h3 className="font-bold text-happi-dark mb-4 text-sm uppercase tracking-wider">
-                  Sommaire
+                  {t('toc')}
                 </h3>
                 <nav className="space-y-2">
                   {toc.map((item) => (
@@ -117,7 +122,7 @@ export default function ArticleLayout({
               {/* Sources */}
               <div className="bg-happi-gray rounded-2xl p-6">
                 <h3 className="font-bold text-happi-dark mb-4 text-sm uppercase tracking-wider">
-                  Sources ({sources.length})
+                  {t('sources')} ({sources.length})
                 </h3>
                 <div className="space-y-3">
                   {sources.map((source, i) => (
@@ -141,15 +146,15 @@ export default function ArticleLayout({
 
               {/* CTA */}
               <div className="bg-gradient-to-br from-happi-blue to-happi-green rounded-2xl p-6 text-white">
-                <h3 className="font-bold mb-2">Envie d'en savoir plus ?</h3>
+                <h3 className="font-bold mb-2">{t('sidebarCta.title')}</h3>
                 <p className="text-sm text-white/80 mb-4">
-                  Découvrez comment H'appi peut transformer votre entreprise.
+                  {t('sidebarCta.description')}
                 </p>
                 <Link
                   href="/#demo"
                   className="block w-full text-center bg-white text-happi-blue py-2.5 rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all"
                 >
-                  Demander une démo
+                  {t('sidebarCta.cta')}
                 </Link>
               </div>
             </aside>
@@ -161,7 +166,7 @@ export default function ArticleLayout({
           <div className="bg-happi-gray border-t border-gray-100">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
               <h2 className="text-2xl font-bold text-happi-dark mb-8">
-                Articles similaires
+                {t('relatedArticles')}
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {relatedArticles.map((a) => (
