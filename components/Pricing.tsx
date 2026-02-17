@@ -119,7 +119,7 @@ export default function Pricing() {
             {/* Support Card */}
             <div className="bg-white rounded-2xl p-8 border-2 border-happi-blue shadow-lg relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-happi-blue text-white px-4 py-1 rounded-full text-xs font-semibold">
-                Recommandé
+                {t('support.recommended')}
               </div>
 
               <div className="flex items-center space-x-3 mb-6">

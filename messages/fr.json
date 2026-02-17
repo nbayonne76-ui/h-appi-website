@@ -13,13 +13,13 @@
   "hero": {
     "badge": "L'IA qui apprend votre métier",
     "title": "Des chatbots intelligents qui <highlight>évoluent</highlight> avec votre entreprise",
-    "subtitle": "Transformez chaque interaction en opportunité de croissance. Automatisez votre service client et votre supply chain avec des chatbots personnalisés qui comprennent vraiment votre métier.",
+    "subtitle": "Automatisez votre service client et votre supply chain avec des chatbots personnalisés qui comprennent vraiment votre métier. Sur-mesure, transparent, accessible.",
     "stats": {
-      "adoption": { "value": "85%", "label": "Adoption IA en France" },
-      "availability": { "value": "24/7", "label": "Disponibilité" },
-      "cost": { "value": "-60%", "label": "Coûts de support" }
+      "adoption": { "value": "85%", "label": "des entreprises adoptent l'IA (source : McKinsey 2025)" },
+      "availability": { "value": "24/7", "label": "Disponibilité du chatbot" },
+      "cost": { "value": "4x", "label": "moins cher que le marché" }
     },
-    "ctaPrimary": "Demander une démo gratuite",
+    "ctaPrimary": "Discutons de votre projet",
     "ctaSecondary": "Voir les tarifs",
     "trustHosting": "Données hébergées en France",
     "trustRgpd": "Conforme RGPD",
@@ -28,10 +28,10 @@
     "chatMsg1": "Bonjour ! Je suis l'assistant H'appi. Comment puis-je vous aider aujourd'hui ?",
     "chatMsg2": "Où en est ma commande #FR12345 ?",
     "chatMsg3": "Votre commande #FR12345 est actuellement en transit. Livraison prévue demain entre 9h et 12h. 📦",
-    "floatResolution": "Taux de résolution",
-    "floatResolutionValue": "94%",
-    "floatResponse": "Temps de réponse",
-    "floatResponseValue": "<2s"
+    "floatResolution": "Sur-mesure",
+    "floatResolutionValue": "100%",
+    "floatResponse": "Startup française",
+    "floatResponseValue": "2026"
   },
   "problemSolution": {
     "title": "Le problème que nous résolvons",
@@ -126,6 +126,7 @@
     "support": {
       "title": "Support technique dédié",
       "description": "Nous gérons la maintenance technique de votre chatbot",
+      "recommended": "Recommandé",
       "price": "30€ - 50€",
       "priceDetail": "/ mois",
       "priceNote": "Tarif variable selon votre consommation de tokens LLM",
@@ -153,35 +154,37 @@
     "finalCtaNote": "Devis gratuit • Sans engagement • Réponse sous 48h"
   },
   "testimonials": {
-    "badge": "Témoignages",
-    "title": "Ils nous font <highlight>confiance</highlight>",
-    "subtitle": "Découvrez comment des entreprises françaises transforment leur expérience client et leur supply chain avec H'appi.",
-    "items": [
-      { "name": "Marie Dubois", "role": "Directrice CX", "company": "RetailPlus", "content": "H'appi a transformé notre service client. En 3 mois, notre taux de résolution au premier contact est passé de 45% à 87%. Nos équipes se concentrent enfin sur les cas vraiment complexes.", "avatar": "MD" },
-      { "name": "Thomas Laurent", "role": "Responsable Supply Chain", "company": "LogiTrans", "content": "Le chatbot Supply Chain de H'appi gère 80% des demandes de suivi de nos clients. Le temps de réponse est passé de 4 heures à moins de 2 secondes. Un gain énorme !", "avatar": "TL" },
-      { "name": "Sophie Martin", "role": "CEO", "company": "E-ShopFR", "content": "En tant que PME, nous n'avions pas les ressources pour un service client 24/7. H'appi nous a permis d'offrir cette disponibilité sans recruter. Le ROI est impressionnant.", "avatar": "SM" }
-    ]
+    "badge": "Nos débuts",
+    "title": "Nous sommes une <highlight>jeune startup</highlight>",
+    "subtitle": "H'appi a été lancée début 2026. Nous accompagnons nos premiers clients et construisons notre réputation projet après projet.",
+    "honesty": "Nous n'avons pas encore de témoignages clients à afficher ici — et nous préférons être honnêtes plutôt que d'inventer de faux avis.",
+    "commitments": [
+      { "title": "Transparence totale", "description": "Pas de faux témoignages, pas de chiffres gonflés. Ce que vous voyez ici, c'est la réalité de notre jeune entreprise." },
+      { "title": "Premiers clients accompagnés", "description": "Nous travaillons actuellement avec nos premiers partenaires. Leurs retours arriveront ici dès qu'ils seront prêts à témoigner." },
+      { "title": "Qualité avant quantité", "description": "Nous préférons livrer un travail excellent à quelques clients plutôt que de promettre la lune à tout le monde." }
+    ],
+    "cta": "Devenez l'un de nos premiers clients et bénéficiez d'un accompagnement privilégié."
   },
   "faq": {
     "badge": "FAQ",
     "title": "Questions fréquentes",
     "subtitle": "Tout ce que vous devez savoir sur H'appi",
     "items": [
-      { "question": "Combien de temps faut-il pour déployer H'appi ?", "answer": "Le déploiement de base prend entre 3 et 7 jours selon la complexité de vos besoins. Notre équipe vous accompagne à chaque étape, de la configuration à la mise en ligne. Le plan Gratuit peut être activé en quelques minutes." },
-      { "question": "H'appi remplace-t-il mes agents de support ?", "answer": "Non, et c'est notre philosophie fondamentale. H'appi augmente vos équipes en gérant les demandes répétitives (jusqu'à 80% du volume). Vos agents se concentrent sur les cas complexes et à forte valeur ajoutée. 51% des entreprises cherchent à concilier humain et technologie, et c'est exactement notre approche." },
-      { "question": "Mes données sont-elles sécurisées ?", "answer": "Absolument. Toutes les données sont hébergées en France, dans des datacenters certifiés. Nous sommes 100% conformes au RGPD. Aucune donnée n'est partagée avec des tiers. Pour les plans Enterprise, un déploiement on-premise est possible." },
-      { "question": "Quelles intégrations sont disponibles ?", "answer": "H'appi s'intègre nativement avec les principaux CRM (Salesforce, HubSpot), ERP (SAP, Oracle), outils de messaging (WhatsApp, Messenger, Teams) et plateformes e-commerce (Shopify, WooCommerce). Des API ouvertes permettent des intégrations personnalisées." },
-      { "question": "Comment fonctionne l'IA de H'appi ?", "answer": "Nos chatbots utilisent l'IA générative et le traitement du langage naturel (NLP) pour comprendre les intentions de vos clients. Le système apprend continuellement de chaque interaction pour améliorer ses réponses. Des templates sectoriels (CX, Supply Chain) sont disponibles dès la configuration." },
-      { "question": "Puis-je tester avant de m'engager ?", "answer": "Oui ! Notre plan Gratuit vous permet de tester H'appi avec 100 conversations par mois, sans engagement et sans carte bancaire. Les plans Starter et Professional offrent un essai gratuit de 14 jours avec toutes les fonctionnalités." },
-      { "question": "Quel est le taux de résolution moyen ?", "answer": "Nos clients observent en moyenne un taux de résolution automatique de 85 à 94% sur les demandes de niveau 1. Ce taux s'améliore continuellement grâce à l'apprentissage de l'IA. Le temps de réponse moyen est inférieur à 2 secondes." }
+      { "question": "Combien de temps faut-il pour déployer un chatbot ?", "answer": "Le délai dépend de la complexité du projet. Un chatbot simple peut être opérationnel en 1 à 2 semaines. Un projet plus complexe avec des intégrations CRM/ERP prend généralement 3 à 6 semaines. Nous définissons ensemble un planning réaliste dès le début." },
+      { "question": "H'appi remplace-t-il mes agents de support ?", "answer": "Non, et c'est notre philosophie. Notre objectif est d'augmenter vos équipes, pas de les remplacer. Le chatbot gère les demandes répétitives pour que vos agents se concentrent sur les cas complexes et à forte valeur ajoutée." },
+      { "question": "Mes données sont-elles sécurisées ?", "answer": "Oui. Toutes les données sont hébergées en France, dans des datacenters certifiés. Nous sommes conformes au RGPD. Aucune donnée n'est partagée avec des tiers. Un déploiement on-premise est possible selon vos besoins." },
+      { "question": "Quelles intégrations proposez-vous ?", "answer": "Nous pouvons intégrer votre chatbot avec les principaux CRM (Salesforce, HubSpot), ERP (SAP, Oracle), outils de messaging (WhatsApp, Messenger, Teams) et plateformes e-commerce (Shopify, WooCommerce). Des intégrations personnalisées via API sont également possibles." },
+      { "question": "Comment fonctionne l'IA de H'appi ?", "answer": "Nos chatbots utilisent l'IA générative et le traitement du langage naturel (NLP) pour comprendre les intentions de vos clients. Le système s'améliore avec chaque interaction. Nous personnalisons l'IA selon votre secteur (CX, Supply Chain, etc.)." },
+      { "question": "Puis-je tester avant de m'engager ?", "answer": "Nous proposons un premier échange gratuit pour comprendre vos besoins et vous présenter une démo personnalisée. Chaque devis est détaillé et sans engagement. Contactez-nous pour en discuter." },
+      { "question": "Pourquoi êtes-vous moins chers que le marché ?", "answer": "Notre modèle repose sur une infrastructure cloud optimisée, une stack open-source (pas de coûts de licence), et une organisation lean. Nous répercutons ces économies directement sur nos tarifs. Chaque devis est transparent et détaillé ligne par ligne." }
     ]
   },
   "cta": {
-    "title": "Prêt à transformer votre expérience client ?",
-    "subtitle": "Rejoignez les entreprises qui font confiance à H'appi pour automatiser leur service client et leur supply chain. Démarrez gratuitement, sans engagement.",
-    "ctaPrimary": "Demander une démo gratuite",
-    "ctaSecondary": "Commencer gratuitement",
-    "note": "Pas de carte bancaire requise. Essai gratuit de 14 jours."
+    "title": "Envie d'en savoir plus ?",
+    "subtitle": "Nous sommes une jeune startup et chaque projet compte pour nous. Discutons de vos besoins — sans engagement, en toute transparence.",
+    "ctaPrimary": "Discutons de votre projet",
+    "ctaSecondary": "Voir les tarifs",
+    "note": "Réponse sous 48h. Devis gratuit et détaillé."
   },
   "footer": {
     "tagline": "Des chatbots intelligents qui évoluent avec votre entreprise. L'IA doit augmenter l'humain, pas le remplacer.",
@@ -281,30 +284,7 @@
     ]
   },
   "pricingPage": {
-    "badge": "Tarifs",
-    "title": "Un plan adapté à <highlight>chaque entreprise</highlight>",
-    "subtitle": "Commencez gratuitement, évoluez à votre rythme. Aucun engagement, annulable à tout moment. Réduction de 20% sur les plans annuels.",
-    "comparisonTitle": "Comparaison détaillée des plans",
-    "tableHeader": "Fonctionnalité",
-    "tableRows": [
-      ["Conversations / mois", "100", "1 000", "10 000", "Illimité"],
-      ["Canaux", "1 (web)", "3", "Illimité", "Illimité"],
-      ["Chatbots", "1", "1", "3", "Illimité"],
-      ["Personnalisation", "Basique", "Couleurs, logo", "Workflows avancés", "Sur-mesure"],
-      ["Intégration CRM/ERP", "-", "-", "Oui", "Oui"],
-      ["Analytics", "Basiques", "Basiques", "Avancés + IA", "Avancés + IA"],
-      ["Support", "Communauté", "Email", "Prioritaire", "Account manager"],
-      ["Templates sectoriels", "-", "2", "Tous", "Tous + custom"],
-      ["Branding H'appi", "Visible", "Optionnel", "Masqué", "Masqué"],
-      ["SLA", "-", "-", "99.5%", "Personnalisé"],
-      ["Déploiement on-premise", "-", "-", "-", "Disponible"]
-    ],
-    "whyTitle": "Pourquoi ce modèle tarifaire ?",
-    "whySections": [
-      { "title": "Freemium accessible", "description": "Le plan gratuit vous permet de tester H'appi sans risque. Les coûts marginaux d'un chatbot SaaS sont faibles, ce qui nous permet de proposer un accès gratuit viable." },
-      { "title": "Croissance alignée", "description": "La tarification basée sur les conversations aligne votre investissement sur votre usage réel. Plus vous grandissez, plus la valeur de H'appi augmente pour vous." },
-      { "title": "Réduction annuelle", "description": "L'engagement annuel offre une réduction de 20%, améliorant la prévisibilité de vos coûts tout en vous faisant économiser significativement." }
-    ]
+    "dummy": ""
   },
   "faqPage": {
     "badge": "FAQ",
@@ -324,12 +304,12 @@
     "heroTitle3": "Prix révolutionnaires.",
     "heroSubtitle": "H'appi est née d'une conviction simple : le digital sur-mesure ne devrait pas coûter une fortune. Nous créons des solutions qui vous ressemblent et qui évoluent pour devenir votre avantage compétitif.",
     "keyNumbers": [
-      { "value": "50-70%", "label": "Moins cher que le marché" },
-      { "value": "1 000", "label": "Entreprises visées d'ici 2030" },
-      { "value": "2026", "label": "Fondée par des passionnés" },
-      { "value": "100%", "label": "Code propriétaire pour vous" }
+      { "value": "2026", "label": "Lancée début 2026" },
+      { "value": "4x", "label": "Moins cher que le marché" },
+      { "value": "100%", "label": "Sur-mesure, pas de template" },
+      { "value": "0", "label": "Faux témoignage sur ce site" }
     ],
-    "promiseQuote": "Chez H'appi, nous croyons que l'IA doit augmenter l'humain, pas le remplacer. Nos solutions personnalisées apprennent votre métier pour offrir une expérience exceptionnelle tout en libérant vos équipes.",
+    "promiseQuote": "Chez H'appi, nous croyons que l'IA doit augmenter l'humain, pas le remplacer. Nous sommes une jeune startup et chaque projet compte. Notre force : la transparence et un accompagnement personnalisé.",
     "badges": ["Sur-mesure radical", "Intelligence évolutive", "Prix disruptifs", "RGPD & Made in France"],
     "exploreTitle": "Explorez notre histoire",
     "exploreSubtitle": "Cliquez sur une section pour en savoir plus",
@@ -340,9 +320,9 @@
       { "title": "Rejoindre H'appi", "description": "Entreprise, talent tech ou partenaire : découvrez comment faire partie de l'aventure H'appi." }
     ],
     "briefTitle": "En bref",
-    "briefP1": "Fondée en 2026 par une équipe d'ingénieurs passionnés, H'appi révolutionne les prix du digital sur-mesure grâce à des infrastructures cloud nouvelle génération, une stack open-source moderne et une organisation lean.",
-    "briefP2": "Aujourd'hui, nous accompagnons des entreprises dans leur transformation digitale avec une promesse simple :",
-    "briefHighlight": "sur-mesure, accessible, évolutif.",
+    "briefP1": "Lancée début 2026, H'appi est une jeune startup qui casse les prix du digital sur-mesure grâce à des infrastructures cloud optimisées, une stack 100% open-source et une organisation lean.",
+    "briefP2": "Nous accompagnons nos premiers clients avec une promesse simple :",
+    "briefHighlight": "sur-mesure, accessible, évolutif — et surtout honnête.",
     "briefCta": "Découvrir notre vision"
   },
   "visionPage": {
@@ -524,8 +504,8 @@
       { "title": "Phase 4 : Activation des Modules SaaS", "subtitle": "Upsell à la Carte", "description": "Choisissez uniquement les modules CX et Supply Chain qui créent de la valeur pour vous. Sans engagement long terme, facturation mensuelle flexible." }
     ],
     "example": {
-      "title": "Exemple concret pour un e-commerce :",
-      "content": "Analyse sur 6 mois : 2 347 interactions bot, 73% de questions sur le statut de commande, 18% sur les retours produits. Nous recommandons d'activer le <strong>Module CX - Tracking Intelligent</strong> qui automatisera ces réponses et vous permettra de réduire de 60% les sollicitations du support."
+      "title": "Exemple fictif pour un e-commerce :",
+      "content": "Imaginons une analyse sur 6 mois : 2 000+ interactions bot, 70% de questions sur le statut de commande, 15% sur les retours produits. Nous recommanderions d'activer le <strong>Module CX - Tracking Intelligent</strong> pour automatiser ces réponses et réduire significativement les sollicitations du support."
     },
     "winWin": {
       "title": "Pourquoi ce modèle est gagnant-gagnant",
@@ -616,7 +596,7 @@
   },
   "blogData": {
     "articles": [
-      { "title": "Chatbot H'appi : comment nous personnalisons chaque bot selon votre métier", "excerpt": "Découvrez pourquoi les chatbots génériques frustrent vos clients et comment la personnalisation sectorielle transforme l'expérience client avec un taux de satisfaction de 92%.", "category": "Produit", "date": "12 février 2026", "readTime": "8 min", "author": "Équipe H'appi", "authorRole": "Product & Engineering" },
+      { "title": "Chatbot H'appi : comment nous personnalisons chaque bot selon votre métier", "excerpt": "Découvrez pourquoi les chatbots génériques frustrent vos clients et comment la personnalisation sectorielle peut transformer l'expérience client.", "category": "Produit", "date": "12 février 2026", "readTime": "8 min", "author": "Équipe H'appi", "authorRole": "Product & Engineering" },
       { "title": "Application sur-mesure vs solution standardisée : comment choisir ?", "excerpt": "Comparaison détaillée des deux approches avec tableau comparatif, cas d'usage et guide de décision pour faire le bon choix selon votre situation.", "category": "Guide", "date": "5 février 2026", "readTime": "10 min", "author": "Équipe H'appi", "authorRole": "Strategy & Consulting" },
       { "title": "IA générative en 2026 : les 5 avancées qui changent les chatbots", "excerpt": "Support proactif, intelligence émotionnelle, multimodalité... Les innovations concrètes qui transforment les chatbots en véritables assistants stratégiques.", "category": "Tendances", "date": "28 janvier 2026", "readTime": "7 min", "author": "Équipe H'appi", "authorRole": "Research & Innovation" },
       { "title": "Chatbots et RGPD : guide complet de conformité pour la France et l'Europe", "excerpt": "RGPD + AI Act : tout ce que vous devez savoir pour déployer un chatbot conforme. Checklist actionnable et obligations détaillées.", "category": "Conformité", "date": "20 janvier 2026", "readTime": "12 min", "author": "Équipe H'appi", "authorRole": "Legal & Compliance" }
@@ -713,12 +693,12 @@
     "titleLine3": "<highlight>Prix révolutionnaires.</highlight>",
     "subtitle": "H'appi est née d'une conviction simple : le digital sur-mesure ne devrait pas coûter une fortune. Nous créons des solutions qui vous ressemblent et qui évoluent pour devenir votre avantage compétitif.",
     "keyNumbers": [
-      { "value": "50-70%", "label": "Moins cher que le marché" },
-      { "value": "1 000", "label": "Entreprises visées d'ici 2030" },
-      { "value": "2026", "label": "Fondée par des passionnés" },
-      { "value": "100%", "label": "Code propriétaire pour vous" }
+      { "value": "2026", "label": "Lancée début 2026" },
+      { "value": "4x", "label": "Moins cher que le marché" },
+      { "value": "100%", "label": "Sur-mesure, pas de template" },
+      { "value": "0", "label": "Faux témoignage sur ce site" }
     ],
-    "quote": "Chez H'appi, nous croyons que l'IA doit augmenter l'humain, pas le remplacer. Nos solutions personnalisées apprennent votre métier pour offrir une expérience exceptionnelle tout en libérant vos équipes.",
+    "quote": "Chez H'appi, nous croyons que l'IA doit augmenter l'humain, pas le remplacer. Nous sommes une jeune startup et chaque projet compte. Notre force : la transparence et un accompagnement personnalisé.",
     "tags": ["Sur-mesure radical", "Intelligence évolutive", "Prix disruptifs", "RGPD & Made in France"],
     "exploreTitle": "Explorez notre histoire",
     "exploreSubtitle": "Cliquez sur une section pour en savoir plus",
@@ -729,8 +709,8 @@
       { "title": "Rejoindre H'appi", "description": "Entreprise, talent tech ou partenaire : découvrez comment faire partie de l'aventure H'appi." }
     ],
     "historyTitle": "En bref",
-    "historyP1": "Fondée en 2026 par une équipe d'ingénieurs passionnés, H'appi révolutionne les prix du digital sur-mesure grâce à des infrastructures cloud nouvelle génération, une stack open-source moderne et une organisation lean.",
-    "historyP2": "Aujourd'hui, nous accompagnons des entreprises dans leur transformation digitale avec une promesse simple : <strong>sur-mesure, accessible, évolutif.</strong>",
+    "historyP1": "Lancée début 2026, H'appi est une jeune startup qui casse les prix du digital sur-mesure grâce à des infrastructures cloud optimisées, une stack 100% open-source et une organisation lean.",
+    "historyP2": "Nous accompagnons nos premiers clients avec une promesse simple : <strong>sur-mesure, accessible, évolutif — et surtout honnête.</strong>",
     "historyCta": "Découvrir notre vision"
   },
   "pageVision": {
