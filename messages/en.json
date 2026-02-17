@@ -93,43 +93,64 @@
     }
   },
   "pricing": {
-    "badge": "Pricing",
-    "title": "A plan for <highlight>every company</highlight>",
-    "subtitle": "Start for free, scale at your pace. No commitment, cancel anytime.",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "discount": "-20%",
-    "popular": "Popular",
-    "perMonth": "/ month",
-    "billedYearly": "Billed {price}€ / year",
-    "customPrice": "Custom pricing",
-    "taxNote": "All prices in euros excl. tax. VAT applicable per your country.",
-    "plans": [
-      {
-        "name": "Free",
-        "description": "Ideal to discover H'appi",
-        "features": ["100 conversations / month", "1 channel (website)", "Basic chatbot", "Community support", "H'appi branding visible"],
-        "cta": "Get started for free"
-      },
-      {
-        "name": "Starter",
-        "description": "For growing SMEs",
-        "features": ["1,000 conversations / month", "3 channels (web, WhatsApp, Messenger)", "Basic customization", "Email support", "Basic analytics"],
-        "cta": "14-day free trial"
-      },
-      {
-        "name": "Professional",
-        "description": "The complete solution to scale",
-        "features": ["10,000 conversations / month", "All channels unlimited", "CX & Supply Chain workflows", "CRM / ERP integration", "Priority support", "Advanced analytics + AI insights"],
-        "cta": "14-day free trial"
-      },
-      {
-        "name": "Enterprise",
-        "description": "Custom-built for large companies",
-        "features": ["Unlimited conversations", "Multiple chatbots", "Custom development", "On-premise deployment available", "Dedicated account manager", "Guaranteed SLAs"],
-        "cta": "Contact our team"
-      }
-    ]
+    "heroBadge": "4x cheaper than the market",
+    "heroTitle": "Custom chatbots at <highlight>revolutionary prices</highlight>",
+    "heroSubtitle": "We create personalized chatbots for your business, with transparent pricing tailored to your real needs. No fixed grid: every project is unique.",
+    "heroCta": "Contact us for a free quote",
+    "heroNote": "Response within 48h with a detailed estimate",
+    "implementTitle": "Your chatbot implementation",
+    "implementSubtitle": "Implementation cost varies based on your project's complexity",
+    "implementDescription": "Each chatbot is custom-designed for your business. The price depends on your specific needs: number of scenarios, integrations, expected volume... That's why we prefer to discuss directly with you rather than display a generic price that wouldn't match your reality.",
+    "implementCta": "Request a quote",
+    "implementItems": [
+      "Analysis of your needs and specifications",
+      "Chatbot development and customization",
+      "Integration with your existing tools (CRM, ERP...)",
+      "Team training",
+      "Production deployment and testing"
+    ],
+    "maintenanceTitle": "Maintenance and support",
+    "maintenanceSubtitle": "Two plans to match your level of autonomy",
+    "autonomy": {
+      "title": "Self-managed",
+      "description": "You keep full control of your chatbot",
+      "price": "Included",
+      "priceDetail": "with implementation",
+      "features": [
+        "Full access to the admin interface",
+        "Complete documentation and user guides",
+        "Automatic technical updates",
+        "Self-service knowledge base"
+      ]
+    },
+    "support": {
+      "title": "Dedicated technical support",
+      "description": "We handle the technical maintenance of your chatbot",
+      "price": "€30 - €50",
+      "priceDetail": "/ month",
+      "priceNote": "Price varies based on your LLM token consumption",
+      "features": [
+        "24/7 monitoring and surveillance",
+        "Continuous performance optimization",
+        "Priority support via email and chat",
+        "Technical updates and improvements"
+      ]
+    },
+    "transparencyTitle": "Total price transparency",
+    "transparencySubtitle": "Why a custom quote rather than a fixed grid?",
+    "transparencyIntro": "We refuse mysterious pricing. Here's what influences your chatbot's cost:",
+    "transparencyFactors": [
+      { "title": "Chatbot complexity", "description": "Number of conversational scenarios, response trees, tone and style customization." },
+      { "title": "Required integrations", "description": "Connection to your tools (CRM, ERP, databases, third-party APIs) for contextual responses." },
+      { "title": "Conversation volume", "description": "The estimated number of monthly interactions determines the required infrastructure." },
+      { "title": "LLM token consumption", "description": "Each AI-generated response consumes tokens. The longer and more complex the responses, the higher the cost." }
+    ],
+    "transparencyConclusion": "Every quote details line by line what you're paying for. No surprises, no hidden fees.",
+    "finalCtaTitle": "Ready to discuss your project?",
+    "finalCtaSubtitle": "Every project is unique. Let's talk about yours to offer you a perfectly tailored solution and price.",
+    "finalCtaPrimary": "Let's discuss your project",
+    "finalCtaSecondary": "See our work",
+    "finalCtaNote": "Free quote • No commitment • Response within 48h"
   },
   "testimonials": {
     "badge": "Testimonials",
@@ -605,7 +626,7 @@
     "home": { "title": "H'appi - Intelligent Chatbots for CX and Supply Chain", "description": "Intelligent chatbots that evolve with your company. Transform every interaction into a growth opportunity." },
     "features": { "title": "Features - H'appi | AI Chatbots for CX and Supply Chain", "description": "Discover all H'appi features: industry AI, fast deployment, analytics, omnichannel, GDPR and continuous evolution." },
     "useCases": { "title": "Use Cases - H'appi | CX and Supply Chain", "description": "Discover H'appi's concrete use cases: automated customer support, order tracking, inventory management, logistics coordination." },
-    "pricing": { "title": "Pricing - H'appi | Plans for Every Company", "description": "Discover our pricing plans: Free, Starter (€49/month), Professional (€149/month) and Enterprise. Get started for free." },
+    "pricing": { "title": "Pricing - H'appi | Custom Chatbots 4x Cheaper", "description": "Custom chatbots for your business at revolutionary prices. Transparent and tailored pricing. Request a free quote." },
     "faq": { "title": "FAQ - H'appi | Frequently Asked Questions", "description": "All the answers to your questions about H'appi: deployment, security, integrations, AI, pricing and more." },
     "about": { "title": "About - H'appi | Vision, Mission and Values", "description": "Discover H'appi's vision: democratize custom digital, revolutionize IT market prices and transform your applications into business intelligence platforms." },
     "vision": { "title": "Vision & Mission - H'appi", "description": "Discover H'appi's vision: democratize custom digital and transform your applications into business intelligence platforms." },
@@ -672,30 +693,7 @@
     ]
   },
   "pageTarifs": {
-    "badge": "Pricing",
-    "title": "A plan for <highlight>every company</highlight>",
-    "subtitle": "Start for free, scale at your pace. No commitment, cancel anytime. 20% discount on annual plans.",
-    "comparisonTitle": "Detailed plan comparison",
-    "comparisonHeaders": ["Feature", "Free", "Starter", "Professional", "Enterprise"],
-    "comparisonRows": [
-      ["Conversations / month", "100", "1,000", "10,000", "Unlimited"],
-      ["Channels", "1 (web)", "3", "Unlimited", "Unlimited"],
-      ["Chatbots", "1", "1", "3", "Unlimited"],
-      ["Customization", "Basic", "Colors, logo", "Advanced workflows", "Custom"],
-      ["CRM/ERP Integration", "-", "-", "Yes", "Yes"],
-      ["Analytics", "Basic", "Basic", "Advanced + AI", "Advanced + AI"],
-      ["Support", "Community", "Email", "Priority", "Account manager"],
-      ["Industry templates", "-", "2", "All", "All + custom"],
-      ["H'appi branding", "Visible", "Optional", "Hidden", "Hidden"],
-      ["SLA", "-", "-", "99.5%", "Custom"],
-      ["On-premise deployment", "-", "-", "-", "Available"]
-    ],
-    "whyTitle": "Why this pricing model?",
-    "whyItems": [
-      { "title": "Accessible freemium", "description": "The free plan lets you test H'appi risk-free. The marginal costs of a SaaS chatbot are low, allowing us to offer a viable free tier." },
-      { "title": "Aligned growth", "description": "Conversation-based pricing aligns your investment with actual usage. The more you grow, the more value H'appi delivers." },
-      { "title": "Annual discount", "description": "Annual commitment offers a 20% discount, improving cost predictability while saving you significantly." }
-    ]
+    "dummy": ""
   },
   "pageFaq": {
     "badge": "FAQ",
