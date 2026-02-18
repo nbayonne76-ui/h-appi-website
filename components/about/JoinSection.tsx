@@ -10,7 +10,7 @@ export default function JoinSection() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
             {t.rich('title', {
               highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
             })}

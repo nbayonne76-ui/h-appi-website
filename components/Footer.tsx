@@ -1,6 +1,6 @@
 'use client';
 
-import { MessageCircle, Linkedin, Twitter } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -27,22 +27,13 @@ export default function Footer() {
             <p className="text-happi-muted leading-relaxed mb-6 text-sm">
               {t('tagline')}
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="w-10 h-10 bg-happi-surface rounded-lg flex items-center justify-center hover:bg-happi-blue transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-happi-surface rounded-lg flex items-center justify-center hover:bg-happi-blue transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-            </div>
+            <a
+              href="mailto:contact@happi.ai"
+              className="inline-flex items-center space-x-2 text-happi-muted hover:text-white transition-colors text-sm"
+            >
+              <MessageCircle size={16} />
+              <span>contact@happi.ai</span>
+            </a>
           </div>
 
           {/* Links Columns */}

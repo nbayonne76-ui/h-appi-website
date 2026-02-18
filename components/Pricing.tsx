@@ -57,7 +57,7 @@ export default function Pricing() {
 
             <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border">
               <h3 className="font-semibold mb-6 text-happi-muted text-xs uppercase tracking-wide">
-                Inclus dans chaque projet
+                {t('implementItemsLabel')}
               </h3>
               <ul className="space-y-4">
                 {Array.from({ length: 5 }).map((_, i) => (

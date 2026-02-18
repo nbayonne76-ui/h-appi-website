@@ -15,7 +15,7 @@ export default function UpsellModel() {
           <span className="inline-block px-4 py-2 bg-happi-blue/10 text-happi-blue rounded-full text-sm font-medium mb-4">
             {t('badge')}
           </span>
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
             {t.rich('title', {
               highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
             })}

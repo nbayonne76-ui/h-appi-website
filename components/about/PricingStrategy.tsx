@@ -9,10 +9,10 @@ export default function PricingStrategy() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-happi-yellow/20 text-white rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 bg-happi-yellow/10 text-happi-yellow rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-yellow/20">
             {t('badge')}
           </span>
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
             {t.rich('title', {
               highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
             })}
@@ -20,8 +20,8 @@ export default function PricingStrategy() {
         </div>
 
         {/* Problem */}
-        <div className="bg-red-500/10 rounded-2xl p-8 border border-red-100 mb-12">
-          <h3 className="text-xl font-bold text-red-700 mb-4">
+        <div className="bg-red-500/10 rounded-2xl p-8 border border-red-500/20 mb-12">
+          <h3 className="text-xl font-bold text-red-400 mb-4">
             {t('problem.title')}
           </h3>
           <p className="text-happi-muted mb-4">
@@ -37,7 +37,7 @@ export default function PricingStrategy() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-sm text-red-600 font-medium">
+          <p className="mt-4 text-sm text-red-400 font-medium">
             {t('problem.result')}
           </p>
         </div>

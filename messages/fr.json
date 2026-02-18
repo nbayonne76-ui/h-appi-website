@@ -165,6 +165,7 @@
     "implementSubtitle": "Le coût d'implémentation varie selon la complexité de votre projet",
     "implementDescription": "Chaque chatbot est conçu sur-mesure pour votre métier. Le tarif dépend de vos besoins spécifiques : nombre de scénarios, intégrations, volume prévu... C'est pourquoi nous préférons discuter directement avec vous plutôt que d'afficher un prix générique qui ne correspondrait pas à votre réalité.",
     "implementCta": "Demander un devis",
+    "implementItemsLabel": "Inclus dans chaque projet",
     "implementItems": [
       "Analyse de vos besoins et cahier des charges",
       "Développement et personnalisation du chatbot",

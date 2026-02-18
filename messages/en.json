@@ -165,6 +165,7 @@
     "implementSubtitle": "Implementation cost varies based on your project's complexity",
     "implementDescription": "Each chatbot is custom-designed for your business. The price depends on your specific needs: number of scenarios, integrations, expected volume... That's why we prefer to discuss directly with you rather than display a generic price that wouldn't match your reality.",
     "implementCta": "Request a quote",
+    "implementItemsLabel": "Included in every project",
     "implementItems": [
       "Analysis of your needs and specifications",
       "Chatbot development and customization",

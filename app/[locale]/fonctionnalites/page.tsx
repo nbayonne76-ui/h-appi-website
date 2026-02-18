@@ -27,7 +27,7 @@ export default async function FonctionnalitesPage() {
             <span className="inline-block px-4 py-2 bg-happi-blue/10 text-happi-blue rounded-full text-sm font-medium mb-4">
               {t('badge')}
             </span>
-            <h1 className="text-5xl font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               {t.rich('title', {
                 highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
               })}
