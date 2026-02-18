@@ -34,7 +34,7 @@ export default function ArticleLayout({
       <Header />
       <main className="pt-20">
         {/* Breadcrumb */}
-        <div className="bg-happi-gray border-b border-gray-100">
+        <div className="bg-happi-darker border-b border-happi-border/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-center space-x-2 text-sm">
               <Link
@@ -44,14 +44,14 @@ export default function ArticleLayout({
                 <ArrowLeft size={14} className="mr-1" />
                 Blog
               </Link>
-              <span className="text-gray-300">/</span>
-              <span className="text-gray-500 truncate">{article.title}</span>
+              <span className="text-happi-muted">/</span>
+              <span className="text-happi-muted truncate">{article.title}</span>
             </div>
           </div>
         </div>
 
         {/* Article Header */}
-        <div className="bg-white border-b border-gray-100">
+        <div className="bg-happi-surface border-b border-happi-border/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <span
               className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${article.categoryColor}`}
@@ -59,15 +59,15 @@ export default function ArticleLayout({
               {article.category}
             </span>
 
-            <h1 className="text-3xl md:text-4xl font-bold text-happi-dark leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
               {article.title}
             </h1>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-lg text-happi-muted leading-relaxed mb-8">
               {article.excerpt}
             </p>
 
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-happi-muted">
               <div className="flex items-center space-x-2">
                 <User size={16} />
                 <span>{article.author}</span>
@@ -95,15 +95,15 @@ export default function ArticleLayout({
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid lg:grid-cols-[1fr_280px] gap-12">
             {/* Main Content */}
-            <article className="prose prose-lg max-w-none prose-headings:text-happi-dark prose-headings:font-bold prose-a:text-happi-blue prose-a:no-underline hover:prose-a:underline prose-strong:text-happi-dark">
+            <article className="prose prose-lg max-w-none prose-headings:text-white prose-headings:font-bold prose-a:text-happi-blue prose-a:no-underline hover:prose-a:underline prose-strong:text-white">
               {children}
             </article>
 
             {/* Sidebar */}
             <aside className="space-y-8 lg:sticky lg:top-24 lg:self-start">
               {/* Table of Contents */}
-              <div className="bg-happi-gray rounded-2xl p-6">
-                <h3 className="font-bold text-happi-dark mb-4 text-sm uppercase tracking-wider">
+              <div className="bg-happi-darker rounded-2xl p-6">
+                <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wider">
                   {t('toc')}
                 </h3>
                 <nav className="space-y-2">
@@ -111,7 +111,7 @@ export default function ArticleLayout({
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className="block text-sm text-gray-600 hover:text-happi-blue transition-colors py-1 border-l-2 border-transparent hover:border-happi-blue pl-3"
+                      className="block text-sm text-happi-muted hover:text-happi-blue transition-colors py-1 border-l-2 border-transparent hover:border-happi-blue pl-3"
                     >
                       {item.label}
                     </a>
@@ -120,8 +120,8 @@ export default function ArticleLayout({
               </div>
 
               {/* Sources */}
-              <div className="bg-happi-gray rounded-2xl p-6">
-                <h3 className="font-bold text-happi-dark mb-4 text-sm uppercase tracking-wider">
+              <div className="bg-happi-darker rounded-2xl p-6">
+                <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wider">
                   {t('sources')} ({sources.length})
                 </h3>
                 <div className="space-y-3">
@@ -136,7 +136,7 @@ export default function ArticleLayout({
                       <span className="text-happi-blue group-hover:underline font-medium">
                         {source.name}
                       </span>
-                      <span className="text-gray-400 block mt-0.5">
+                      <span className="text-happi-muted block mt-0.5">
                         {source.detail}
                       </span>
                     </a>
@@ -152,7 +152,7 @@ export default function ArticleLayout({
                 </p>
                 <Link
                   href="/#demo"
-                  className="block w-full text-center bg-white text-happi-blue py-2.5 rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all"
+                  className="block w-full text-center bg-happi-surface text-happi-blue py-2.5 rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all"
                 >
                   {t('sidebarCta.cta')}
                 </Link>
@@ -163,9 +163,9 @@ export default function ArticleLayout({
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (
-          <div className="bg-happi-gray border-t border-gray-100">
+          <div className="bg-happi-darker border-t border-happi-border">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-              <h2 className="text-2xl font-bold text-happi-dark mb-8">
+              <h2 className="text-2xl font-bold text-white mb-8">
                 {t('relatedArticles')}
               </h2>
               <div className="grid md:grid-cols-2 gap-6">

@@ -7,7 +7,7 @@ export default function VisionSection() {
   const t = useTranslations('vision');
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
       <div className="max-w-5xl mx-auto">
         {/* Vision */}
         <div className="mb-20">
@@ -15,27 +15,27 @@ export default function VisionSection() {
             <div className="w-12 h-12 bg-happi-yellow/20 rounded-xl flex items-center justify-center">
               <Eye className="text-happi-yellow" size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-happi-dark">{t('title')}</h2>
+            <h2 className="text-3xl font-bold text-white">{t('title')}</h2>
           </div>
 
           <p className="text-xl font-semibold text-happi-blue mb-6">
             {t('headline')}
           </p>
 
-          <div className="space-y-4 text-gray-600 leading-relaxed">
+          <div className="space-y-4 text-happi-muted leading-relaxed">
             <p>
               {t.rich('paragraph1', {
-                strong: (chunks) => <strong className="text-happi-dark">{chunks}</strong>,
+                strong: (chunks) => <strong className="text-white">{chunks}</strong>,
               })}
             </p>
             <p>
               {t.rich('paragraph2', {
-                strong: (chunks) => <strong className="text-happi-dark">{chunks}</strong>,
+                strong: (chunks) => <strong className="text-white">{chunks}</strong>,
               })}
             </p>
             <p>
               {t.rich('paragraph3', {
-                strong: (chunks) => <strong className="text-happi-dark">{chunks}</strong>,
+                strong: (chunks) => <strong className="text-white">{chunks}</strong>,
               })}
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function VisionSection() {
             <div className="w-12 h-12 bg-happi-blue/10 rounded-xl flex items-center justify-center">
               <Sparkles className="text-happi-blue" size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-happi-dark">
+            <h2 className="text-3xl font-bold text-white">
               {t('missionTitle')}
             </h2>
           </div>
@@ -70,7 +70,7 @@ export default function VisionSection() {
             {t('missionHeadline')}
           </p>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-happi-muted leading-relaxed">
             {t('missionIntro')}
           </p>
         </div>

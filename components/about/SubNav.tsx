@@ -12,7 +12,7 @@ export default function SubNav() {
   const t = useTranslations('aboutSubNav');
 
   return (
-    <div className="bg-white border-b border-gray-100 sticky top-16 z-40">
+    <div className="bg-happi-dark/90 backdrop-blur-md border-b border-happi-border/50 sticky top-16 z-40">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center space-x-1 overflow-x-auto py-3 scrollbar-hide">
           <Link
@@ -20,7 +20,7 @@ export default function SubNav() {
             className={`flex items-center space-x-1.5 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
               pathname === '/a-propos'
                 ? 'bg-happi-blue/10 text-happi-blue'
-                : 'text-gray-500 hover:text-happi-dark hover:bg-gray-50'
+                : 'text-happi-muted hover:text-white hover:bg-happi-surface'
             }`}
           >
             <span>{t('overview')}</span>
@@ -32,7 +32,7 @@ export default function SubNav() {
               className={`flex items-center space-x-1.5 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
                 pathname === subLinkHrefs[index]
                   ? 'bg-happi-blue/10 text-happi-blue'
-                  : 'text-gray-500 hover:text-happi-dark hover:bg-gray-50'
+                  : 'text-happi-muted hover:text-white hover:bg-happi-surface'
               }`}
             >
               <Icon size={16} />

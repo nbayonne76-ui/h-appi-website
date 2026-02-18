@@ -17,7 +17,7 @@ export default function ArticleCard({
   return (
     <Link
       href={`/blog/${article.slug}`}
-      className={`group block bg-white rounded-2xl border border-gray-100 hover:border-happi-blue/20 hover:shadow-lg transition-all overflow-hidden ${
+      className={`group block bg-happi-surface rounded-2xl border border-happi-border hover:border-happi-blue/20 hover:shadow-lg transition-all overflow-hidden ${
         featured ? 'md:col-span-2' : ''
       }`}
     >
@@ -31,14 +31,14 @@ export default function ArticleCard({
           >
             {article.category}
           </span>
-          <div className="flex items-center space-x-1 text-gray-400 text-xs">
+          <div className="flex items-center space-x-1 text-happi-muted text-xs">
             <Clock size={12} />
             <span>{article.readTime} {t('readTime')}</span>
           </div>
         </div>
 
         <h3
-          className={`font-bold text-happi-dark mb-3 group-hover:text-happi-blue transition-colors ${
+          className={`font-bold text-white mb-3 group-hover:text-happi-blue transition-colors ${
             featured ? 'text-2xl' : 'text-lg'
           }`}
         >
@@ -46,7 +46,7 @@ export default function ArticleCard({
         </h3>
 
         <p
-          className={`text-gray-600 leading-relaxed mb-6 ${
+          className={`text-happi-muted leading-relaxed mb-6 ${
             featured ? 'text-base' : 'text-sm'
           }`}
         >
@@ -54,7 +54,7 @@ export default function ArticleCard({
         </p>
 
         <div className="flex items-center justify-between">
-          <div className="text-xs text-gray-400">{article.date}</div>
+          <div className="text-xs text-happi-muted">{article.date}</div>
           <span className="flex items-center text-happi-blue text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
             {t('readArticle')}
             <ArrowRight

@@ -18,9 +18,9 @@ const subSectionItemCounts = [[5, 5]];
 const hasFootnote = [true, true, true, false, true];
 
 const iconColorMap: Record<string, string> = {
-  'happi-blue': 'bg-blue-50 text-happi-blue',
-  'happi-green': 'bg-green-50 text-happi-green',
-  'happi-yellow': 'bg-yellow-50 text-happi-yellow',
+  'happi-blue': 'bg-happi-blue/10 text-happi-blue',
+  'happi-green': 'bg-happi-green/10 text-happi-green',
+  'happi-yellow': 'bg-happi-yellow/10 text-happi-yellow',
 };
 
 const numberColorMap: Record<string, string> = {
@@ -33,14 +33,14 @@ export default function MissionPillars() {
   const t = useTranslations('missionPillars');
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-gray">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
       <div className="max-w-5xl mx-auto space-y-12">
         {pillarIcons.map((Icon, idx) => {
           const color = pillarColors[idx];
           return (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100"
+              className="bg-happi-surface rounded-2xl p-8 md:p-10 shadow-none border border-happi-border"
             >
               <div className="flex items-start space-x-4 mb-6">
                 <span
@@ -55,12 +55,12 @@ export default function MissionPillars() {
                     >
                       <Icon size={20} />
                     </div>
-                    <h3 className="text-xl font-bold text-happi-dark">
+                    <h3 className="text-xl font-bold text-white">
                       {t(`pillars.${idx}.title`)}
                     </h3>
                   </div>
 
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-happi-muted leading-relaxed mb-6">
                     {t(`pillars.${idx}.intro`)}
                   </p>
 
@@ -69,7 +69,7 @@ export default function MissionPillars() {
                       {Array.from({ length: pillarItemCounts[idx] }).map((_, i) => (
                         <div
                           key={i}
-                          className="flex items-start space-x-3 bg-happi-gray rounded-lg p-4"
+                          className="flex items-start space-x-3 bg-happi-darker rounded-lg p-4"
                         >
                           <svg
                             className="w-5 h-5 text-happi-green mt-0.5 flex-shrink-0"
@@ -83,10 +83,10 @@ export default function MissionPillars() {
                             />
                           </svg>
                           <div>
-                            <span className="font-semibold text-happi-dark">
+                            <span className="font-semibold text-white">
                               {t(`pillars.${idx}.items.${i}.label`)}
                             </span>
-                            <span className="text-gray-600"> — {t(`pillars.${idx}.items.${i}.desc`)}</span>
+                            <span className="text-happi-muted"> — {t(`pillars.${idx}.items.${i}.desc`)}</span>
                           </div>
                         </div>
                       ))}
@@ -96,15 +96,15 @@ export default function MissionPillars() {
                   {pillarSubSectionCounts[idx] > 0 && (
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       {Array.from({ length: pillarSubSectionCounts[idx] }).map((_, subIdx) => (
-                        <div key={subIdx} className="bg-happi-gray rounded-xl p-6">
-                          <h4 className="font-bold text-happi-dark mb-3">
+                        <div key={subIdx} className="bg-happi-darker rounded-xl p-6">
+                          <h4 className="font-bold text-white mb-3">
                             {t(`pillars.${idx}.subSections.${subIdx}.title`)}
                           </h4>
                           <ul className="space-y-2">
                             {Array.from({ length: subSectionItemCounts[0][subIdx] }).map((_, j) => (
                               <li
                                 key={j}
-                                className="flex items-start space-x-2 text-sm text-gray-600"
+                                className="flex items-start space-x-2 text-sm text-happi-muted"
                               >
                                 <svg
                                   className="w-4 h-4 text-happi-green mt-0.5 flex-shrink-0"
@@ -127,7 +127,7 @@ export default function MissionPillars() {
                   )}
 
                   {hasFootnote[idx] && (
-                    <p className="text-gray-500 text-sm italic border-l-4 border-happi-blue/20 pl-4">
+                    <p className="text-happi-muted text-sm italic border-l-4 border-happi-blue/20 pl-4">
                       {t(`pillars.${idx}.footnote`)}
                     </p>
                   )}

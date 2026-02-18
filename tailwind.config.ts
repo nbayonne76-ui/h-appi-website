@@ -8,12 +8,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'happi-blue': '#0066FF',
-        'happi-green': '#00D084',
-        'happi-yellow': '#FFD700',
-        'happi-dark': '#2D3748',
+        'happi-blue': '#3B82F6',
+        'happi-green': '#10B981',
+        'happi-yellow': '#FBBF24',
+        'happi-dark': '#0F172A',
+        'happi-darker': '#020617',
+        'happi-surface': '#1E293B',
+        'happi-border': '#334155',
+        'happi-muted': '#94A3B8',
         'happi-gray': '#F7FAFC',
-        border: '#E2E8F0',
+        border: '#334155',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

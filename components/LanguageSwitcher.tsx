@@ -22,7 +22,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={switchLocale}
-      className="flex items-center space-x-1 px-3 py-1.5 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors text-sm font-medium text-happi-dark"
+      className="flex items-center space-x-1 px-3 py-1.5 rounded-lg border border-happi-border hover:bg-happi-surface transition-colors text-sm font-medium text-white"
       aria-label={`Switch to ${labels[otherLocale]}`}
     >
       <span className="text-base">

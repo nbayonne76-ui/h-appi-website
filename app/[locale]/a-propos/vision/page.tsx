@@ -26,12 +26,12 @@ export default async function VisionPage() {
       <main>
         <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 gradient-bg">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-happi-dark mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               {t.rich('title', {
                 highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
               })}
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-happi-muted max-w-2xl mx-auto">
               {t('subtitle')}
             </p>
           </div>

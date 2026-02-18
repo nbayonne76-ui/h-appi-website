@@ -27,12 +27,12 @@ export default async function FonctionnalitesPage() {
             <span className="inline-block px-4 py-2 bg-happi-blue/10 text-happi-blue rounded-full text-sm font-medium mb-4">
               {t('badge')}
             </span>
-            <h1 className="text-5xl font-bold text-happi-dark mb-6">
+            <h1 className="text-5xl font-bold text-white mb-6">
               {t.rich('title', {
                 highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
               })}
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-happi-muted leading-relaxed">
               {t('subtitle')}
             </p>
           </div>
@@ -40,9 +40,9 @@ export default async function FonctionnalitesPage() {
 
         <Features />
 
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-happi-dark mb-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">
               {t('whyTitle')}
             </h2>
 
@@ -50,10 +50,10 @@ export default async function FonctionnalitesPage() {
               {/* Detail 1 */}
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="text-2xl font-bold text-happi-dark mb-4">
+                  <h3 className="text-2xl font-bold text-white mb-4">
                     {t('details.0.title')}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-happi-muted leading-relaxed mb-4">
                     {t('details.0.description')}
                   </p>
                   <ul className="space-y-3">
@@ -62,39 +62,39 @@ export default async function FonctionnalitesPage() {
                         <svg className="w-5 h-5 text-happi-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-gray-600">{t(`details.0.items.${i}`)}</span>
+                        <span className="text-happi-muted">{t(`details.0.items.${i}`)}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="bg-happi-gray rounded-2xl p-8 border border-gray-100">
+                <div className="bg-happi-darker rounded-2xl p-8 border border-happi-border">
                   <div className="text-center">
                     <div className="text-6xl font-bold gradient-text mb-2">{t('details.0.statValue')}</div>
-                    <p className="text-gray-600">{t('details.0.statLabel')}</p>
+                    <p className="text-happi-muted">{t('details.0.statLabel')}</p>
                   </div>
                 </div>
               </div>
 
               {/* Detail 2 */}
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="order-2 lg:order-1 bg-happi-gray rounded-2xl p-8 border border-gray-100">
-                  <h4 className="font-semibold text-happi-dark mb-4">{t('details.1.integrationsTitle')}</h4>
+                <div className="order-2 lg:order-1 bg-happi-darker rounded-2xl p-8 border border-happi-border">
+                  <h4 className="font-semibold text-white mb-4">{t('details.1.integrationsTitle')}</h4>
                   <div className="grid grid-cols-2 gap-3">
                     {integrations.map((tool) => (
-                      <div key={tool} className="bg-white rounded-lg px-4 py-3 text-sm text-happi-dark border border-gray-200 text-center">
+                      <div key={tool} className="bg-happi-surface rounded-lg px-4 py-3 text-sm text-white border border-happi-border text-center">
                         {tool}
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="order-1 lg:order-2">
-                  <h3 className="text-2xl font-bold text-happi-dark mb-4">
+                  <h3 className="text-2xl font-bold text-white mb-4">
                     {t('details.1.title')}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-happi-muted leading-relaxed mb-4">
                     {t('details.1.description1')}
                   </p>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-happi-muted leading-relaxed">
                     {t('details.1.description2')}
                   </p>
                 </div>
@@ -103,13 +103,13 @@ export default async function FonctionnalitesPage() {
               {/* Detail 3 */}
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="text-2xl font-bold text-happi-dark mb-4">
+                  <h3 className="text-2xl font-bold text-white mb-4">
                     {t('details.2.title')}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-happi-muted leading-relaxed mb-4">
                     {t('details.2.description1')}
                   </p>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-happi-muted leading-relaxed">
                     {t('details.2.description2')}
                   </p>
                 </div>

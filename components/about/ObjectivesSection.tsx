@@ -9,13 +9,13 @@ export default function ObjectivesSection() {
   const t = useTranslations('objectives');
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-happi-dark mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             {t('title')}
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-happi-muted">
             {t('subtitle')}
           </p>
         </div>
@@ -24,10 +24,10 @@ export default function ObjectivesSection() {
           {/* Moyen Terme */}
           <div>
             <div className="flex items-center space-x-3 mb-8">
-              <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-happi-green/10 rounded-xl flex items-center justify-center">
                 <TrendingUp className="text-happi-green" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-happi-dark">
+              <h3 className="text-2xl font-bold text-white">
                 {t('midTerm.title')}
               </h3>
             </div>
@@ -36,9 +36,9 @@ export default function ObjectivesSection() {
               {Array.from({ length: 4 }).map((_, goalIdx) => (
                 <div
                   key={goalIdx}
-                  className="bg-happi-gray rounded-xl p-6 border border-gray-100"
+                  className="bg-happi-darker rounded-xl p-6 border border-happi-border"
                 >
-                  <h4 className="font-bold text-happi-dark mb-4">
+                  <h4 className="font-bold text-white mb-4">
                     {t(`midTerm.goals.${goalIdx}.category`)}
                   </h4>
                   <ul className="space-y-3">
@@ -58,7 +58,7 @@ export default function ObjectivesSection() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span className="text-gray-600">{t(`midTerm.goals.${goalIdx}.items.${i}`)}</span>
+                        <span className="text-happi-muted">{t(`midTerm.goals.${goalIdx}.items.${i}`)}</span>
                       </li>
                     ))}
                   </ul>

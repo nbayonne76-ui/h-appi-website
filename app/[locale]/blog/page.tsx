@@ -37,19 +37,19 @@ export default function BlogPage() {
                 {t('badge')}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-happi-dark mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               {t.rich('title', {
                 highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
               })}
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-happi-muted max-w-2xl mx-auto">
               {t('subtitle')}
             </p>
           </div>
         </section>
 
         {/* Category Filter */}
-        <section className="sticky top-16 z-40 bg-white border-b border-gray-100">
+        <section className="sticky top-16 z-40 bg-happi-dark border-b border-happi-border/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center space-x-2 overflow-x-auto py-4 scrollbar-hide">
               {categories.map((cat) => (
@@ -59,7 +59,7 @@ export default function BlogPage() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
                     activeCategory === cat
                       ? 'bg-happi-blue text-white'
-                      : 'bg-happi-gray text-gray-600 hover:bg-gray-200'
+                      : 'bg-happi-darker text-happi-muted hover:bg-happi-surface'
                   }`}
                 >
                   {cat}
@@ -71,9 +71,9 @@ export default function BlogPage() {
 
         {/* Featured Article */}
         {activeCategory === categories[0] && featuredArticle && (
-          <section className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
+          <section className="py-10 px-4 sm:px-6 lg:px-8 bg-happi-dark">
             <div className="max-w-5xl mx-auto">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
+              <p className="text-xs font-semibold text-happi-muted uppercase tracking-wider mb-4">
                 {t('featured')}
               </p>
               <ArticleCard article={featuredArticle} featured />
@@ -82,16 +82,16 @@ export default function BlogPage() {
         )}
 
         {/* Articles Grid */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-happi-gray">
+        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-happi-darker">
           <div className="max-w-5xl mx-auto">
             {activeCategory === categories[0] && (
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-6">
+              <p className="text-xs font-semibold text-happi-muted uppercase tracking-wider mb-6">
                 {t('allArticles')}
               </p>
             )}
 
             {filtered.length === 0 ? (
-              <div className="text-center py-16 text-gray-500">
+              <div className="text-center py-16 text-happi-muted">
                 {t('noArticles')}
               </div>
             ) : (
@@ -108,25 +108,25 @@ export default function BlogPage() {
         </section>
 
         {/* Newsletter CTA */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-dark">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-happi-dark mb-3">
+            <h2 className="text-2xl font-bold text-white mb-3">
               {t('newsletterTitle')}
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-happi-muted mb-6">
               {t('newsletterSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder={t('newsletterPlaceholder')}
-                className="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-happi-blue/20 focus:border-happi-blue"
+                className="flex-1 px-4 py-3 border border-happi-border rounded-lg focus:outline-none focus:ring-2 focus:ring-happi-blue/20 focus:border-happi-blue"
               />
               <button className="px-6 py-3 bg-happi-blue text-white rounded-lg hover:bg-opacity-90 transition-all font-medium whitespace-nowrap">
                 {t('newsletterCta')}
               </button>
             </div>
-            <p className="text-xs text-gray-400 mt-3">
+            <p className="text-xs text-happi-muted mt-3">
               {t('newsletterNote')}
             </p>
           </div>

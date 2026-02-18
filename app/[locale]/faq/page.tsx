@@ -25,10 +25,10 @@ export default async function FAQPage() {
             <span className="inline-block px-4 py-2 bg-happi-blue/10 text-happi-blue rounded-full text-sm font-medium mb-4">
               {t('badge')}
             </span>
-            <h1 className="text-5xl font-bold text-happi-dark mb-6">
+            <h1 className="text-5xl font-bold text-white mb-6">
               {t('title')}
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-happi-muted leading-relaxed">
               {t('subtitle')}
             </p>
           </div>
@@ -36,17 +36,17 @@ export default async function FAQPage() {
 
         <FAQ />
 
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-happi-dark mb-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">
               {t('resourcesTitle')}
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
               {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="bg-happi-gray rounded-2xl p-8 text-center hover:shadow-md transition-all">
+                <div key={i} className="bg-happi-darker rounded-2xl p-8 text-center hover:shadow-md transition-all">
                   <div className={`w-14 h-14 ${
-                    i === 0 ? 'bg-blue-50' : i === 1 ? 'bg-green-50' : 'bg-yellow-50'
+                    i === 0 ? 'bg-happi-blue/10' : i === 1 ? 'bg-happi-green/10' : 'bg-happi-yellow/10'
                   } rounded-xl flex items-center justify-center mx-auto mb-4`}>
                     {i === 0 && (
                       <svg className="w-7 h-7 text-happi-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -64,8 +64,8 @@ export default async function FAQPage() {
                       </svg>
                     )}
                   </div>
-                  <h3 className="font-bold text-happi-dark mb-2">{t(`resources.${i}.title`)}</h3>
-                  <p className="text-gray-600 text-sm">{t(`resources.${i}.description`)}</p>
+                  <h3 className="font-bold text-white mb-2">{t(`resources.${i}.title`)}</h3>
+                  <p className="text-happi-muted text-sm">{t(`resources.${i}.description`)}</p>
                 </div>
               ))}
             </div>

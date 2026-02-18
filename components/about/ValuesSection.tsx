@@ -17,17 +17,17 @@ const valueColors = ['blue', 'green', 'yellow', 'blue', 'green', 'yellow', 'blue
 
 const colorMap: Record<string, { bg: string; text: string; border: string }> = {
   blue: {
-    bg: 'bg-blue-50',
+    bg: 'bg-happi-blue/10',
     text: 'text-happi-blue',
     border: 'border-happi-blue/20',
   },
   green: {
-    bg: 'bg-green-50',
+    bg: 'bg-happi-green/10',
     text: 'text-happi-green',
     border: 'border-happi-green/20',
   },
   yellow: {
-    bg: 'bg-yellow-50',
+    bg: 'bg-happi-yellow/10',
     text: 'text-happi-yellow',
     border: 'border-happi-yellow/20',
   },
@@ -37,18 +37,18 @@ export default function ValuesSection() {
   const t = useTranslations('values');
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-gray">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-happi-green/10 text-happi-green rounded-full text-sm font-medium mb-4">
             {t('badge')}
           </span>
-          <h2 className="text-4xl font-bold text-happi-dark mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             {t.rich('title', {
               highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
             })}
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-happi-muted">
             {t('subtitle')}
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function ValuesSection() {
             return (
               <div
                 key={index}
-                className={`bg-white rounded-2xl p-8 border ${colors.border} hover:shadow-md transition-all`}
+                className={`bg-happi-surface rounded-2xl p-8 border ${colors.border} hover:shadow-md transition-all`}
               >
                 <div className="flex items-start space-x-4">
                   <div
@@ -68,7 +68,7 @@ export default function ValuesSection() {
                     <Icon className={colors.text} size={24} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-happi-dark mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {index + 1}. {t(`items.${index}.title`)}
                     </h3>
                     <blockquote
@@ -76,12 +76,12 @@ export default function ValuesSection() {
                     >
                       &laquo; {t(`items.${index}.quote`)} &raquo;
                     </blockquote>
-                    <p className="text-gray-600 leading-relaxed mb-4">
+                    <p className="text-happi-muted leading-relaxed mb-4">
                       {t(`items.${index}.description`)}
                     </p>
-                    <div className="bg-happi-gray rounded-lg p-4">
-                      <p className="text-sm text-gray-500">
-                        <span className="font-semibold text-happi-dark">
+                    <div className="bg-happi-dark rounded-lg p-4 border border-happi-border">
+                      <p className="text-sm text-happi-muted">
+                        <span className="font-semibold text-white">
                           {t('inPractice')}{' '}
                         </span>
                         {t(`items.${index}.practice`)}

@@ -11,7 +11,7 @@ export default function Footer() {
   const t = useTranslations('footer');
 
   return (
-    <footer className="bg-happi-dark text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-happi-darker text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8 border-t border-happi-border/50">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
           {/* Brand Column */}
@@ -24,20 +24,20 @@ export default function Footer() {
                 H&apos;<span className="text-happi-blue">appi</span>
               </span>
             </Link>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-happi-muted leading-relaxed mb-6 text-sm">
               {t('tagline')}
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-happi-blue transition-colors"
+                className="w-10 h-10 bg-happi-surface rounded-lg flex items-center justify-center hover:bg-happi-blue transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-happi-blue transition-colors"
+                className="w-10 h-10 bg-happi-surface rounded-lg flex items-center justify-center hover:bg-happi-blue transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Links Columns */}
           {columnKeys.map((colKey, colIdx) => (
             <div key={colKey}>
-              <h3 className="font-semibold text-white mb-4">
+              <h3 className="font-semibold text-white mb-4 text-sm">
                 {t(`columns.${colKey}.title`)}
               </h3>
               <ul className="space-y-3">
@@ -56,7 +56,7 @@ export default function Footer() {
                   <li key={linkIdx}>
                     <a
                       href={t(`columns.${colKey}.links.${linkIdx}.href`)}
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                      className="text-happi-muted hover:text-white transition-colors text-sm"
                     >
                       {t(`columns.${colKey}.links.${linkIdx}.label`)}
                     </a>
@@ -68,11 +68,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-gray-500 text-sm">
+        <div className="border-t border-happi-border/50 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <p className="text-happi-muted text-sm">
             &copy; {new Date().getFullYear()} {t('copyright')}
           </p>
-          <div className="flex items-center space-x-2 text-sm text-gray-500">
+          <div className="flex items-center space-x-2 text-sm text-happi-muted">
             <span className="w-2 h-2 bg-happi-green rounded-full" />
             <span>{t('badge')}</span>
           </div>

@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const sectionIcons = [Eye, Heart, Coins, Users];
 const sectionColors = [
-  { color: 'bg-blue-50 text-happi-blue', border: 'hover:border-happi-blue/30' },
-  { color: 'bg-green-50 text-happi-green', border: 'hover:border-happi-green/30' },
-  { color: 'bg-yellow-50 text-happi-yellow', border: 'hover:border-happi-yellow/30' },
-  { color: 'bg-blue-50 text-happi-blue', border: 'hover:border-happi-blue/30' },
+  { color: 'bg-happi-blue/10 text-happi-blue', border: 'hover:border-happi-blue/30' },
+  { color: 'bg-happi-green/10 text-happi-green', border: 'hover:border-happi-green/30' },
+  { color: 'bg-happi-yellow/10 text-happi-yellow', border: 'hover:border-happi-yellow/30' },
+  { color: 'bg-happi-blue/10 text-happi-blue', border: 'hover:border-happi-blue/30' },
 ];
 const sectionHrefs = ['/a-propos/vision', '/a-propos/valeurs', '/a-propos/strategie', '/a-propos/rejoindre'];
 const tagIcons = [Target, Sparkles, Coins, ShieldCheck];
@@ -48,21 +48,21 @@ export default async function AProposPage() {
             <span className="inline-block px-4 py-2 bg-happi-blue/10 text-happi-blue rounded-full text-sm font-medium mb-6">
               {t('badge')}
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-happi-dark mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {t('titleLine1')}<br />
               {t('titleLine2')}<br />
               {t.rich('titleLine3', {
                 highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
               })}
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-happi-muted leading-relaxed max-w-2xl mx-auto">
               {t('subtitle')}
             </p>
           </div>
         </section>
 
         {/* Key Numbers */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-happi-dark border-b border-happi-border/50">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {Array.from({ length: 4 }).map((_, i) => (
@@ -70,7 +70,7 @@ export default async function AProposPage() {
                   <div className="text-3xl font-bold gradient-text mb-1">
                     {t(`keyNumbers.${i}.value`)}
                   </div>
-                  <div className="text-sm text-gray-500">{t(`keyNumbers.${i}.label`)}</div>
+                  <div className="text-sm text-happi-muted">{t(`keyNumbers.${i}.label`)}</div>
                 </div>
               ))}
             </div>
@@ -78,17 +78,17 @@ export default async function AProposPage() {
         </section>
 
         {/* Promise Banner */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-dark">
           <div className="max-w-3xl mx-auto text-center">
-            <blockquote className="text-xl md:text-2xl font-semibold text-happi-dark leading-relaxed mb-8">
+            <blockquote className="text-xl md:text-2xl font-semibold text-white leading-relaxed mb-8">
               &laquo; {t('quote')} &raquo;
             </blockquote>
 
             <div className="flex flex-wrap justify-center gap-4">
               {tagIcons.map((Icon, i) => (
-                <div key={i} className="flex items-center space-x-2 bg-happi-gray rounded-full px-4 py-2">
+                <div key={i} className="flex items-center space-x-2 bg-happi-darker rounded-full px-4 py-2">
                   <Icon className={tagColors[i]} size={16} />
-                  <span className="text-sm text-happi-dark font-medium">
+                  <span className="text-sm text-white font-medium">
                     {t(`tags.${i}`)}
                   </span>
                 </div>
@@ -98,12 +98,12 @@ export default async function AProposPage() {
         </section>
 
         {/* Section Cards */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-gray">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-darker">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold text-happi-dark mb-2 text-center">
+            <h2 className="text-2xl font-bold text-white mb-2 text-center">
               {t('exploreTitle')}
             </h2>
-            <p className="text-gray-500 text-center mb-10">
+            <p className="text-happi-muted text-center mb-10">
               {t('exploreSubtitle')}
             </p>
 
@@ -112,21 +112,21 @@ export default async function AProposPage() {
                 <Link
                   key={i}
                   href={sectionHrefs[i]}
-                  className={`group bg-white rounded-2xl p-8 border border-gray-100 ${sectionColors[i].border} hover:shadow-lg transition-all`}
+                  className={`group bg-happi-surface rounded-2xl p-8 border border-happi-border ${sectionColors[i].border} hover:shadow-lg transition-all`}
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${sectionColors[i].color}`}>
                       <Icon size={28} />
                     </div>
                     <ArrowRight
-                      className="text-gray-300 group-hover:text-happi-blue group-hover:translate-x-1 transition-all"
+                      className="text-happi-muted group-hover:text-happi-blue group-hover:translate-x-1 transition-all"
                       size={20}
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-happi-dark mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {t(`sections.${i}.title`)}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-happi-muted leading-relaxed">
                     {t(`sections.${i}.description`)}
                   </p>
                 </Link>
@@ -136,17 +136,17 @@ export default async function AProposPage() {
         </section>
 
         {/* Quick History */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-dark">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-happi-dark mb-6">
+            <h2 className="text-2xl font-bold text-white mb-6">
               {t('historyTitle')}
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-happi-muted leading-relaxed mb-6">
               {t('historyP1')}
             </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <p className="text-happi-muted leading-relaxed mb-8">
               {t.rich('historyP2', {
-                strong: (chunks) => <strong className="text-happi-dark">{chunks}</strong>,
+                strong: (chunks) => <strong className="text-white">{chunks}</strong>,
               })}
             </p>
             <Link
