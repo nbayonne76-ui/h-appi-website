@@ -157,7 +157,7 @@
     "badge": "Our beginnings",
     "title": "We are a <highlight>young startup</highlight>",
     "subtitle": "H'appi was launched in early 2026. We are supporting our first clients and building our reputation project by project.",
-    "honesty": "We don't have any client testimonials to display here yet — and we'd rather be honest than make up fake reviews.",
+    "honesty": "We don't have any client testimonials to display here yet, and we'd rather be honest than make up fake reviews.",
     "commitments": [
       { "title": "Total transparency", "description": "No fake testimonials, no inflated numbers. What you see here is the reality of our young company." },
       { "title": "First clients onboarded", "description": "We are currently working with our first partners. Their feedback will appear here as soon as they are ready to share." },
@@ -181,7 +181,7 @@
   },
   "cta": {
     "title": "Want to learn more?",
-    "subtitle": "We are a young startup and every project matters to us. Let's discuss your needs — no commitment, full transparency.",
+    "subtitle": "We are a young startup and every project matters to us. Let's discuss your needs, no commitment, full transparency.",
     "ctaPrimary": "Let's discuss your project",
     "ctaSecondary": "See pricing",
     "note": "Response within 48h. Free and detailed quote."
@@ -322,7 +322,7 @@
     "briefTitle": "In brief",
     "briefP1": "Launched in early 2026, H'appi is a young startup disrupting custom digital pricing through optimized cloud infrastructure, a 100% open-source stack and a lean organization.",
     "briefP2": "We support our first clients with a simple promise:",
-    "briefHighlight": "custom-built, accessible, scalable — and above all, honest.",
+    "briefHighlight": "custom-built, accessible, scalable, and above all, honest.",
     "briefCta": "Discover our vision"
   },
   "visionPage": {
@@ -710,7 +710,7 @@
     ],
     "historyTitle": "In brief",
     "historyP1": "Launched in early 2026, H'appi is a young startup disrupting custom digital pricing through optimized cloud infrastructure, a 100% open-source stack and a lean organization.",
-    "historyP2": "We support our first clients with a simple promise: <strong>custom, accessible, scalable — and above all, honest.</strong>",
+    "historyP2": "We support our first clients with a simple promise: <strong>custom, accessible, scalable, and above all, honest.</strong>",
     "historyCta": "Discover our vision"
   },
   "pageVision": {

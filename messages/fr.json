@@ -157,7 +157,7 @@
     "badge": "Nos débuts",
     "title": "Nous sommes une <highlight>jeune startup</highlight>",
     "subtitle": "H'appi a été lancée début 2026. Nous accompagnons nos premiers clients et construisons notre réputation projet après projet.",
-    "honesty": "Nous n'avons pas encore de témoignages clients à afficher ici — et nous préférons être honnêtes plutôt que d'inventer de faux avis.",
+    "honesty": "Nous n'avons pas encore de témoignages clients à afficher ici, et nous préférons être honnêtes plutôt que d'inventer de faux avis.",
     "commitments": [
       { "title": "Transparence totale", "description": "Pas de faux témoignages, pas de chiffres gonflés. Ce que vous voyez ici, c'est la réalité de notre jeune entreprise." },
       { "title": "Premiers clients accompagnés", "description": "Nous travaillons actuellement avec nos premiers partenaires. Leurs retours arriveront ici dès qu'ils seront prêts à témoigner." },
@@ -181,7 +181,7 @@
   },
   "cta": {
     "title": "Envie d'en savoir plus ?",
-    "subtitle": "Nous sommes une jeune startup et chaque projet compte pour nous. Discutons de vos besoins — sans engagement, en toute transparence.",
+    "subtitle": "Nous sommes une jeune startup et chaque projet compte pour nous. Discutons de vos besoins, sans engagement et en toute transparence.",
     "ctaPrimary": "Discutons de votre projet",
     "ctaSecondary": "Voir les tarifs",
     "note": "Réponse sous 48h. Devis gratuit et détaillé."
@@ -322,7 +322,7 @@
     "briefTitle": "En bref",
     "briefP1": "Lancée début 2026, H'appi est une jeune startup qui casse les prix du digital sur-mesure grâce à des infrastructures cloud optimisées, une stack 100% open-source et une organisation lean.",
     "briefP2": "Nous accompagnons nos premiers clients avec une promesse simple :",
-    "briefHighlight": "sur-mesure, accessible, évolutif — et surtout honnête.",
+    "briefHighlight": "sur-mesure, accessible, évolutif, et surtout honnête.",
     "briefCta": "Découvrir notre vision"
   },
   "visionPage": {
@@ -710,7 +710,7 @@
     ],
     "historyTitle": "En bref",
     "historyP1": "Lancée début 2026, H'appi est une jeune startup qui casse les prix du digital sur-mesure grâce à des infrastructures cloud optimisées, une stack 100% open-source et une organisation lean.",
-    "historyP2": "Nous accompagnons nos premiers clients avec une promesse simple : <strong>sur-mesure, accessible, évolutif — et surtout honnête.</strong>",
+    "historyP2": "Nous accompagnons nos premiers clients avec une promesse simple : <strong>sur-mesure, accessible, évolutif, et surtout honnête.</strong>",
     "historyCta": "Découvrir notre vision"
   },
   "pageVision": {
