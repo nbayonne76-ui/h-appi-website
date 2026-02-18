@@ -55,7 +55,7 @@ export default function Hero() {
                 {t('ctaPrimary')}
               </a>
               <a
-                href="#pricing"
+                href="/tarifs"
                 className="inline-flex items-center justify-center px-8 py-3.5 border border-happi-border text-white rounded-lg hover:bg-happi-surface transition-all font-medium"
               >
                 <TrendingUp className="mr-2" size={18} />
