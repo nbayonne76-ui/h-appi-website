@@ -152,11 +152,15 @@ export default function JoinSection() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {[Mail, Globe, MessageCircle, CalendarDays].map((Icon, i) => (
-              <div key={i} className="bg-happi-surface/10 rounded-xl p-4 backdrop-blur-sm">
+              <a
+                key={i}
+                href={i === 0 ? `mailto:${t(`contact.channels.${i}.value`)}` : i === 1 ? `https://${t(`contact.channels.${i}.value`)}` : '#contact'}
+                className="bg-happi-surface/10 rounded-xl p-4 backdrop-blur-sm hover:bg-happi-surface/20 transition-colors block"
+              >
                 <Icon className="mx-auto mb-2" size={24} />
                 <p className="text-sm font-medium">{t(`contact.channels.${i}.label`)}</p>
                 <p className="text-xs text-white/80">{t(`contact.channels.${i}.value`)}</p>
-              </div>
+              </a>
             ))}
           </div>
 
