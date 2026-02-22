@@ -45,12 +45,12 @@ export default function Footer() {
               <ul className="space-y-3">
                 {Array.from({ length: linkCounts[colIdx] }).map((_, linkIdx) => (
                   <li key={linkIdx}>
-                    <a
-                      href={t(`columns.${colKey}.links.${linkIdx}.href`)}
+                    <Link
+                      href={t(`columns.${colKey}.links.${linkIdx}.href`) as any}
                       className="text-happi-muted hover:text-white transition-colors text-sm"
                     >
                       {t(`columns.${colKey}.links.${linkIdx}.label`)}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
