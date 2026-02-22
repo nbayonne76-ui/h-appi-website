@@ -30,7 +30,7 @@ export default function UseCases() {
   const currentIcons = activeTab === 'cx' ? cxIcons : supplyIcons;
 
   return (
-    <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
+    <section id="use-cases" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-happi-green/10 text-happi-green rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-green/20">
