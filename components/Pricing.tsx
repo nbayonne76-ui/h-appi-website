@@ -193,7 +193,7 @@ export default function Pricing() {
                   {t('finalCtaPrimary')}
                 </a>
                 <a
-                  href="/a-propos"
+                  href="/faq"
                   className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium"
                 >
                   {t('finalCtaSecondary')}
