@@ -154,7 +154,15 @@ export default function JoinSection() {
             {[Mail, Globe, MessageCircle, CalendarDays].map((Icon, i) => (
               <a
                 key={i}
-                href={i === 0 ? `mailto:${t(`contact.channels.${i}.value`)}` : i === 1 ? `https://${t(`contact.channels.${i}.value`)}` : '#contact'}
+                href={
+                  i === 0
+                    ? `mailto:nbayonne76@gmail.com`
+                    : i === 1
+                    ? `https://www.happi.ai`
+                    : i === 2
+                    ? `mailto:nbayonne76@gmail.com?subject=Question`
+                    : `mailto:nbayonne76@gmail.com?subject=RDV d%C3%A9couverte H%27appi`
+                }
                 className="bg-happi-surface/10 rounded-xl p-4 backdrop-blur-sm hover:bg-happi-surface/20 transition-colors block"
               >
                 <Icon className="mx-auto mb-2" size={24} />

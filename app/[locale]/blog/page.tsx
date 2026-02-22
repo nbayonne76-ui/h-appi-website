@@ -107,7 +107,7 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Newsletter CTA */}
+        {/* Contact CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-dark">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-white mb-3">
@@ -116,17 +116,13 @@ export default function BlogPage() {
             <p className="text-happi-muted mb-6">
               {t('newsletterSubtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder={t('newsletterPlaceholder')}
-                className="flex-1 px-4 py-3 border border-happi-border rounded-lg focus:outline-none focus:ring-2 focus:ring-happi-blue/20 focus:border-happi-blue"
-              />
-              <button className="px-6 py-3 bg-happi-blue text-white rounded-lg hover:bg-opacity-90 transition-all font-medium whitespace-nowrap">
-                {t('newsletterCta')}
-              </button>
-            </div>
-            <p className="text-xs text-happi-muted mt-3">
+            <a
+              href="mailto:nbayonne76@gmail.com?subject=Prise de contact H'appi"
+              className="inline-flex items-center px-8 py-3 bg-happi-blue text-white rounded-lg hover:bg-opacity-90 transition-all font-medium"
+            >
+              {t('newsletterCta')}
+            </a>
+            <p className="text-xs text-happi-muted mt-4">
               {t('newsletterNote')}
             </p>
           </div>

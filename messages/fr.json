@@ -226,7 +226,7 @@
     "finalCtaTitle": "Prêt à discuter de votre projet ?",
     "finalCtaSubtitle": "Chaque projet est unique. Parlons du vôtre pour vous proposer une solution et un tarif parfaitement adaptés.",
     "finalCtaPrimary": "Discutons de votre projet",
-    "finalCtaSecondary": "Voir nos réalisations",
+    "finalCtaSecondary": "En savoir plus sur H'appi",
     "finalCtaNote": "Devis gratuit • Sans engagement • Réponse sous 48h"
   },
   "testimonials": {
@@ -994,12 +994,12 @@
           "value": "www.happi.ai"
         },
         {
-          "label": "Chat en direct",
-          "value": "Discutez avec notre équipe"
+          "label": "Réponse rapide",
+          "value": "Sous 24h ouvrées"
         },
         {
           "label": "RDV découverte",
-          "value": "30 min gratuites"
+          "value": "30 min par email"
         }
       ],
       "closing": "Ensemble, créons des solutions qui vous ressemblent.<br></br>Ensemble, révolutionnons les prix du marché.<br></br>Ensemble, transformons vos données en intelligence métier.<br></br><highlight>Ensemble, faisons grandir H'appi.</highlight>"
@@ -1012,11 +1012,11 @@
     "featured": "Article mis en avant",
     "allArticles": "Tous les articles",
     "noArticles": "Aucun article dans cette catégorie pour le moment.",
-    "newsletterTitle": "Restez informé",
-    "newsletterSubtitle": "Recevez nos analyses mensuelles sur l'IA, les chatbots et le digital sur-mesure directement dans votre boîte mail.",
+    "newsletterTitle": "Une question ? Un projet ?",
+    "newsletterSubtitle": "On préfère une vraie conversation à un formulaire générique. Écrivez-nous directement, on répond sous 24h.",
     "newsletterPlaceholder": "votre@email.com",
-    "newsletterCta": "S'inscrire",
-    "newsletterNote": "Pas de spam. Désinscription en un clic. Conforme RGPD.",
+    "newsletterCta": "Nous écrire",
+    "newsletterNote": "Réponse humaine garantie • Sans engagement • Sous 24h ouvrées.",
     "categories": [
       "Tous",
       "Produit",
