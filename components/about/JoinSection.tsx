@@ -19,7 +19,7 @@ export default function JoinSection() {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {/* Entreprise */}
-          <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:shadow-lg transition-all">
+          <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 hover:border-happi-blue/30 transition-all duration-200">
             <div className="w-14 h-14 bg-happi-blue/10 rounded-xl flex items-center justify-center mb-6">
               <Building2 className="text-happi-blue" size={28} />
             </div>
@@ -46,7 +46,7 @@ export default function JoinSection() {
           </div>
 
           {/* Talent */}
-          <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:shadow-lg transition-all">
+          <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 hover:border-happi-blue/30 transition-all duration-200">
             <div className="w-14 h-14 bg-happi-green/10 rounded-xl flex items-center justify-center mb-6">
               <Code2 className="text-happi-green" size={28} />
             </div>
@@ -70,7 +70,7 @@ export default function JoinSection() {
           </div>
 
           {/* Partenaire */}
-          <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:shadow-lg transition-all">
+          <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 hover:border-happi-blue/30 transition-all duration-200">
             <div className="w-14 h-14 bg-happi-yellow/10 rounded-xl flex items-center justify-center mb-6">
               <Users className="text-happi-yellow" size={28} />
             </div>

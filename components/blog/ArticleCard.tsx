@@ -17,7 +17,7 @@ export default function ArticleCard({
   return (
     <Link
       href={`/blog/${article.slug}`}
-      className={`group block bg-happi-surface rounded-2xl border border-happi-border hover:border-happi-blue/20 hover:shadow-lg transition-all overflow-hidden ${
+      className={`group block bg-happi-surface rounded-2xl border border-happi-border hover:border-happi-blue/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 transition-all duration-200 overflow-hidden ${
         featured ? 'md:col-span-2' : ''
       }`}
     >

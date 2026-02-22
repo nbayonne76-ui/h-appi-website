@@ -59,7 +59,7 @@ export default function ValuesSection() {
             return (
               <div
                 key={index}
-                className={`bg-happi-surface rounded-2xl p-8 border ${colors.border} hover:shadow-md transition-all`}
+                className={`bg-happi-surface rounded-2xl p-8 border ${colors.border} hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 transition-all duration-200`}
               >
                 <div className="flex items-start space-x-4">
                   <div

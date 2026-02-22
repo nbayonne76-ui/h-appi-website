@@ -11,32 +11,32 @@
     "cta": "Demander une démo"
   },
   "hero": {
-    "badge": "L'IA qui apprend votre métier",
-    "title": "Des chatbots intelligents qui <highlight>évoluent</highlight> avec votre entreprise",
-    "subtitle": "Automatisez votre service client et votre supply chain avec des chatbots personnalisés qui comprennent vraiment votre métier. Sur-mesure, transparent, accessible.",
+    "badge": "Chatbot sur-mesure pour votre entreprise",
+    "title": "Votre assistant qui répond à vos clients, <highlight>même quand vous dormez</highlight>",
+    "subtitle": "On crée un chatbot qui connaît votre entreprise par cœur. Déployé en 3 semaines. 4x moins cher que les agences.",
     "stats": {
       "adoption": {
-        "value": "85%",
-        "label": "des entreprises adoptent l'IA (source : McKinsey 2025)"
+        "value": "3 sem.",
+        "label": "Délai de déploiement"
       },
       "availability": {
         "value": "24/7",
-        "label": "Disponibilité du chatbot"
+        "label": "Disponibilité totale"
       },
       "cost": {
         "value": "4x",
-        "label": "moins cher que le marché"
+        "label": "Moins cher que le marché"
       }
     },
     "ctaPrimary": "Discutons de votre projet",
     "ctaSecondary": "Voir les tarifs",
-    "trustHosting": "Données hébergées en France",
-    "trustRgpd": "Conforme RGPD",
+    "trustHosting": "Hébergé en France",
+    "trustRgpd": "Sans engagement",
     "chatAssistant": "H'appi Assistant",
     "chatOnline": "En ligne",
     "chatMsg1": "Bonjour ! Je suis l'assistant H'appi. Comment puis-je vous aider aujourd'hui ?",
     "chatMsg2": "Où en est ma commande #FR12345 ?",
-    "chatMsg3": "Votre commande #FR12345 est actuellement en transit. Livraison prévue demain entre 9h et 12h. 📦",
+    "chatMsg3": "Votre commande #FR12345 est en transit. Livraison prévue demain entre 9h et 12h. 📦",
     "floatResolution": "Sur-mesure",
     "floatResolutionValue": "100%",
     "floatResponse": "Startup française",
@@ -44,7 +44,7 @@
   },
   "problemSolution": {
     "title": "Le problème que nous résolvons",
-    "subtitle": "53% des entreprises françaises placent l'expérience client comme priorité n°1, mais les outils actuels ne sont pas à la hauteur.",
+    "subtitle": "Vos clients veulent des réponses rapides. Vos équipes veulent moins de tâches répétitives. Les chatbots génériques n'aident ni les uns ni les autres.",
     "withoutTitle": "Sans H'appi",
     "withTitle": "Avec H'appi",
     "problems": [
@@ -287,7 +287,7 @@
   },
   "cta": {
     "title": "Envie d'en savoir plus ?",
-    "subtitle": "Nous sommes une jeune startup et chaque projet compte pour nous. Discutons de vos besoins, sans engagement et en toute transparence.",
+    "subtitle": "Un échange de 30 minutes. Zéro jargon. On vous dit honnêtement si H'appi correspond à votre situation.",
     "ctaPrimary": "Discutons de votre projet",
     "ctaSecondary": "Voir les tarifs",
     "note": "Réponse sous 48h. Devis gratuit et détaillé."
@@ -1124,10 +1124,10 @@
   "aboutSubNav": {
     "overview": "Vue d'ensemble",
     "links": [
-      "Vision & Mission",
-      "Nos Valeurs",
-      "Stratégie & Prix",
-      "Rejoindre H'appi"
+      "Notre vision",
+      "Nos valeurs",
+      "Notre stratégie",
+      "Contact"
     ]
   },
   "pageFonctionnalites": {

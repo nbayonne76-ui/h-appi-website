@@ -43,7 +43,7 @@ export default function Features() {
           {icons.map((Icon, index) => (
             <div
               key={index}
-              className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:border-happi-blue/30 transition-all duration-300 group"
+              className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:border-happi-blue/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20 transition-all duration-200 group"
             >
               <div
                 className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${colorMap[colors[index]]} group-hover:scale-110 transition-transform`}

@@ -11,27 +11,27 @@
     "cta": "Request a Demo"
   },
   "hero": {
-    "badge": "AI that learns your business",
-    "title": "Intelligent chatbots that <highlight>evolve</highlight> with your company",
-    "subtitle": "Automate your customer service and supply chain with custom chatbots that truly understand your business. Tailored, transparent, affordable.",
+    "badge": "Custom chatbot for your business",
+    "title": "Your assistant that answers clients, <highlight>even while you sleep</highlight>",
+    "subtitle": "We build a chatbot that knows your business inside out. Deployed in 3 weeks. 4x cheaper than agencies.",
     "stats": {
       "adoption": {
-        "value": "85%",
-        "label": "of companies adopt AI (source: McKinsey 2025)"
+        "value": "3 wks",
+        "label": "Deployment time"
       },
       "availability": {
         "value": "24/7",
-        "label": "Chatbot availability"
+        "label": "Total availability"
       },
       "cost": {
         "value": "4x",
-        "label": "cheaper than the market"
+        "label": "Cheaper than the market"
       }
     },
     "ctaPrimary": "Let's discuss your project",
     "ctaSecondary": "See pricing",
-    "trustHosting": "Data hosted in France",
-    "trustRgpd": "GDPR compliant",
+    "trustHosting": "Hosted in France",
+    "trustRgpd": "No commitment",
     "chatAssistant": "H'appi Assistant",
     "chatOnline": "Online",
     "chatMsg1": "Hello! I'm the H'appi assistant. How can I help you today?",
@@ -44,7 +44,7 @@
   },
   "problemSolution": {
     "title": "The problem we solve",
-    "subtitle": "53% of French companies rank customer experience as their #1 priority, but current tools fall short.",
+    "subtitle": "Your clients want fast answers. Your teams want fewer repetitive tasks. Generic chatbots help neither.",
     "withoutTitle": "Without H'appi",
     "withTitle": "With H'appi",
     "problems": [
@@ -287,7 +287,7 @@
   },
   "cta": {
     "title": "Want to learn more?",
-    "subtitle": "We are a young startup and every project matters to us. Let's discuss your needs, no commitment, full transparency.",
+    "subtitle": "A 30-minute conversation. Zero jargon. We'll tell you honestly whether H'appi is the right fit for you.",
     "ctaPrimary": "Let's discuss your project",
     "ctaSecondary": "See pricing",
     "note": "Response within 48h. Free and detailed quote."
@@ -1124,10 +1124,10 @@
   "aboutSubNav": {
     "overview": "Overview",
     "links": [
-      "Vision & Mission",
-      "Our Values",
-      "Strategy & Pricing",
-      "Join H'appi"
+      "Our vision",
+      "Our values",
+      "Our strategy",
+      "Contact"
     ]
   },
   "pageFonctionnalites": {
