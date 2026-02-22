@@ -35,7 +35,7 @@ export default function CTASection({ hidePricing = false }: { hidePricing?: bool
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:nbayonne76@gmail.com"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-happi-blue rounded-lg hover:shadow-xl transition-all font-medium"
+                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-white text-happi-blue rounded-lg hover:shadow-xl transition-all font-medium active:scale-[0.97]"
               >
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}
@@ -43,7 +43,7 @@ export default function CTASection({ hidePricing = false }: { hidePricing?: bool
               {!hidePricing && (
                 <a
                   href="/tarifs"
-                  className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium"
+                  className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium active:scale-[0.97]"
                 >
                   {t('ctaSecondary')}
                   <ArrowRight className="ml-2" size={18} />

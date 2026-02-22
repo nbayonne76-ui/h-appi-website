@@ -35,7 +35,7 @@ export default function JoinSection() {
             <div className="space-y-2">
               <a
                 href="#contact"
-                className="block w-full text-center bg-happi-blue text-white py-3 rounded-lg hover:bg-opacity-90 transition-all font-medium text-sm"
+                className="btn-shimmer block w-full text-center bg-happi-blue text-white py-3 rounded-lg hover:bg-opacity-90 transition-all font-medium text-sm active:scale-[0.97]"
               >
                 {t('enterprise.cta')}
               </a>

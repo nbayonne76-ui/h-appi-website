@@ -46,6 +46,59 @@
     text-wrap: balance;
   }
 
+  /* ─── Button shimmer sweep ───────────────────────────────────────────────── */
+  /* Lumière qui traverse le bouton au survol — feedback de haute qualité      */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.16),
+      transparent
+    );
+    transition: left 0.55s ease;
+    pointer-events: none;
+  }
+
+  .btn-shimmer:hover::before {
+    left: 160%;
+  }
+
+  /* ─── Nav link animated underline ───────────────────────────────────────── */
+  /* Soulignement qui glisse de gauche à droite au survol / état actif         */
+  .nav-link-animated {
+    position: relative;
+  }
+
+  .nav-link-animated::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--happi-blue);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-link-animated:hover::after,
+  .nav-link-animated.is-active::after {
+    transform: scaleX(1);
+  }
+
   .gradient-text {
     @apply bg-gradient-to-r from-happi-blue to-happi-green bg-clip-text text-transparent;
   }

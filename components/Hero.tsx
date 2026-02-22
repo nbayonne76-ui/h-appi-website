@@ -3,6 +3,7 @@
 import { MessageCircle, Sparkles, TrendingUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { motion, useReducedMotion } from 'framer-motion';
+import { CountUp } from '@/components/ui/CountUp';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -45,15 +46,15 @@ export default function Hero() {
             {/* Stats */}
             <motion.div {...item(0.3)} className="grid grid-cols-3 gap-6 pt-4">
               <div>
-                <div className="text-3xl font-bold text-happi-blue">{t('stats.adoption.value')}</div>
+                <CountUp value={t('stats.adoption.value')} className="text-3xl font-bold text-happi-blue" />
                 <div className="text-sm text-happi-muted">{t('stats.adoption.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-happi-green">{t('stats.availability.value')}</div>
+                <CountUp value={t('stats.availability.value')} className="text-3xl font-bold text-happi-green" />
                 <div className="text-sm text-happi-muted">{t('stats.availability.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-happi-yellow">{t('stats.cost.value')}</div>
+                <CountUp value={t('stats.cost.value')} className="text-3xl font-bold text-happi-yellow" />
                 <div className="text-sm text-happi-muted">{t('stats.cost.label')}</div>
               </div>
             </motion.div>
@@ -62,14 +63,14 @@ export default function Hero() {
             <motion.div {...item(0.4)} className="flex flex-col sm:flex-row gap-4 pt-2">
               <a
                 href="#demo"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium"
+                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium active:scale-[0.97]"
               >
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}
               </a>
               <a
                 href="/tarifs"
-                className="inline-flex items-center justify-center px-8 py-3.5 border border-happi-border text-white rounded-lg hover:bg-happi-surface transition-all font-medium"
+                className="inline-flex items-center justify-center px-8 py-3.5 border border-happi-border text-white rounded-lg hover:bg-happi-surface transition-all font-medium active:scale-[0.97]"
               >
                 <TrendingUp className="mr-2" size={18} />
                 {t('ctaSecondary')}

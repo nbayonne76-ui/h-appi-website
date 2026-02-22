@@ -38,9 +38,9 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`transition-colors font-medium text-sm ${
+                className={`nav-link-animated transition-colors font-medium text-sm ${
                   pathname === item.href
-                    ? 'text-happi-blue'
+                    ? 'text-happi-blue is-active'
                     : 'text-happi-muted hover:text-white'
                 }`}
               >
@@ -50,7 +50,7 @@ export default function Header() {
             <LanguageSwitcher />
             <Link
               href="/#demo"
-              className="bg-happi-blue text-white px-5 py-2 rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/20 text-sm font-medium"
+              className="btn-shimmer bg-happi-blue text-white px-5 py-2 rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/20 text-sm font-medium active:scale-[0.97]"
             >
               {t('cta')}
             </Link>

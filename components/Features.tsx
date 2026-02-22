@@ -45,7 +45,7 @@ export default function Features() {
             <StaggerItem key={index}>
               <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:border-happi-blue/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20 transition-all duration-200 group h-full">
                 <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${colorMap[colors[index]]} group-hover:scale-110 transition-transform`}
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${colorMap[colors[index]]} group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300`}
                 >
                   <Icon size={24} />
                 </div>
