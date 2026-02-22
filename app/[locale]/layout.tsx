@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { locales } from '@/i18n/config';
 import { getTranslations } from 'next-intl/server';
+import { FloatingCTA } from '@/components/ui/FloatingCTA';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <FloatingCTA />
         </NextIntlClientProvider>
       </body>
     </html>

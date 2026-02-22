@@ -100,7 +100,17 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-happi-blue to-happi-green bg-clip-text text-transparent;
+    background: linear-gradient(90deg, #3B82F6 0%, #10B981 50%, #3B82F6 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s linear infinite;
+  }
+
+  /* ─── Ticker scrolling strip ─────────────────────────────────────────────── */
+  .ticker-track {
+    animation: ticker-scroll 35s linear infinite;
   }
 
   .gradient-bg {
@@ -115,4 +125,15 @@
     background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
   }
+}
+
+/* ─── Keyframes (outside layers for global scope) ───────────────────────── */
+@keyframes gradient-shift {
+  from { background-position: 0% center; }
+  to   { background-position: 200% center; }
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

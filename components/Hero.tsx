@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { MessageCircle, Sparkles, TrendingUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -8,6 +9,14 @@ import { CountUp } from '@/components/ui/CountUp';
 export default function Hero() {
   const t = useTranslations('hero');
   const prefersReduced = useReducedMotion();
+  const [chatKey, setChatKey] = useState(0);
+
+  // Replay chat animation every 7s (messages finish at ~1.7s + 5s reading time)
+  useEffect(() => {
+    if (prefersReduced) return;
+    const timer = setInterval(() => setChatKey((k) => k + 1), 7000);
+    return () => clearInterval(timer);
+  }, [prefersReduced]);
 
   const item = (delay: number) => ({
     initial: { opacity: 0, y: prefersReduced ? 0 : 20 },
@@ -117,8 +126,8 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Chat Messages */}
-                <div className="space-y-3">
+                {/* Chat Messages — key forces remount → replays all framer-motion animations */}
+                <div key={chatKey} className="space-y-3">
                   <motion.div
                     className="flex"
                     initial={{ opacity: 0, x: prefersReduced ? 0 : -10 }}
