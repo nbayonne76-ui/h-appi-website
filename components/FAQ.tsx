@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { FadeInUp, Stagger, StaggerItem, CollapseContent } from '@/components/ui/Animate';
 
 const FAQ_COUNT = 7;
 
@@ -13,7 +14,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
+        <FadeInUp className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">
             {t('badge')}
           </span>
@@ -23,38 +24,35 @@ export default function FAQ() {
           <p className="text-lg text-happi-muted">
             {t('subtitle')}
           </p>
-        </div>
+        </FadeInUp>
 
-        <div className="space-y-3">
+        <Stagger className="space-y-3">
           {Array.from({ length: FAQ_COUNT }).map((_, index) => (
-            <div
-              key={index}
-              className="bg-happi-surface rounded-xl border border-happi-border overflow-hidden"
-            >
-              <button
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-happi-dark/50 transition-colors"
-              >
-                <span className="font-medium pr-4 text-sm">
-                  {t(`items.${index}.question`)}
-                </span>
-                <ChevronDown
-                  className={`text-happi-blue flex-shrink-0 transition-transform ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                  size={18}
-                />
-              </button>
-              {openIndex === index && (
-                <div className="px-5 pb-5 text-happi-muted leading-relaxed text-sm">
-                  {t(`items.${index}.answer`)}
-                </div>
-              )}
-            </div>
+            <StaggerItem key={index}>
+              <div className="bg-happi-surface rounded-xl border border-happi-border overflow-hidden">
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-happi-dark/50 transition-colors"
+                >
+                  <span className="font-medium pr-4 text-sm">
+                    {t(`items.${index}.question`)}
+                  </span>
+                  <ChevronDown
+                    className={`text-happi-blue flex-shrink-0 transition-transform duration-200 ${
+                      openIndex === index ? 'rotate-180' : ''
+                    }`}
+                    size={18}
+                  />
+                </button>
+                <CollapseContent isOpen={openIndex === index}>
+                  <div className="px-5 pb-5 text-happi-muted leading-relaxed text-sm">
+                    {t(`items.${index}.answer`)}
+                  </div>
+                </CollapseContent>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

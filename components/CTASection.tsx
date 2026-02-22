@@ -2,6 +2,7 @@
 
 import { MessageCircle, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { ScaleIn } from '@/components/ui/Animate';
 
 export default function CTASection({ hidePricing = false }: { hidePricing?: boolean }) {
   const t = useTranslations('cta');
@@ -9,6 +10,7 @@ export default function CTASection({ hidePricing = false }: { hidePricing?: bool
   return (
     <section id="demo" className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
       <div className="max-w-4xl mx-auto text-center">
+        <ScaleIn>
         <div className="bg-gradient-to-br from-happi-blue to-happi-green rounded-3xl p-12 md:p-16 text-white relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
@@ -54,6 +56,7 @@ export default function CTASection({ hidePricing = false }: { hidePricing?: bool
             </p>
           </div>
         </div>
+        </ScaleIn>
       </div>
     </section>
   );
