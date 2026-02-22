@@ -38,7 +38,7 @@ export default async function StrategiePage() {
 
         <PricingStrategy />
         <UpsellModel />
-        <CTASection />
+        <CTASection hidePricing />
       </main>
       <Footer />
     </>
