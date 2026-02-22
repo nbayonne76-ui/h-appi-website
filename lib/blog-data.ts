@@ -25,10 +25,10 @@ const categoryColors: Record<string, string> = {
   Produit: 'bg-happi-blue/10 text-happi-blue',
   Product: 'bg-happi-blue/10 text-happi-blue',
   Guide: 'bg-happi-green/10 text-happi-green',
-  Tendances: 'bg-purple-100 text-purple-700',
-  Trends: 'bg-purple-100 text-purple-700',
-  Conformité: 'bg-red-50 text-red-600',
-  Compliance: 'bg-red-50 text-red-600',
+  Tendances: 'bg-purple-500/10 text-purple-400',
+  Trends: 'bg-purple-500/10 text-purple-400',
+  Conformité: 'bg-red-500/10 text-red-400',
+  Compliance: 'bg-red-500/10 text-red-400',
 };
 
 const messages: Record<string, typeof frMessages> = {
