@@ -269,7 +269,7 @@
       },
       {
         "question": "Quelles intégrations proposez-vous ?",
-        "answer": "Nous pouvons intégrer votre chatbot avec les principaux CRM (Salesforce, HubSpot), ERP (SAP, Oracle), outils de messaging (WhatsApp, Messenger, Teams) et plateformes e-commerce (Shopify, WooCommerce). Des intégrations personnalisées via API sont également possibles."
+        "answer": "Nous développons des connexions sur mesure avec vos outils métiers : CRM (Salesforce, HubSpot), ERP (SAP, Oracle), messagerie (WhatsApp, Messenger, Teams) et e-commerce (Shopify, WooCommerce). Chaque intégration est conçue spécifiquement pour votre projet et peut nécessiter la collaboration de votre prestataire ou éditeur logiciel."
       },
       {
         "question": "Comment fonctionne l'IA de H'appi ?",
@@ -401,9 +401,9 @@
     },
     "integration": {
       "title": "Intégration avec votre écosystème",
-      "description1": "H'appi s'intègre nativement avec les principaux CRM, ERP, outils de messaging et plateformes e-commerce. La vision 360° du client devient enfin une réalité grâce à des connecteurs pré-configurés.",
+      "description1": "H'appi peut se connecter à vos CRM, ERP, outils de messaging et plateformes e-commerce via API. Chaque connexion est développée sur mesure selon votre environnement technique.*",
       "description2": "Les entreprises déploient en moyenne 4 outils de mesure de performance CX. H'appi centralise ces données pour offrir des KPIs clairs : taux de résolution, satisfaction client, temps de réponse moyen.",
-      "integrationsTitle": "Intégrations disponibles"
+      "integrationsTitle": "Outils connectables via API"
     },
     "hybrid": {
       "title": "L'approche hybride humain-IA",
@@ -1149,9 +1149,10 @@
       },
       {
         "title": "Intégration avec votre écosystème",
-        "description1": "H'appi s'intègre nativement avec les principaux CRM, ERP, outils de messaging et plateformes e-commerce. La vision 360° du client devient enfin une réalité grâce à des connecteurs pré-configurés.",
+        "description1": "H'appi peut se connecter à vos CRM, ERP, outils de messaging et plateformes e-commerce via API. Chaque connexion est développée sur mesure selon votre environnement technique.*",
         "description2": "Les entreprises déploient en moyenne 4 outils de mesure de performance CX. H'appi centralise ces données pour offrir des KPIs clairs : taux de résolution, satisfaction client, temps de réponse moyen.",
-        "integrationsTitle": "Intégrations disponibles"
+        "integrationsTitle": "Outils connectables via API",
+        "note": "Chaque connexion est développée sur mesure lors du projet. L'intégration avec certains outils peut nécessiter la collaboration de votre prestataire ou éditeur logiciel."
       },
       {
         "title": "L'approche hybride humain-IA",

@@ -86,6 +86,9 @@ export default async function FonctionnalitesPage() {
                       </div>
                     ))}
                   </div>
+                  <p className="text-xs text-happi-muted mt-4 leading-relaxed">
+                    * {t('details.1.note')}
+                  </p>
                 </div>
                 <div className="order-1 lg:order-2">
                   <h3 className="text-2xl font-bold text-white mb-4">

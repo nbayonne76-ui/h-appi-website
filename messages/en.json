@@ -269,7 +269,7 @@
       },
       {
         "question": "What integrations are available?",
-        "answer": "We can integrate your chatbot with major CRMs (Salesforce, HubSpot), ERPs (SAP, Oracle), messaging tools (WhatsApp, Messenger, Teams) and e-commerce platforms (Shopify, WooCommerce). Custom API integrations are also possible."
+        "answer": "We custom-build connections with your existing tools: CRMs (Salesforce, HubSpot), ERPs (SAP, Oracle), messaging platforms (WhatsApp, Messenger, Teams) and e-commerce systems (Shopify, WooCommerce). Each integration is developed specifically for your project and may require collaboration from your software provider or integrator."
       },
       {
         "question": "How does H'appi's AI work?",
@@ -401,9 +401,9 @@
     },
     "integration": {
       "title": "Integration with your ecosystem",
-      "description1": "H'appi natively integrates with major CRMs, ERPs, messaging tools and e-commerce platforms. A 360° customer view finally becomes reality thanks to pre-configured connectors.",
+      "description1": "H'appi can connect to your CRMs, ERPs, messaging tools and e-commerce platforms via API. Each connection is custom-built to fit your technical environment.*",
       "description2": "Companies deploy an average of 4 CX performance measurement tools. H'appi centralizes this data to offer clear KPIs: resolution rate, customer satisfaction, average response time.",
-      "integrationsTitle": "Available integrations"
+      "integrationsTitle": "Tools connectable via API"
     },
     "hybrid": {
       "title": "The human-AI hybrid approach",
@@ -1149,9 +1149,10 @@
       },
       {
         "title": "Integration with your ecosystem",
-        "description1": "H'appi natively integrates with major CRMs, ERPs, messaging tools and e-commerce platforms. The 360° customer view finally becomes a reality thanks to pre-configured connectors.",
+        "description1": "H'appi can connect to your CRMs, ERPs, messaging tools and e-commerce platforms via API. Each connection is custom-built to fit your technical environment.*",
         "description2": "Companies deploy an average of 4 CX performance measurement tools. H'appi centralizes this data to deliver clear KPIs: resolution rate, customer satisfaction, average response time.",
-        "integrationsTitle": "Available integrations"
+        "integrationsTitle": "Tools connectable via API",
+        "note": "Each connection is custom-developed for your project. Integration with certain tools may require collaboration from your software provider or integrator."
       },
       {
         "title": "The hybrid human-AI approach",
