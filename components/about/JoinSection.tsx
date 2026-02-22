@@ -58,9 +58,9 @@ export default function JoinSection() {
             </p>
             <div className="space-y-2 text-sm text-happi-muted mb-6">
               <p className="font-medium text-white">{t('talent.positionsLabel')}</p>
-              <ul className="space-y-1">
+              <ul className="space-y-1 list-disc pl-4">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <li key={i}>- {t(`talent.positions.${i}`)}</li>
+                  <li key={i}>{t(`talent.positions.${i}`)}</li>
                 ))}
               </ul>
             </div>
@@ -84,9 +84,9 @@ export default function JoinSection() {
               <p className="font-medium text-white">
                 {t('partner.typesLabel')}
               </p>
-              <ul className="space-y-1">
+              <ul className="space-y-1 list-disc pl-4">
                 {Array.from({ length: 4 }).map((_, i) => (
-                  <li key={i}>- {t(`partner.types.${i}`)}</li>
+                  <li key={i}>{t(`partner.types.${i}`)}</li>
                 ))}
               </ul>
             </div>
