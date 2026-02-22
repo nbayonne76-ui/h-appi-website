@@ -40,7 +40,7 @@ export default async function VisionPage() {
         <VisionSection />
         <MissionPillars />
         <ObjectivesSection />
-        <CTASection />
+        <CTASection hidePricing />
       </main>
       <Footer />
     </>

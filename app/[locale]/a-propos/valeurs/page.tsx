@@ -38,7 +38,7 @@ export default async function ValeursPage() {
 
         <ValuesSection />
         <PromiseSection />
-        <CTASection />
+        <CTASection hidePricing />
       </main>
       <Footer />
     </>

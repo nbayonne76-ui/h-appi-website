@@ -3,7 +3,7 @@
 import { MessageCircle, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-export default function CTASection() {
+export default function CTASection({ hidePricing = false }: { hidePricing?: boolean }) {
   const t = useTranslations('cta');
 
   return (
@@ -38,13 +38,15 @@ export default function CTASection() {
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}
               </a>
-              <a
-                href="/tarifs"
-                className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium"
-              >
-                {t('ctaSecondary')}
-                <ArrowRight className="ml-2" size={18} />
-              </a>
+              {!hidePricing && (
+                <a
+                  href="/tarifs"
+                  className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium"
+                >
+                  {t('ctaSecondary')}
+                  <ArrowRight className="ml-2" size={18} />
+                </a>
+              )}
             </div>
 
             <p className="text-white/60 text-sm mt-6">
