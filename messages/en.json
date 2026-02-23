@@ -363,15 +363,15 @@
         "links": [
           {
             "label": "Legal Notice",
-            "href": "/a-propos/rejoindre#contact"
+            "href": "/mentions-legales"
           },
           {
             "label": "Privacy Policy",
-            "href": "/a-propos/rejoindre#contact"
+            "href": "/confidentialite"
           },
           {
             "label": "Terms of Service",
-            "href": "/a-propos/rejoindre#contact"
+            "href": "/cgv"
           },
           {
             "label": "Security & GDPR",
