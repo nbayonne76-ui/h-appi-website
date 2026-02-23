@@ -374,8 +374,8 @@
             "href": "/a-propos/rejoindre#contact"
           },
           {
-            "label": "GDPR",
-            "href": "/a-propos/rejoindre#contact"
+            "label": "Security & GDPR",
+            "href": "/securite"
           }
         ]
       }
@@ -1322,5 +1322,26 @@
   "pageRejoindre": {
     "title": "Join the <highlight>H'appi</highlight> Adventure",
     "subtitle": "Whether you're a company, a tech talent or a potential partner, there's a place for you in the H'appi story."
+  },
+  "securitePage": {
+    "metaTitle": "Hosting & Security — H'appi",
+    "metaDescription": "Discover how H'appi protects your data: 100% European hosting (Scaleway, Hetzner), full GDPR compliance, ISO 27001 and HDS certifications, end-to-end encryption.",
+    "badge": "Security & GDPR Compliance",
+    "title": "Your data, <highlight>protected in Europe</highlight>",
+    "subtitle": "100% European Union hosting, full GDPR compliance, international certifications. Enterprise-grade security, accessible to every business.",
+    "introP1": "At H'appi, we apply the same security standards as large enterprises using Microsoft Azure or Oracle Cloud — end-to-end encryption, multi-factor authentication, 24/7 monitoring, regular audits.",
+    "introP2": "The difference: we achieve this with certified European cloud partners, at revolutionary costs, without compromising your data sovereignty.",
+    "hostingTitle": "100% European Hosting",
+    "hostingSubtitle": "Two certified partners, chosen for their performance, compliance and commitment to European digital sovereignty.",
+    "rgpdTitle": "GDPR Compliance — Our 8 Commitments",
+    "rgpdSubtitle": "Every H'appi project includes a Data Processing Agreement (DPA) compliant with Article 28 of the GDPR. Here is what we guarantee contractually.",
+    "certsTitle": "Certifications Overview",
+    "securityTitle": "Multi-Layer Security",
+    "sovereigntyTitle": "European Digital Sovereignty",
+    "sovereigntySubtitle": "Your data stays under European jurisdiction — protected by GDPR, not exposed to US laws.",
+    "faqTitle": "Security FAQ",
+    "summaryTitle": "In Summary",
+    "summarySubtitle": "What you get with every H'appi project.",
+    "summaryConclusion": "Your security is our responsibility. Not an option, not an extra cost — a foundation."
   }
 }

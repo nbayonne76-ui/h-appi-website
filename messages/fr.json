@@ -374,8 +374,8 @@
             "href": "/a-propos/rejoindre#contact"
           },
           {
-            "label": "RGPD",
-            "href": "/a-propos/rejoindre#contact"
+            "label": "Sécurité & RGPD",
+            "href": "/securite"
           }
         ]
       }
@@ -1322,5 +1322,26 @@
   "pageRejoindre": {
     "title": "Rejoignez l'Aventure <highlight>H'appi</highlight>",
     "subtitle": "Que vous soyez une entreprise, un talent tech ou un partenaire potentiel, il y a une place pour vous dans l'histoire H'appi."
+  },
+  "securitePage": {
+    "metaTitle": "Hébergement & Sécurité — H'appi",
+    "metaDescription": "Découvrez comment H'appi protège vos données : hébergement 100% européen (Scaleway, Hetzner), conformité RGPD totale, certifications ISO 27001, HDS, chiffrement bout-en-bout.",
+    "badge": "Sécurité & Conformité RGPD",
+    "title": "Vos données, <highlight>protégées en Europe</highlight>",
+    "subtitle": "Hébergement 100% Union Européenne, conformité RGPD totale, certifications internationales. La sécurité enterprise, accessible à toutes les entreprises.",
+    "introP1": "Chez H'appi, nous appliquons les mêmes standards de sécurité que les grandes entreprises utilisant Microsoft Azure ou Oracle Cloud — chiffrement de bout en bout, authentification multi-facteurs, monitoring 24/7, audits réguliers.",
+    "introP2": "La différence : nous y arrivons avec des partenaires cloud européens certifiés, à des coûts révolutionnaires, sans compromis sur la souveraineté de vos données.",
+    "hostingTitle": "Hébergement 100% Européen",
+    "hostingSubtitle": "Deux partenaires certifiés, choisis pour leurs performances, leur conformité et leur engagement pour la souveraineté numérique européenne.",
+    "rgpdTitle": "Conformité RGPD — Nos 8 Engagements",
+    "rgpdSubtitle": "Chaque projet H'appi inclut un accord de traitement des données (DPA) conforme à l'Article 28 du RGPD. Voici ce que nous garantissons contractuellement.",
+    "certsTitle": "Tableau des Certifications",
+    "securityTitle": "Sécurité Multi-Couches",
+    "sovereigntyTitle": "Souveraineté Numérique Européenne",
+    "sovereigntySubtitle": "Vos données restent sous juridiction européenne — protégées par le RGPD, pas exposées aux lois américaines.",
+    "faqTitle": "Questions fréquentes sur la sécurité",
+    "summaryTitle": "En Résumé",
+    "summarySubtitle": "Ce que vous obtenez avec chaque projet H'appi.",
+    "summaryConclusion": "Votre sécurité est notre responsabilité. Pas une option, pas un surcoût — une fondation."
   }
 }
