@@ -535,7 +535,7 @@
     "sections": [
       {
         "title": "Vision & Mission",
-        "description": "Why H'appi exists, where we're going, and how we plan to change the rules of custom digital."
+        "description": "Why H'appi exists, where we're going, and how we plan to change the rules of custom digital solutions."
       },
       {
         "title": "Our 8 Values",
@@ -558,7 +558,7 @@
   },
   "visionPage": {
     "title": "Our Vision & <highlight>Our Mission</highlight>",
-    "subtitle": "Why we exist, where we're going, and the 5 pillars on which we're building the future of custom digital."
+    "subtitle": "Why we exist, where we're going, and the 5 pillars on which we're building the future of custom digital solutions."
   },
   "valeursPage": {
     "title": "Our Core <highlight>Values</highlight>",
@@ -576,7 +576,7 @@
     "title": "Our Vision",
     "headline": "Democratize access to custom digital solutions and business intelligence for all companies.",
     "paragraph1": "At H'appi, we envision a world where every company, regardless of size, can afford personalized applications, chatbots and websites without blowing their budget or depending on tech giants. Our vision is to <strong>break the monopoly of standardized solutions and prohibitive prices</strong> imposed by IT multinationals.",
-    "paragraph2": "We believe custom digital should no longer be a luxury reserved for large corporations. With H'appi, an SME can have an application as powerful as a multinational's, a website as beautiful as a Silicon Valley unicorn's, and a chatbot as smart as market leaders'... <strong>for a fraction of the usual price.</strong>",
+    "paragraph2": "We believe custom digital solutions should no longer be a luxury reserved for large corporations. With H'appi, an SME can have an application as powerful as a multinational's, a website as beautiful as a Silicon Valley unicorn's, and a chatbot as smart as market leaders'... <strong>for a fraction of the usual price.</strong>",
     "paragraph3": "But our ambition goes further. We want your digital solutions to become <strong>smart growth engines</strong>. Through interaction data collected by your bots and applications, we transform your initial investment into a scalable SaaS ecosystem that generates concrete business insights in customer experience (CX) and supply chain.",
     "objective2030": {
       "title": "2030 Objective",
@@ -584,7 +584,7 @@
     },
     "missionTitle": "Our Mission",
     "missionHeadline": "Create custom applications, chatbots and websites that evolve into business intelligence platforms.",
-    "missionIntro": "Concretely, at H'appi, we act on 5 fundamental pillars to transform how companies access custom digital."
+    "missionIntro": "Concretely, at H'appi, we act on 5 fundamental pillars to transform how companies access custom digital solutions."
   },
   "missionPillars": {
     "pillars": [
@@ -747,7 +747,7 @@
       {
         "title": "Fair and Transparent Pricing",
         "quote": "Custom digital should no longer be a privilege for the wealthy.",
-        "description": "We built H'appi on a strong conviction: the prices charged by the IT industry are unjustified. The same skills can cost 50 to 70% less.",
+        "description": "We built H'appi on a strong conviction: the prices charged by the IT industry are unjustifiable. The same skills can cost 50 to 70% less.",
         "practice": "Detailed quotes with every line explained. Disruptive pricing through our optimized infrastructure. Flexible payment adapted to SMEs. Satisfaction guarantee included."
       },
       {
@@ -766,7 +766,7 @@
         "title": "Long-Term Partnership",
         "quote": "We're not a vendor, we're your outsourced tech team.",
         "description": "Too many digital projects fail because the provider delivers and disappears. At H'appi, we stay by your side.",
-        "practice": "Every client has a dedicated contact. Responsive support during business days. Proactive maintenance. Regular strategic advice. No anonymous ticket, a real human relationship."
+        "practice": "Every client has a dedicated contact. Responsive support during business days. Proactive maintenance. Regular strategic advice. No anonymous tickets — a real human relationship."
       },
       {
         "title": "Uncompromising Security",
@@ -971,7 +971,7 @@
     },
     "history": {
       "title": "Our Story (In Brief)",
-      "paragraph1": "H'appi was born from a simple but deep frustration: <strong>why does custom digital cost so much when technologies are increasingly accessible?</strong>",
+      "paragraph1": "H'appi was born from a simple but deep frustration: <strong>why do custom digital solutions cost so much when technologies are increasingly accessible?</strong>",
       "paragraph2": "Launched in 2026, H'appi is a young startup on a mission to revolutionize market prices without compromising quality, building on:",
       "pillars": [
         "Next-generation cloud infrastructure (40-60% cheaper)",
@@ -1008,7 +1008,7 @@
   "blog": {
     "badge": "The H'appi Blog",
     "title": "Insights, guides and <highlight>trends</highlight>",
-    "subtitle": "Resources for companies that want to get the most out of AI, chatbots and custom digital.",
+    "subtitle": "Resources for companies that want to get the most out of AI, chatbots and custom digital solutions.",
     "featured": "Featured article",
     "allArticles": "All articles",
     "noArticles": "No articles in this category yet.",
@@ -1102,11 +1102,11 @@
     },
     "about": {
       "title": "About - H'appi | Vision, Mission and Values",
-      "description": "Discover H'appi's vision: democratize custom digital, revolutionize IT market prices and transform your applications into business intelligence platforms."
+      "description": "Discover H'appi's vision: democratize custom digital solutions, revolutionize IT market prices and transform your applications into business intelligence platforms."
     },
     "vision": {
       "title": "Vision & Mission - H'appi",
-      "description": "Discover H'appi's vision: democratize custom digital and transform your applications into business intelligence platforms."
+      "description": "Discover H'appi's vision: democratize custom digital solutions and transform your applications into business intelligence platforms."
     },
     "valeurs": {
       "title": "Our Values - H'appi",
@@ -1287,7 +1287,7 @@
     "sections": [
       {
         "title": "Vision & Mission",
-        "description": "Why H'appi exists, where we're going, and how we plan to change the rules of custom digital."
+        "description": "Why H'appi exists, where we're going, and how we plan to change the rules of custom digital solutions."
       },
       {
         "title": "Our 8 Values",
@@ -1309,7 +1309,7 @@
   },
   "pageVision": {
     "title": "Our Vision & <highlight>Our Mission</highlight>",
-    "subtitle": "Why we exist, where we're going, and the 5 pillars on which we're building the future of custom digital."
+    "subtitle": "Why we exist, where we're going, and the 5 pillars on which we're building the future of custom digital solutions."
   },
   "pageValeurs": {
     "title": "Our Core <highlight>Values</highlight>",
