@@ -24,7 +24,7 @@ export default function Features() {
   const t = useTranslations('features');
 
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark dot-pattern">
+    <section id="features" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-happi-dark dot-pattern">
       <div className="max-w-7xl mx-auto">
         <FadeInUp className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">

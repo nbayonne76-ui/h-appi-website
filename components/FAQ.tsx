@@ -12,7 +12,7 @@ export default function FAQ() {
   const t = useTranslations('faq');
 
   return (
-    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
+    <section id="faq" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
       <div className="max-w-3xl mx-auto">
         <FadeInUp className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">

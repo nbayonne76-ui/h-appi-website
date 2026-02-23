@@ -20,20 +20,6 @@ export default async function FAQPage() {
     <>
       <Header />
       <main>
-        <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 gradient-bg">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-happi-blue/10 text-happi-blue rounded-full text-sm font-medium mb-4">
-              {t('badge')}
-            </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              {t('title')}
-            </h1>
-            <p className="text-xl text-happi-muted leading-relaxed">
-              {t('subtitle')}
-            </p>
-          </div>
-        </section>
-
         <FAQ />
 
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
