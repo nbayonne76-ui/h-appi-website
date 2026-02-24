@@ -5,6 +5,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Menu, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
+import { openContactModal } from '@/components/ui/ContactModal';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,12 +49,12 @@ export default function Header() {
               </Link>
             ))}
             <LanguageSwitcher />
-            <Link
-              href="/#demo"
+            <button
+              onClick={openContactModal}
               className="btn-shimmer bg-happi-blue text-white px-5 py-2 rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/20 text-sm font-medium active:scale-[0.97]"
             >
               {t('cta')}
-            </Link>
+            </button>
           </div>
 
           <div className="md:hidden">
@@ -87,13 +88,12 @@ export default function Header() {
             <div className="py-2">
               <LanguageSwitcher />
             </div>
-            <Link
-              href="/#demo"
-              className="block bg-happi-blue text-white px-6 py-2 rounded-lg text-center hover:bg-happi-blue/90 transition-all text-sm font-medium"
-              onClick={() => setIsMenuOpen(false)}
+            <button
+              onClick={() => { setIsMenuOpen(false); openContactModal(); }}
+              className="block w-full bg-happi-blue text-white px-6 py-2 rounded-lg text-center hover:bg-happi-blue/90 transition-all text-sm font-medium"
             >
               {t('cta')}
-            </Link>
+            </button>
           </div>
         )}
       </nav>

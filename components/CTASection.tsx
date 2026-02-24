@@ -3,6 +3,7 @@
 import { MessageCircle, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { ScaleIn } from '@/components/ui/Animate';
+import { openContactModal } from '@/components/ui/ContactModal';
 
 export default function CTASection({ hidePricing = false }: { hidePricing?: boolean }) {
   const t = useTranslations('cta');
@@ -33,13 +34,13 @@ export default function CTASection({ hidePricing = false }: { hidePricing?: bool
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:nbayonne76@gmail.com"
+              <button
+                onClick={openContactModal}
                 className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-white text-happi-blue rounded-lg hover:shadow-xl transition-all font-medium active:scale-[0.97]"
               >
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}
-              </a>
+              </button>
               {!hidePricing && (
                 <a
                   href="/faq"

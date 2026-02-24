@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { locales } from '@/i18n/config';
 import { getTranslations } from 'next-intl/server';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
+import { ContactModal } from '@/components/ui/ContactModal';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -41,6 +42,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
           <FloatingCTA />
+          <ContactModal />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { useLocale } from 'next-intl';
+import { openContactModal } from '@/components/ui/ContactModal';
 
 export function FloatingCTA() {
   const [visible, setVisible] = useState(false);
@@ -16,8 +17,8 @@ export function FloatingCTA() {
   }, []);
 
   return (
-    <a
-      href="/#demo"
+    <button
+      onClick={openContactModal}
       aria-label={label}
       className={`fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-happi-blue rounded-full shadow-xl shadow-happi-blue/30 hover:bg-happi-blue/90 hover:scale-110 active:scale-95 transition-all duration-300 ${
         visible
@@ -28,6 +29,6 @@ export function FloatingCTA() {
       {/* Pulsing ring */}
       <span className="absolute inset-0 rounded-full bg-happi-blue animate-ping opacity-20" />
       <MessageCircle className="text-white relative z-10" size={22} />
-    </a>
+    </button>
   );
 }
