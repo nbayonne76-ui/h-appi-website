@@ -4,6 +4,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
 import { X, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
+// Module-level reference — set when ContactModal mounts, called by openContactModal()
+let _openFn: (() => void) | null = null;
+
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
 const copy = {
@@ -56,13 +59,12 @@ export function ContactModal() {
   const firstInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const handler = () => {
+    _openFn = () => {
       setOpen(true);
       setStatus('idle');
       setForm({ name: '', email: '', company: '', message: '' });
     };
-    window.addEventListener('open-contact-modal', handler);
-    return () => window.removeEventListener('open-contact-modal', handler);
+    return () => { _openFn = null; };
   }, []);
 
   useEffect(() => {
@@ -80,7 +82,7 @@ export function ContactModal() {
     };
   }, [open]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
     try {
@@ -231,5 +233,5 @@ export function ContactModal() {
 
 /** Call this from any button to open the contact modal */
 export function openContactModal() {
-  window.dispatchEvent(new CustomEvent('open-contact-modal'));
+  _openFn?.();
 }
