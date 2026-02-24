@@ -1,6 +1,7 @@
 'use client';
 
 import { Check, Mail, Star, Info } from 'lucide-react';
+import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations } from 'next-intl';
 
 export default function Pricing() {
@@ -22,13 +23,13 @@ export default function Pricing() {
           <p className="text-lg text-happi-muted mb-8 max-w-2xl mx-auto">
             {t('heroSubtitle')}
           </p>
-          <a
-            href={`mailto:nbayonne76@gmail.com?subject=${encodeURIComponent('Demande de devis')}`}
+          <button
+            onClick={openContactModal}
             className="inline-flex items-center px-8 py-3.5 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium"
           >
             <Mail className="mr-2" size={18} />
             {t('heroCta')}
-          </a>
+          </button>
           <p className="text-happi-muted text-sm mt-4">{t('heroNote')}</p>
         </div>
       </section>
@@ -47,12 +48,12 @@ export default function Pricing() {
               <p className="text-happi-muted leading-relaxed mb-8">
                 {t('implementDescription')}
               </p>
-              <a
-                href="mailto:nbayonne76@gmail.com"
+              <button
+                onClick={openContactModal}
                 className="inline-flex items-center px-6 py-3 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all font-medium"
               >
                 {t('implementCta')}
-              </a>
+              </button>
             </div>
 
             <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border">
@@ -185,13 +186,13 @@ export default function Pricing() {
                 {t('finalCtaSubtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:nbayonne76@gmail.com"
+                <button
+                  onClick={openContactModal}
                   className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-happi-blue rounded-lg hover:shadow-xl transition-all font-medium"
                 >
                   <Mail className="mr-2" size={18} />
                   {t('finalCtaPrimary')}
-                </a>
+                </button>
                 <a
                   href="/faq"
                   className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium"

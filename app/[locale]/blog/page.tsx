@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { openContactModal } from '@/components/ui/ContactModal';
 import { useLocale, useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -116,12 +117,12 @@ export default function BlogPage() {
             <p className="text-happi-muted mb-6">
               {t('newsletterSubtitle')}
             </p>
-            <a
-              href="mailto:nbayonne76@gmail.com?subject=Prise de contact H'appi"
+            <button
+              onClick={openContactModal}
               className="inline-flex items-center px-8 py-3 bg-happi-blue text-white rounded-lg hover:bg-opacity-90 transition-all font-medium"
             >
               {t('newsletterCta')}
-            </a>
+            </button>
             <p className="text-xs text-happi-muted mt-4">
               {t('newsletterNote')}
             </p>

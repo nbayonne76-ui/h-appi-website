@@ -1,6 +1,7 @@
 'use client';
 
 import { Link } from '@/i18n/navigation';
+import { openContactModal } from '@/components/ui/ContactModal';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ArticleCard from '@/components/blog/ArticleCard';
@@ -150,12 +151,12 @@ export default function ArticleLayout({
                 <p className="text-sm text-white/80 mb-4">
                   {t('sidebarCta.description')}
                 </p>
-                <Link
-                  href="/#demo"
+                <button
+                  onClick={openContactModal}
                   className="block w-full text-center bg-happi-surface text-happi-blue py-2.5 rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all"
                 >
                   {t('sidebarCta.cta')}
-                </Link>
+                </button>
               </div>
             </aside>
           </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { Building2, Code2, Users, Mail, Globe, MessageCircle, CalendarDays } from 'lucide-react';
+import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations } from 'next-intl';
 
 export default function JoinSection() {
@@ -151,25 +152,19 @@ export default function JoinSection() {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            {[Mail, Globe, MessageCircle, CalendarDays].map((Icon, i) => (
-              <a
-                key={i}
-                href={
-                  i === 0
-                    ? `mailto:nbayonne76@gmail.com`
-                    : i === 1
-                    ? `https://www.happi.ai`
-                    : i === 2
-                    ? `mailto:nbayonne76@gmail.com?subject=Question`
-                    : `mailto:nbayonne76@gmail.com?subject=RDV d%C3%A9couverte H%27appi`
-                }
-                className="bg-happi-surface/10 rounded-xl p-4 backdrop-blur-sm hover:bg-happi-surface/20 transition-colors block"
-              >
-                <Icon className="mx-auto mb-2" size={24} />
-                <p className="text-sm font-medium">{t(`contact.channels.${i}.label`)}</p>
-                <p className="text-xs text-white/80">{t(`contact.channels.${i}.value`)}</p>
-              </a>
-            ))}
+            {[Mail, Globe, MessageCircle, CalendarDays].map((Icon, i) => {
+              const cls = "bg-happi-surface/10 rounded-xl p-4 backdrop-blur-sm hover:bg-happi-surface/20 transition-colors block text-center cursor-pointer";
+              const inner = (
+                <>
+                  <Icon className="mx-auto mb-2" size={24} />
+                  <p className="text-sm font-medium">{t(`contact.channels.${i}.label`)}</p>
+                  <p className="text-xs text-white/80">{t(`contact.channels.${i}.value`)}</p>
+                </>
+              );
+              if (i === 0) return <a key={i} href="mailto:nbayonne76@gmail.com" className={cls}>{inner}</a>;
+              if (i === 1) return <a key={i} href="https://www.happi.ai" target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>;
+              return <button key={i} onClick={openContactModal} className={cls}>{inner}</button>;
+            })}
           </div>
 
           <p className="text-lg font-semibold text-white/90 leading-relaxed max-w-2xl mx-auto">
