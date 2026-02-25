@@ -313,7 +313,7 @@
     "note": "Response within 48h. Free and detailed quote."
   },
   "footer": {
-    "tagline": "Intelligent chatbots that evolve with your company. AI should empower humans, not replace them.",
+    "tagline": "Custom digital solutions, built in your image. Technology should empower humans, not replace them.",
     "columns": {
       "produit": {
         "title": "Product",
@@ -340,19 +340,15 @@
         "title": "Solutions",
         "links": [
           {
-            "label": "Customer Experience (CX)",
+            "label": "SAV Bot",
             "href": "/cas-usage"
           },
           {
-            "label": "Supply Chain",
+            "label": "Traceability App",
             "href": "/cas-usage"
           },
           {
-            "label": "E-commerce",
-            "href": "/cas-usage"
-          },
-          {
-            "label": "B2B Services",
+            "label": "SaaS Platform",
             "href": "/cas-usage"
           }
         ]

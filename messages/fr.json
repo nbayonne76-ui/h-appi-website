@@ -313,7 +313,7 @@
     "note": "Réponse sous 48h. Devis gratuit et détaillé."
   },
   "footer": {
-    "tagline": "Des chatbots intelligents qui évoluent avec votre entreprise. L'IA doit élever l'humain, pas le remplacer.",
+    "tagline": "Des solutions digitales sur mesure, construites à votre image. La technologie doit élever l'humain, pas le remplacer.",
     "columns": {
       "produit": {
         "title": "Produit",
@@ -340,19 +340,15 @@
         "title": "Solutions",
         "links": [
           {
-            "label": "Expérience Client (CX)",
+            "label": "Bot SAV",
             "href": "/cas-usage"
           },
           {
-            "label": "Supply Chain",
+            "label": "Application de traçabilité",
             "href": "/cas-usage"
           },
           {
-            "label": "E-commerce",
-            "href": "/cas-usage"
-          },
-          {
-            "label": "Services B2B",
+            "label": "Plateforme SaaS",
             "href": "/cas-usage"
           }
         ]
