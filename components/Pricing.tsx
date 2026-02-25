@@ -3,6 +3,7 @@
 import { Check, Mail, Star, Info } from 'lucide-react';
 import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export default function Pricing() {
   const t = useTranslations('pricing');
@@ -193,12 +194,12 @@ export default function Pricing() {
                   <Mail className="mr-2" size={18} />
                   {t('finalCtaPrimary')}
                 </button>
-                <a
+                <Link
                   href="/faq"
                   className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium"
                 >
                   {t('finalCtaSecondary')}
-                </a>
+                </Link>
               </div>
               <p className="text-white/60 text-sm mt-6">{t('finalCtaNote')}</p>
             </div>
