@@ -340,15 +340,15 @@
         "title": "Solutions",
         "links": [
           {
-            "label": "SAV Bot",
+            "label": "Tailored Chatbot",
             "href": "/cas-usage"
           },
           {
-            "label": "Traceability App",
+            "label": "Tailored App",
             "href": "/cas-usage"
           },
           {
-            "label": "SaaS Platform",
+            "label": "Tailored Website",
             "href": "/cas-usage"
           }
         ]

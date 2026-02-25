@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 
 const columnKeys = ['produit', 'solutions', 'entreprise', 'legal'] as const;
-const linkCounts = [4, 4, 4, 4];
+const linkCounts = [4, 3, 4, 4];
 
 export default function Footer() {
   const t = useTranslations('footer');
