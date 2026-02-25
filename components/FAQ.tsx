@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { FadeInUp, Stagger, StaggerItem, CollapseContent } from '@/components/ui/Animate';
 
-const FAQ_COUNT = 7;
+const FAQ_COUNT = 12;
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

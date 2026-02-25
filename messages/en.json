@@ -282,6 +282,26 @@
       {
         "question": "Why are you cheaper than the market?",
         "answer": "Our model relies on optimized cloud infrastructure, an open-source stack (no license costs), and a lean organization. We pass these savings directly to our pricing. Every quote is transparent and detailed line by line."
+      },
+      {
+        "question": "What is H'appi's SAV Bot and how does it work?",
+        "answer": "The SAV Bot replaces phone calls to after-sales support. The customer opens the bot interface and enters three pieces of information: their ticket number, their name, and a description of their issue (e.g., broken table leg corner). The conversation happens through the interface — even if an agent is assisting by phone at the same time. All information is automatically structured in a dedicated dashboard for the technical team. Concrete results: 50% of SAV calls are avoided, handling time drops from 2.5 days to 4 hours, and NPS increases by 38 points on average. (Sources: Narvar, Salesforce, Intercom)"
+      },
+      {
+        "question": "How does the furniture traceability app work?",
+        "answer": "The mobile app connects three actors in real time. The supplier creates the product file and generates a unique QR code per piece of furniture. The driver scans the QR code in 2 seconds, takes timestamped geolocated photos and captures the customer's electronic signature. The end customer tracks their delivery on an interactive map and receives automatic notifications at each step. 7.6% of furniture arrives damaged — without digital proof, the dispute is almost always lost. With the app, companies reduce disputes by 80% and increase customer satisfaction by 60%. (Sources: DispatchTrack, Furniture Retail 2025)"
+      },
+      {
+        "question": "How are the SAV Bot and the traceability app connected?",
+        "answer": "This is the key connection in our platform. The customer file created by the app (delivered furniture, photos, signature, delivery date, driver) is automatically accessible in the SAV bot. When a customer opens a complaint ticket, the technical team immediately sees the complete delivery history. Zero double entry, zero manual searching. That's why both tools are deployed simultaneously: together, they create complete end-to-end traceability."
+      },
+      {
+        "question": "Do you build custom solutions or generic tools?",
+        "answer": "Exclusively custom. We don't deliver a standard product you adapt: we build in your image. Every bot, every application is designed around your business processes, your branding, your organization and your teams. Your SAV bot will have your visual identity, your communication tone, and will be connected to your existing tools. No templates, no copy-paste from one project to another."
+      },
+      {
+        "question": "What is H'appi's progressive SaaS platform?",
+        "answer": "H'appi is not just a chatbot: it's a platform that grows with your usage. During the first 2 to 3 months, the assistant learns your processes, your customer patterns and your business constraints. After this period, advanced modules automatically activate on your instance: delivery route optimization (up to -20% cost on the last mile), customer absence prediction, logistics anomaly detection, and predictive SAV. No migration, no additional project. The more you use the platform, the more powerful it becomes. (Sources: Capgemini, MIT Sloan, McKinsey)"
       }
     ]
   },

@@ -282,6 +282,26 @@
       {
         "question": "Pourquoi êtes-vous moins chers que le marché ?",
         "answer": "Notre modèle repose sur une infrastructure cloud optimisée, une stack open-source (pas de coûts de licence), et une organisation lean. Nous répercutons ces économies directement sur nos tarifs. Chaque devis est transparent et détaillé ligne par ligne."
+      },
+      {
+        "question": "Qu'est-ce que le Bot SAV H'appi et comment fonctionne-t-il ?",
+        "answer": "Le Bot SAV remplace les appels téléphoniques au service après-vente. Le client ouvre l'interface bot et saisit trois informations : son numéro de ticket, son nom, et décrit son problème (exemple : angle du pied de table cassé). La conversation se déroule via l'interface — même si un agent l'accompagne par téléphone en parallèle. Toutes les informations sont automatiquement structurées dans un tableau de bord dédié à l'équipe technique. Résultat concret : 50 % des appels SAV sont évités, le délai de traitement passe de 2,5 jours à 4 heures, et le NPS augmente de 38 points en moyenne. (Sources : Narvar, Salesforce, Intercom)"
+      },
+      {
+        "question": "Comment fonctionne l'application de traçabilité mobilier ?",
+        "answer": "L'application mobile connecte trois acteurs en temps réel. Le fournisseur crée la fiche produit et génère un QR code unique par meuble. Le livreur scanne le QR code en 2 secondes, prend des photos géolocalisées horodatées et capture la signature électronique du client. Le client final suit sa livraison sur une carte interactive et reçoit des notifications automatiques à chaque étape. 7,6 % des meubles arrivent endommagés — sans preuve numérique, le litige est presque toujours perdu. Avec l'application, les entreprises réduisent leurs litiges de 80 % et augmentent leur satisfaction client de 60 %. (Sources : DispatchTrack, Furniture Retail 2025)"
+      },
+      {
+        "question": "Comment le Bot SAV et l'application de traçabilité sont-ils reliés ?",
+        "answer": "C'est la connexion clé de notre plateforme. Le dossier client créé par l'application (meuble livré, photos, signature, date de livraison, livreur) est automatiquement accessible dans le bot SAV. Quand un client ouvre un ticket de réclamation, l'équipe technique voit immédiatement l'historique complet de sa livraison. Zéro double saisie, zéro recherche manuelle. C'est pourquoi les deux outils sont déployés simultanément : ensemble, ils créent une traçabilité complète de bout en bout."
+      },
+      {
+        "question": "Développez-vous des solutions sur mesure ou des outils génériques ?",
+        "answer": "Exclusivement sur mesure. Nous ne livrons pas un produit standard que vous adaptez : nous construisons à votre image. Chaque bot, chaque application est conçu autour de vos processus métier, votre branding, votre organisation et vos équipes. Votre bot SAV aura votre identité visuelle, votre ton de communication, et sera connecté à vos outils existants. Aucun template, aucun copier-coller d'un projet à l'autre."
+      },
+      {
+        "question": "Qu'est-ce que la plateforme SaaS évolutive H'appi ?",
+        "answer": "H'appi n'est pas un simple chatbot : c'est une plateforme qui grandit avec votre usage. Pendant les 2 à 3 premiers mois, l'assistant apprend vos processus, vos patterns clients et vos contraintes métier. Après cette période, des modules avancés s'activent automatiquement sur votre instance : optimisation des tournées de livraison (jusqu'à -20 % de coût sur le dernier kilomètre), prédiction des absences client, détection d'anomalies logistiques, et SAV prédictif. Aucune migration, aucun projet supplémentaire. Plus vous utilisez la plateforme, plus elle devient puissante. (Sources : Capgemini, MIT Sloan, McKinsey)"
       }
     ]
   },
