@@ -304,7 +304,6 @@ export default function CasUsageAccordion() {
                   {!isOpen && (
                     <p className="text-happi-muted text-xs mt-1.5 leading-relaxed max-w-xl">
                       {step.teaser}
-                      <span className="text-happi-muted/40 ml-1">— {step.teaserSource}</span>
                     </p>
                   )}
                 </div>
@@ -326,7 +325,7 @@ export default function CasUsageAccordion() {
                         <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
                         <p className="text-sm text-happi-muted leading-relaxed">
                           {step.teaser}
-                          <span className="text-happi-muted/50 ml-1 text-xs">— {step.teaserSource}</span>
+                          <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
                         </p>
                       </div>
 
@@ -400,7 +399,7 @@ export default function CasUsageAccordion() {
                         <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
                         <p className="text-sm text-happi-muted leading-relaxed">
                           {step.teaser}
-                          <span className="text-happi-muted/50 ml-1 text-xs">— {step.teaserSource}</span>
+                          <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
                         </p>
                       </div>
 
@@ -467,7 +466,7 @@ export default function CasUsageAccordion() {
                         <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
                         <p className="text-sm text-happi-muted leading-relaxed">
                           {step.teaser}
-                          <span className="text-happi-muted/50 ml-1 text-xs">— {step.teaserSource}</span>
+                          <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
                         </p>
                       </div>
 
