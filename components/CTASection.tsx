@@ -2,6 +2,7 @@
 
 import { MessageCircle, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { ScaleIn } from '@/components/ui/Animate';
 import { openContactModal } from '@/components/ui/ContactModal';
 
@@ -42,13 +43,13 @@ export default function CTASection({ hidePricing = false }: { hidePricing?: bool
                 {t('ctaPrimary')}
               </button>
               {!hidePricing && (
-                <a
+                <Link
                   href="/faq"
                   className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all font-medium active:scale-[0.97]"
                 >
                   {t('ctaSecondary')}
                   <ArrowRight className="ml-2" size={18} />
-                </a>
+                </Link>
               )}
             </div>
 
