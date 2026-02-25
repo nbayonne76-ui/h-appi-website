@@ -38,9 +38,9 @@ const steps = (fr: boolean) => [
     badge: fr ? 'Bot SAV · Terminé' : 'SAV Bot · Complete',
     title: fr ? 'Fini les appels au service après-vente' : 'No more after-sales phone calls',
     teaser: fr
-      ? '50 % des appels au service client sont des "où en est ma livraison ?". Chaque appel coûte en moyenne 5 €.'
-      : '50% of customer service calls are "where is my order?". Each one costs an average of €5.',
-    teaserSource: 'Narvar / Gorgias',
+      ? '50 % des appels SAV sont liés au suivi de commande, représentant un coût moyen de 5 € par appel.'
+      : '50% of SAV calls are order-tracking related, costing an average of €5 each.',
+    teaserSource: 'Narvar',
     content: {
       problem: {
         label: fr ? 'Le problème' : 'The problem',
@@ -74,6 +74,28 @@ const steps = (fr: boolean) => [
           },
         ],
       },
+      miniStats: [
+        {
+          value: '−65 %',
+          label: fr ? "d'appels entrants grâce à l'automatisation" : 'fewer incoming calls with automation',
+          source: 'Narvar / Gorgias',
+        },
+        {
+          value: '85 %',
+          label: fr ? 'des demandes traitées sans intervention humaine' : 'of requests handled without human intervention',
+          source: 'Gorgias / Zendesk',
+        },
+        {
+          value: '2,5 j → 4 h',
+          label: fr ? 'de délai de traitement SAV avec automatisation' : 'SAV processing time with automation',
+          source: 'Salesforce',
+        },
+        {
+          value: '+38 pts',
+          label: fr ? 'NPS après 3 mois d\'utilisation du bot SAV' : 'NPS after 3 months of SAV bot',
+          source: 'Intercom / Gorgias',
+        },
+      ],
       result: {
         label: fr ? 'Ce que ça change' : 'What changes',
         items: fr
@@ -103,9 +125,9 @@ const steps = (fr: boolean) => [
     badge: fr ? 'App Traçabilité · Déployé en même temps' : 'Traceability App · Deployed simultaneously',
     title: fr ? 'Visibilité totale sur le parcours du meuble' : 'Total visibility over furniture journeys',
     teaser: fr
-      ? '7,6 % des meubles arrivent endommagés. Sans preuve numérique horodatée, le litige est presque toujours perdu.'
-      : '7.6% of furniture arrives damaged. Without timestamped digital proof, disputes are almost always lost.',
-    teaserSource: 'DispatchTrack / Furniture Shows',
+      ? '7,6 % des meubles arrivent endommagés, générant un coût moyen de 45 € par retour. Sans preuve numérique, le litige est presque toujours perdu.'
+      : '7.6% of furniture arrives damaged, generating an average cost of €45 per return. Without digital proof, disputes are almost always lost.',
+    teaserSource: 'DispatchTrack / Furniture Retail 2025',
     content: {
       actors: [
         {
@@ -139,9 +161,28 @@ const steps = (fr: boolean) => [
             : ['Real-time map tracking', 'Automatic push notifications', 'Photos + signature on demand', 'Accessible delivery proof'],
         },
       ],
-      stat: fr
-        ? { value: '−80 %', label: 'de litiges avec la preuve numérique', source: 'DispatchTrack' }
-        : { value: '−80%', label: 'of disputes with digital proof of delivery', source: 'DispatchTrack' },
+      miniStats: [
+        {
+          value: '−80 %',
+          label: fr ? 'de litiges grâce à la preuve numérique (photo + signature + GPS)' : 'fewer disputes with digital proof (photo + signature + GPS)',
+          source: 'DispatchTrack',
+        },
+        {
+          value: '+60 %',
+          label: fr ? 'de satisfaction client avec preuve de livraison transparente' : 'client satisfaction with transparent delivery proof',
+          source: 'DispatchTrack / Zendesk',
+        },
+        {
+          value: '+42 %',
+          label: fr ? 'de livraisons réussies au 1er passage grâce aux notifications' : 'successful first-pass deliveries thanks to notifications',
+          source: 'DispatchTrack',
+        },
+        {
+          value: '82 %',
+          label: fr ? 'des clients veulent un suivi temps réel → +35 % de rétention' : 'of clients want real-time tracking → +35% retention',
+          source: 'Inbound Logistics / Salesforce',
+        },
+      ],
       interconnect: {
         title: fr ? 'La connexion qui fait tout' : 'The connection that makes it all work',
         text: fr
@@ -163,9 +204,9 @@ const steps = (fr: boolean) => [
     badge: fr ? 'Plateforme SaaS · Activation progressive' : 'SaaS Platform · Progressive activation',
     title: fr ? 'Après 2-3 mois, la plateforme s\'éveille' : 'After 2-3 months, the platform awakens',
     teaser: fr
-      ? '53 % du coût d\'une livraison se concentre sur le dernier kilomètre. L\'optimisation par IA réduit ce coût directement.'
-      : '53% of delivery cost is concentrated on the last mile. AI optimization directly reduces this cost.',
-    teaserSource: 'Capgemini / MIT Sloan',
+      ? '53 % du coût de livraison est lié au dernier kilomètre. L\'optimisation des tournées par IA permet de réduire ce poste jusqu\'à 20 %.'
+      : '53% of delivery cost comes from the last mile. AI-driven route optimization can cut this by up to 20%.',
+    teaserSource: 'Capgemini / MIT Sloan / McKinsey',
     content: {
       intro: fr
         ? 'Une fois que l\'assistant a appris vos processus, vos patterns clients, et vos contraintes métier, des modules s\'activent automatiquement. Sans migration ni projet supplémentaire.'
@@ -220,24 +261,24 @@ const steps = (fr: boolean) => [
 
 const globalStats = (fr: boolean) => [
   {
-    value: '50 %',
-    label: fr ? 'des appels SAV sont des "où est ma livraison ?"' : 'of SAV calls are "where is my delivery?"',
-    source: 'Narvar',
+    value: '−65 %',
+    label: fr ? "d'appels SAV après déploiement du bot" : 'fewer SAV calls after bot deployment',
+    source: 'Narvar / Gorgias',
   },
   {
-    value: '53 %',
-    label: fr ? 'du coût d\'une livraison sur le dernier kilomètre' : 'of delivery cost on the last mile',
-    source: 'Capgemini',
+    value: '85 %',
+    label: fr ? 'des demandes SAV automatisables sans agent humain' : 'of SAV requests automatable without a human agent',
+    source: 'Gorgias / Zendesk',
   },
   {
     value: '−80 %',
-    label: fr ? 'de litiges avec la preuve de livraison numérique' : 'fewer disputes with digital delivery proof',
+    label: fr ? 'de litiges grâce à la preuve de livraison numérique' : 'fewer disputes with digital delivery proof',
     source: 'DispatchTrack',
   },
   {
-    value: '82 %',
-    label: fr ? 'des clients veulent un suivi en temps réel' : 'of clients want real-time tracking',
-    source: 'Inbound Logistics',
+    value: '+42 %',
+    label: fr ? 'de livraisons réussies au 1er passage avec notifications' : 'successful 1st-pass deliveries with notifications',
+    source: 'DispatchTrack',
   },
 ];
 
@@ -371,6 +412,17 @@ export default function CasUsageAccordion() {
                         </div>
                       </div>
 
+                      {/* Mini stats grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                        {step.content.miniStats.map((s: any) => (
+                          <div key={s.value} className="bg-happi-dark border border-happi-border rounded-xl p-4">
+                            <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
+                            <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
+                            <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
+                          </div>
+                        ))}
+                      </div>
+
                       {/* Result */}
                       <div>
                         <div className="flex items-center gap-2 mb-3">
@@ -428,15 +480,15 @@ export default function CasUsageAccordion() {
                         })}
                       </div>
 
-                      {/* Stat highlight */}
-                      <div className="flex items-center gap-4 bg-happi-darker border border-happi-green/20 rounded-xl p-5">
-                        <div className="text-3xl font-bold text-happi-green flex-shrink-0">
-                          {step.content.stat.value}
-                        </div>
-                        <div>
-                          <div className="text-white text-sm font-medium">{step.content.stat.label}</div>
-                          <div className="text-happi-muted/50 text-[10px] mt-0.5 uppercase tracking-wide">Source: {step.content.stat.source}</div>
-                        </div>
+                      {/* Mini stats grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                        {step.content.miniStats.map((s: any) => (
+                          <div key={s.value} className="bg-happi-darker border border-happi-border rounded-xl p-4">
+                            <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
+                            <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
+                            <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
+                          </div>
+                        ))}
                       </div>
 
                       {/* Interconnect */}
