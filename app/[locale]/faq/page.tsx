@@ -58,7 +58,7 @@ export default async function FAQPage() {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection hidePricing />
       </main>
       <Footer />
     </>
