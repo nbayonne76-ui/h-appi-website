@@ -38,15 +38,15 @@ const steps = (fr: boolean) => [
     badge: fr ? 'Bot SAV · Terminé' : 'SAV Bot · Complete',
     title: fr ? 'Fini les appels au service après-vente' : 'No more after-sales phone calls',
     teaser: fr
-      ? '50 % des appels au service client sont des "où en est ma livraison ?" — chaque appel coûte en moyenne 5 €.'
-      : '50% of customer service calls are "where is my order?" — each one costs an average of €5.',
+      ? '50 % des appels au service client sont des "où en est ma livraison ?". Chaque appel coûte en moyenne 5 €.'
+      : '50% of customer service calls are "where is my order?". Each one costs an average of €5.',
     teaserSource: 'Narvar / Gorgias',
     content: {
       problem: {
         label: fr ? 'Le problème' : 'The problem',
         text: fr
-          ? 'Un client reçoit un meuble endommagé ou une pièce manquante. Il appelle le service après-vente. Un agent note manuellement le numéro de commande, le nom, le problème. L\'info se perd, les équipes cherchent dans leurs emails, les délais s\'allongent — et la frustration monte des deux côtés.'
-          : 'A client receives damaged furniture or a missing part. They call after-sales. An agent manually notes the order number, name, problem. The info gets lost, teams search through emails, delays grow — and frustration builds on both sides.',
+          ? 'Un client reçoit un meuble endommagé ou une pièce manquante. Il appelle le service après-vente. Un agent note manuellement le numéro de commande, le nom, le problème. L\'info se perd, les équipes cherchent dans leurs emails, les délais s\'allongent. La frustration monte des deux côtés.'
+          : 'A client receives damaged furniture or a missing part. They call after-sales. An agent manually notes the order number, name, problem. The info gets lost, teams search through emails, delays grow. Frustration builds on both sides.',
       },
       solution: {
         label: fr ? 'Comment ça marche' : 'How it works',
@@ -168,8 +168,8 @@ const steps = (fr: boolean) => [
     teaserSource: 'Capgemini / MIT Sloan',
     content: {
       intro: fr
-        ? 'Une fois que l\'assistant a appris vos processus, vos patterns clients, et vos contraintes métier, des modules s\'activent automatiquement — sans migration ni projet supplémentaire.'
-        : 'Once the assistant has learned your processes, client patterns, and business constraints, modules activate automatically — no migration, no extra project.',
+        ? 'Une fois que l\'assistant a appris vos processus, vos patterns clients, et vos contraintes métier, des modules s\'activent automatiquement. Sans migration ni projet supplémentaire.'
+        : 'Once the assistant has learned your processes, client patterns, and business constraints, modules activate automatically. No migration, no extra project.',
       modules: [
         {
           icon: TrendingUp,
@@ -499,8 +499,8 @@ export default function CasUsageAccordion() {
                         <Shield size={16} className="text-happi-muted mt-0.5 flex-shrink-0" />
                         <p className="text-happi-muted text-xs leading-relaxed">
                           {fr
-                            ? 'Ces modules s\'activent sur votre instance, avec votre branding, vos règles métier. Nous ne livrons pas un produit standard que vous adaptez — nous construisons à votre image.'
-                            : 'These modules activate on your instance, with your branding, your business rules. We don\'t deliver a standard product you adapt — we build in your image.'}
+                            ? 'Ces modules s\'activent sur votre instance, avec votre branding, vos règles métier. Nous ne livrons pas un produit standard que vous adaptez. Nous construisons à votre image.'
+                            : 'These modules activate on your instance, with your branding, your business rules. We don\'t deliver a standard product you adapt. We build in your image.'}
                         </p>
                       </div>
                     </div>

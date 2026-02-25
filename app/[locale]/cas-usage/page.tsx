@@ -37,13 +37,34 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
             </h1>
             <p className="text-lg text-happi-muted max-w-2xl mx-auto leading-relaxed">
               {fr
-                ? 'Pas un outil générique que vous adaptez — un outil que nous construisons autour de vos processus, votre équipe, votre marque. Voici comment ça fonctionne concrètement dans le secteur du mobilier.'
-                : 'Not a generic tool you adapt — a tool we build around your processes, your team, your brand. Here\'s how it works concretely in the furniture industry.'}
+                ? 'Pas un outil générique que vous adaptez. Un outil que nous construisons autour de vos processus, votre équipe, votre marque. Voici comment ça fonctionne concrètement dans le secteur du mobilier.'
+                : 'Not a generic tool you adapt. A tool we build around your processes, your team, your brand. Here\'s how it works concretely in the furniture industry.'}
             </p>
           </div>
         </section>
 
-{/* ── Accordion + Stats ── */}
+        {/* ── Philosophy banner ── */}
+        <section className="px-4 sm:px-6 lg:px-8 pb-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-r from-happi-blue/10 to-happi-green/10 border border-happi-blue/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-5 items-start">
+              <div className="w-10 h-10 bg-happi-blue/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-happi-blue/20">
+                <span className="text-happi-blue text-lg">✦</span>
+              </div>
+              <div>
+                <h2 className="text-base font-bold text-white mb-1.5">
+                  {fr ? 'Notre philosophie' : 'Our philosophy'}
+                </h2>
+                <p className="text-happi-muted text-sm leading-relaxed">
+                  {fr
+                    ? 'Chaque bot, chaque application est conçu autour de vous. Votre branding, vos flux métier, vos équipes. Nous ne reproduisons pas un modèle standard. Nous apprenons votre réalité et construisons en conséquence. Ce cas d\'usage mobilier illustre exactement cette approche : un bot SAV sur mesure, une app de traçabilité à votre image, interconnectés dès le premier jour.'
+                    : 'Every bot, every application is designed around you. Your branding, your business flows, your teams. We don\'t replicate a standard model. We learn your reality and build accordingly. This furniture use case illustrates exactly that: a custom SAV bot, a traceability app in your image, interconnected from day one.'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Accordion + Stats ── */}
         <section className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="max-w-5xl mx-auto">
             <CasUsageAccordion />
