@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
     `;
 
     await resend.emails.send({
-      from: 'H\'appi Contact <onboarding@resend.dev>',
+      from: 'H\'appi Contact <contact@happi-bot.com>',
       to: 'nbayonne76@gmail.com',
       replyTo: email,
       subject,
