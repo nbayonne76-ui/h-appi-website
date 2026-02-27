@@ -28,11 +28,11 @@ export default function Footer() {
               {t('tagline')}
             </p>
             <a
-              href="mailto:nbayonne76@gmail.com"
+              href="mailto:contact@happi-bot.com"
               className="inline-flex items-center space-x-2 text-happi-muted hover:text-white transition-colors text-sm"
             >
               <MessageCircle size={16} />
-              <span>nbayonne76@gmail.com</span>
+              <span>contact@happi-bot.com</span>
             </a>
           </div>
 
