@@ -22,7 +22,7 @@ export default async function ConfidentialitePage({ params }: { params: Promise<
           title: '1. Responsable du traitement',
           content: [
             'H\'appi — Ndiaye Bayonne',
-            'Email : nbayonne76@gmail.com',
+            'Email : contact@happi-bot.com',
             'En tant que responsable du traitement, H\'appi s\'engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés.',
           ],
         },
@@ -67,7 +67,7 @@ export default async function ConfidentialitePage({ params }: { params: Promise<
             'Droit à l\'effacement : demander la suppression de vos données.',
             'Droit à la portabilité : recevoir vos données dans un format lisible.',
             'Droit d\'opposition : vous opposer à certains traitements.',
-            'Pour exercer ces droits, contactez-nous à : nbayonne76@gmail.com',
+            'Pour exercer ces droits, contactez-nous à : contact@happi-bot.com',
             'En cas de litige non résolu, vous pouvez saisir la CNIL (www.cnil.fr).',
           ],
         },
@@ -91,7 +91,7 @@ export default async function ConfidentialitePage({ params }: { params: Promise<
           title: '1. Data Controller',
           content: [
             'H\'appi — Ndiaye Bayonne',
-            'Email: nbayonne76@gmail.com',
+            'Email: contact@happi-bot.com',
             'As data controller, H\'appi is committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR — EU 2016/679).',
           ],
         },
@@ -136,7 +136,7 @@ export default async function ConfidentialitePage({ params }: { params: Promise<
             'Right to erasure: request deletion of your data.',
             'Right to data portability: receive your data in a readable format.',
             'Right to object: object to certain processing activities.',
-            'To exercise these rights, contact us at: nbayonne76@gmail.com',
+            'To exercise these rights, contact us at: contact@happi-bot.com',
             'If your complaint is unresolved, you may contact your national supervisory authority (e.g. CNIL in France).',
           ],
         },
@@ -193,8 +193,8 @@ export default async function ConfidentialitePage({ params }: { params: Promise<
                   ? 'Pour toute question relative à vos données personnelles :'
                   : 'For any questions about your personal data:'}
               </p>
-              <a href="mailto:nbayonne76@gmail.com" className="text-happi-blue font-medium hover:underline">
-                nbayonne76@gmail.com
+              <a href="mailto:contact@happi-bot.com" className="text-happi-blue font-medium hover:underline">
+                contact@happi-bot.com
               </a>
             </div>
           </div>
