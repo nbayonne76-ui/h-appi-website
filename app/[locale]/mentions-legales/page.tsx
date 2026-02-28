@@ -24,7 +24,7 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
           content: [
             'Le site H\'appi (happi.ai) est édité par H\'appi, entreprise individuelle en cours d\'immatriculation.',
             'Responsable de publication : Ndiaye Bayonne',
-            'Contact : nbayonne76@gmail.com',
+            'Contact : contact@happi-bot.com',
           ],
         },
         {
@@ -59,7 +59,7 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
         {
           title: '6. Contact',
           content: [
-            'Pour toute question relative aux présentes mentions légales, contactez-nous à : nbayonne76@gmail.com',
+            'Pour toute question relative aux présentes mentions légales, contactez-nous à : contact@happi-bot.com',
           ],
         },
       ]
@@ -69,7 +69,7 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
           content: [
             'The H\'appi website (happi.ai) is published by H\'appi, sole proprietorship in process of registration.',
             'Publication manager: Ndiaye Bayonne',
-            'Contact: nbayonne76@gmail.com',
+            'Contact: contact@happi-bot.com',
           ],
         },
         {
@@ -104,7 +104,7 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
         {
           title: '6. Contact',
           content: [
-            'For any questions regarding these legal notices, contact us at: nbayonne76@gmail.com',
+            'For any questions regarding these legal notices, contact us at: contact@happi-bot.com',
           ],
         },
       ];

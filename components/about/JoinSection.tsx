@@ -161,7 +161,7 @@ export default function JoinSection() {
                   <p className="text-xs text-white/80">{t(`contact.channels.${i}.value`)}</p>
                 </>
               );
-              if (i === 0) return <a key={i} href="mailto:nbayonne76@gmail.com" className={cls}>{inner}</a>;
+              if (i === 0) return <a key={i} href="mailto:contact@happi-bot.com" className={cls}>{inner}</a>;
               if (i === 1) return <a key={i} href="https://www.happi.ai" target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>;
               return <button key={i} onClick={openContactModal} className={cls}>{inner}</button>;
             })}

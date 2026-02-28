@@ -211,8 +211,8 @@ export default async function CgvPage({ params }: { params: Promise<{ locale: st
                   ? 'Pour toute question sur ces conditions, contactez-nous :'
                   : 'For any questions about these terms, contact us:'}
               </p>
-              <a href="mailto:nbayonne76@gmail.com" className="text-happi-blue font-medium hover:underline">
-                nbayonne76@gmail.com
+              <a href="mailto:contact@happi-bot.com" className="text-happi-blue font-medium hover:underline">
+                contact@happi-bot.com
               </a>
             </div>
           </div>
