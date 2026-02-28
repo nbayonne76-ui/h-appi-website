@@ -418,7 +418,7 @@
     "integration": {
       "title": "Integration with your ecosystem",
       "description1": "H'appi can connect to your CRMs, ERPs, messaging tools and e-commerce platforms via API. Each connection is custom-built to fit your technical environment.*",
-      "description2": "Companies deploy an average of 4 CX performance measurement tools. H'appi centralizes this data to offer clear KPIs: resolution rate, customer satisfaction, average response time.",
+      "description2": "Every H'appi solution connects to your existing software. No migration, no double entry. You keep your tools, we add intelligence on top.",
       "integrationsTitle": "Tools connectable via API"
     },
     "hybrid": {
@@ -1166,7 +1166,7 @@
       {
         "title": "Integration with your ecosystem",
         "description1": "H'appi can connect to your CRMs, ERPs, messaging tools and e-commerce platforms via API. Each connection is custom-built to fit your technical environment.*",
-        "description2": "Companies deploy an average of 4 CX performance measurement tools. H'appi centralizes this data to deliver clear KPIs: resolution rate, customer satisfaction, average response time.",
+        "description2": "Every H'appi solution connects to your existing software. No migration, no double entry. You keep your tools, we add intelligence on top.",
         "integrationsTitle": "Tools connectable via API",
         "note": "Each connection is custom-developed for your project. Integration with certain tools may require collaboration from your software provider or integrator."
       },
