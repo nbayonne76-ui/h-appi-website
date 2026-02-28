@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { MessageCircle, Sparkles, TrendingUp } from 'lucide-react';
 import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { motion, useReducedMotion } from 'framer-motion';
 import { CountUp } from '@/components/ui/CountUp';
 
@@ -78,13 +79,13 @@ export default function Hero() {
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}
               </button>
-              <a
+              <Link
                 href="/tarifs"
                 className="inline-flex items-center justify-center px-8 py-3.5 border border-happi-border text-white rounded-lg hover:bg-happi-surface transition-all font-medium active:scale-[0.97]"
               >
                 <TrendingUp className="mr-2" size={18} />
                 {t('ctaSecondary')}
-              </a>
+              </Link>
             </motion.div>
 
             {/* Trust Badges */}
