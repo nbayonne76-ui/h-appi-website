@@ -1059,6 +1059,33 @@
   "blogData": {
     "articles": [
       {
+        "title": "The real cost of a failed delivery (and how to reduce it)",
+        "excerpt": "Every failed delivery costs far more than a simple refund. Direct costs, SAV calls, disputes, reputation: here's how to calculate the real amount and act on it.",
+        "category": "Guide",
+        "date": "January 15, 2026",
+        "readTime": "9 min",
+        "author": "H'appi Team",
+        "authorRole": "Strategy & Operations"
+      },
+      {
+        "title": "Furniture SAV: why your team is drowning in calls",
+        "excerpt": "65% of SAV calls in furniture retail cover the same 5 topics. Understanding why is the first step to automating intelligently.",
+        "category": "Product",
+        "date": "January 22, 2026",
+        "readTime": "7 min",
+        "author": "H'appi Team",
+        "authorRole": "Product & CX"
+      },
+      {
+        "title": "How to measure a SAV chatbot's ROI before buying",
+        "excerpt": "90% of chatbot projects fail to prove their ROI. Here are the 4 metrics that matter, the calculation formula, and a real-world furniture example.",
+        "category": "Guide",
+        "date": "January 29, 2026",
+        "readTime": "8 min",
+        "author": "H'appi Team",
+        "authorRole": "Strategy & Consulting"
+      },
+      {
         "title": "H'appi Chatbot: how we customize each bot for your business",
         "excerpt": "Discover why generic chatbots frustrate your customers and how industry customization can transform the customer experience.",
         "category": "Product",

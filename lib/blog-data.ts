@@ -7,6 +7,7 @@ export type Article = {
   excerpt: string;
   category: string;
   categoryColor: string;
+  accentHex: string;
   date: string;
   readTime: string;
   author: string;
@@ -15,6 +16,9 @@ export type Article = {
 };
 
 const slugs = [
+  'vrai-cout-livraison-ratee',
+  'sav-ameublement-equipe-appels',
+  'roi-chatbot-sav-mesure',
   'chatbot-personnalisation-metier',
   'application-sur-mesure-vs-standardisee',
   'ia-generative-2026-tendances',
@@ -31,6 +35,16 @@ const categoryColors: Record<string, string> = {
   Compliance: 'bg-red-500/10 text-red-400',
 };
 
+const categoryAccent: Record<string, string> = {
+  Produit: '#3B82F6',
+  Product: '#3B82F6',
+  Guide: '#10B981',
+  Tendances: '#c084fc',
+  Trends: '#c084fc',
+  Conformité: '#f87171',
+  Compliance: '#f87171',
+};
+
 const messages: Record<string, typeof frMessages> = {
   fr: frMessages,
   en: enMessages,
@@ -44,6 +58,7 @@ export function getArticles(locale: string): Article[] {
     excerpt: item.excerpt,
     category: item.category,
     categoryColor: categoryColors[item.category] || 'bg-gray-100 text-gray-700',
+    accentHex: categoryAccent[item.category] || '#3B82F6',
     date: item.date,
     readTime: item.readTime,
     author: item.author,

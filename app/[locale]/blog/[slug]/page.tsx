@@ -1,10 +1,12 @@
-import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getArticleBySlug, getRelatedArticles } from '@/lib/blog-data';
 import ArticleLayout from '@/components/blog/ArticleLayout';
 import type { Article } from '@/lib/blog-data';
 
 const slugs = [
+  'vrai-cout-livraison-ratee',
+  'sav-ameublement-equipe-appels',
+  'roi-chatbot-sav-mesure',
   'chatbot-personnalisation-metier',
   'application-sur-mesure-vs-standardisee',
   'ia-generative-2026-tendances',
@@ -430,9 +432,438 @@ function Article4_EN() {
   );
 }
 
+// ─── Priority 1 articles ─────────────────────────────────────────────────────
+
+function ArticleP1_FR() {
+  return (
+    <>
+      <h2 id="cout-direct">Le coût direct : ce que vous voyez</h2>
+      <p>
+        Une livraison ratée a un coût immédiat et visible : le remboursement total ou partiel de la commande, le second passage du livreur, et parfois le retour du meuble en entrepôt. Pour un canapé à 800 €, une livraison ratée peut coûter entre 120 € et 300 € en logistique seule.
+      </p>
+      <p>
+        Mais ce que la plupart des directions opérationnelles calculent s&apos;arrête là. C&apos;est une erreur.
+      </p>
+
+      <h2 id="cout-cache">Le coût caché : ce que vous ne mesurez pas</h2>
+      <p>
+        Derrière chaque livraison ratée se cache une chaîne de coûts invisibles qui multiplient la facture réelle par 3 à 5.
+      </p>
+      <ul>
+        <li><strong>Appels SAV</strong> : en moyenne 2 à 3 contacts client par litige non résolu. À 28 €/h pour un agent, et 8 minutes par appel, c&apos;est 11 à 17 € de coût humain supplémentaire.</li>
+        <li><strong>Traitement administratif</strong> : saisie du litige, coordination transporteur, émission de bon de retour. Entre 20 et 45 minutes de travail interne par cas.</li>
+        <li><strong>Litiges transporteurs</strong> : si la preuve de livraison est absente, le transporteur peut refuser l&apos;indemnisation. Vous absorbez 100 % du coût.</li>
+        <li><strong>Perte commerciale</strong> : selon Narvar, <strong>33 % des clients qui vivent une mauvaise expérience de livraison ne recommandent pas chez le même enseigne</strong>. Pour un panier moyen de 600 €, c&apos;est une commande future perdue.</li>
+      </ul>
+
+      <h2 id="cout-reputation">Le coût de réputation : le plus long à réparer</h2>
+      <p>
+        Un client mécontent en 2026 ne vous appelle pas — il poste. Un avis négatif sur Google ou Trustpilot reste indexé pendant des années et influence directement votre taux de conversion.
+      </p>
+      <p>
+        BrightLocal indique que <strong>88 % des consommateurs consultent les avis en ligne avant un achat de mobilier</strong>. Une note qui chute de 4,4 à 4,1 étoiles peut réduire votre conversion de 8 à 12 %.
+      </p>
+
+      <h2 id="calcul">Comment calculer le coût réel pour votre activité</h2>
+      <p>
+        Voici la formule simple que nous utilisons avec nos clients ameublement :
+      </p>
+      <ul>
+        <li><strong>Coût direct</strong> = (taux de litige × panier moyen × taux de remboursement) + coût logistique second passage</li>
+        <li><strong>Coût SAV</strong> = nombre de litiges × contacts moyens × durée × coût horaire agent</li>
+        <li><strong>Coût réputation</strong> = estimation à 15-25 % du chiffre d&apos;affaires à risque (avis négatifs × panier moyen)</li>
+      </ul>
+      <p>
+        Pour 300 livraisons/mois avec un taux de litige de 8 %, cela représente environ <strong>24 litiges × 85 € de coût total moyen = 2 040 € par mois</strong>, soit 24 480 € par an.
+      </p>
+
+      <h2 id="happi-solution">Comment H&apos;appi réduit ces coûts</h2>
+      <p>
+        Notre approche agit sur les trois niveaux simultanément :
+      </p>
+      <ul>
+        <li><strong>Réduction des litiges</strong> : l&apos;App Traçabilité H&apos;appi documente chaque livraison avec photo géolocalisée, signature électronique et timestamp. −80 % de litiges non indemnisés dès le premier mois.</li>
+        <li><strong>Automatisation SAV</strong> : le Bot H&apos;appi prend en charge les demandes de statut, les réclamations simples et les planifications de second passage. −65 % d&apos;appels entrants.</li>
+        <li><strong>Donnez une preuve numérique</strong> : chaque livraison devient un dossier horodaté, utilisable en cas de contestation client ou transporteur.</li>
+      </ul>
+      <p>
+        Le ROI est généralement atteint en moins de 6 semaines pour les acteurs traitant plus de 100 livraisons par mois.
+      </p>
+    </>
+  );
+}
+
+function ArticleP1_EN() {
+  return (
+    <>
+      <h2 id="cout-direct">The direct cost: what you can see</h2>
+      <p>
+        A failed delivery has an immediate, visible cost: full or partial order refund, a second delivery attempt, and sometimes returning the furniture to the warehouse. For an 800 € sofa, a failed delivery can cost between 120 € and 300 € in logistics alone.
+      </p>
+      <p>
+        But most operations teams stop calculating there. That&apos;s a mistake.
+      </p>
+
+      <h2 id="cout-cache">The hidden cost: what you&apos;re not measuring</h2>
+      <p>
+        Behind every failed delivery lies a chain of invisible costs that multiply the real bill by 3 to 5.
+      </p>
+      <ul>
+        <li><strong>SAV calls</strong>: on average 2–3 customer contacts per unresolved dispute. At 28 €/h for an agent and 8 minutes per call, that&apos;s an extra 11–17 € in human cost.</li>
+        <li><strong>Administrative handling</strong>: logging the dispute, coordinating with the carrier, issuing a return label. Between 20 and 45 minutes of internal work per case.</li>
+        <li><strong>Carrier disputes</strong>: if proof of delivery is missing, the carrier can refuse compensation. You absorb 100% of the cost.</li>
+        <li><strong>Lost business</strong>: according to Narvar, <strong>33% of customers who have a bad delivery experience won&apos;t reorder from the same retailer</strong>. On an average basket of 600 €, that&apos;s a future order gone.</li>
+      </ul>
+
+      <h2 id="cout-reputation">The reputation cost: the hardest to repair</h2>
+      <p>
+        A dissatisfied customer in 2026 doesn&apos;t call you — they post. A negative review on Google or Trustpilot stays indexed for years and directly influences your conversion rate.
+      </p>
+      <p>
+        BrightLocal shows that <strong>88% of consumers check online reviews before purchasing furniture</strong>. A rating drop from 4.4 to 4.1 stars can reduce conversion by 8–12%.
+      </p>
+
+      <h2 id="calcul">How to calculate the real cost for your business</h2>
+      <p>
+        Here is the simple formula we use with our furniture clients:
+      </p>
+      <ul>
+        <li><strong>Direct cost</strong> = (dispute rate × average basket × refund rate) + second-attempt logistics cost</li>
+        <li><strong>SAV cost</strong> = disputes × average contacts × duration × agent hourly rate</li>
+        <li><strong>Reputation cost</strong> = estimate at 15–25% of at-risk revenue (negative reviews × average basket)</li>
+      </ul>
+      <p>
+        For 300 deliveries/month with an 8% dispute rate: roughly <strong>24 disputes × 85 € average total cost = 2,040 €/month</strong>, or 24,480 € per year.
+      </p>
+
+      <h2 id="happi-solution">How H&apos;appi reduces these costs</h2>
+      <p>
+        Our approach acts on all three levels simultaneously:
+      </p>
+      <ul>
+        <li><strong>Dispute reduction</strong>: H&apos;appi&apos;s Traceability App documents every delivery with a geolocated photo, e-signature and timestamp. −80% non-compensated disputes from day one.</li>
+        <li><strong>SAV automation</strong>: H&apos;appi&apos;s Bot handles status requests, simple claims and second-attempt scheduling. −65% inbound calls.</li>
+        <li><strong>Digital proof</strong>: every delivery becomes a timestamped dossier, usable in any client or carrier dispute.</li>
+      </ul>
+      <p>
+        ROI is typically reached in under 6 weeks for operators handling more than 100 deliveries per month.
+      </p>
+    </>
+  );
+}
+
+function ArticleP2_FR() {
+  return (
+    <>
+      <h2 id="probleme-structurel">Le problème structurel du SAV ameublement</h2>
+      <p>
+        Le SAV ameublement souffre d&apos;un paradoxe : plus votre chiffre d&apos;affaires croît, plus vos appels augmentent — de manière quasi-proportionnelle. Contrairement au retail standard, un meuble livré est difficile à retourner et impossible à "réinstaller" à distance. Chaque problème nécessite un contact humain.
+      </p>
+      <p>
+        Résultat : selon une étude Zendesk 2024, les équipes SAV de l&apos;ameublement traitent en moyenne <strong>47 % plus de contacts par commande que le retail général</strong>. Ce n&apos;est pas une question de mauvaise organisation — c&apos;est structurel.
+      </p>
+
+      <h2 id="cinq-raisons">Les 5 raisons qui expliquent le volume</h2>
+      <ul>
+        <li>
+          <strong>1. Absence de visibilité en temps réel.</strong> Le client ne sait pas où est son meuble. Il appelle pour savoir. C&apos;est la raison n°1 des contacts SAV dans l&apos;ameublement : <em>Où est ma commande ?</em>
+        </li>
+        <li>
+          <strong>2. Délais de livraison longs.</strong> Un canapé ou une armoire, c&apos;est souvent 3 à 8 semaines de délai. Pendant ce temps, le client s&apos;inquiète, relance, et peut annuler.
+        </li>
+        <li>
+          <strong>3. Livraisons manquées.</strong> Un client absent, un code d&apos;accès erroné, un monte-charge bloqué : le second passage génère systématiquement 2 à 3 contacts SAV supplémentaires.
+        </li>
+        <li>
+          <strong>4. Dommages à la livraison.</strong> Coin abîmé, emballage déchiré, pied cassé. Chaque dommage génère un litige qui dure en moyenne 8 jours et implique 4 à 6 échanges.
+        </li>
+        <li>
+          <strong>5. Montage et installation.</strong> "Comment je monte ce meuble ?", "La pièce A ne rentre pas dans le trou B". Les questions de montage représentent 12 à 18 % des contacts post-livraison.
+        </li>
+      </ul>
+
+      <h2 id="chiffres">Ce que disent les chiffres</h2>
+      <p>
+        Gorgias a analysé 1 200 boutiques e-commerce en 2024. Dans le segment ameublement et décoration, ils ont constaté que :
+      </p>
+      <ul>
+        <li><strong>65 % des appels SAV</strong> portaient sur les mêmes 5 sujets (statut livraison, retard, litige, montage, produit défectueux)</li>
+        <li><strong>41 % de ces appels</strong> auraient pu être résolus par un système automatisé sans intervention humaine</li>
+        <li>Le coût moyen d&apos;un contact SAV en ameublement est de <strong>8,50 € à 14 €</strong> selon la complexité</li>
+      </ul>
+      <p>
+        Ces chiffres signifient qu&apos;une équipe traitant 500 appels/mois dépense entre 4 250 € et 7 000 € par mois en contacts qui pourraient être automatisés en grande partie.
+      </p>
+
+      <h2 id="solution">La solution : automatisation + traçabilité</h2>
+      <p>
+        Réduire le volume d&apos;appels ne signifie pas supprimer le contact humain. Cela signifie <strong>réserver les agents aux situations qui le nécessitent vraiment</strong>.
+      </p>
+      <p>
+        La combinaison gagnante est double :
+      </p>
+      <ul>
+        <li><strong>Automatiser les demandes simples</strong> : statut de livraison, créneaux disponibles, suivi de litige, guide de montage — un chatbot SAV métier peut traiter 60 à 70 % de ces demandes 24h/24.</li>
+        <li><strong>Éliminer les causes de litige</strong> : une application de traçabilité qui documente chaque livraison (photo, signature, GPS) réduit mécaniquement le nombre de contestations non fondées.</li>
+      </ul>
+
+      <h2 id="happi-change">Ce que H&apos;appi change concrètement</h2>
+      <p>
+        H&apos;appi a développé deux outils spécifiquement pour ce secteur. Le <strong>Bot SAV H&apos;appi</strong> est entraîné sur le vocabulaire et les processus de l&apos;ameublement : il connaît la différence entre un BL et un bon de retour, comprend ce qu&apos;est un monte-charge et sait escalader au bon moment.
+      </p>
+      <p>
+        L&apos;<strong>App Traçabilité H&apos;appi</strong> équipe les livreurs d&apos;un outil mobile simple : photo géolocalisée obligatoire avant de quitter le domicile, signature électronique client, rapport automatique en cas de dommage. Ces preuves sont accessibles en temps réel par le service client.
+      </p>
+      <p>
+        Résultat pour nos clients actuels : <strong>−65 % d&apos;appels</strong> le premier mois, <strong>−80 % de litiges</strong> sur 3 mois.
+      </p>
+    </>
+  );
+}
+
+function ArticleP2_EN() {
+  return (
+    <>
+      <h2 id="probleme-structurel">The structural problem in furniture SAV</h2>
+      <p>
+        Furniture after-sales suffers from a paradox: the more your revenue grows, the more your call volume grows — almost proportionally. Unlike standard retail, a delivered piece of furniture is hard to return and impossible to "reinstall" remotely. Every problem requires a human contact.
+      </p>
+      <p>
+        As a result, according to a 2024 Zendesk study, furniture SAV teams handle on average <strong>47% more contacts per order than general retail</strong>. This isn&apos;t a matter of poor organisation — it&apos;s structural.
+      </p>
+
+      <h2 id="cinq-raisons">The 5 reasons behind the volume</h2>
+      <ul>
+        <li>
+          <strong>1. No real-time visibility.</strong> The customer doesn&apos;t know where their furniture is. They call to find out. This is the #1 reason for SAV contacts in furniture: <em>Where is my order?</em>
+        </li>
+        <li>
+          <strong>2. Long delivery lead times.</strong> A sofa or wardrobe often takes 3 to 8 weeks. During that time, customers worry, follow up, and may cancel.
+        </li>
+        <li>
+          <strong>3. Missed deliveries.</strong> An absent customer, a wrong access code, a broken lift: second attempts systematically generate 2–3 extra SAV contacts.
+        </li>
+        <li>
+          <strong>4. Delivery damage.</strong> Dented corner, torn packaging, broken leg. Each damage claim lasts an average of 8 days and involves 4 to 6 exchanges.
+        </li>
+        <li>
+          <strong>5. Assembly and installation.</strong> "How do I assemble this?" or "Part A won&apos;t fit in slot B." Assembly questions account for 12–18% of post-delivery contacts.
+        </li>
+      </ul>
+
+      <h2 id="chiffres">What the numbers say</h2>
+      <p>
+        Gorgias analysed 1,200 e-commerce stores in 2024. In the furniture and home décor segment, they found that:
+      </p>
+      <ul>
+        <li><strong>65% of SAV calls</strong> covered the same 5 topics (delivery status, delay, dispute, assembly, defective product)</li>
+        <li><strong>41% of those calls</strong> could have been resolved by an automated system without human intervention</li>
+        <li>The average cost of a SAV contact in furniture is <strong>8.50 € to 14 €</strong> depending on complexity</li>
+      </ul>
+      <p>
+        These figures mean a team handling 500 calls/month spends between 4,250 € and 7,000 € per month on contacts that could largely be automated.
+      </p>
+
+      <h2 id="solution">The solution: automation + traceability</h2>
+      <p>
+        Reducing call volume doesn&apos;t mean removing human contact. It means <strong>reserving agents for situations that truly require them</strong>.
+      </p>
+      <ul>
+        <li><strong>Automate simple requests</strong>: delivery status, available time slots, dispute tracking, assembly guides — a domain-specific SAV chatbot can handle 60–70% of these requests 24/7.</li>
+        <li><strong>Eliminate the causes of disputes</strong>: a traceability app that documents each delivery (photo, signature, GPS) mechanically reduces unfounded contestations.</li>
+      </ul>
+
+      <h2 id="happi-change">What H&apos;appi changes in practice</h2>
+      <p>
+        H&apos;appi has built two tools specifically for this sector. The <strong>H&apos;appi SAV Bot</strong> is trained on furniture vocabulary and processes: it knows the difference between a delivery note and a return label, understands what a goods lift is, and knows when to escalate.
+      </p>
+      <p>
+        The <strong>H&apos;appi Traceability App</strong> equips drivers with a simple mobile tool: a mandatory geolocated photo before leaving the premises, client e-signature, and automatic damage reports. All of this is accessible in real time by the customer service team.
+      </p>
+      <p>
+        Results for our current clients: <strong>−65% calls</strong> in month one, <strong>−80% disputes</strong> over 3 months.
+      </p>
+    </>
+  );
+}
+
+function ArticleP3_FR() {
+  return (
+    <>
+      <h2 id="pourquoi-echec">Pourquoi 90 % des projets chatbot échouent à prouver leur ROI</h2>
+      <p>
+        La plupart des achats de chatbot SAV reposent sur une promesse floue : &quot;vous allez réduire vos coûts&quot;. Pas de baseline, pas de KPIs définis avant le déploiement, pas de méthode de mesure. Résultat : 6 mois plus tard, personne ne peut dire si ça a vraiment fonctionné.
+      </p>
+      <p>
+        Selon Gartner, <strong>85 % des projets IA en entreprise ne parviennent pas à démontrer un ROI mesurable</strong> dans les 18 premiers mois. Ce n&apos;est pas un problème de technologie — c&apos;est un problème de méthode.
+      </p>
+
+      <h2 id="quatre-metriques">Les 4 métriques qui comptent vraiment</h2>
+      <ul>
+        <li>
+          <strong>1. Taux de déflexion</strong> : pourcentage d&apos;appels/tickets entrants traités par le chatbot sans intervention humaine. Cible réaliste pour un bot métier bien configuré : 55 à 70 %.
+        </li>
+        <li>
+          <strong>2. Coût par contact résolu</strong> : coût total du chatbot (abonnement + maintenance) divisé par le nombre de contacts résolus. À comparer avec le coût humain (agent + infrastructure).
+        </li>
+        <li>
+          <strong>3. CSAT (Customer Satisfaction Score)</strong> : ne mesurez pas seulement si les clients ont eu une réponse — mesurez s&apos;ils ont eu la bonne réponse. Un bot mal configuré peut déflexer 80 % des contacts mais satisfaire seulement 30 %.
+        </li>
+        <li>
+          <strong>4. Temps de résolution moyen (AHT)</strong> : pour les cas qui passent quand même à un agent, le bot doit réduire l&apos;AHT en fournissant le contexte du client en amont. Cible : −25 % d&apos;AHT agent.
+        </li>
+      </ul>
+
+      <h2 id="formule">La formule de calcul ROI H&apos;appi</h2>
+      <p>
+        Voici la formule que nous utilisons systématiquement avant tout engagement :
+      </p>
+      <ul>
+        <li><strong>Économie mensuelle brute</strong> = (contacts mensuels × taux de déflexion × durée moyenne) / 60 × coût horaire agent</li>
+        <li><strong>ROI mensuel net</strong> = économie brute − coût abonnement chatbot</li>
+        <li><strong>Délai de retour sur investissement</strong> = coût de déploiement / ROI mensuel net</li>
+      </ul>
+      <p>
+        Cette formule est délibérément conservatrice : elle ne prend pas en compte la réduction des litiges, la satisfaction client ou les économies sur les horaires étendus (bot disponible 24h/24).
+      </p>
+
+      <h2 id="cas-pratique">Cas pratique : 300 appels/mois à 28 €/h</h2>
+      <ul>
+        <li>300 appels SAV/mois × 65 % de déflexion = <strong>195 appels automatisés</strong></li>
+        <li>195 × 8 min / 60 × 28 €/h = <strong>728 € économisés par mois</strong> sur la main-d&apos;œuvre pure</li>
+        <li>Abonnement Bot H&apos;appi : 299 €/mois</li>
+        <li><strong>ROI net : +429 €/mois dès le premier mois</strong>, soit +5 148 € sur 12 mois</li>
+        <li>Sans compter la réduction des litiges et la disponibilité 24/7</li>
+      </ul>
+      <p>
+        Notre calculateur ROI en ligne vous permet d&apos;adapter ces chiffres à votre situation réelle en 2 minutes.
+      </p>
+
+      <h2 id="erreurs">Les erreurs à éviter dans votre calcul</h2>
+      <ul>
+        <li><strong>Surestimer le taux de déflexion</strong> : un vendeur qui vous promet 90 % de déflexion sans voir vos données ment. Partez sur 55 à 65 % pour un calcul honnête.</li>
+        <li><strong>Oublier le temps d&apos;implémentation</strong> : 2 à 4 semaines pendant lesquelles votre équipe est mobilisée. À intégrer dans le ROI an 1.</li>
+        <li><strong>Ne pas mesurer le CSAT post-bot</strong> : un bot qui déflexe mais frustre peut coûter plus en churns clients qu&apos;il n&apos;économise en appels.</li>
+        <li><strong>Comparer avec un coût zéro</strong> : le statu quo a un coût. Mesurez-le honnêtement avant de comparer.</li>
+      </ul>
+    </>
+  );
+}
+
+function ArticleP3_EN() {
+  return (
+    <>
+      <h2 id="pourquoi-echec">Why 90% of chatbot projects fail to prove their ROI</h2>
+      <p>
+        Most SAV chatbot purchases are based on a vague promise: &quot;you&apos;ll reduce costs.&quot; No baseline, no KPIs defined before deployment, no measurement methodology. Result: 6 months later, nobody can say whether it actually worked.
+      </p>
+      <p>
+        According to Gartner, <strong>85% of enterprise AI projects fail to demonstrate measurable ROI</strong> within the first 18 months. This isn&apos;t a technology problem — it&apos;s a methodology problem.
+      </p>
+
+      <h2 id="quatre-metriques">The 4 metrics that actually matter</h2>
+      <ul>
+        <li>
+          <strong>1. Deflection rate</strong>: percentage of inbound calls/tickets handled by the chatbot without human intervention. Realistic target for a well-configured domain chatbot: 55–70%.
+        </li>
+        <li>
+          <strong>2. Cost per resolved contact</strong>: total chatbot cost (subscription + maintenance) divided by the number of contacts resolved. Compare against the human cost (agent + infrastructure).
+        </li>
+        <li>
+          <strong>3. CSAT (Customer Satisfaction Score)</strong>: don&apos;t just measure whether customers got a response — measure whether they got the right one. A poorly configured bot can deflect 80% of contacts but satisfy only 30%.
+        </li>
+        <li>
+          <strong>4. Average Handling Time (AHT)</strong>: for cases that still reach an agent, the bot should reduce AHT by providing client context upfront. Target: −25% agent AHT.
+        </li>
+      </ul>
+
+      <h2 id="formule">The H&apos;appi ROI calculation formula</h2>
+      <p>
+        Here is the formula we use systematically before any engagement:
+      </p>
+      <ul>
+        <li><strong>Gross monthly savings</strong> = (monthly contacts × deflection rate × avg duration) / 60 × agent hourly cost</li>
+        <li><strong>Net monthly ROI</strong> = gross savings − chatbot subscription cost</li>
+        <li><strong>Payback period</strong> = deployment cost / net monthly ROI</li>
+      </ul>
+      <p>
+        This formula is deliberately conservative: it doesn&apos;t account for dispute reduction, customer satisfaction improvements, or savings from extended hours (bot available 24/7).
+      </p>
+
+      <h2 id="cas-pratique">Real-world case: 300 calls/month at 28 €/h</h2>
+      <ul>
+        <li>300 SAV calls/month × 65% deflection = <strong>195 automated calls</strong></li>
+        <li>195 × 8 min / 60 × 28 €/h = <strong>728 € saved per month</strong> in pure labour</li>
+        <li>H&apos;appi Bot subscription: 299 €/month</li>
+        <li><strong>Net ROI: +429 €/month from month one</strong>, or +5,148 € over 12 months</li>
+        <li>Not counting dispute reduction and 24/7 availability</li>
+      </ul>
+      <p>
+        Our online ROI calculator lets you adapt these figures to your real situation in under 2 minutes.
+      </p>
+
+      <h2 id="erreurs">Mistakes to avoid in your calculation</h2>
+      <ul>
+        <li><strong>Overestimating deflection rate</strong>: a vendor promising 90% deflection without seeing your data is misleading you. Use 55–65% for an honest calculation.</li>
+        <li><strong>Forgetting implementation time</strong>: 2 to 4 weeks during which your team is mobilised. Include this in year-1 ROI.</li>
+        <li><strong>Not measuring post-bot CSAT</strong>: a bot that deflects but frustrates can cost more in customer churn than it saves in calls.</li>
+        <li><strong>Comparing against zero cost</strong>: the status quo has a cost. Measure it honestly before comparing.</li>
+      </ul>
+    </>
+  );
+}
+
 // ─── TOC & Sources per slug ───────────────────────────────────────────────────
 
 const tocData: Record<string, Record<string, { id: string; label: string }[]>> = {
+  'vrai-cout-livraison-ratee': {
+    fr: [
+      { id: 'cout-direct', label: 'Le coût direct : ce que vous voyez' },
+      { id: 'cout-cache', label: 'Le coût caché : ce que vous ne mesurez pas' },
+      { id: 'cout-reputation', label: 'Le coût de réputation' },
+      { id: 'calcul', label: 'Comment calculer le coût réel' },
+      { id: 'happi-solution', label: "Comment H'appi réduit ces coûts" },
+    ],
+    en: [
+      { id: 'cout-direct', label: 'The direct cost: what you can see' },
+      { id: 'cout-cache', label: "The hidden cost: what you're not measuring" },
+      { id: 'cout-reputation', label: 'The reputation cost' },
+      { id: 'calcul', label: 'How to calculate the real cost' },
+      { id: 'happi-solution', label: "How H'appi reduces these costs" },
+    ],
+  },
+  'sav-ameublement-equipe-appels': {
+    fr: [
+      { id: 'probleme-structurel', label: 'Le problème structurel du SAV ameublement' },
+      { id: 'cinq-raisons', label: 'Les 5 raisons qui expliquent le volume' },
+      { id: 'chiffres', label: 'Ce que disent les chiffres' },
+      { id: 'solution', label: 'La solution : automatisation + traçabilité' },
+      { id: 'happi-change', label: "Ce que H'appi change concrètement" },
+    ],
+    en: [
+      { id: 'probleme-structurel', label: 'The structural problem in furniture SAV' },
+      { id: 'cinq-raisons', label: 'The 5 reasons behind the volume' },
+      { id: 'chiffres', label: 'What the numbers say' },
+      { id: 'solution', label: 'The solution: automation + traceability' },
+      { id: 'happi-change', label: "What H'appi changes in practice" },
+    ],
+  },
+  'roi-chatbot-sav-mesure': {
+    fr: [
+      { id: 'pourquoi-echec', label: "Pourquoi 90 % des projets échouent" },
+      { id: 'quatre-metriques', label: 'Les 4 métriques qui comptent' },
+      { id: 'formule', label: 'La formule de calcul ROI' },
+      { id: 'cas-pratique', label: 'Cas pratique chiffré' },
+      { id: 'erreurs', label: 'Les erreurs à éviter' },
+    ],
+    en: [
+      { id: 'pourquoi-echec', label: 'Why 90% of chatbot projects fail' },
+      { id: 'quatre-metriques', label: 'The 4 metrics that matter' },
+      { id: 'formule', label: 'The ROI calculation formula' },
+      { id: 'cas-pratique', label: 'Real-world case study' },
+      { id: 'erreurs', label: 'Mistakes to avoid' },
+    ],
+  },
   'chatbot-personnalisation-metier': {
     fr: [
       { id: 'probleme', label: 'Le problème des chatbots génériques' },
@@ -502,6 +933,21 @@ const tocData: Record<string, Record<string, { id: string; label: string }[]>> =
 };
 
 const sourcesData: Record<string, { name: string; url: string; detail: string }[]> = {
+  'vrai-cout-livraison-ratee': [
+    { name: 'Narvar — Consumer Report 2024', url: 'https://corp.narvar.com', detail: '33% of customers who have a bad delivery experience won\'t reorder from the same retailer' },
+    { name: 'BrightLocal — Local Consumer Review Survey', url: 'https://www.brightlocal.com', detail: '88% of consumers read online reviews before purchasing furniture' },
+    { name: 'Statista — E-commerce Returns Rate by Category', url: 'https://www.statista.com', detail: 'Furniture return and dispute rates by sector' },
+  ],
+  'sav-ameublement-equipe-appels': [
+    { name: 'Zendesk — CX Trends 2024', url: 'https://www.zendesk.com/fr/blog/cx-trends', detail: 'Furniture SAV teams handle 47% more contacts per order than general retail' },
+    { name: 'Gorgias — E-commerce SAV Benchmark 2024', url: 'https://www.gorgias.com', detail: '65% of SAV calls in furniture cover the same 5 topics' },
+    { name: 'Narvar — Post-Purchase Experience Report', url: 'https://corp.narvar.com', detail: 'Delivery visibility as #1 driver of inbound SAV contacts' },
+  ],
+  'roi-chatbot-sav-mesure': [
+    { name: 'Gartner — AI ROI Survey 2024', url: 'https://www.gartner.com', detail: '85% of enterprise AI projects fail to demonstrate measurable ROI within 18 months' },
+    { name: 'Gorgias — Chatbot Deflection Rates by Industry', url: 'https://www.gorgias.com', detail: 'Realistic deflection rates for domain-specific vs generic chatbots' },
+    { name: 'Zendesk — Cost Per Contact Benchmark', url: 'https://www.zendesk.com', detail: 'Average SAV contact cost by sector and resolution type' },
+  ],
   'chatbot-personnalisation-metier': [
     { name: 'Gartner — Chatbot User Survey 2024', url: 'https://www.gartner.com', detail: '64 % of customers prefer no chatbot over a bad one' },
     { name: 'IBM — AI Chatbot Statistics', url: 'https://www.ibm.com/blog/chatbot-statistics', detail: 'Domain-specific bots show 2x higher CSAT scores' },
@@ -527,6 +973,9 @@ const sourcesData: Record<string, { name: string; url: string; detail: string }[
 };
 
 const contentMap: Record<string, Record<string, React.ReactNode>> = {
+  'vrai-cout-livraison-ratee': { fr: <ArticleP1_FR />, en: <ArticleP1_EN /> },
+  'sav-ameublement-equipe-appels': { fr: <ArticleP2_FR />, en: <ArticleP2_EN /> },
+  'roi-chatbot-sav-mesure': { fr: <ArticleP3_FR />, en: <ArticleP3_EN /> },
   'chatbot-personnalisation-metier': { fr: <Article1_FR />, en: <Article1_EN /> },
   'application-sur-mesure-vs-standardisee': { fr: <Article2_FR />, en: <Article2_EN /> },
   'ia-generative-2026-tendances': { fr: <Article3_FR />, en: <Article3_EN /> },

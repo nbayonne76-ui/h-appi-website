@@ -1059,6 +1059,33 @@
   "blogData": {
     "articles": [
       {
+        "title": "Le vrai coût d'une livraison ratée (et comment le réduire)",
+        "excerpt": "Chaque livraison ratée coûte bien plus que le simple remboursement. Coûts directs, appels SAV, litiges, réputation : voici comment calculer le montant réel et agir.",
+        "category": "Guide",
+        "date": "15 janvier 2026",
+        "readTime": "9 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Strategy & Operations"
+      },
+      {
+        "title": "SAV ameublement : pourquoi votre équipe croule sous les appels",
+        "excerpt": "65 % des appels SAV dans l'ameublement portent sur les mêmes 5 sujets. Comprendre pourquoi est la première étape pour automatiser intelligemment.",
+        "category": "Produit",
+        "date": "22 janvier 2026",
+        "readTime": "7 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Product & CX"
+      },
+      {
+        "title": "Comment mesurer le ROI d'un chatbot SAV avant de l'acheter",
+        "excerpt": "90 % des projets chatbot échouent à prouver leur ROI. Voici les 4 métriques qui comptent, la formule de calcul et un cas pratique chiffré pour l'ameublement.",
+        "category": "Guide",
+        "date": "29 janvier 2026",
+        "readTime": "8 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Strategy & Consulting"
+      },
+      {
         "title": "Chatbot H'appi : comment nous personnalisons chaque bot selon votre métier",
         "excerpt": "Découvrez pourquoi les chatbots génériques frustrent vos clients et comment la personnalisation sectorielle peut transformer l'expérience client.",
         "category": "Produit",
