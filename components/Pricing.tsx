@@ -4,6 +4,7 @@ import { Check, Mail, Star, Info } from 'lucide-react';
 import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { RoiCalculator } from '@/components/pricing/RoiCalculator';
 
 export default function Pricing() {
   const t = useTranslations('pricing');
@@ -35,8 +36,20 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* ROI Calculator */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-dark">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="inline-block px-3 py-1 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">
+              {t('roiBadge')}
+            </span>
+          </div>
+          <RoiCalculator />
+        </div>
+      </section>
+
       {/* Implementation */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

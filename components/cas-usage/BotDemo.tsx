@@ -55,10 +55,12 @@ export function BotDemo() {
   const [isTyping, setIsTyping] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const [started, setStarted] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
+  // Scroll inside the chat container only — never scrolls the page
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const el = messagesContainerRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
   }, [messages, isTyping]);
 
   const start = () => {
@@ -136,7 +138,7 @@ export function BotDemo() {
         </div>
 
         {/* Messages */}
-        <div className="px-4 pt-4 pb-2 min-h-[160px] max-h-[300px] overflow-y-auto space-y-3">
+        <div ref={messagesContainerRef} className="px-4 pt-4 pb-2 min-h-[160px] max-h-[300px] overflow-y-auto space-y-3">
           {!started ? (
             <div className="flex items-center justify-center h-28">
               <button
@@ -186,7 +188,6 @@ export function BotDemo() {
               )}
             </>
           )}
-          <div ref={messagesEndRef} />
         </div>
 
         {/* Reply buttons */}
