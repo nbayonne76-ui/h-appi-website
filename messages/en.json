@@ -28,7 +28,7 @@
         "label": "Cheaper than the market"
       }
     },
-    "ctaPrimary": "Let's discuss your project",
+    "ctaPrimary": "Start my project",
     "ctaSecondary": "See pricing",
     "trustHosting": "Hosted in France",
     "trustRgpd": "No commitment",
@@ -225,7 +225,7 @@
     "transparencyConclusion": "Every quote details line by line what you're paying for. No surprises, no hidden fees.",
     "finalCtaTitle": "Ready to discuss your project?",
     "finalCtaSubtitle": "Every project is unique. Let's talk about yours to offer you a perfectly tailored solution and price.",
-    "finalCtaPrimary": "Let's discuss your project",
+    "finalCtaPrimary": "Get my quote",
     "finalCtaSecondary": "See the FAQ",
     "finalCtaNote": "Free quote • No commitment • Response within 48h"
   },
@@ -412,8 +412,8 @@
         "Continuous learning of your business vocabulary",
         "Adaptation to each client's internal processes"
       ],
-      "statValue": "85%",
-      "statLabel": "of customer service interactions automated in France in 2025"
+      "statValue": "3x",
+      "statLabel": "faster to deploy than a generic solution"
     },
     "integration": {
       "title": "Integration with your ecosystem",
@@ -423,25 +423,25 @@
     },
     "hybrid": {
       "title": "The human-AI hybrid approach",
-      "description1": "51% of companies seek to balance human contact and technology. H'appi is designed to empower your teams, not replace them. The chatbot handles repetitive requests (up to 80% of volume) and transfers complex cases to your advisors with all necessary context.",
+      "description1": "H'appi is designed to empower your teams, not replace them. The chatbot handles repetitive requests (up to 80% of volume) and transfers complex cases to your advisors with all necessary context.",
       "description2": "Result: your agents are more efficient, your customers are better served, and your support costs decrease.",
       "stat1": {
-        "value": "51%",
-        "label": "want to balance human and technology"
+        "value": "80%",
+        "label": "of repetitive requests handled automatically"
       },
       "stat2": {
-        "value": "36%",
-        "label": "prioritize human contact"
+        "value": "−30%",
+        "label": "support costs on average"
       },
       "stat3": {
-        "value": "9%",
-        "label": "bet everything on technology"
+        "value": "+42%",
+        "label": "customer satisfaction"
       }
     }
   },
   "useCasesPage": {
     "badge": "Use Cases",
-    "title": "Two expertises, one single <highlight>platform</highlight>",
+    "title": "CX & Supply Chain: where we <highlight>create the most value</highlight>",
     "subtitle": "H'appi specializes in Customer Experience and Supply Chain, the two areas where chatbots create the most value for your business.",
     "cxTitle": "Customer Experience",
     "cxDescription": "AI adoption in customer service went from 10% in 2020 to 85% in 2025 in France. Companies that don't automate their CX are falling behind.",
@@ -498,7 +498,7 @@
   "faqPage": {
     "badge": "FAQ",
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about H'appi. Can't find your answer? Contact us directly.",
+    "subtitle": "Detailed answers to your questions. Can't find what you're looking for? Contact us directly.",
     "resourcesTitle": "Additional resources",
     "resources": [
       {
@@ -527,8 +527,8 @@
         "label": "Launched early 2026"
       },
       {
-        "value": "4x",
-        "label": "Cheaper than the market"
+        "value": "50-70%",
+        "label": "Savings vs traditional agencies"
       },
       {
         "value": "100%",
@@ -539,7 +539,7 @@
         "label": "Fake testimonials on this site"
       }
     ],
-    "promiseQuote": "At H'appi, we believe AI should empower humans, not replace them. We are a young startup and every project matters. Our strength: transparency and personalized support.",
+    "promiseQuote": "Every project we deliver builds our reputation. That's why we put the same standard into a €3,000 project as a €30,000 one. Your success is our best showcase.",
     "badges": [
       "Radical customization",
       "Evolving intelligence",
@@ -567,7 +567,7 @@
       }
     ],
     "briefTitle": "In brief",
-    "briefP1": "Launched in early 2026, H'appi is a young startup disrupting custom digital pricing through optimized cloud infrastructure, a 100% open-source stack and a lean organization.",
+    "briefP1": "Our conviction: why pay 10x more to a traditional agency for the same result? Through optimized cloud infrastructure and an open-source stack, we deliver premium solutions at accessible prices.",
     "briefP2": "We support our first clients with a simple promise:",
     "briefHighlight": "custom-built, accessible, scalable, and above all, honest.",
     "briefCta": "Discover our vision"
@@ -1148,7 +1148,7 @@
   },
   "pageFonctionnalites": {
     "badge": "Features",
-    "title": "A complete platform to <highlight>transform</highlight> your service",
+    "title": "All your features to <highlight>scale up</highlight>",
     "subtitle": "H'appi combines generative AI, industry customization and GDPR compliance to offer a chatbot solution tailored to French businesses.",
     "whyTitle": "Why choose H'appi?",
     "details": [
@@ -1193,7 +1193,7 @@
   },
   "pageCasUsage": {
     "badge": "Use Cases",
-    "title": "Two expertises, one single <highlight>platform</highlight>",
+    "title": "CX & Supply Chain: where we <highlight>create the most value</highlight>",
     "subtitle": "H'appi specializes in Customer Experience and Supply Chain, the two areas where chatbots create the most value for your business.",
     "cxTitle": "Customer Experience",
     "cxDescription": "AI adoption in customer service grew from 10% in 2020 to 85% in 2025 in France. Companies that don't automate their CX are falling behind.",
@@ -1250,7 +1250,7 @@
   "pageFaq": {
     "badge": "FAQ",
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about H'appi. Can't find your answer? Contact us directly.",
+    "subtitle": "Detailed answers to your questions. Can't find what you're looking for? Contact us directly.",
     "resourcesTitle": "Additional Resources",
     "resources": [
       {
@@ -1279,8 +1279,8 @@
         "label": "Launched early 2026"
       },
       {
-        "value": "4x",
-        "label": "Cheaper than the market"
+        "value": "50-70%",
+        "label": "Savings vs traditional agencies"
       },
       {
         "value": "100%",
@@ -1291,7 +1291,7 @@
         "label": "Fake testimonials on this site"
       }
     ],
-    "quote": "At H'appi, we believe AI should empower humans, not replace them. We are a young startup and every project matters. Our strength: transparency and personalized support.",
+    "quote": "Every project we deliver builds our reputation. That's why we put the same standard into a €3,000 project as a €30,000 one. Your success is our best showcase.",
     "tags": [
       "Radical customization",
       "Evolving intelligence",

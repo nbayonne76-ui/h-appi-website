@@ -28,7 +28,7 @@
         "label": "Moins cher que le marché"
       }
     },
-    "ctaPrimary": "Discutons de votre projet",
+    "ctaPrimary": "Démarrer mon projet",
     "ctaSecondary": "Voir les tarifs",
     "trustHosting": "Hébergé en France",
     "trustRgpd": "Sans engagement",
@@ -225,7 +225,7 @@
     "transparencyConclusion": "Chaque devis détaille ligne par ligne ce que vous payez. Pas de surprises, pas de frais cachés.",
     "finalCtaTitle": "Prêt à discuter de votre projet ?",
     "finalCtaSubtitle": "Chaque projet est unique. Parlons du vôtre pour vous proposer une solution et un tarif parfaitement adaptés.",
-    "finalCtaPrimary": "Discutons de votre projet",
+    "finalCtaPrimary": "Demander mon devis",
     "finalCtaSecondary": "Voir la FAQ",
     "finalCtaNote": "Devis gratuit • Sans engagement • Réponse sous 48h"
   },
@@ -412,8 +412,8 @@
         "Apprentissage continu de votre vocabulaire métier",
         "Adaptation aux processus internes de chaque client"
       ],
-      "statValue": "85%",
-      "statLabel": "des interactions de service client automatisées en France en 2025"
+      "statValue": "3x",
+      "statLabel": "plus rapide à déployer qu'une solution générique"
     },
     "integration": {
       "title": "Intégration avec votre écosystème",
@@ -423,25 +423,25 @@
     },
     "hybrid": {
       "title": "L'approche hybride humain-IA",
-      "description1": "51% des entreprises cherchent à concilier contact humain et technologie. H'appi est conçu pour renforcer vos équipes, pas les remplacer. Le chatbot gère les demandes répétitives (jusqu'à 80% du volume) et transfère les cas complexes à vos conseillers avec tout le contexte nécessaire.",
+      "description1": "H'appi est conçu pour renforcer vos équipes, pas les remplacer. Le chatbot gère les demandes répétitives (jusqu'à 80% du volume) et transfère les cas complexes à vos conseillers avec tout le contexte nécessaire.",
       "description2": "Résultat : vos agents sont plus efficaces, vos clients sont mieux servis, et vos coûts de support diminuent.",
       "stat1": {
-        "value": "51%",
-        "label": "veulent concilier humain et technologie"
+        "value": "80%",
+        "label": "des demandes répétitives traitées automatiquement"
       },
       "stat2": {
-        "value": "36%",
-        "label": "privilégient l'humain"
+        "value": "−30%",
+        "label": "de coûts de support en moyenne"
       },
       "stat3": {
-        "value": "9%",
-        "label": "misent tout sur la technologie"
+        "value": "+42%",
+        "label": "de satisfaction client"
       }
     }
   },
   "useCasesPage": {
     "badge": "Cas d'usage",
-    "title": "Deux expertises, une seule <highlight>plateforme</highlight>",
+    "title": "CX & Supply Chain : là où nous <highlight>créons le plus de valeur</highlight>",
     "subtitle": "H'appi se spécialise dans l'Expérience Client et la Supply Chain, les deux domaines où les chatbots créent le plus de valeur pour votre entreprise.",
     "cxTitle": "Expérience Client",
     "cxDescription": "L'adoption de l'IA dans le service client est passée de 10% en 2020 à 85% en 2025 en France. Les entreprises qui n'automatisent pas leur CX prennent du retard.",
@@ -498,7 +498,7 @@
   "faqPage": {
     "badge": "FAQ",
     "title": "Questions fréquentes",
-    "subtitle": "Tout ce que vous devez savoir sur H'appi. Vous ne trouvez pas votre réponse ? Contactez-nous directement.",
+    "subtitle": "Réponses détaillées à vos questions. Vous ne trouvez pas ce que vous cherchez ? Contactez-nous directement.",
     "resourcesTitle": "Ressources complémentaires",
     "resources": [
       {
@@ -527,8 +527,8 @@
         "label": "Lancée début 2026"
       },
       {
-        "value": "4x",
-        "label": "Moins cher que le marché"
+        "value": "50-70%",
+        "label": "D'économies vs agences traditionnelles"
       },
       {
         "value": "100%",
@@ -539,7 +539,7 @@
         "label": "Faux témoignage sur ce site"
       }
     ],
-    "promiseQuote": "Chez H'appi, nous croyons que l'IA doit élever l'humain, pas le remplacer. Nous sommes une jeune startup et chaque projet compte. Notre force : la transparence et un accompagnement personnalisé.",
+    "promiseQuote": "Chaque projet que nous livrons construit notre réputation. C'est pourquoi nous mettons la même exigence sur un projet à 3 000€ que sur un projet à 30 000€. Votre succès est notre meilleure vitrine.",
     "badges": [
       "Sur-mesure radical",
       "Intelligence évolutive",
@@ -567,7 +567,7 @@
       }
     ],
     "briefTitle": "En bref",
-    "briefP1": "Lancée début 2026, H'appi est une jeune startup qui casse les prix du digital sur-mesure grâce à des infrastructures cloud optimisées, une stack 100% open-source et une organisation lean.",
+    "briefP1": "Notre conviction : pourquoi payer 10x plus cher une agence traditionnelle pour le même résultat ? Grâce à une infrastructure cloud optimisée et une stack open-source, nous proposons des solutions premium à prix accessibles.",
     "briefP2": "Nous accompagnons nos premiers clients avec une promesse simple :",
     "briefHighlight": "sur-mesure, accessible, évolutif, et surtout honnête.",
     "briefCta": "Découvrir notre vision"
@@ -1148,7 +1148,7 @@
   },
   "pageFonctionnalites": {
     "badge": "Fonctionnalités",
-    "title": "Une plateforme complète pour <highlight>transformer</highlight> votre service",
+    "title": "Toutes vos fonctionnalités pour <highlight>passer à l'échelle</highlight>",
     "subtitle": "H'appi combine IA générative, personnalisation sectorielle et conformité RGPD pour offrir une solution de chatbot adaptée aux entreprises françaises.",
     "whyTitle": "Pourquoi choisir H'appi ?",
     "details": [
@@ -1193,7 +1193,7 @@
   },
   "pageCasUsage": {
     "badge": "Cas d'usage",
-    "title": "Deux expertises, une seule <highlight>plateforme</highlight>",
+    "title": "CX & Supply Chain : là où nous <highlight>créons le plus de valeur</highlight>",
     "subtitle": "H'appi se spécialise dans l'Expérience Client et la Supply Chain, les deux domaines où les chatbots créent le plus de valeur pour votre entreprise.",
     "cxTitle": "Expérience Client",
     "cxDescription": "L'adoption de l'IA dans le service client est passée de 10% en 2020 à 85% en 2025 en France. Les entreprises qui n'automatisent pas leur CX prennent du retard.",
@@ -1250,7 +1250,7 @@
   "pageFaq": {
     "badge": "FAQ",
     "title": "Questions fréquentes",
-    "subtitle": "Tout ce que vous devez savoir sur H'appi. Vous ne trouvez pas votre réponse ? Contactez-nous directement.",
+    "subtitle": "Réponses détaillées à vos questions. Vous ne trouvez pas ce que vous cherchez ? Contactez-nous directement.",
     "resourcesTitle": "Ressources complémentaires",
     "resources": [
       {
@@ -1279,8 +1279,8 @@
         "label": "Lancée début 2026"
       },
       {
-        "value": "4x",
-        "label": "Moins cher que le marché"
+        "value": "50-70%",
+        "label": "D'économies vs agences traditionnelles"
       },
       {
         "value": "100%",
@@ -1291,7 +1291,7 @@
         "label": "Faux témoignage sur ce site"
       }
     ],
-    "quote": "Chez H'appi, nous croyons que l'IA doit élever l'humain, pas le remplacer. Nous sommes une jeune startup et chaque projet compte. Notre force : la transparence et un accompagnement personnalisé.",
+    "quote": "Chaque projet que nous livrons construit notre réputation. C'est pourquoi nous mettons la même exigence sur un projet à 3 000€ que sur un projet à 30 000€. Votre succès est notre meilleure vitrine.",
     "tags": [
       "Sur-mesure radical",
       "Intelligence évolutive",
