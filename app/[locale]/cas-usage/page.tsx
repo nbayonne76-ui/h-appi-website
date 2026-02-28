@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import CasUsageAccordion from '@/components/cas-usage/CasUsageAccordion';
+import { BotDemo } from '@/components/cas-usage/BotDemo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -61,6 +62,26 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── Bot Demo Teaser ── */}
+        <section className="px-4 sm:px-6 lg:px-8 pb-16">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-6">
+              <span className="inline-block bg-happi-blue/10 text-happi-blue border border-happi-blue/20 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide mb-4">
+                {fr ? '⚡ Démo interactive' : '⚡ Interactive demo'}
+              </span>
+              <h2 className="text-2xl font-bold text-white tracking-tight mb-2">
+                {fr ? 'Pas envie de tout lire ?' : "Don't feel like reading everything?"}
+              </h2>
+              <p className="text-happi-muted text-sm">
+                {fr
+                  ? 'Testez le bot SAV en 2 minutes — aucune inscription requise'
+                  : 'Try the SAV bot in 2 minutes — no sign-up needed'}
+              </p>
+            </div>
+            <BotDemo />
           </div>
         </section>
 
