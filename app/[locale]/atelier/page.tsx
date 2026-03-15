@@ -5,7 +5,8 @@ import { ExternalLink } from 'lucide-react';
 
 const bots = [
   {
-    client: 'Atelier King Kong',
+    nameFr: 'Bot Portfolio Interactif',
+    nameEn: 'Interactive Portfolio Bot',
     sectorFr: 'Architecture culturelle',
     sectorEn: 'Cultural architecture',
     pioneerFr: '1er bot portfolio archi de France',
@@ -28,7 +29,8 @@ const bots = [
     url: 'https://happi-kingkong.vercel.app',
   },
   {
-    client: 'Groupe Monassier',
+    nameFr: 'Assistant Notarial',
+    nameEn: 'Notarial Assistant',
     sectorFr: 'Notariat',
     sectorEn: 'Notarial law',
     pioneerFr: '1er bot notarial de France',
@@ -51,7 +53,8 @@ const bots = [
     url: 'https://happi-groupe-monassier.vercel.app',
   },
   {
-    client: 'Cabinet ARC',
+    nameFr: 'Bot Recouvrement de Créances',
+    nameEn: 'Debt Recovery Bot',
     sectorFr: 'Recouvrement de créances B2B',
     sectorEn: 'B2B debt collection',
     pioneerFr: '1er bot recouvrement de France',
@@ -75,7 +78,8 @@ const bots = [
     url: 'https://happi-cabinet-arc.vercel.app',
   },
   {
-    client: 'Audit Experts',
+    nameFr: 'Assistant Expert-Comptable',
+    nameEn: 'Accounting Assistant',
     sectorFr: 'Expertise comptable',
     sectorEn: 'Accounting & tax advisory',
     pioneerFr: '1er bot comptable de France',
@@ -98,7 +102,8 @@ const bots = [
     url: 'https://happi-audit-expert.vercel.app',
   },
   {
-    client: 'Uqudo',
+    nameFr: 'Bot Pre-Sales Intelligence',
+    nameEn: 'Pre-Sales Intelligence Bot',
     sectorFr: 'Identity SaaS · RegTech MEA',
     sectorEn: 'Identity SaaS · RegTech MEA',
     pioneerFr: '1er bot pre-sales Identity SaaS',
@@ -189,9 +194,11 @@ export default async function AtelierPage({
                 const sector = fr ? bot.sectorFr : bot.sectorEn;
                 const pioneer = fr ? bot.pioneerFr : bot.pioneerEn;
 
+                const name = fr ? bot.nameFr : bot.nameEn;
+
                 return (
                   <div
-                    key={bot.client}
+                    key={bot.nameFr}
                     className="bg-happi-surface border border-happi-border rounded-2xl overflow-hidden flex flex-col hover:border-white/20 transition-colors group"
                     style={{ borderTopWidth: '4px', borderTopColor: bot.color }}
                   >
@@ -202,7 +209,7 @@ export default async function AtelierPage({
                         <div>
                           <div className="text-2xl mb-2">{bot.icon}</div>
                           <h2 className="text-base font-bold text-white leading-tight">
-                            {bot.client}
+                            {name}
                           </h2>
                           <div className="text-happi-muted text-xs mt-0.5">{sector}</div>
                         </div>
