@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import BotGrid from '@/components/atelier/BotGrid';
+import BotConfigurator from '@/components/atelier/BotConfigurator';
 
 const TOTAL_STEPS = 134; // 14+28+26+30+36
 
@@ -72,6 +73,8 @@ export default async function AtelierPage({
             </p>
           </div>
         </section>
+
+        <BotConfigurator fr={fr} />
 
         <CTASection />
       </main>
