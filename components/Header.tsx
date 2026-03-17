@@ -17,6 +17,7 @@ export default function Header() {
     { name: t('nav.features'), href: '/fonctionnalites' as const },
     { name: t('nav.useCases'), href: '/cas-usage' as const },
     { name: t('nav.atelier'), href: '/atelier' as const },
+    { name: t('nav.dropos'), href: '/dropos' as const },
     { name: t('nav.pricing'), href: '/tarifs' as const },
     { name: t('nav.faq'), href: '/faq' as const },
     { name: t('nav.blog'), href: '/blog' as const },
