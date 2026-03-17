@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: '/founding-members', destination: '/fr/founding-members', permanent: false },
+      { source: '/dropos',            destination: '/fr/dropos',            permanent: false },
       { source: '/atelier',          destination: '/fr/atelier',          permanent: false },
     ];
   },
