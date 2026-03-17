@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, Flame, Lock, MessageSquare, Check } from 'lucide-react';
-import Link from 'next/link';
+import { Flame, Lock, MessageSquare, Check } from 'lucide-react';
+import WaitlistForm from '@/components/dropos/WaitlistForm';
 
 // ── Spot counter ───────────────────────────────────────────────────────────────
 
@@ -34,7 +34,7 @@ function SpotCounter({ claimed = 47, total = 100, fr }: { claimed?: number; tota
 
 // ── Page ───────────────────────────────────────────────────────────────────────
 
-export default async function FoundingMembersPage({
+export default async function DropOSPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -133,29 +133,23 @@ export default async function FoundingMembersPage({
                 : 'This is not a typical launch. I don\'t want 100 passive users. I want 100 people who will help me make this perfect.'}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="https://app.dropos.io/register"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-lg font-bold text-neutral-950 transition-all shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:opacity-90"
-                style={{ background: 'linear-gradient(135deg, #f97316, #fb923c)' }}
-              >
-                <Flame className="w-5 h-5" />
-                {fr ? 'Rejoindre comme Founding Member' : 'Claim your founding spot'}
-              </Link>
-              <a
-                href="#offer"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold border border-happi-border text-happi-muted hover:text-white hover:border-white/20 transition-all"
-              >
-                {fr ? 'Voir l\'offre' : 'See the offer'}
-                <ArrowRight className="w-4 h-4" />
-              </a>
+            {/* Email form — Resend style */}
+            <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
+              <WaitlistForm fr={fr} variant="hero" />
+              <p className="text-xs text-happi-muted/50">
+                {fr ? 'Sans carte bancaire. Sans engagement. 100 places au total.' : 'No credit card. No commitment. 100 spots total.'}
+              </p>
             </div>
 
-            <p className="mt-4 text-xs text-happi-muted/50">
-              {fr ? 'Sans carte bancaire. Sans engagement. 100 places au total.' : 'No credit card. No commitment. 100 spots total.'}
-            </p>
+            <div className="mt-8">
+              <a
+                href="#offer"
+                className="inline-flex items-center gap-1.5 text-sm text-happi-muted hover:text-white transition-colors"
+              >
+                {fr ? 'Voir ce que vous obtenez' : 'See what you get'}
+                <span className="text-xs">↓</span>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -228,19 +222,10 @@ export default async function FoundingMembersPage({
               </div>
             </div>
 
-            {/* Counter + CTA */}
+            {/* Counter + Form */}
             <div className="max-w-xl mx-auto flex flex-col gap-4">
               <SpotCounter claimed={47} total={100} fr={fr} />
-              <Link
-                href="https://app.dropos.io/register"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 text-neutral-950 transition-all shadow-xl shadow-orange-500/25 hover:opacity-90"
-                style={{ background: 'linear-gradient(135deg, #f97316, #fb923c)' }}
-              >
-                <Flame className="w-5 h-5" />
-                {fr ? 'Rejoindre maintenant' : 'Claim your founding spot now'}
-              </Link>
+              <WaitlistForm fr={fr} variant="inline" />
               <p className="text-center text-xs text-happi-muted/60">
                 {fr
                   ? 'Premier arrive, premier servi. 100 places au total. Sans carte bancaire.'
@@ -259,7 +244,7 @@ export default async function FoundingMembersPage({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {whoFor.map(({ label, desc }) => (
                 <div key={label} className="bg-happi-surface border border-happi-border rounded-2xl p-5 hover:border-happi-blue/30 transition-colors">
-                  <div className="w-2 h-2 rounded-full gradient-text mb-3" style={{ background: 'var(--happi-blue, #3b82f6)' }} />
+                  <div className="w-2 h-2 rounded-full mb-3" style={{ background: '#3b82f6' }} />
                   <h3 className="font-semibold text-white mb-2">{label}</h3>
                   <p className="text-sm text-happi-muted leading-relaxed">{desc}</p>
                 </div>
@@ -313,26 +298,12 @@ export default async function FoundingMembersPage({
                 <>Stop guessing your profits.<br /><span className="gradient-text">Start knowing them, for free.</span></>
               )}
             </h2>
-            <p className="text-happi-muted mb-4 leading-relaxed">
+            <p className="text-happi-muted mb-10 leading-relaxed">
               {fr
                 ? 'Connectez votre boutique Shopify et voyez vos vrais chiffres en moins de 2 minutes. Gratuit pendant 1 an. Sans engagement.'
                 : 'Connect your Shopify store and see your real numbers in under 2 minutes. Free for a full year. No strings attached.'}
             </p>
-            <p className="text-sm text-happi-muted/50 mb-10">
-              {fr
-                ? 'Suivez-nous sur LinkedIn pour les mises a jour. Contactez-moi directement pour toute question.'
-                : 'Follow us on LinkedIn for updates. DM me directly for any question.'}
-            </p>
-            <Link
-              href="https://app.dropos.io/register"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-lg font-bold text-neutral-950 transition-all shadow-xl shadow-orange-500/25 hover:opacity-90"
-              style={{ background: 'linear-gradient(135deg, #f97316, #fb923c)' }}
-            >
-              <Flame className="w-5 h-5" />
-              {fr ? 'Rejoindre comme Founding Member' : 'Claim your founding spot'}
-            </Link>
+            <WaitlistForm fr={fr} variant="inline" />
             <p className="mt-4 text-xs text-happi-muted/50">
               {fr
                 ? '100 places. Premier arrive, premier servi. Sans carte bancaire.'
