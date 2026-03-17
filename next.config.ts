@@ -8,12 +8,6 @@ const nextConfig: NextConfig = {
   images: {
     domains: [],
   },
-  async redirects() {
-    return [
-      { source: '/dropos',            destination: '/fr/dropos',            permanent: false },
-      { source: '/atelier',          destination: '/fr/atelier',          permanent: false },
-    ];
-  },
 };
 
 export default withNextIntl(nextConfig);
