@@ -308,8 +308,8 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
           </h2>
           <p className="text-happi-muted max-w-lg mx-auto text-base leading-relaxed">
             {fr
-              ? "Choisissez chaque paramètre — votre bot se construit en temps réel."
-              : "Pick each parameter — your bot assembles in real time."}
+              ? "Choisissez chaque paramètre, votre bot se construit en temps réel."
+              : "Pick each parameter, your bot assembles in real time."}
           </p>
         </div>
 
