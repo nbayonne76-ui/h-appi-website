@@ -177,31 +177,53 @@
       "Mise en production et tests"
     ],
     "maintenanceTitle": "Maintenance et support",
-    "maintenanceSubtitle": "Deux formules pour s'adapter à votre niveau d'autonomie",
-    "autonomy": {
-      "title": "Gestion autonome",
-      "description": "Vous gardez le contrôle total de votre chatbot",
-      "price": "Inclus",
-      "priceDetail": "dans l'implémentation",
-      "features": [
-        "Accès complet à l'interface d'administration",
-        "Documentation complète et guides d'utilisation",
-        "Mises à jour techniques automatiques",
-        "Base de connaissances en libre-service"
-      ]
-    },
-    "support": {
-      "title": "Support technique dédié",
-      "description": "Nous gérons la maintenance technique de votre chatbot",
-      "recommended": "Recommandé",
+    "maintenanceSubtitle": "Trois formules adaptées à la taille de votre entreprise",
+    "planStartup": {
+      "label": "Startup & Petite entreprise",
+      "title": "Support Essentiel",
+      "description": "Pour les indépendants et les entreprises en phase de démarrage",
       "price": "30€ - 50€",
       "priceDetail": "/ mois",
-      "priceNote": "Tarif variable selon votre consommation de tokens LLM",
+      "priceNote": "Variable selon la consommation de tokens LLM",
       "features": [
-        "Monitoring et surveillance 24/7",
-        "Optimisation continue des performances",
-        "Support prioritaire par email et chat",
-        "Mises à jour et évolutions techniques"
+        "Déploiement du bot inclus",
+        "Accès complet à l'interface d'administration",
+        "Support par email (réponse sous 48h)",
+        "Rapport de performance mensuel",
+        "Mises à jour automatiques"
+      ]
+    },
+    "planMedium": {
+      "label": "Entreprise moyenne",
+      "title": "Support Professionnel",
+      "description": "Pour les entreprises en croissance avec des besoins de volume plus importants",
+      "recommended": "Le plus populaire",
+      "price": "100€ - 500€",
+      "priceDetail": "/ mois",
+      "priceNote": "Selon le volume et les intégrations",
+      "features": [
+        "Tout le pack Essentiel",
+        "Monitoring et alertes 24/7",
+        "Support prioritaire — même journée ouvrable",
+        "Intégrations CRM & outils avancés",
+        "Bilan stratégique trimestriel",
+        "Accès multi-utilisateurs admin"
+      ]
+    },
+    "planEnterprise": {
+      "label": "Grande entreprise & Multinationale",
+      "title": "Support Enterprise",
+      "description": "Pour les grandes organisations avec des exigences sur-mesure",
+      "price": "500€ - 2000€",
+      "priceDetail": "/ mois",
+      "priceNote": "SLA personnalisé et infrastructure dédiée",
+      "features": [
+        "Tout le pack Professionnel",
+        "Account manager dédié",
+        "Contrat SLA personnalisé",
+        "Option white-label",
+        "Déploiement on-premise disponible",
+        "Support téléphonique 24/7"
       ]
     },
     "transparencyTitle": "Transparence totale sur nos prix",

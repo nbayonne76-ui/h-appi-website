@@ -177,31 +177,53 @@
       "Production deployment and testing"
     ],
     "maintenanceTitle": "Maintenance and support",
-    "maintenanceSubtitle": "Two plans to match your level of autonomy",
-    "autonomy": {
-      "title": "Self-managed",
-      "description": "You keep full control of your chatbot",
-      "price": "Included",
-      "priceDetail": "with implementation",
-      "features": [
-        "Full access to the admin interface",
-        "Complete documentation and user guides",
-        "Automatic technical updates",
-        "Self-service knowledge base"
-      ]
-    },
-    "support": {
-      "title": "Dedicated technical support",
-      "description": "We handle the technical maintenance of your chatbot",
-      "recommended": "Recommended",
+    "maintenanceSubtitle": "Three plans adapted to your company size",
+    "planStartup": {
+      "label": "Startup & Small business",
+      "title": "Essential support",
+      "description": "For independent professionals and early-stage companies",
       "price": "€30 - €50",
       "priceDetail": "/ month",
-      "priceNote": "Price varies based on your LLM token consumption",
+      "priceNote": "Varies based on LLM token consumption",
       "features": [
-        "24/7 monitoring and surveillance",
-        "Continuous performance optimization",
-        "Priority support via email and chat",
-        "Technical updates and improvements"
+        "Bot deployment included",
+        "Full access to the admin interface",
+        "Email support (48h response time)",
+        "Monthly performance report",
+        "Automatic updates"
+      ]
+    },
+    "planMedium": {
+      "label": "Medium company",
+      "title": "Professional support",
+      "description": "For growing companies with higher volume needs",
+      "recommended": "Most popular",
+      "price": "€100 - €500",
+      "priceDetail": "/ month",
+      "priceNote": "Based on volume and integrations",
+      "features": [
+        "Everything in Essential",
+        "24/7 monitoring and alerting",
+        "Priority support — same business day",
+        "Advanced CRM & tool integrations",
+        "Quarterly strategic review",
+        "Multi-user admin access"
+      ]
+    },
+    "planEnterprise": {
+      "label": "Large company & Multinational",
+      "title": "Enterprise support",
+      "description": "For large organizations with custom requirements",
+      "price": "€500 - €2000",
+      "priceDetail": "/ month",
+      "priceNote": "Custom SLA and dedicated infrastructure",
+      "features": [
+        "Everything in Professional",
+        "Dedicated account manager",
+        "Custom SLA agreement",
+        "White-label option",
+        "On-premise deployment available",
+        "24/7 phone support"
       ]
     },
     "transparencyTitle": "Total price transparency",
