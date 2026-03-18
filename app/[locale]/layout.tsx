@@ -6,6 +6,7 @@ import { locales } from '@/i18n/config';
 import { getTranslations } from 'next-intl/server';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { ContactModal } from '@/components/ui/ContactModal';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
           {children}
           <FloatingCTA />
           <ContactModal />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
