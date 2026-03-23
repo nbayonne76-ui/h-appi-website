@@ -182,9 +182,9 @@
       "label": "Startup & Small business",
       "title": "Essential support",
       "description": "For independent professionals and early-stage companies",
-      "price": "€30 - €50",
-      "priceDetail": "/ month",
-      "priceNote": "Varies based on LLM token consumption",
+      "price": "Included",
+      "priceDetail": "with implementation",
+      "priceNote": "Self-managed — full admin access from day one",
       "features": [
         "Bot deployment included",
         "Full access to the admin interface",

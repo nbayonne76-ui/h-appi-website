@@ -182,9 +182,9 @@
       "label": "Startup & Petite entreprise",
       "title": "Support Essentiel",
       "description": "Pour les indépendants et les entreprises en phase de démarrage",
-      "price": "30€ - 50€",
-      "priceDetail": "/ mois",
-      "priceNote": "Variable selon la consommation de tokens LLM",
+      "price": "Inclus",
+      "priceDetail": "avec l'implémentation",
+      "priceNote": "Autonome — accès admin complet dès le premier jour",
       "features": [
         "Déploiement du bot inclus",
         "Accès complet à l'interface d'administration",
