@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import { Check, Phone, Calendar, MessageSquare, Mic, Clock, Zap, X } from 'lucide-react';
 import SecretaryCTA from '@/components/secretary/SecretaryCTA';
 
@@ -143,6 +144,62 @@ export default async function SecretaryPage({
                 <div className="text-xs md:text-sm text-happi-muted leading-snug">{label}</div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ── Product mockup ── */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-happi-border">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">
+                {fr ? 'Le produit' : 'The product'}
+              </span>
+              <h2 className="text-3xl font-bold text-white mb-3">
+                {fr ? 'Un tableau de bord conçu pour la clarté' : 'A dashboard built for clarity'}
+              </h2>
+              <p className="text-happi-muted text-sm max-w-xl mx-auto">
+                {fr
+                  ? 'Chaque appel enregistré, chaque intention analysée, chaque rendez-vous tracé. En temps réel.'
+                  : 'Every call logged, every intent analysed, every appointment tracked. In real time.'}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              {/* Dashboard screenshot */}
+              <div className="relative rounded-2xl overflow-hidden border border-happi-border shadow-2xl shadow-black/40 group">
+                <div className="absolute inset-0 bg-gradient-to-t from-happi-darker/60 via-transparent to-transparent z-10 pointer-events-none" />
+                <Image
+                  src="/images/secretary-dashboard.jpg"
+                  alt={fr ? 'Tableau de bord Happi-Secretary' : 'Happi-Secretary dashboard'}
+                  width={1400}
+                  height={800}
+                  className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.01]"
+                  priority
+                />
+                <div className="absolute bottom-4 left-6 z-20">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-happi-dark/90 border border-happi-border text-xs font-semibold text-white backdrop-blur-sm">
+                    📊 {fr ? 'Tableau de bord' : 'Dashboard'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Calls screenshot */}
+              <div className="relative rounded-2xl overflow-hidden border border-happi-border shadow-2xl shadow-black/40 group">
+                <div className="absolute inset-0 bg-gradient-to-t from-happi-darker/60 via-transparent to-transparent z-10 pointer-events-none" />
+                <Image
+                  src="/images/secretary-calls.jpg"
+                  alt={fr ? 'Historique des appels Happi-Secretary' : 'Happi-Secretary call history'}
+                  width={1400}
+                  height={800}
+                  className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.01]"
+                />
+                <div className="absolute bottom-4 left-6 z-20">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-happi-dark/90 border border-happi-border text-xs font-semibold text-white backdrop-blur-sm">
+                    📞 {fr ? 'Historique des appels' : 'Call history'}
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
