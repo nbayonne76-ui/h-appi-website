@@ -134,9 +134,9 @@ const SECTOR_FEATURES: Record<Sector, FeatureItem[]> = {
 // ── Tones ──────────────────────────────────────────────────────────────────────
 
 const TONES: { id: Tone; emoji: string; fr: string; en: string; descFr: string; descEn: string; color: string }[] = [
-  { id: 'formal',    emoji: '🎩', fr: 'Formel & Professionnel',   en: 'Formal & Professional',   color: '#D4AF37', descFr: 'Langage soutenu, registre juridique ou financier — inspire confiance et sérieux', descEn: 'Formal language, legal or financial tone — inspires trust and credibility' },
-  { id: 'friendly',  emoji: '😊', fr: 'Accessible & Chaleureux',  en: 'Friendly & Approachable', color: '#22C55E', descFr: 'Ton conversationnel, proche du client — idéal pour fidéliser et engager',         descEn: 'Conversational and client-centric — perfect for engagement and loyalty' },
-  { id: 'technical', emoji: '⚡', fr: 'Technique & Expert',        en: 'Technical & Expert',      color: '#4F46E5', descFr: 'Précis, data-driven, pour un public averti — crédibilité maximale',              descEn: 'Precise, data-driven, expert audience — maximum credibility' },
+  { id: 'formal',    emoji: '🎩', fr: 'Formel & Professionnel',   en: 'Formal & Professional',   color: '#D4AF37', descFr: 'Langage soutenu, registre juridique ou financier. Inspire confiance et sérieux', descEn: 'Formal language, legal or financial tone. Inspires trust and credibility' },
+  { id: 'friendly',  emoji: '😊', fr: 'Accessible & Chaleureux',  en: 'Friendly & Approachable', color: '#22C55E', descFr: 'Ton conversationnel, proche du client. Idéal pour fidéliser et engager',         descEn: 'Conversational and client-centric. Perfect for engagement and loyalty' },
+  { id: 'technical', emoji: '⚡', fr: 'Technique & Expert',        en: 'Technical & Expert',      color: '#4F46E5', descFr: 'Précis, data-driven, pour un public averti. Crédibilité maximale',              descEn: 'Precise, data-driven, expert audience. Maximum credibility' },
 ];
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
@@ -223,7 +223,7 @@ const STEP_Q = [
 
 const STEP_SUB = [
   { fr: 'Votre bot sera 100% adapté à votre domaine', en: 'Your bot will be fully tailored to your industry' },
-  { fr: 'Définissez son rôle — tout part de là',      en: 'Define its role — everything starts here' },
+  { fr: 'Définissez son rôle. Tout part de là',      en: 'Define its role. Everything starts here' },
   { fr: 'Là où vos clients vous contactent déjà',     en: 'Where your clients already reach you' },
   { fr: "Optionnel · Jusqu'à 4 fonctionnalités",      en: 'Optional · Up to 4 features' },
   { fr: 'Sa personnalité face à vos clients',          en: 'Its personality when talking to your clients' },
@@ -721,8 +721,8 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                 <div className="px-6 py-5">
                   <p className="text-happi-muted text-sm mb-5 leading-relaxed">
                     {fr
-                      ? "Laissez vos coordonnées — je vous envoie une proposition personnalisée basée sur votre configuration sous 24h."
-                      : "Leave your details — I'll send a personalized proposal based on your config within 24h."}
+                      ? "Laissez vos coordonnées. Je vous envoie une proposition personnalisée basée sur votre configuration sous 24h."
+                      : "Leave your details. I'll send a personalized proposal based on your config within 24h."}
                   </p>
                   <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                     <input required placeholder={fr ? 'Prénom' : 'First name'} value={form.prenom}

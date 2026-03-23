@@ -110,8 +110,8 @@ export function RoiCalculator() {
             </h3>
             <p className="text-happi-muted text-xs mt-0.5">
               {fr
-                ? 'Ajustez les 3 curseurs — le calcul se met à jour en temps réel'
-                : 'Adjust the 3 sliders — calculation updates in real time'}
+                ? 'Ajustez les 3 curseurs. Le calcul se met à jour en temps réel'
+                : 'Adjust the 3 sliders. Calculation updates in real time'}
             </p>
           </div>
         </div>

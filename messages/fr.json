@@ -160,7 +160,7 @@
   },
   "pricing": {
     "heroBadge": "4x moins cher que le marché",
-    "roiBadge": "Calculateur ROI — Votre chiffre, pas le nôtre",
+    "roiBadge": "Calculateur ROI: Votre chiffre, pas le nôtre",
     "heroTitle": "Des chatbots sur-mesure à <highlight>prix révolutionnaire</highlight>",
     "heroSubtitle": "Nous créons des chatbots personnalisés pour votre métier, avec une tarification transparente adaptée à vos besoins réels. Pas de grille figée : chaque projet est unique.",
     "heroCta": "Contactez-nous pour un devis gratuit",
@@ -185,7 +185,7 @@
       "description": "Pour les indépendants et les entreprises en phase de démarrage",
       "price": "Inclus",
       "priceDetail": "avec l'implémentation",
-      "priceNote": "Autonome — accès admin complet dès le premier jour",
+      "priceNote": "Autonome. Accès admin complet dès le premier jour.",
       "features": [
         "Déploiement du bot inclus",
         "Accès complet à l'interface d'administration",
@@ -205,7 +205,7 @@
       "features": [
         "Tout le pack Essentiel",
         "Monitoring et alertes 24/7",
-        "Support prioritaire — même journée ouvrable",
+        "Support prioritaire, même journée ouvrable",
         "Intégrations CRM & outils avancés",
         "Bilan stratégique trimestriel",
         "Accès multi-utilisateurs admin"
@@ -808,7 +808,7 @@
         "title": "Partenariat Long Terme",
         "quote": "Nous ne sommes pas un prestataire, nous sommes votre équipe tech externalisée.",
         "description": "Trop de projets digitaux échouent parce que le prestataire livre et disparaît. Chez H'appi, nous restons à vos côtés.",
-        "practice": "Chaque client a un interlocuteur dédié. Support réactif en jours ouvrés. Maintenance proactive. Conseils stratégiques réguliers. Pas de tickets anonymes — une vraie relation humaine."
+        "practice": "Chaque client a un interlocuteur dédié. Support réactif en jours ouvrés. Maintenance proactive. Conseils stratégiques réguliers. Pas de tickets anonymes. Une vraie relation humaine."
       },
       {
         "title": "Sécurité Sans Compromis",

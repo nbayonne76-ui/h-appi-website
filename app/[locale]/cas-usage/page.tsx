@@ -77,8 +77,8 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
               </h2>
               <p className="text-happi-muted text-sm">
                 {fr
-                  ? 'Testez le bot SAV en 2 minutes — aucune inscription requise'
-                  : 'Try the SAV bot in 2 minutes — no sign-up needed'}
+                  ? 'Testez le bot SAV en 2 minutes, aucune inscription requise'
+                  : 'Try the SAV bot in 2 minutes, no sign-up needed'}
               </p>
             </div>
             <BotDemo />

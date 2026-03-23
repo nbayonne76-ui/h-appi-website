@@ -31,8 +31,8 @@ const getScript = (fr: boolean): ScriptStep[] => [
   },
   {
     botText: fr
-      ? 'Commande trouvée ✓ — Table chêne massif, livrée le 24 fév. Quel est le problème exact ?'
-      : 'Order found ✓ — Solid oak table, delivered Feb 24. What is the exact issue?',
+      ? 'Commande trouvée ✓. Table chêne massif, livrée le 24 fév. Quel est le problème exact ?'
+      : 'Order found ✓. Solid oak table, delivered Feb 24. What is the exact issue?',
     userReplies: fr
       ? ['Un pied de table est cassé', 'Pièce manquante']
       : ['A table leg is broken', 'Missing part'],
@@ -104,7 +104,7 @@ export function BotDemo() {
       <div className="flex items-center gap-2 mb-3">
         <div className="w-1.5 h-1.5 rounded-full bg-happi-blue" />
         <span className="text-xs font-semibold text-happi-blue uppercase tracking-wide">
-          {fr ? 'Démo interactive — Essayez le bot SAV' : 'Interactive demo — Try the SAV bot'}
+          {fr ? 'Démo interactive: Essayez le bot SAV' : 'Interactive demo: Try the SAV bot'}
         </span>
       </div>
 

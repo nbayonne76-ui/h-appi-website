@@ -44,7 +44,7 @@ export default function WaitlistForm({ fr, variant = 'hero' }: Props) {
         <p className="text-sm text-happi-muted text-center">
           {fr
             ? 'Vérifiez votre boîte mail — un email de confirmation vient d\'arriver.'
-            : 'Check your inbox — a confirmation email is on its way.'}
+            : 'Check your inbox. A confirmation email is on its way.'}
         </p>
       </div>
     );

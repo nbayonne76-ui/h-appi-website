@@ -157,13 +157,13 @@ export default async function SecretaryPage({
             </h2>
             <p className="text-happi-muted leading-relaxed text-base mb-5">
               {fr
-                ? "Happi-Secretary est une intelligence artificielle vocale qui fonctionne comme un véritable secrétaire pour votre entreprise. Disponible jour et nuit, elle répond aux appels, prend des messages, planifie des rendez-vous et s'intègre à vos outils — sans pause et sans congés."
-                : "Happi-Secretary is a voice AI that works as a real secretary for your business. Available day and night, it answers calls, takes messages, schedules appointments and integrates with your tools — without breaks or holidays."}
+                ? "Happi-Secretary est une intelligence artificielle vocale qui fonctionne comme un véritable secrétaire pour votre entreprise. Disponible jour et nuit, elle répond aux appels, prend des messages, planifie des rendez-vous et s'intègre à vos outils. Sans pause et sans congés."
+                : "Happi-Secretary is a voice AI that works as a real secretary for your business. Available day and night, it answers calls, takes messages, schedules appointments and integrates with your tools. No breaks. No holidays."}
             </p>
             <p className="text-happi-muted/70 leading-relaxed text-sm">
               {fr
                 ? "C'est comme avoir un collaborateur virtuel ultra-compétent qui maîtrise votre calendrier, vos priorités et votre image, tout en restant professionnel et discret."
-                : "Think of it as a highly competent virtual colleague who knows your calendar, your priorities and your brand — always professional, always discreet."}
+                : "Think of it as a highly competent virtual colleague who knows your calendar, your priorities and your brand. Always professional, always discreet."}
             </p>
           </div>
         </section>

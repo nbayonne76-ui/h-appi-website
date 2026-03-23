@@ -160,7 +160,7 @@
   },
   "pricing": {
     "heroBadge": "4x cheaper than the market",
-    "roiBadge": "ROI Calculator — Your number, not ours",
+    "roiBadge": "ROI Calculator: Your number, not ours",
     "heroTitle": "Custom chatbots at <highlight>revolutionary prices</highlight>",
     "heroSubtitle": "We create personalized chatbots for your business, with transparent pricing tailored to your real needs. No fixed grid: every project is unique.",
     "heroCta": "Contact us for a free quote",
@@ -185,7 +185,7 @@
       "description": "For independent professionals and early-stage companies",
       "price": "Included",
       "priceDetail": "with implementation",
-      "priceNote": "Self-managed — full admin access from day one",
+      "priceNote": "Self-managed. Full admin access from day one.",
       "features": [
         "Bot deployment included",
         "Full access to the admin interface",
@@ -205,7 +205,7 @@
       "features": [
         "Everything in Essential",
         "24/7 monitoring and alerting",
-        "Priority support — same business day",
+        "Priority support, same business day",
         "Advanced CRM & tool integrations",
         "Quarterly strategic review",
         "Multi-user admin access"
@@ -808,7 +808,7 @@
         "title": "Long-Term Partnership",
         "quote": "We're not a vendor, we're your outsourced tech team.",
         "description": "Too many digital projects fail because the provider delivers and disappears. At H'appi, we stay by your side.",
-        "practice": "Every client has a dedicated contact. Responsive support during business days. Proactive maintenance. Regular strategic advice. No anonymous tickets — a real human relationship."
+        "practice": "Every client has a dedicated contact. Responsive support during business days. Proactive maintenance. Regular strategic advice. No anonymous tickets. A real human relationship."
       },
       {
         "title": "Uncompromising Security",
@@ -1055,7 +1055,7 @@
     "allArticles": "All articles",
     "noArticles": "No articles in this category yet.",
     "newsletterTitle": "A question? A project?",
-    "newsletterSubtitle": "We prefer a real conversation over a generic form. Write to us directly — we reply within 24 hours.",
+    "newsletterSubtitle": "We prefer a real conversation over a generic form. Write to us directly. We reply within 24 hours.",
     "newsletterPlaceholder": "your@email.com",
     "newsletterCta": "Contact us",
     "newsletterNote": "Human reply guaranteed • No commitment • Within 24 business hours.",
