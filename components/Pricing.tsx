@@ -5,6 +5,9 @@ import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { RoiCalculator } from '@/components/pricing/RoiCalculator';
+import TiltCard from '@/components/ui/TiltCard';
+import AnimatedMesh from '@/components/ui/AnimatedMesh';
+import MagneticButton from '@/components/ui/MagneticButton';
 
 export default function Pricing() {
   const t = useTranslations('pricing');
@@ -25,13 +28,13 @@ export default function Pricing() {
           <p className="text-lg text-happi-muted mb-8 max-w-2xl mx-auto">
             {t('heroSubtitle')}
           </p>
-          <button
+          <MagneticButton
             onClick={openContactModal}
             className="inline-flex items-center px-8 py-3.5 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium"
           >
             <Mail className="mr-2" size={18} />
             {t('heroCta')}
-          </button>
+          </MagneticButton>
           <p className="text-happi-muted text-sm mt-4">{t('heroNote')}</p>
         </div>
       </section>
@@ -90,8 +93,9 @@ export default function Pricing() {
       </section>
 
       {/* Maintenance */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker relative overflow-hidden">
+        <AnimatedMesh variant="purple" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
               {t('maintenanceTitle')}
@@ -102,76 +106,82 @@ export default function Pricing() {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
             {/* Startup */}
-            <div className="bg-happi-surface rounded-2xl p-7 border border-happi-border flex flex-col">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-happi-green mb-4 px-2.5 py-1 rounded-full border border-happi-green/30 bg-happi-green/10 w-fit">
-                {t('planStartup.label')}
-              </span>
-              <h3 className="text-xl font-bold mb-1">{t('planStartup.title')}</h3>
-              <p className="text-happi-muted text-sm mb-6 leading-relaxed">{t('planStartup.description')}</p>
-              <div className="mb-1">
-                <span className="text-3xl font-bold text-happi-green">{t('planStartup.price')}</span>
-                <span className="text-happi-muted text-sm ml-2">{t('planStartup.priceDetail')}</span>
+            <TiltCard intensity={5}>
+              <div className="glass-card rounded-2xl p-7 border border-happi-border hover:border-happi-green/30 transition-all flex flex-col h-full">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-happi-green mb-4 px-2.5 py-1 rounded-full border border-happi-green/30 bg-happi-green/10 w-fit">
+                  {t('planStartup.label')}
+                </span>
+                <h3 className="text-xl font-bold mb-1">{t('planStartup.title')}</h3>
+                <p className="text-happi-muted text-sm mb-6 leading-relaxed">{t('planStartup.description')}</p>
+                <div className="mb-1">
+                  <span className="text-3xl font-bold text-happi-green">{t('planStartup.price')}</span>
+                  <span className="text-happi-muted text-sm ml-2">{t('planStartup.priceDetail')}</span>
+                </div>
+                <p className="text-happi-muted text-xs mb-6">{t('planStartup.priceNote')}</p>
+                <ul className="space-y-3 mt-auto">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <li key={i} className="flex items-start space-x-3">
+                      <Check className="text-happi-green flex-shrink-0 mt-0.5" size={15} />
+                      <span className="text-sm text-happi-muted">{t(`planStartup.features.${i}`)}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-happi-muted text-xs mb-6">{t('planStartup.priceNote')}</p>
-              <ul className="space-y-3 mt-auto">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <li key={i} className="flex items-start space-x-3">
-                    <Check className="text-happi-green flex-shrink-0 mt-0.5" size={15} />
-                    <span className="text-sm text-happi-muted">{t(`planStartup.features.${i}`)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            </TiltCard>
 
             {/* Medium — recommended */}
-            <div className="bg-happi-surface rounded-2xl p-7 border-2 border-happi-blue relative shadow-lg shadow-happi-blue/10 flex flex-col">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="flex items-center space-x-1 bg-happi-blue text-white text-xs font-semibold px-4 py-1.5 rounded-full whitespace-nowrap">
-                  <Star size={12} />
-                  <span>{t('planMedium.recommended')}</span>
+            <TiltCard intensity={5}>
+              <div className="glass-card rounded-2xl p-7 border-2 border-happi-blue relative shadow-lg shadow-happi-blue/10 flex flex-col h-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <span className="flex items-center space-x-1 bg-happi-blue text-white text-xs font-semibold px-4 py-1.5 rounded-full whitespace-nowrap">
+                    <Star size={12} />
+                    <span>{t('planMedium.recommended')}</span>
+                  </span>
+                </div>
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-happi-blue mb-4 px-2.5 py-1 rounded-full border border-happi-blue/30 bg-happi-blue/10 w-fit">
+                  {t('planMedium.label')}
                 </span>
+                <h3 className="text-xl font-bold mb-1">{t('planMedium.title')}</h3>
+                <p className="text-happi-muted text-sm mb-6 leading-relaxed">{t('planMedium.description')}</p>
+                <div className="mb-1">
+                  <span className="text-3xl font-bold text-happi-blue">{t('planMedium.price')}</span>
+                  <span className="text-happi-muted text-sm ml-2">{t('planMedium.priceDetail')}</span>
+                </div>
+                <p className="text-happi-muted text-xs mb-6">{t('planMedium.priceNote')}</p>
+                <ul className="space-y-3 mt-auto">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <li key={i} className="flex items-start space-x-3">
+                      <Check className="text-happi-blue flex-shrink-0 mt-0.5" size={15} />
+                      <span className="text-sm text-happi-muted">{t(`planMedium.features.${i}`)}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-happi-blue mb-4 px-2.5 py-1 rounded-full border border-happi-blue/30 bg-happi-blue/10 w-fit">
-                {t('planMedium.label')}
-              </span>
-              <h3 className="text-xl font-bold mb-1">{t('planMedium.title')}</h3>
-              <p className="text-happi-muted text-sm mb-6 leading-relaxed">{t('planMedium.description')}</p>
-              <div className="mb-1">
-                <span className="text-3xl font-bold text-happi-blue">{t('planMedium.price')}</span>
-                <span className="text-happi-muted text-sm ml-2">{t('planMedium.priceDetail')}</span>
-              </div>
-              <p className="text-happi-muted text-xs mb-6">{t('planMedium.priceNote')}</p>
-              <ul className="space-y-3 mt-auto">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <li key={i} className="flex items-start space-x-3">
-                    <Check className="text-happi-blue flex-shrink-0 mt-0.5" size={15} />
-                    <span className="text-sm text-happi-muted">{t(`planMedium.features.${i}`)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            </TiltCard>
 
             {/* Enterprise */}
-            <div className="bg-happi-surface rounded-2xl p-7 border border-happi-border flex flex-col" style={{ borderColor: '#8B5CF640' }}>
-              <span className="inline-block text-xs font-bold uppercase tracking-widest mb-4 px-2.5 py-1 rounded-full border w-fit" style={{ color: '#8B5CF6', background: '#8B5CF610', borderColor: '#8B5CF630' }}>
-                {t('planEnterprise.label')}
-              </span>
-              <h3 className="text-xl font-bold mb-1">{t('planEnterprise.title')}</h3>
-              <p className="text-happi-muted text-sm mb-6 leading-relaxed">{t('planEnterprise.description')}</p>
-              <div className="mb-1">
-                <span className="text-3xl font-bold" style={{ color: '#8B5CF6' }}>{t('planEnterprise.price')}</span>
-                <span className="text-happi-muted text-sm ml-2">{t('planEnterprise.priceDetail')}</span>
+            <TiltCard intensity={5}>
+              <div className="glass-card rounded-2xl p-7 border border-happi-border hover:border-purple-400/30 transition-all flex flex-col h-full" style={{ borderColor: '#8B5CF640' }}>
+                <span className="inline-block text-xs font-bold uppercase tracking-widest mb-4 px-2.5 py-1 rounded-full border w-fit" style={{ color: '#8B5CF6', background: '#8B5CF610', borderColor: '#8B5CF630' }}>
+                  {t('planEnterprise.label')}
+                </span>
+                <h3 className="text-xl font-bold mb-1">{t('planEnterprise.title')}</h3>
+                <p className="text-happi-muted text-sm mb-6 leading-relaxed">{t('planEnterprise.description')}</p>
+                <div className="mb-1">
+                  <span className="text-3xl font-bold" style={{ color: '#8B5CF6' }}>{t('planEnterprise.price')}</span>
+                  <span className="text-happi-muted text-sm ml-2">{t('planEnterprise.priceDetail')}</span>
+                </div>
+                <p className="text-happi-muted text-xs mb-6">{t('planEnterprise.priceNote')}</p>
+                <ul className="space-y-3 mt-auto">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <li key={i} className="flex items-start space-x-3">
+                      <Check className="flex-shrink-0 mt-0.5" size={15} style={{ color: '#8B5CF6' }} />
+                      <span className="text-sm text-happi-muted">{t(`planEnterprise.features.${i}`)}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-happi-muted text-xs mb-6">{t('planEnterprise.priceNote')}</p>
-              <ul className="space-y-3 mt-auto">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <li key={i} className="flex items-start space-x-3">
-                    <Check className="flex-shrink-0 mt-0.5" size={15} style={{ color: '#8B5CF6' }} />
-                    <span className="text-sm text-happi-muted">{t(`planEnterprise.features.${i}`)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            </TiltCard>
 
           </div>
         </div>

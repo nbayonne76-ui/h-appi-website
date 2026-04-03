@@ -6,6 +6,7 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import { SolutionQuiz } from '@/components/quiz/SolutionQuiz';
 import { Ticker } from '@/components/ui/Ticker';
+import LogoWall from '@/components/ui/LogoWall';
 import { getLocale } from 'next-intl/server';
 
 export default async function Home() {
@@ -18,6 +19,7 @@ export default async function Home() {
       <main>
         <Hero />
         <Ticker />
+        <LogoWall fr={fr} />
         <ProblemSolution />
         <Testimonials />
 
