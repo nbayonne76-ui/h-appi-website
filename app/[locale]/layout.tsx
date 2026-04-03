@@ -9,7 +9,7 @@ import { ContactModal } from '@/components/ui/ContactModal';
 import { Analytics } from '@vercel/analytics/next';
 import SmoothScroll from '@/components/ui/SmoothScroll';
 import ScrollProgress from '@/components/ui/ScrollProgress';
-import GlowCursor from '@/components/ui/GlowCursor';
+import CustomCursor from '@/components/ui/CustomCursor';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -46,7 +46,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <SmoothScroll />
           <ScrollProgress />
-          <GlowCursor />
+          <CustomCursor />
           {children}
           <FloatingCTA />
           <ContactModal />

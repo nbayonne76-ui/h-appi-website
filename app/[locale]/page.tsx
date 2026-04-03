@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import { SolutionQuiz } from '@/components/quiz/SolutionQuiz';
 import { Ticker } from '@/components/ui/Ticker';
 import LogoWall from '@/components/ui/LogoWall';
+import LiveChatDemo from '@/components/LiveChatDemo';
 import { getLocale } from 'next-intl/server';
 
 export default async function Home() {
@@ -41,6 +42,7 @@ export default async function Home() {
           </div>
         </section>
 
+        <LiveChatDemo fr={fr} />
         <CTASection />
       </main>
       <Footer />
