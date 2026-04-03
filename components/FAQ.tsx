@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { FadeInUp, Stagger, StaggerItem, CollapseContent } from '@/components/ui/Animate';
+import AnimatedMesh from '@/components/ui/AnimatedMesh';
 
 const FAQ_COUNT = 12;
 
@@ -12,8 +13,9 @@ export default function FAQ() {
   const t = useTranslations('faq');
 
   return (
-    <section id="faq" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
-      <div className="max-w-3xl mx-auto">
+    <section id="faq" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-happi-darker relative overflow-hidden">
+      <AnimatedMesh variant="purple" />
+      <div className="max-w-3xl mx-auto relative z-10">
         <FadeInUp className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">
             {t('badge')}
@@ -29,10 +31,10 @@ export default function FAQ() {
         <Stagger className="space-y-3">
           {Array.from({ length: FAQ_COUNT }).map((_, index) => (
             <StaggerItem key={index}>
-              <div className="bg-happi-surface rounded-xl border border-happi-border overflow-hidden">
+              <div className="glass-card rounded-xl border border-happi-border overflow-hidden hover:border-happi-blue/30 transition-colors">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-happi-dark/50 transition-colors"
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-white/[0.03] transition-colors"
                 >
                   <span className="font-medium pr-4 text-sm">
                     {t(`items.${index}.question`)}

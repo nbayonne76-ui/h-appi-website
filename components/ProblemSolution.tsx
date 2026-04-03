@@ -3,6 +3,7 @@
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { FadeInUp, SlideInLeft, SlideInRight } from '@/components/ui/Animate';
+import AnimatedMesh from '@/components/ui/AnimatedMesh';
 
 function XIcon({ className, size }: { className?: string; size?: number }) {
   return (
@@ -27,8 +28,9 @@ export default function ProblemSolution() {
   const t = useTranslations('problemSolution');
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker relative overflow-hidden">
+      <AnimatedMesh variant="blue" />
+      <div className="max-w-7xl mx-auto relative z-10">
         <FadeInUp className="text-center mb-16">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
             {t('title')}
