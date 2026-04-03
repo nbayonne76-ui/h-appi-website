@@ -7,6 +7,9 @@ import { getTranslations } from 'next-intl/server';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { ContactModal } from '@/components/ui/ContactModal';
 import { Analytics } from '@vercel/analytics/next';
+import SmoothScroll from '@/components/ui/SmoothScroll';
+import ScrollProgress from '@/components/ui/ScrollProgress';
+import GlowCursor from '@/components/ui/GlowCursor';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -41,6 +44,9 @@ export default async function LocaleLayout({
     <html lang={locale} className="scroll-smooth">
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
+          <SmoothScroll />
+          <ScrollProgress />
+          <GlowCursor />
           {children}
           <FloatingCTA />
           <ContactModal />
