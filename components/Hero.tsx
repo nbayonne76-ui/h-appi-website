@@ -7,6 +7,8 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { motion, useReducedMotion } from 'framer-motion';
 import { CountUp } from '@/components/ui/CountUp';
+import AnimatedMesh from '@/components/ui/AnimatedMesh';
+import MagneticButton from '@/components/ui/MagneticButton';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -27,8 +29,9 @@ export default function Hero() {
   });
 
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 gradient-bg relative">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 gradient-bg relative overflow-hidden">
+      <AnimatedMesh variant="hero" />
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
@@ -72,13 +75,13 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <motion.div {...item(0.4)} className="flex flex-col sm:flex-row gap-4 pt-2">
-              <button
+              <MagneticButton
                 onClick={openContactModal}
-                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium active:scale-[0.97]"
+                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium"
               >
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}
-              </button>
+              </MagneticButton>
               <Link
                 href="/tarifs"
                 className="inline-flex items-center justify-center px-8 py-3.5 border border-happi-border text-white rounded-lg hover:bg-happi-surface transition-all font-medium active:scale-[0.97]"
