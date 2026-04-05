@@ -509,7 +509,7 @@ function ArticleP1_EN() {
         Behind every failed delivery lies a chain of invisible costs that multiply the real bill by 3 to 5.
       </p>
       <ul>
-        <li><strong>SAV calls</strong>: on average 2–3 customer contacts per unresolved dispute. At 28 €/h for an agent and 8 minutes per call, that&apos;s an extra 11–17 € in human cost.</li>
+        <li><strong>After-sales calls</strong>: on average 2–3 customer contacts per unresolved dispute. At 28 €/h for an agent and 8 minutes per call, that&apos;s an extra 11–17 € in human cost.</li>
         <li><strong>Administrative handling</strong>: logging the dispute, coordinating with the carrier, issuing a return label. Between 20 and 45 minutes of internal work per case.</li>
         <li><strong>Carrier disputes</strong>: if proof of delivery is missing, the carrier can refuse compensation. You absorb 100% of the cost.</li>
         <li><strong>Lost business</strong>: according to Narvar, <strong>33% of customers who have a bad delivery experience won&apos;t reorder from the same retailer</strong>. On an average basket of 600 €, that&apos;s a future order gone.</li>
@@ -529,7 +529,7 @@ function ArticleP1_EN() {
       </p>
       <ul>
         <li><strong>Direct cost</strong> = (dispute rate × average basket × refund rate) + second-attempt logistics cost</li>
-        <li><strong>SAV cost</strong> = disputes × average contacts × duration × agent hourly rate</li>
+        <li><strong>After-sales cost</strong> = disputes × average contacts × duration × agent hourly rate</li>
         <li><strong>Reputation cost</strong> = estimate at 15–25% of at-risk revenue (negative reviews × average basket)</li>
       </ul>
       <p>
@@ -542,7 +542,7 @@ function ArticleP1_EN() {
       </p>
       <ul>
         <li><strong>Dispute reduction</strong>: H&apos;appi&apos;s Traceability App documents every delivery with a geolocated photo, e-signature and timestamp. −80% non-compensated disputes from day one.</li>
-        <li><strong>SAV automation</strong>: H&apos;appi&apos;s Bot handles status requests, simple claims and second-attempt scheduling. −65% inbound calls.</li>
+        <li><strong>After-sales automation</strong>: H&apos;appi&apos;s Bot handles status requests, simple claims and second-attempt scheduling. −65% inbound calls.</li>
         <li><strong>Digital proof</strong>: every delivery becomes a timestamped dossier, usable in any client or carrier dispute.</li>
       </ul>
       <p>
@@ -624,24 +624,24 @@ function ArticleP2_FR() {
 function ArticleP2_EN() {
   return (
     <>
-      <h2 id="probleme-structurel">The structural problem in furniture SAV</h2>
+      <h2 id="probleme-structurel">The structural problem in furniture after-sales</h2>
       <p>
         Furniture after-sales suffers from a paradox: the more your revenue grows, the more your call volume grows — almost proportionally. Unlike standard retail, a delivered piece of furniture is hard to return and impossible to "reinstall" remotely. Every problem requires a human contact.
       </p>
       <p>
-        As a result, according to a 2024 Zendesk study, furniture SAV teams handle on average <strong>47% more contacts per order than general retail</strong>. This isn&apos;t a matter of poor organisation — it&apos;s structural.
+        As a result, according to a 2024 Zendesk study, furniture after-sales teams handle on average <strong>47% more contacts per order than general retail</strong>. This isn&apos;t a matter of poor organisation — it&apos;s structural.
       </p>
 
       <h2 id="cinq-raisons">The 5 reasons behind the volume</h2>
       <ul>
         <li>
-          <strong>1. No real-time visibility.</strong> The customer doesn&apos;t know where their furniture is. They call to find out. This is the #1 reason for SAV contacts in furniture: <em>Where is my order?</em>
+          <strong>1. No real-time visibility.</strong> The customer doesn&apos;t know where their furniture is. They call to find out. This is the #1 reason for after-sales contacts in furniture: <em>Where is my order?</em>
         </li>
         <li>
           <strong>2. Long delivery lead times.</strong> A sofa or wardrobe often takes 3 to 8 weeks. During that time, customers worry, follow up, and may cancel.
         </li>
         <li>
-          <strong>3. Missed deliveries.</strong> An absent customer, a wrong access code, a broken lift: second attempts systematically generate 2–3 extra SAV contacts.
+          <strong>3. Missed deliveries.</strong> An absent customer, a wrong access code, a broken lift: second attempts systematically generate 2–3 extra after-sales contacts.
         </li>
         <li>
           <strong>4. Delivery damage.</strong> Dented corner, torn packaging, broken leg. Each damage claim lasts an average of 8 days and involves 4 to 6 exchanges.
@@ -656,9 +656,9 @@ function ArticleP2_EN() {
         Gorgias analysed 1,200 e-commerce stores in 2024. In the furniture and home décor segment, they found that:
       </p>
       <ul>
-        <li><strong>65% of SAV calls</strong> covered the same 5 topics (delivery status, delay, dispute, assembly, defective product)</li>
+        <li><strong>65% of after-sales calls</strong> covered the same 5 topics (delivery status, delay, dispute, assembly, defective product)</li>
         <li><strong>41% of those calls</strong> could have been resolved by an automated system without human intervention</li>
-        <li>The average cost of a SAV contact in furniture is <strong>8.50 € to 14 €</strong> depending on complexity</li>
+        <li>The average cost of an after-sales contact in furniture is <strong>8.50 € to 14 €</strong> depending on complexity</li>
       </ul>
       <p>
         These figures mean a team handling 500 calls/month spends between 4,250 € and 7,000 € per month on contacts that could largely be automated.
@@ -669,13 +669,13 @@ function ArticleP2_EN() {
         Reducing call volume doesn&apos;t mean removing human contact. It means <strong>reserving agents for situations that truly require them</strong>.
       </p>
       <ul>
-        <li><strong>Automate simple requests</strong>: delivery status, available time slots, dispute tracking, assembly guides — a domain-specific SAV chatbot can handle 60–70% of these requests 24/7.</li>
+        <li><strong>Automate simple requests</strong>: delivery status, available time slots, dispute tracking, assembly guides — a domain-specific after-sales chatbot can handle 60–70% of these requests 24/7.</li>
         <li><strong>Eliminate the causes of disputes</strong>: a traceability app that documents each delivery (photo, signature, GPS) mechanically reduces unfounded contestations.</li>
       </ul>
 
       <h2 id="happi-change">What H&apos;appi changes in practice</h2>
       <p>
-        H&apos;appi has built two tools specifically for this sector. The <strong>H&apos;appi SAV Bot</strong> is trained on furniture vocabulary and processes: it knows the difference between a delivery note and a return label, understands what a goods lift is, and knows when to escalate.
+        H&apos;appi has built two tools specifically for this sector. The <strong>H&apos;appi After-Sales Bot</strong> is trained on furniture vocabulary and processes: it knows the difference between a delivery note and a return label, understands what a goods lift is, and knows when to escalate.
       </p>
       <p>
         The <strong>H&apos;appi Traceability App</strong> equips drivers with a simple mobile tool: a mandatory geolocated photo before leaving the premises, client e-signature, and automatic damage reports. All of this is accessible in real time by the customer service team.
@@ -755,7 +755,7 @@ function ArticleP3_EN() {
     <>
       <h2 id="pourquoi-echec">Why 90% of chatbot projects fail to prove their ROI</h2>
       <p>
-        Most SAV chatbot purchases are based on a vague promise: &quot;you&apos;ll reduce costs.&quot; No baseline, no KPIs defined before deployment, no measurement methodology. Result: 6 months later, nobody can say whether it actually worked.
+        Most after-sales chatbot purchases are based on a vague promise: &quot;you&apos;ll reduce costs.&quot; No baseline, no KPIs defined before deployment, no measurement methodology. Result: 6 months later, nobody can say whether it actually worked.
       </p>
       <p>
         According to Gartner, <strong>85% of enterprise AI projects fail to demonstrate measurable ROI</strong> within the first 18 months. This isn&apos;t a technology problem — it&apos;s a methodology problem.
@@ -792,7 +792,7 @@ function ArticleP3_EN() {
 
       <h2 id="cas-pratique">Real-world case: 300 calls/month at 28 €/h</h2>
       <ul>
-        <li>300 SAV calls/month × 65% deflection = <strong>195 automated calls</strong></li>
+        <li>300 after-sales calls/month × 65% deflection = <strong>195 automated calls</strong></li>
         <li>195 × 8 min / 60 × 28 €/h = <strong>728 € saved per month</strong> in pure labour</li>
         <li>H&apos;appi Bot subscription: 299 €/month</li>
         <li><strong>Net ROI: +429 €/month from month one</strong>, or +5,148 € over 12 months</li>
@@ -841,7 +841,7 @@ const tocData: Record<string, Record<string, { id: string; label: string }[]>> =
       { id: 'happi-change', label: "Ce que H'appi change concrètement" },
     ],
     en: [
-      { id: 'probleme-structurel', label: 'The structural problem in furniture SAV' },
+      { id: 'probleme-structurel', label: 'The structural problem in furniture after-sales' },
       { id: 'cinq-raisons', label: 'The 5 reasons behind the volume' },
       { id: 'chiffres', label: 'What the numbers say' },
       { id: 'solution', label: 'The solution: automation + traceability' },
@@ -939,14 +939,14 @@ const sourcesData: Record<string, { name: string; url: string; detail: string }[
     { name: 'Statista — E-commerce Returns Rate by Category', url: 'https://www.statista.com', detail: 'Furniture return and dispute rates by sector' },
   ],
   'sav-ameublement-equipe-appels': [
-    { name: 'Zendesk — CX Trends 2024', url: 'https://www.zendesk.com/fr/blog/cx-trends', detail: 'Furniture SAV teams handle 47% more contacts per order than general retail' },
-    { name: 'Gorgias — E-commerce SAV Benchmark 2024', url: 'https://www.gorgias.com', detail: '65% of SAV calls in furniture cover the same 5 topics' },
-    { name: 'Narvar — Post-Purchase Experience Report', url: 'https://corp.narvar.com', detail: 'Delivery visibility as #1 driver of inbound SAV contacts' },
+    { name: 'Zendesk — CX Trends 2024', url: 'https://www.zendesk.com/fr/blog/cx-trends', detail: 'Furniture after-sales teams handle 47% more contacts per order than general retail' },
+    { name: 'Gorgias — E-commerce After-Sales Benchmark 2024', url: 'https://www.gorgias.com', detail: '65% of after-sales calls in furniture cover the same 5 topics' },
+    { name: 'Narvar — Post-Purchase Experience Report', url: 'https://corp.narvar.com', detail: 'Delivery visibility as #1 driver of inbound after-sales contacts' },
   ],
   'roi-chatbot-sav-mesure': [
     { name: 'Gartner — AI ROI Survey 2024', url: 'https://www.gartner.com', detail: '85% of enterprise AI projects fail to demonstrate measurable ROI within 18 months' },
     { name: 'Gorgias — Chatbot Deflection Rates by Industry', url: 'https://www.gorgias.com', detail: 'Realistic deflection rates for domain-specific vs generic chatbots' },
-    { name: 'Zendesk — Cost Per Contact Benchmark', url: 'https://www.zendesk.com', detail: 'Average SAV contact cost by sector and resolution type' },
+    { name: 'Zendesk — Cost Per Contact Benchmark', url: 'https://www.zendesk.com', detail: 'Average after-sales contact cost by sector and resolution type' },
   ],
   'chatbot-personnalisation-metier': [
     { name: 'Gartner — Chatbot User Survey 2024', url: 'https://www.gartner.com', detail: '64 % of customers prefer no chatbot over a bad one' },

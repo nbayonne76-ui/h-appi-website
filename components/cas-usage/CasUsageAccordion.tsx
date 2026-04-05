@@ -35,11 +35,11 @@ const steps = (fr: boolean) => [
     activeBorderClass: 'border-happi-blue/50',
     dotClass: 'bg-happi-blue',
     icon: MessageSquare,
-    badge: fr ? 'Bot SAV · Terminé' : 'SAV Bot · Complete',
+    badge: fr ? 'Bot SAV · Terminé' : 'After-Sales Bot · Complete',
     title: fr ? 'Fini les appels au service après-vente' : 'No more after-sales phone calls',
     teaser: fr
       ? '50 % des appels SAV sont liés au suivi de commande, représentant un coût moyen de 5 € par appel.'
-      : '50% of SAV calls are order-tracking related, costing an average of €5 each.',
+      : '50% of after-sales calls are order-tracking related, costing an average of €5 each.',
     teaserSource: 'Narvar',
     content: {
       problem: {
@@ -87,12 +87,12 @@ const steps = (fr: boolean) => [
         },
         {
           value: '2,5 j → 4 h',
-          label: fr ? 'de délai de traitement SAV avec automatisation' : 'SAV processing time with automation',
+          label: fr ? 'de délai de traitement SAV avec automatisation' : 'after-sales processing time with automation',
           source: 'Salesforce',
         },
         {
           value: '+38 pts',
-          label: fr ? 'NPS après 3 mois d\'utilisation du bot SAV' : 'NPS after 3 months of SAV bot',
+          label: fr ? 'NPS après 3 mois d\'utilisation du bot SAV' : 'NPS after 3 months of after-sales bot',
           source: 'Intercom / Gorgias',
         },
       ],
@@ -105,7 +105,7 @@ const steps = (fr: boolean) => [
             'Zéro saisie manuelle, zéro information perdue, zéro appel pour un statut simple',
           ]
           : [
-            'All SAV requests arrive structured and prioritized in the dashboard',
+            'All after-sales requests arrive structured and prioritized in the dashboard',
             'The technical team sees: the client, the furniture, the exact issue, the delivery date',
             'Zero manual entry, zero lost information, zero calls for a simple status update',
           ],
@@ -187,7 +187,7 @@ const steps = (fr: boolean) => [
         title: fr ? 'La connexion qui fait tout' : 'The connection that makes it all work',
         text: fr
           ? 'Le dossier client créé par l\'app (meuble livré, photos, signature, date) est automatiquement accessible dans le bot SAV. Quand un client ouvre un ticket de réclamation, l\'équipe technique voit immédiatement l\'historique complet. Zéro double saisie. Zéro recherche manuelle.'
-          : 'The client file created by the app (furniture delivered, photos, signature, date) is automatically accessible in the SAV bot. When a client opens a claim ticket, the technical team immediately sees the full history. Zero double entry. Zero manual search.',
+          : 'The client file created by the app (furniture delivered, photos, signature, date) is automatically accessible in the after-sales bot. When a client opens a claim ticket, the technical team immediately sees the full history. Zero double entry. Zero manual search.',
       },
     },
   },
@@ -262,12 +262,12 @@ const steps = (fr: boolean) => [
 const globalStats = (fr: boolean) => [
   {
     value: '−65 %',
-    label: fr ? "d'appels SAV après déploiement du bot" : 'fewer SAV calls after bot deployment',
+    label: fr ? "d'appels SAV après déploiement du bot" : 'fewer after-sales calls after bot deployment',
     source: 'Narvar / Gorgias',
   },
   {
     value: '85 %',
-    label: fr ? 'des demandes SAV automatisables sans agent humain' : 'of SAV requests automatable without a human agent',
+    label: fr ? 'des demandes SAV automatisables sans agent humain' : 'of after-sales requests automatable without a human agent',
     source: 'Gorgias / Zendesk',
   },
   {

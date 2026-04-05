@@ -106,7 +106,7 @@ export function RoiCalculator() {
           </div>
           <div>
             <h3 className="text-white font-bold text-base">
-              {fr ? 'Combien vous coûte votre SAV aujourd\'hui ?' : 'How much does your SAV cost today?'}
+              {fr ? 'Combien vous coûte votre SAV aujourd\'hui ?' : 'How much does your after-sales service cost today?'}
             </h3>
             <p className="text-happi-muted text-xs mt-0.5">
               {fr
@@ -121,7 +121,7 @@ export function RoiCalculator() {
         {/* Sliders */}
         <div className="space-y-5">
           <Slider
-            label={fr ? 'Appels SAV / mois' : 'SAV calls / month'}
+            label={fr ? 'Appels SAV / mois' : 'After-sales calls / month'}
             hint={fr ? '(tickets, emails, appels)' : '(tickets, emails, calls)'}
             value={calls}
             min={50}

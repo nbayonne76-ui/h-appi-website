@@ -58,7 +58,7 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
                 <p className="text-happi-muted text-sm leading-relaxed">
                   {fr
                     ? 'Chaque bot, chaque application est conçu autour de vous. Votre branding, vos flux métier, vos équipes. Nous ne reproduisons pas un modèle standard. Nous apprenons votre réalité et construisons en conséquence. Ce cas d\'usage mobilier illustre exactement cette approche : un bot SAV sur mesure, une app de traçabilité à votre image, interconnectés dès le premier jour.'
-                    : 'Every bot, every application is designed around you. Your branding, your business flows, your teams. We don\'t replicate a standard model. We learn your reality and build accordingly. This furniture use case illustrates exactly that: a custom SAV bot, a traceability app in your image, interconnected from day one.'}
+                    : 'Every bot, every application is designed around you. Your branding, your business flows, your teams. We don\'t replicate a standard model. We learn your reality and build accordingly. This furniture use case illustrates exactly that: a custom after-sales bot, a traceability app in your image, interconnected from day one.'}
                 </p>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
               <p className="text-happi-muted text-sm">
                 {fr
                   ? 'Testez le bot SAV en 2 minutes, aucune inscription requise'
-                  : 'Try the SAV bot in 2 minutes, no sign-up needed'}
+                  : 'Try the after-sales bot in 2 minutes, no sign-up needed'}
               </p>
             </div>
             <BotDemo />

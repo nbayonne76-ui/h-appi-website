@@ -27,7 +27,7 @@ const getQuestions = (fr: boolean): Question[] => [
     options: [
       {
         emoji: '📞',
-        label: fr ? 'Trop d\'appels SAV' : 'Too many SAV calls',
+        label: fr ? 'Trop d\'appels SAV' : 'Too many after-sales calls',
         sub: fr ? 'Mes équipes sont débordées par les demandes clients' : 'My teams are overwhelmed by customer requests',
         scores: { bot: 3, app: 0, saas: 0 },
       },
@@ -52,7 +52,7 @@ const getQuestions = (fr: boolean): Question[] => [
     ],
   },
   {
-    question: fr ? 'Combien de demandes SAV recevez-vous par mois ?' : 'How many SAV requests do you receive per month?',
+    question: fr ? 'Combien de demandes SAV recevez-vous par mois ?' : 'How many after-sales requests do you receive per month?',
     options: [
       {
         emoji: '🌱',
@@ -85,7 +85,7 @@ const getQuestions = (fr: boolean): Question[] => [
     options: [
       {
         emoji: '💰',
-        label: fr ? 'Réduire les coûts SAV' : 'Cut SAV costs',
+        label: fr ? 'Réduire les coûts SAV' : 'Cut after-sales costs',
         sub: fr ? 'Chaque appel coûte du temps et de l\'argent' : 'Every call costs time and money',
         scores: { bot: 3, app: 0, saas: 0 },
       },
@@ -149,12 +149,12 @@ const getResults = (fr: boolean) => ({
     colorClass: 'text-happi-blue',
     bgClass: 'bg-happi-blue/10',
     borderClass: 'border-happi-blue/30',
-    title: fr ? 'Le Bot SAV H\'appi' : 'H\'appi SAV Bot',
+    title: fr ? 'Le Bot SAV H\'appi' : 'H\'appi After-Sales Bot',
     desc: fr
       ? 'Votre défi principal est la gestion du volume SAV. Notre chatbot automatise 65% de vos demandes et se déploie en 2 semaines. Zéro appel pour un statut simple, zéro information perdue.'
-      : 'Your main challenge is SAV volume management. Our chatbot automates 65% of your requests and deploys in 2 weeks. Zero calls for a simple status, zero lost information.',
+      : 'Your main challenge is after-sales volume management. Our chatbot automates 65% of your requests and deploys in 2 weeks. Zero calls for a simple status, zero lost information.',
     stat: fr ? '−65 % d\'appels dès le 1er mois' : '−65% calls from month one',
-    cta: fr ? 'Discuter du bot SAV' : 'Discuss the SAV bot',
+    cta: fr ? 'Discuter du bot SAV' : 'Discuss the after-sales bot',
   },
   app: {
     icon: Smartphone,

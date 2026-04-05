@@ -18,7 +18,7 @@ const getScript = (fr: boolean): ScriptStep[] => [
   {
     botText: fr
       ? "Bonjour ! Je suis le bot H'appi SAV. Comment puis-je vous aider ?"
-      : "Hello! I'm the H'appi SAV bot. How can I help you?",
+      : "Hello! I'm the H'appi After-Sales bot. How can I help you?",
     userReplies: fr
       ? ["J'ai reçu un meuble endommagé"]
       : ['I received damaged furniture'],
@@ -104,7 +104,7 @@ export function BotDemo() {
       <div className="flex items-center gap-2 mb-3">
         <div className="w-1.5 h-1.5 rounded-full bg-happi-blue" />
         <span className="text-xs font-semibold text-happi-blue uppercase tracking-wide">
-          {fr ? 'Démo interactive: Essayez le bot SAV' : 'Interactive demo: Try the SAV bot'}
+          {fr ? 'Démo interactive: Essayez le bot SAV' : 'Interactive demo: Try the after-sales bot'}
         </span>
       </div>
 
@@ -117,7 +117,7 @@ export function BotDemo() {
               <MessageSquare size={14} className="text-happi-blue" />
             </div>
             <div>
-              <div className="text-white text-xs font-semibold">Bot SAV H&apos;appi</div>
+              <div className="text-white text-xs font-semibold">{fr ? "Bot SAV H'appi" : "H'appi After-Sales Bot"}</div>
               <div className="flex items-center gap-1.5 mt-0.5">
                 <div className="w-1.5 h-1.5 bg-happi-green rounded-full" />
                 <span className="text-happi-muted text-[10px]">
