@@ -214,10 +214,16 @@ function cleanExcerpt(raw: string): string {
     .replace(/#+\s/g, '')
     // Remove URLs
     .replace(/https?:\/\/\S+/g, '')
-    // Normalize em/en dashes surrounded by spaces → comma or remove if at start
-    .replace(/\s[—–-]{1,2}\s/g, ', ')
-    // Remove leading punctuation artifacts (dash, pipe, bullet, colon)
-    .replace(/^[\s—–\-|·:,]+/, '')
+    // Replace sequences of dashes/underscores used as separators (---, ---, ___)
+    .replace(/[-_]{2,}/g, ' ')
+    // Normalize em dash / en dash surrounded by optional spaces → comma+space
+    .replace(/\s*[—–]\s*/g, ', ')
+    // Remove leading punctuation artifacts (dash, pipe, bullet, colon, comma)
+    .replace(/^[\s\-|·:,]+/, '')
+    // Remove trailing punctuation artifacts (dash, pipe, comma)
+    .replace(/[\-|,\s]+$/, '')
+    // Normalize triple dots to ellipsis character
+    .replace(/\.{2,}/g, '…')
     // Collapse whitespace
     .replace(/\s+/g, ' ')
     .trim();
