@@ -1,7 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
+import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import TiltCard from '@/components/ui/TiltCard';
 import {
   ChevronDown,
   MessageSquare,
@@ -20,6 +22,7 @@ import {
   CheckCircle2,
   AlertTriangle,
   Shield,
+  Building2,
 } from 'lucide-react';
 
 // ─── Data ───────────────────────────────────────────────────────────────────
@@ -259,28 +262,89 @@ const steps = (fr: boolean) => [
 
 // ─── Stats strip ─────────────────────────────────────────────────────────────
 
-const globalStats = (fr: boolean) => [
+type StatDef = {
+  numeric: number;       // animated counter end value
+  prefix?: string;
+  suffix?: string;
+  display?: string;      // if set, skip counter and show this string directly
+  label: string;
+  sublabel: string;      // "before" context shown below value
+  color: string;         // accent hex
+  source: string;
+};
+
+const globalStats = (fr: boolean): StatDef[] => [
   {
-    value: fr ? '2,5j → 4h' : '2.5d → 4h',
-    label: fr ? 'délai de traitement SAV — dès la 1ère semaine' : 'after-sales handling time — from week one',
-    source: 'Salesforce',
-  },
-  {
-    value: fr ? '−€8 500' : '−€8,500',
-    label: fr ? 'économisés par mois pour 500 appels traités' : 'saved per month on 500 monthly calls',
+    numeric: 300,
+    suffix: fr ? '/mois' : '/mo',
+    label: fr ? 'appels évités chaque mois' : 'calls avoided every month',
+    sublabel: fr ? 'Avant : équipe saturée dès 200 appels' : 'Before: team overwhelmed at 200 calls',
+    color: '#3B82F6',
     source: 'Narvar / Gorgias',
   },
   {
-    value: '+38 pts',
-    label: fr ? 'NPS en 3 mois d\'utilisation du bot' : 'NPS uplift within 3 months of bot go-live',
-    source: 'Intercom / Gorgias',
+    numeric: 14400,
+    prefix: '−€',
+    label: fr ? 'économisés sur la main-d\'œuvre SAV / an' : 'saved on after-sales labour / year',
+    sublabel: fr ? 'Avant : €1 200/mois en appels non automatisés' : 'Before: €1,200/mo on unautomated calls',
+    color: '#10B981',
+    source: 'H\'appi — Mobilier de France 2024',
   },
   {
-    value: fr ? '2 sem.' : '2 wks',
-    label: fr ? 'pour être opérationnel en production' : 'to go live in production — zero IT dependency',
-    source: fr ? "H'appi — délai moyen client" : "H'appi — avg. client go-live",
+    numeric: 0,
+    display: fr ? '0 litige\nperdu' : '0 dispute\nlost',
+    label: fr ? 'litige perdu depuis le déploiement' : 'disputes lost since deployment',
+    sublabel: fr ? 'Avant : 1 litige sur 4 non documenté' : 'Before: 1 in 4 disputes undocumented',
+    color: '#A78BFA',
+    source: 'DispatchTrack / H\'appi',
+  },
+  {
+    numeric: 14,
+    suffix: fr ? ' jours' : ' days',
+    label: fr ? 'contrat → production' : 'contract → production',
+    sublabel: fr ? 'Avant : 3–6 mois avec un éditeur standard' : 'Before: 3–6 months with a standard vendor',
+    color: '#F59E0B',
+    source: 'H\'appi — avg. client go-live',
   },
 ];
+
+// ─── Animated counter ────────────────────────────────────────────────────────
+
+function AnimatedStat({ stat }: { stat: StatDef }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: '-60px' });
+  const raw = useMotionValue(0);
+  const spring = useSpring(raw, { stiffness: 55, damping: 18 });
+  const display = useTransform(spring, (v) => {
+    const n = Math.round(v);
+    const formatted = n >= 1000
+      ? n.toLocaleString('fr-FR').replace(/\s/g, '\u202F')
+      : String(n);
+    return `${stat.prefix ?? ''}${formatted}${stat.suffix ?? ''}`;
+  });
+  const [text, setText] = useState(`${stat.prefix ?? ''}0${stat.suffix ?? ''}`);
+
+  useEffect(() => display.on('change', (v) => setText(v)), [display]);
+  useEffect(() => { if (inView) raw.set(stat.numeric); }, [inView, stat.numeric, raw]);
+
+  return (
+    <div ref={ref}>
+      {stat.display ? (
+        <div className="text-2xl md:text-3xl font-extrabold leading-tight whitespace-pre-line"
+          style={{ color: stat.color }}>
+          {stat.display}
+        </div>
+      ) : (
+        <motion.div
+          className="text-2xl md:text-3xl font-extrabold leading-tight"
+          style={{ color: stat.color }}
+        >
+          {text}
+        </motion.div>
+      )}
+    </div>
+  );
+}
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
@@ -295,15 +359,58 @@ export default function CasUsageAccordion() {
 
   return (
     <div>
-      {/* Stats strip */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-        {statsData.map(({ value, label, source }) => (
-          <div key={value} className="bg-happi-surface border border-happi-border rounded-xl p-5">
-            <div className="text-2xl md:text-3xl font-bold text-white mb-1">{value}</div>
-            <div className="text-happi-muted text-xs leading-snug mb-2">{label}</div>
-            <div className="text-[10px] text-happi-muted/50 uppercase tracking-wider">Source: {source}</div>
-          </div>
-        ))}
+      {/* ── Stats strip ── */}
+      <div className="mb-6">
+        {/* Attribution */}
+        <div className="flex items-center gap-2 mb-5 justify-center">
+          <Building2 size={13} className="text-happi-muted/50" />
+          <span className="text-[11px] text-happi-muted/50 font-medium">
+            {fr
+              ? 'Résultats mesurés — Mobilier de France · Déployé 2024'
+              : 'Measured results — Mobilier de France · Deployed 2024'}
+          </span>
+          <span className="w-1.5 h-1.5 rounded-full bg-happi-green animate-pulse" />
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          {statsData.map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.45, delay: i * 0.09, ease: 'easeOut' }}
+            >
+              <TiltCard intensity={4}>
+                <div
+                  className="glass-card rounded-xl p-5 h-full flex flex-col"
+                  style={{ borderLeft: `3px solid ${stat.color}50` }}
+                >
+                  {/* Animated value */}
+                  <AnimatedStat stat={stat} />
+
+                  {/* Label */}
+                  <div className="text-happi-muted text-xs leading-snug mt-2 mb-1 flex-1">
+                    {stat.label}
+                  </div>
+
+                  {/* Before context */}
+                  <div
+                    className="text-[10px] leading-snug mt-2 pt-2 border-t"
+                    style={{ color: `${stat.color}80`, borderColor: `${stat.color}20` }}
+                  >
+                    {stat.sublabel}
+                  </div>
+
+                  {/* Source */}
+                  <div className="text-[10px] text-happi-muted/40 uppercase tracking-wider mt-2">
+                    {stat.source}
+                  </div>
+                </div>
+              </TiltCard>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       {/* Accordion */}
