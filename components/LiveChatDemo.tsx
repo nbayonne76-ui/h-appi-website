@@ -78,11 +78,12 @@ export default function LiveChatDemo({ fr }: { fr: boolean }) {
   const [typing, setTyping]       = useState(false);
   const [used, setUsed]           = useState<string[]>([]);
   const [disabled, setDisabled]   = useState(false);
-  const bottomRef                 = useRef<HTMLDivElement>(null);
+  const messagesContainerRef      = useRef<HTMLDivElement>(null);
 
-  // Scroll to bottom on new messages
+  // Scroll only inside the chat container — never scrolls the page
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const el = messagesContainerRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
   }, [messages, typing]);
 
   // Send intro message on mount
@@ -116,7 +117,6 @@ export default function LiveChatDemo({ fr }: { fr: boolean }) {
     setDisabled(false);
   }
 
-  const availableReplies = QUICK_REPLIES.filter(r => !used.includes(r.key));
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-happi-darker relative overflow-hidden border-t border-happi-border">
@@ -165,7 +165,7 @@ export default function LiveChatDemo({ fr }: { fr: boolean }) {
               </div>
 
               {/* Messages */}
-              <div className="flex flex-col gap-3 p-5 min-h-[280px] max-h-[380px] overflow-y-auto">
+              <div ref={messagesContainerRef} className="flex flex-col gap-3 p-5 min-h-[280px] max-h-[380px] overflow-y-auto">
                 <AnimatePresence initial={false}>
                   {messages.map(msg => (
                     <motion.div
@@ -206,7 +206,6 @@ export default function LiveChatDemo({ fr }: { fr: boolean }) {
                     </motion.div>
                   )}
                 </AnimatePresence>
-                <div ref={bottomRef} />
               </div>
 
               {/* Input bar */}
