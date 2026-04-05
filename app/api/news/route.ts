@@ -193,20 +193,21 @@ function decodeEntities(str: string): string {
 }
 
 function cleanExcerpt(raw: string): string {
-  return decodeEntities(
-    raw
-      // Remove full HTML tags and their content for known noisy elements
-      .replace(/<(script|style|figure|img|iframe|table|code|pre)[^>]*>[\s\S]*?<\/\1>/gi, '')
-      // Strip remaining HTML tags
-      .replace(/<[^>]+>/g, ' ')
-      // Remove leftover markdown-style artifacts
-      .replace(/#+\s/g, '')
-      // Remove URLs
-      .replace(/https?:\/\/\S+/g, '')
-      // Collapse whitespace
-      .replace(/\s+/g, ' ')
-      .trim()
-  );
+  // Decode entities FIRST so that encoded tags like &lt;p&gt; become <p>
+  // before the HTML-stripping regexes run — otherwise they survive and render as text.
+  const decoded = decodeEntities(raw);
+  return decoded
+    // Remove noisy block elements and their content
+    .replace(/<(script|style|figure|img|iframe|table|code|pre)[^>]*>[\s\S]*?<\/\1>/gi, '')
+    // Strip all remaining HTML tags
+    .replace(/<[^>]+>/g, ' ')
+    // Remove leftover markdown headers
+    .replace(/#+\s/g, '')
+    // Remove URLs
+    .replace(/https?:\/\/\S+/g, '')
+    // Collapse whitespace
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function parseItems(xml: string, feed: FeedDef): NewsItem[] {
