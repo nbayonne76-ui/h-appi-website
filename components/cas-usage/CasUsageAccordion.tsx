@@ -261,24 +261,24 @@ const steps = (fr: boolean) => [
 
 const globalStats = (fr: boolean) => [
   {
-    value: '−65 %',
-    label: fr ? "d'appels SAV après déploiement du bot" : 'fewer after-sales calls after bot deployment',
+    value: fr ? '2,5j → 4h' : '2.5d → 4h',
+    label: fr ? 'délai de traitement SAV — dès la 1ère semaine' : 'after-sales handling time — from week one',
+    source: 'Salesforce',
+  },
+  {
+    value: fr ? '−€8 500' : '−€8,500',
+    label: fr ? 'économisés par mois pour 500 appels traités' : 'saved per month on 500 monthly calls',
     source: 'Narvar / Gorgias',
   },
   {
-    value: '85 %',
-    label: fr ? 'des demandes SAV automatisables sans agent humain' : 'of after-sales requests automatable without a human agent',
-    source: 'Gorgias / Zendesk',
+    value: '+38 pts',
+    label: fr ? 'NPS en 3 mois d\'utilisation du bot' : 'NPS uplift within 3 months of bot go-live',
+    source: 'Intercom / Gorgias',
   },
   {
-    value: '−80 %',
-    label: fr ? 'de litiges grâce à la preuve de livraison numérique' : 'fewer disputes with digital delivery proof',
-    source: 'DispatchTrack',
-  },
-  {
-    value: '+42 %',
-    label: fr ? 'de livraisons réussies au 1er passage avec notifications' : 'successful 1st-pass deliveries with notifications',
-    source: 'DispatchTrack',
+    value: fr ? '2 sem.' : '2 wks',
+    label: fr ? 'pour être opérationnel en production' : 'to go live in production — zero IT dependency',
+    source: fr ? "H'appi — délai moyen client" : "H'appi — avg. client go-live",
   },
 ];
 
