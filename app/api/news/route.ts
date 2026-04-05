@@ -168,6 +168,15 @@ function isSpam(title: string): boolean {
   return SPAM_PATTERNS.some((re) => re.test(title));
 }
 
+// ── Language filter (EN/FR only) ───────────────────────────────────────────────
+
+// Matches Cyrillic, Arabic, CJK, Hebrew, Hindi, Thai, and other non-Latin scripts
+const NON_LATIN_RE = /[\u0400-\u04FF\u0600-\u06FF\u4E00-\u9FFF\u3040-\u30FF\uAC00-\uD7AF\u0590-\u05FF\u0900-\u097F\u0E00-\u0E7F]/;
+
+function isEnglishOrFrench(text: string): boolean {
+  return !NON_LATIN_RE.test(text);
+}
+
 // ── HTML & entity cleaning ─────────────────────────────────────────────────────
 
 function decodeEntities(str: string): string {
@@ -205,6 +214,10 @@ function cleanExcerpt(raw: string): string {
     .replace(/#+\s/g, '')
     // Remove URLs
     .replace(/https?:\/\/\S+/g, '')
+    // Normalize em/en dashes surrounded by spaces → comma or remove if at start
+    .replace(/\s[—–-]{1,2}\s/g, ', ')
+    // Remove leading punctuation artifacts (dash, pipe, bullet, colon)
+    .replace(/^[\s—–\-|·:,]+/, '')
     // Collapse whitespace
     .replace(/\s+/g, ' ')
     .trim();
@@ -232,6 +245,9 @@ function parseItems(xml: string, feed: FeedDef): NewsItem[] {
       extractTag(chunk, 'dc:date');
 
     if (!title || !url) continue;
+
+    // Drop non-English/French articles
+    if (!isEnglishOrFrench(title)) continue;
 
     // Drop spam regardless of feed type
     if (isSpam(title)) continue;
