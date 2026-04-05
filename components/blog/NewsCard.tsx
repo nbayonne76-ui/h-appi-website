@@ -42,11 +42,11 @@ export default function NewsCard({ item }: { item: NewsItem }) {
       </h3>
 
       {/* Excerpt */}
-      {item.excerpt && (
-        <p className="text-happi-muted text-xs leading-relaxed mb-3 line-clamp-2">
-          {item.excerpt}
-        </p>
-      )}
+      <p className="text-happi-muted text-xs leading-relaxed mb-3 line-clamp-2">
+        {item.excerpt && item.excerpt.length > 20
+          ? item.excerpt
+          : 'Click to read the full article →'}
+      </p>
 
       {/* Footer */}
       <div className="flex items-center justify-end mt-auto pt-1">

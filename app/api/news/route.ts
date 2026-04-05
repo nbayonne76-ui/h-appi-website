@@ -151,21 +151,63 @@ function extractTag(xml: string, tag: string): string {
   return '';
 }
 
+// ── Spam / low-quality title blocklist ────────────────────────────────────────
+
+const SPAM_PATTERNS = [
+  /buy.*(account|follower|subscriber|review|traffic|backlink)/i,
+  /sell.*(account|follower|crypto|nft)/i,
+  /(verified|cheap).*(account|service|provider)/i,
+  /\b(casino|poker|betting|gambling|slot|forex|crypto trading)\b/i,
+  /\b(seo|link.?building|guest.?post|sponsored).*(service|offer|cheap)/i,
+  /snapchat|tiktok accounts|instagram accounts/i,
+  /\b(weight loss|diet pill|keto|supplement)\b/i,
+  /\b(essay|homework|assignment).*(help|writing|service)\b/i,
+];
+
+function isSpam(title: string): boolean {
+  return SPAM_PATTERNS.some((re) => re.test(title));
+}
+
+// ── HTML & entity cleaning ─────────────────────────────────────────────────────
+
 function decodeEntities(str: string): string {
   return str
+    // hex entities like &#x2019; &#x201C;
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCharCode(parseInt(h, 16)))
+    // decimal entities like &#8217;
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)))
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n)))
+    .replace(/&apos;|&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&hellip;/g, '…')
+    .replace(/&mdash;/g, '—')
+    .replace(/&ndash;/g, '–')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
+function cleanExcerpt(raw: string): string {
+  return decodeEntities(
+    raw
+      // Remove full HTML tags and their content for known noisy elements
+      .replace(/<(script|style|figure|img|iframe|table|code|pre)[^>]*>[\s\S]*?<\/\1>/gi, '')
+      // Strip remaining HTML tags
+      .replace(/<[^>]+>/g, ' ')
+      // Remove leftover markdown-style artifacts
+      .replace(/#+\s/g, '')
+      // Remove URLs
+      .replace(/https?:\/\/\S+/g, '')
+      // Collapse whitespace
+      .replace(/\s+/g, ' ')
+      .trim()
+  );
+}
+
 function parseItems(xml: string, feed: FeedDef): NewsItem[] {
   const items: NewsItem[] = [];
-  // Handle both RSS <item> and Atom <entry>
   const itemRe = /<(?:item|entry)>([\s\S]*?)<\/(?:item|entry)>/g;
   let m: RegExpExecArray | null;
 
@@ -187,6 +229,9 @@ function parseItems(xml: string, feed: FeedDef): NewsItem[] {
 
     if (!title || !url) continue;
 
+    // Drop spam regardless of feed type
+    if (isSpam(title)) continue;
+
     // Relevance filter for non-tagged feeds
     if (!feed.tagged) {
       const text = `${title} ${rawDesc}`.toLowerCase();
@@ -194,9 +239,15 @@ function parseItems(xml: string, feed: FeedDef): NewsItem[] {
       if (!relevant) continue;
     }
 
-    const excerpt = decodeEntities(rawDesc.replace(/<[^>]+>/g, ''))
-      .slice(0, 180);
-    const excerptTrimmed = excerpt.length === 180 ? excerpt + '…' : excerpt;
+    // Clean excerpt — also apply relevance check on tagged feeds using cleaned text
+    const excerpt = cleanExcerpt(rawDesc);
+
+    // For tagged feeds, still drop if cleaned excerpt looks empty or spammy
+    if (feed.tagged && isSpam(title)) continue;
+
+    const excerptTrimmed = excerpt.length > 180
+      ? excerpt.slice(0, 180).replace(/\s\S*$/, '') + '…'
+      : excerpt;
 
     let isoDate: string;
     try {
