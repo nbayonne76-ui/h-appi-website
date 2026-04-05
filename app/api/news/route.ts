@@ -171,22 +171,25 @@ function isSpam(title: string): boolean {
 // ── HTML & entity cleaning ─────────────────────────────────────────────────────
 
 function decodeEntities(str: string): string {
-  return str
-    // hex entities like &#x2019; &#x201C;
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCharCode(parseInt(h, 16)))
-    // decimal entities like &#8217;
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)))
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;|&#39;/g, "'")
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&hellip;/g, '…')
-    .replace(/&mdash;/g, '—')
-    .replace(/&ndash;/g, '–')
-    .replace(/\s+/g, ' ')
-    .trim();
+  // Run twice: first pass unescapes &amp; → & so that &amp;#x2019; becomes &#x2019;
+  // second pass decodes the resulting numeric/hex entities
+  function once(s: string): string {
+    return s
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&apos;|&#39;/g, "'")
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&hellip;/g, '…')
+      .replace(/&mdash;/g, '—')
+      .replace(/&ndash;/g, '–')
+      // hex entities like &#x2019; &#x201C;
+      .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCharCode(parseInt(h, 16)))
+      // decimal entities like &#8217;
+      .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)));
+  }
+  return once(once(str)).replace(/\s+/g, ' ').trim();
 }
 
 function cleanExcerpt(raw: string): string {
