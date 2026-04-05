@@ -1,8 +1,8 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
-import { motion, useInView, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
-import { TrendingDown, ShieldCheck, Zap, Quote } from 'lucide-react';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { TrendingDown, ShieldCheck, Zap } from 'lucide-react';
 import TiltCard from '@/components/ui/TiltCard';
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -72,13 +72,6 @@ function AnimatedValue({ value, color }: { value: string; color: string }) {
 
 export default function CasUsageResults({ fr }: { fr: boolean }) {
   const outcomes = getOutcomes(fr);
-  const [quoteVisible, setQuoteVisible] = useState(false);
-  const quoteRef = useRef<HTMLDivElement>(null);
-  const quoteInView = useInView(quoteRef, { once: true, margin: '-40px' });
-
-  useEffect(() => {
-    if (quoteInView) setQuoteVisible(true);
-  }, [quoteInView]);
 
   return (
     <section className="px-4 sm:px-6 lg:px-8 pb-20 relative overflow-hidden">
@@ -110,7 +103,7 @@ export default function CasUsageResults({ fr }: { fr: boolean }) {
         </motion.div>
 
         {/* Outcome cards */}
-        <div className="grid md:grid-cols-3 gap-5 mb-12">
+        <div className="grid md:grid-cols-3 gap-5">
           {outcomes.map((card, i) => (
             <motion.div
               key={i}
@@ -157,53 +150,6 @@ export default function CasUsageResults({ fr }: { fr: boolean }) {
               </TiltCard>
             </motion.div>
           ))}
-        </div>
-
-        {/* Testimonial-style quote banner */}
-        <div ref={quoteRef}>
-          <AnimatePresence>
-            {quoteVisible && (
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, ease: 'easeOut' }}
-                className="relative rounded-2xl p-px overflow-hidden"
-                style={{
-                  background:
-                    'linear-gradient(135deg, rgba(59,130,246,0.35), rgba(16,185,129,0.2), rgba(167,139,250,0.15))',
-                }}
-              >
-                <div className="bg-happi-darker rounded-2xl px-6 py-6 md:px-8 flex flex-col sm:flex-row gap-4 items-start">
-                  <motion.div
-                    initial={{ scale: 0, rotate: -20 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 18, delay: 0.2 }}
-                    className="w-9 h-9 bg-happi-blue/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-happi-blue/20"
-                  >
-                    <Quote size={16} className="text-happi-blue" />
-                  </motion.div>
-                  <div>
-                    <p className="text-white/90 text-sm leading-relaxed italic mb-3">
-                      {fr
-                        ? '"Nous avons réduit nos appels de 65 % en un mois, sans changer notre équipe. Le bot gère les cas courants, nos conseillers s\'occupent des cas complexes. Et chaque livraison est maintenant prouvable."'
-                        : '"We cut our inbound calls by 65% in one month without changing our team. The bot handles standard cases, our advisors handle complex ones. And every delivery is now provable."'}
-                    </p>
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-happi-blue/20 border border-happi-blue/30 flex items-center justify-center text-[9px] font-bold text-happi-blue">
-                        MF
-                      </div>
-                      <div>
-                        <div className="text-white text-xs font-semibold">Mobilier de France</div>
-                        <div className="text-happi-muted/60 text-[10px]">
-                          {fr ? 'Responsable SAV · Déploiement 2024' : 'After-Sales Manager · 2024 Deployment'}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
 
       </div>
