@@ -4,6 +4,7 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import CasUsageAccordion from '@/components/cas-usage/CasUsageAccordion';
 import CasUsageTimeline from '@/components/cas-usage/CasUsageTimeline';
+import CasUsageResults from '@/components/cas-usage/CasUsageResults';
 import { BotDemo } from '@/components/cas-usage/BotDemo';
 import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import { FadeInUp, ScaleIn } from '@/components/ui/Animate';
@@ -184,6 +185,9 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
             <CasUsageAccordion />
           </div>
         </section>
+
+        {/* ── Results closing section ── */}
+        <CasUsageResults fr={fr} />
 
         <CTASection />
       </main>
