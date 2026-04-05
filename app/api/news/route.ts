@@ -201,32 +201,46 @@ function decodeEntities(str: string): string {
   return once(once(str)).replace(/\s+/g, ' ').trim();
 }
 
+function cleanText(text: string): string {
+  return text
+    // Multiple dashes or underscores used as horizontal rules / separators
+    .replace(/[-_]{2,}/g, ' ')
+    // Em dash / en dash (with or without surrounding spaces) → comma
+    .replace(/\s*[—–]\s*/g, ', ')
+    // Single hyphen used as separator: "word - word" → "word, word"
+    // (only when surrounded by spaces — preserves hyphenated-words)
+    .replace(/ - /g, ', ')
+    // Pipe separator: "word | word" → "word, word"
+    .replace(/\s*\|\s*/g, ', ')
+    // Middle-dot / bullet separator: "word · word" → "word, word"
+    .replace(/\s*·\s*/g, ', ')
+    // Multiple commas in a row
+    .replace(/,\s*,+/g, ',')
+    // Normalize 2+ dots to ellipsis
+    .replace(/\.{2,}/g, '…')
+    // Strip leading punctuation artifacts
+    .replace(/^[\s\-,|·:]+/, '')
+    // Strip trailing punctuation artifacts (but keep …)
+    .replace(/[\-,|·:\s]+$/, '')
+    // Collapse whitespace
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function cleanExcerpt(raw: string): string {
   // Decode entities FIRST so that encoded tags like &lt;p&gt; become <p>
   // before the HTML-stripping regexes run — otherwise they survive and render as text.
   const decoded = decodeEntities(raw);
-  return decoded
-    // Remove noisy block elements and their content
+  const stripped = decoded
+    // Remove noisy block elements and their full content
     .replace(/<(script|style|figure|img|iframe|table|code|pre)[^>]*>[\s\S]*?<\/\1>/gi, '')
     // Strip all remaining HTML tags
     .replace(/<[^>]+>/g, ' ')
     // Remove leftover markdown headers
     .replace(/#+\s/g, '')
-    // Remove URLs
-    .replace(/https?:\/\/\S+/g, '')
-    // Replace sequences of dashes/underscores used as separators (---, ---, ___)
-    .replace(/[-_]{2,}/g, ' ')
-    // Normalize em dash / en dash surrounded by optional spaces → comma+space
-    .replace(/\s*[—–]\s*/g, ', ')
-    // Remove leading punctuation artifacts (dash, pipe, bullet, colon, comma)
-    .replace(/^[\s\-|·:,]+/, '')
-    // Remove trailing punctuation artifacts (dash, pipe, comma)
-    .replace(/[\-|,\s]+$/, '')
-    // Normalize triple dots to ellipsis character
-    .replace(/\.{2,}/g, '…')
-    // Collapse whitespace
-    .replace(/\s+/g, ' ')
-    .trim();
+    // Remove bare URLs
+    .replace(/https?:\/\/\S+/g, '');
+  return cleanText(stripped);
 }
 
 function parseItems(xml: string, feed: FeedDef): NewsItem[] {
@@ -236,7 +250,7 @@ function parseItems(xml: string, feed: FeedDef): NewsItem[] {
 
   while ((m = itemRe.exec(xml)) !== null) {
     const chunk = m[1];
-    const title = decodeEntities(extractTag(chunk, 'title'));
+    const title = cleanText(decodeEntities(extractTag(chunk, 'title')));
     let url = extractTag(chunk, 'link');
     if (!url) url = extractTag(chunk, 'guid');
     if (!url) url = extractTag(chunk, 'id');
@@ -272,7 +286,7 @@ function parseItems(xml: string, feed: FeedDef): NewsItem[] {
     if (feed.tagged && isSpam(title)) continue;
 
     const excerptTrimmed = excerpt.length > 180
-      ? excerpt.slice(0, 180).replace(/\s\S*$/, '') + '…'
+      ? excerpt.slice(0, 180).replace(/\s\S*$/, '').replace(/[\-,|·:\s]+$/, '') + '…'
       : excerpt;
 
     let isoDate: string;
