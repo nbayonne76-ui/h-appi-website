@@ -6,30 +6,51 @@ import { useLocale, useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ArticleCard from '@/components/blog/ArticleCard';
+import NewsSection from '@/components/blog/NewsSection';
 import { getArticles, getCategories } from '@/lib/blog-data';
-import { BookOpen, MessageSquare } from 'lucide-react';
+import { BookOpen, MessageSquare, Rss } from 'lucide-react';
+
+const NEWS_KEY_FR = 'Actualités';
+const NEWS_KEY_EN = 'News';
 
 export default function BlogPage() {
   const locale = useLocale();
   const t = useTranslations('blog');
+  const fr = locale === 'fr';
   const articles = getArticles(locale);
   const categories = getCategories(locale);
 
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
+  // Inject the "News" tab after the "All" entry
+  const newsLabel = fr ? NEWS_KEY_FR : NEWS_KEY_EN;
+  const allCategories = [
+    categories[0],          // Tous / All
+    newsLabel,              // Actualités / News  ← new
+    ...categories.slice(1), // Produit, Guide, …
+  ];
 
-  const filtered =
-    activeCategory === categories[0]
+  const [activeCategory, setActiveCategory] = useState(allCategories[0]);
+
+  const isNewsTab = activeCategory === newsLabel;
+
+  const filtered = isNewsTab
+    ? articles
+    : activeCategory === allCategories[0]
       ? articles
       : articles.filter((a) => a.category === activeCategory);
 
-  const featuredArticle = activeCategory === categories[0] ? articles.find((a) => a.featured) : null;
+  const featuredArticle =
+    !isNewsTab && activeCategory === allCategories[0]
+      ? articles.find((a) => a.featured)
+      : null;
+
   const gridArticles = featuredArticle
     ? filtered.filter((a) => a.slug !== featuredArticle.slug)
     : filtered;
 
   // Count per category
   const categoryCounts: Record<string, number> = {
-    [categories[0]]: articles.length,
+    [allCategories[0]]: articles.length,
+    [newsLabel]: 0, // dynamic, shown as "live"
   };
   categories.slice(1).forEach((cat) => {
     categoryCounts[cat] = articles.filter((a) => a.category === cat).length;
@@ -62,20 +83,29 @@ export default function BlogPage() {
         {/* Mobile category filter */}
         <div className="lg:hidden sticky top-16 z-40 bg-happi-dark border-b border-happi-border/50 px-4 sm:px-6">
           <div className="flex items-center gap-2 overflow-x-auto py-3 scrollbar-hide">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all flex-shrink-0 ${
-                  activeCategory === cat
-                    ? 'bg-happi-blue text-white'
-                    : 'bg-happi-surface text-happi-muted hover:text-white border border-happi-border'
-                }`}
-              >
-                {cat}
-                <span className="ml-1.5 opacity-60">{categoryCounts[cat] ?? 0}</span>
-              </button>
-            ))}
+            {allCategories.map((cat) => {
+              const isNews = cat === newsLabel;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all flex-shrink-0 flex items-center gap-1.5 ${
+                    activeCategory === cat
+                      ? 'bg-happi-blue text-white'
+                      : 'bg-happi-surface text-happi-muted hover:text-white border border-happi-border'
+                  }`}
+                >
+                  {isNews && <Rss size={10} />}
+                  {cat}
+                  {!isNews && (
+                    <span className="opacity-60">{categoryCounts[cat] ?? 0}</span>
+                  )}
+                  {isNews && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -88,11 +118,12 @@ export default function BlogPage() {
               {/* Categories */}
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-3 px-1">
-                  {locale === 'fr' ? 'Catégories' : 'Categories'}
+                  {fr ? 'Catégories' : 'Categories'}
                 </p>
                 <nav className="space-y-0.5">
-                  {categories.map((cat) => {
+                  {allCategories.map((cat) => {
                     const isActive = activeCategory === cat;
+                    const isNews = cat === newsLabel;
                     return (
                       <button
                         key={cat}
@@ -103,10 +134,20 @@ export default function BlogPage() {
                             : 'text-happi-muted hover:text-white hover:bg-happi-surface'
                         }`}
                       >
-                        <span>{cat}</span>
-                        <span className={`text-xs tabular-nums ${isActive ? 'text-happi-blue/70' : 'text-happi-muted/50'}`}>
-                          {categoryCounts[cat] ?? 0}
+                        <span className="flex items-center gap-2">
+                          {isNews && <Rss size={12} />}
+                          {cat}
                         </span>
+                        {isNews ? (
+                          <span className="flex items-center gap-1 text-xs text-green-400 font-medium">
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                            Live
+                          </span>
+                        ) : (
+                          <span className={`text-xs tabular-nums ${isActive ? 'text-happi-blue/70' : 'text-happi-muted/50'}`}>
+                            {categoryCounts[cat] ?? 0}
+                          </span>
+                        )}
                       </button>
                     );
                   })}
@@ -138,33 +179,41 @@ export default function BlogPage() {
 
             {/* Main content */}
             <div className="flex-1 min-w-0">
-              {/* Featured article */}
-              {featuredArticle && (
-                <div className="mb-8">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-3">
-                    ★ {t('featured')}
-                  </p>
-                  <ArticleCard article={featuredArticle} featured />
-                </div>
-              )}
 
-              {/* Grid */}
-              {gridArticles.length === 0 ? (
-                <div className="text-center py-16 text-happi-muted text-sm">
-                  {t('noArticles')}
-                </div>
+              {/* ── News tab ── */}
+              {isNewsTab ? (
+                <NewsSection fr={fr} />
               ) : (
                 <>
+                  {/* Featured article */}
                   {featuredArticle && (
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-4">
-                      {t('allArticles')}
-                    </p>
+                    <div className="mb-8">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-3">
+                        ★ {t('featured')}
+                      </p>
+                      <ArticleCard article={featuredArticle} featured />
+                    </div>
                   )}
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    {gridArticles.map((article) => (
-                      <ArticleCard key={article.slug} article={article} />
-                    ))}
-                  </div>
+
+                  {/* Grid */}
+                  {gridArticles.length === 0 ? (
+                    <div className="text-center py-16 text-happi-muted text-sm">
+                      {t('noArticles')}
+                    </div>
+                  ) : (
+                    <>
+                      {featuredArticle && (
+                        <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-4">
+                          {t('allArticles')}
+                        </p>
+                      )}
+                      <div className="grid sm:grid-cols-2 gap-5">
+                        {gridArticles.map((article) => (
+                          <ArticleCard key={article.slug} article={article} />
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </>
               )}
             </div>

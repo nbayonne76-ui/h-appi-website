@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { Check, Phone, Calendar, MessageSquare, Mic, Clock, Zap, X } from 'lucide-react';
 import SecretaryCTA from '@/components/secretary/SecretaryCTA';
+import LogoWall from '@/components/ui/LogoWall';
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
@@ -146,6 +147,9 @@ export default async function SecretaryPage({
             ))}
           </div>
         </section>
+
+        {/* ── Logo Wall ── */}
+        <LogoWall fr={fr} />
 
         {/* ── Product mockup ── */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-happi-border">

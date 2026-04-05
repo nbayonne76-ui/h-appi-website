@@ -1,7 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { motion, AnimatePresence, useSpring, useTransform, useMotionValue } from 'framer-motion';
 import { Check, Sparkles, ArrowLeft, Zap, Clock, MessageCircle, Loader2 } from 'lucide-react';
+import AnimatedMesh from '@/components/ui/AnimatedMesh';
+import TiltCard from '@/components/ui/TiltCard';
+import MagneticButton from '@/components/ui/MagneticButton';
+import { FadeInUp } from '@/components/ui/Animate';
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -234,11 +239,11 @@ const STEP_SUB = [
 export default function BotConfigurator({ fr }: { fr: boolean }) {
   const [step, setStep]             = useState(0);
   const [cfg, setCfg]               = useState<Config>({ sector: null, goal: null, channel: null, features: [], tone: null });
-  const [fading, setFading]         = useState(false);
   const [showForm, setShowForm]     = useState(false);
   const [form, setForm]             = useState({ prenom: '', entreprise: '', email: '' });
   const [sent, setSent]             = useState(false);
   const [loading, setLoading]       = useState(false);
+  const [direction, setDirection]   = useState(1); // 1 = forward, -1 = back
 
   const sectorData    = SECTORS.find(s => s.id === cfg.sector);
   const color         = sectorData?.color ?? '#4F46E5';
@@ -250,16 +255,22 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
   const isComplete    = !!(cfg.sector && cfg.goal && cfg.channel && cfg.tone);
   const sectorFeatures = cfg.sector ? SECTOR_FEATURES[cfg.sector] : [];
 
+  // Spring-animated progress bar
+  const progressRaw   = useMotionValue((step / (TOTAL_STEPS - 1)) * 100);
+  const progressSpring = useSpring(progressRaw, { stiffness: 80, damping: 20 });
+  const progressWidth  = useTransform(progressSpring, v => `${v}%`);
+
   function goToStep(n: number) {
-    setFading(true);
-    setTimeout(() => { setStep(n); setFading(false); }, 280);
+    setDirection(n > step ? 1 : -1);
+    setStep(n);
+    progressRaw.set((n / (TOTAL_STEPS - 1)) * 100);
   }
 
   // Single-select: update config then advance — unless it's the last step (tone)
   function pickSingle(update: Partial<Config>, _id: string, next: number) {
     setCfg(p => ({ ...p, ...update }));
     if (next < TOTAL_STEPS) {
-      setTimeout(() => goToStep(next), 420);
+      setTimeout(() => goToStep(next), 380);
     }
     // Last step (tone): stay at step 4, CTA button appears via isComplete
   }
@@ -290,57 +301,78 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
     { label: fr ? 'Ton' : 'Tone',         value: cfg.tone    ? `${TONES.find(t => t.id === cfg.tone)?.emoji} ${TONES.find(t => t.id === cfg.tone)?.[fr ? 'fr' : 'en']}` : null },
   ];
 
-  const progress = (step / (TOTAL_STEPS - 1)) * 100;
-
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-24 border-t border-happi-border">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 sm:px-6 lg:px-8 py-24 border-t border-happi-border relative overflow-hidden">
+      <AnimatedMesh variant="purple" />
+      <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-widest mb-5 border border-happi-blue/20">
-            {fr ? 'Studio de configuration' : 'Bot Studio'}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-            {fr
-              ? <><span className="gradient-text">Configurez</span> votre bot en 5 étapes</>
-              : <><span className="gradient-text">Configure</span> your bot in 5 steps</>}
-          </h2>
-          <p className="text-happi-muted max-w-lg mx-auto text-base leading-relaxed">
-            {fr
-              ? "Choisissez chaque paramètre, votre bot se construit en temps réel."
-              : "Pick each parameter, your bot assembles in real time."}
-          </p>
+          <FadeInUp>
+            <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-widest mb-5 border border-happi-blue/20">
+              {fr ? 'Studio de configuration' : 'Bot Studio'}
+            </span>
+          </FadeInUp>
+          <FadeInUp delay={0.08}>
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+              {fr
+                ? <><span className="gradient-text">Configurez</span> votre bot en 5 étapes</>
+                : <><span className="gradient-text">Configure</span> your bot in 5 steps</>}
+            </h2>
+          </FadeInUp>
+          <FadeInUp delay={0.16}>
+            <p className="text-happi-muted max-w-lg mx-auto text-base leading-relaxed">
+              {fr
+                ? "Choisissez chaque paramètre, votre bot se construit en temps réel."
+                : "Pick each parameter, your bot assembles in real time."}
+            </p>
+          </FadeInUp>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
 
           {/* ── LEFT: Wizard (3/5) ── */}
-          <div className="lg:col-span-3 flex flex-col bg-happi-surface border border-happi-border rounded-3xl overflow-hidden">
+          <div className="lg:col-span-3 flex flex-col glass-card rounded-3xl overflow-hidden">
 
-            {/* Progress bar */}
+            {/* Progress bar — spring animated */}
             <div className="h-1 bg-happi-border">
-              <div
-                className="h-full transition-all duration-500 ease-out"
-                style={{ width: `${progress}%`, background: `linear-gradient(90deg, ${color}, ${color}88)` }}
+              <motion.div
+                className="h-full"
+                style={{ width: progressWidth }}
+                animate={{ background: `linear-gradient(90deg, ${color}, ${color}88)` }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
               />
             </div>
 
             {/* Step indicator row */}
             <div className="flex items-center gap-2 px-6 pt-5 pb-4 border-b border-happi-border/50">
               {Array.from({ length: TOTAL_STEPS }).map((_, i) => (
-                <button
+                <motion.button
                   key={i}
+                  layout
                   onClick={() => i < step && goToStep(i)}
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 transition-all ${i < step ? 'cursor-pointer hover:opacity-80' : 'cursor-default'}`}
+                  whileTap={i < step ? { scale: 0.88 } : {}}
+                  animate={i === step ? { scale: direction > 0 ? [1, 1.1, 1] : [1, 0.88, 1.06, 1] } : { scale: 1 }}
+                  transition={{ duration: 0.35 }}
+                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${i < step ? 'cursor-pointer' : 'cursor-default'}`}
                   style={{
-                    background:  i < step ? color : i === step ? `${color}20` : 'rgba(255,255,255,0.05)',
-                    border:      i === step ? `2px solid ${color}` : '2px solid transparent',
-                    color:       i < step ? '#fff' : i === step ? color : '#64748b',
+                    background: i < step ? color : i === step ? `${color}20` : 'rgba(255,255,255,0.05)',
+                    border:     i === step ? `2px solid ${color}` : '2px solid transparent',
+                    color:      i < step ? '#fff' : i === step ? color : '#64748b',
                   }}
                 >
-                  {i < step ? <Check size={11} strokeWidth={3} /> : i + 1}
-                </button>
+                  <AnimatePresence mode="wait" initial={false}>
+                    {i < step ? (
+                      <motion.span key="check" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} transition={{ duration: 0.2 }}>
+                        <Check size={11} strokeWidth={3} />
+                      </motion.span>
+                    ) : (
+                      <motion.span key="num" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} transition={{ duration: 0.2 }}>
+                        {i + 1}
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </motion.button>
               ))}
               <div className="flex-1" />
               <span className="text-[11px] text-happi-muted/40">
@@ -348,37 +380,67 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
               </span>
             </div>
 
-            {/* Big question */}
-            <div className="px-7 pt-6 pb-4">
-              <h3 className="text-white text-2xl font-extrabold tracking-tight">{STEP_Q[step][fr ? 'fr' : 'en']}</h3>
-              <p className="text-happi-muted text-sm mt-1.5">{STEP_SUB[step][fr ? 'fr' : 'en']}</p>
-            </div>
+            {/* Big question — animates per step */}
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={`q-${step}`}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.22, ease: 'easeOut' }}
+                className="px-7 pt-6 pb-4"
+              >
+                <h3 className="text-white text-2xl font-extrabold tracking-tight">{STEP_Q[step][fr ? 'fr' : 'en']}</h3>
+                <p className="text-happi-muted text-sm mt-1.5">{STEP_SUB[step][fr ? 'fr' : 'en']}</p>
+              </motion.div>
+            </AnimatePresence>
 
-            {/* Step content */}
-            <div
-              className="px-7 pb-7 min-h-[320px] transition-all duration-[280ms]"
-              style={{ opacity: fading ? 0 : 1, transform: fading ? 'translateY(6px)' : 'translateY(0)' }}
-            >
+            {/* Step content — slides in/out with direction */}
+            <div className="px-7 pb-7 min-h-[320px]">
+            <AnimatePresence mode="wait" initial={false} custom={direction}>
+              <motion.div
+                key={step}
+                custom={direction}
+                variants={{
+                  enter:  (d: number) => ({ opacity: 0, x: d * 24 }),
+                  center: { opacity: 1, x: 0 },
+                  exit:   (d: number) => ({ opacity: 0, x: d * -24 }),
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.28, ease: [0.33, 1, 0.68, 1] }}
+              >
 
               {/* ── Step 0: Sector ── */}
               {step === 0 && (
                 <div className="grid grid-cols-2 gap-3">
-                  {SECTORS.map(s => {
+                  {SECTORS.map((s, i) => {
                     const sel = cfg.sector === s.id;
                     return (
-                      <button
+                      <motion.button
                         key={s.id}
                         onClick={() => pickSingle({ sector: s.id, features: [] }, s.id, 1)}
-                        className="group flex items-center gap-3 p-4 rounded-2xl border text-left transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.04, duration: 0.3 }}
+                        whileHover={{ scale: 1.03, y: -1 }}
+                        whileTap={{ scale: 0.96 }}
+                        className="group flex items-center gap-3 p-4 rounded-2xl border text-left"
                         style={{
                           borderColor: sel ? s.color : 'transparent',
                           background:  sel ? `${s.color}18` : 'rgba(255,255,255,0.04)',
+                          boxShadow:   sel ? `0 0 18px ${s.color}22` : 'none',
                         }}
                       >
-                        <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0 transition-all"
-                          style={{ background: sel ? `${s.color}30` : 'rgba(255,255,255,0.06)' }}>
+                        <motion.div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                          animate={{ background: sel ? `${s.color}30` : 'rgba(255,255,255,0.06)' }}
+                          whileHover={{ rotate: sel ? 0 : 8 }}
+                          transition={{ duration: 0.2 }}
+                        >
                           {s.icon}
-                        </div>
+                        </motion.div>
                         <div className="flex-1 min-w-0">
                           <div className={`text-sm font-semibold leading-tight transition-colors ${sel ? 'text-white' : 'text-happi-muted group-hover:text-white'}`}>
                             {fr ? s.fr : s.en}
@@ -387,12 +449,21 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                             {fr ? s.descFr : s.descEn}
                           </div>
                         </div>
-                        {sel && (
-                          <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: s.color }}>
-                            <Check size={10} className="text-white" strokeWidth={3} />
-                          </div>
-                        )}
-                      </button>
+                        <AnimatePresence>
+                          {sel && (
+                            <motion.div
+                              initial={{ scale: 0, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              exit={{ scale: 0, opacity: 0 }}
+                              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                              className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                              style={{ background: s.color }}
+                            >
+                              <Check size={10} className="text-white" strokeWidth={3} />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.button>
                     );
                   })}
                 </div>
@@ -401,29 +472,48 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
               {/* ── Step 1: Goal ── */}
               {step === 1 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {GOALS.map(g => {
+                  {GOALS.map((g, i) => {
                     const sel = cfg.goal === g.id;
                     return (
-                      <button
+                      <motion.button
                         key={g.id}
                         onClick={() => pickSingle({ goal: g.id }, g.id, 2)}
-                        className="group relative flex flex-col gap-2 p-5 rounded-2xl border text-left transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.07, duration: 0.3 }}
+                        whileHover={{ scale: 1.03, y: -2 }}
+                        whileTap={{ scale: 0.96 }}
+                        className="group relative flex flex-col gap-2 p-5 rounded-2xl border text-left"
                         style={{
                           borderColor: sel ? color : 'transparent',
                           background:  sel ? `${color}15` : 'rgba(255,255,255,0.04)',
+                          boxShadow:   sel ? `0 0 20px ${color}22` : 'none',
                         }}
                       >
-                        <div className="text-3xl">{g.icon}</div>
+                        <motion.div
+                          className="text-3xl"
+                          whileHover={{ scale: 1.2, rotate: 10 }}
+                          transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+                        >{g.icon}</motion.div>
                         <div className={`text-base font-bold leading-tight transition-colors ${sel ? 'text-white' : 'text-white/80 group-hover:text-white'}`}>
                           {fr ? g.fr : g.en}
                         </div>
                         <div className="text-xs text-happi-muted leading-relaxed">{fr ? g.descFr : g.descEn}</div>
-                        {sel && (
-                          <div className="absolute top-3 right-3 w-5 h-5 rounded-full flex items-center justify-center" style={{ background: color }}>
-                            <Check size={10} className="text-white" strokeWidth={3} />
-                          </div>
-                        )}
-                      </button>
+                        <AnimatePresence>
+                          {sel && (
+                            <motion.div
+                              initial={{ scale: 0, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              exit={{ scale: 0, opacity: 0 }}
+                              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                              className="absolute top-3 right-3 w-5 h-5 rounded-full flex items-center justify-center"
+                              style={{ background: color }}
+                            >
+                              <Check size={10} className="text-white" strokeWidth={3} />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.button>
                     );
                   })}
                 </div>
@@ -432,34 +522,53 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
               {/* ── Step 2: Channel ── */}
               {step === 2 && (
                 <div className="flex flex-col gap-3">
-                  {CHANNELS.map(c => {
+                  {CHANNELS.map((c, i) => {
                     const sel = cfg.channel === c.id;
                     return (
-                      <button
+                      <motion.button
                         key={c.id}
                         onClick={() => pickSingle({ channel: c.id }, c.id, 3)}
-                        className="group flex items-center gap-4 p-5 rounded-2xl border text-left transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
+                        initial={{ opacity: 0, x: -16 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.08, duration: 0.3 }}
+                        whileHover={{ scale: 1.02, x: 4 }}
+                        whileTap={{ scale: 0.97 }}
+                        className="group flex items-center gap-4 p-5 rounded-2xl border text-left"
                         style={{
                           borderColor: sel ? color : 'transparent',
                           background:  sel ? `${color}15` : 'rgba(255,255,255,0.04)',
+                          boxShadow:   sel ? `0 0 20px ${color}20` : 'none',
                         }}
                       >
-                        <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 transition-all"
-                          style={{ background: sel ? `${color}30` : 'rgba(255,255,255,0.06)' }}>
+                        <motion.div
+                          className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
+                          animate={{ background: sel ? `${color}30` : 'rgba(255,255,255,0.06)' }}
+                          whileHover={{ rotate: sel ? 0 : 6 }}
+                          transition={{ duration: 0.25 }}
+                        >
                           {c.icon}
-                        </div>
+                        </motion.div>
                         <div className="flex-1">
                           <div className={`text-base font-bold transition-colors ${sel ? 'text-white' : 'text-white/80 group-hover:text-white'}`}>
                             {fr ? c.fr : c.en}
                           </div>
                           <div className="text-xs text-happi-muted mt-1 leading-snug">{fr ? c.descFr : c.descEn}</div>
                         </div>
-                        {sel && (
-                          <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: color }}>
-                            <Check size={12} className="text-white" strokeWidth={3} />
-                          </div>
-                        )}
-                      </button>
+                        <AnimatePresence>
+                          {sel && (
+                            <motion.div
+                              initial={{ scale: 0, rotate: -90 }}
+                              animate={{ scale: 1, rotate: 0 }}
+                              exit={{ scale: 0, rotate: 90 }}
+                              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                              className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                              style={{ background: color }}
+                            >
+                              <Check size={12} className="text-white" strokeWidth={3} />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.button>
                     );
                   })}
                 </div>
@@ -477,39 +586,63 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                     <span className="text-[11px] text-happi-muted/40">{fr ? 'Optionnel' : 'Optional'}</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2.5">
-                    {sectorFeatures.map(f => {
+                    {sectorFeatures.map((f, i) => {
                       const selected = cfg.features.includes(f.id);
                       const disabled = !selected && cfg.features.length >= 4;
                       return (
-                        <button
+                        <motion.button
                           key={f.id}
                           onClick={() => !disabled && toggleFeature(f.id)}
                           disabled={disabled}
-                          className={`flex items-center gap-3 p-3.5 rounded-xl border text-left transition-all ${
-                            selected  ? 'text-white'
-                            : disabled ? 'opacity-25 cursor-not-allowed'
-                            : 'text-happi-muted hover:text-white'
-                          }`}
+                          initial={{ opacity: 0, scale: 0.92 }}
+                          animate={{ opacity: disabled ? 0.25 : 1, scale: 1 }}
+                          transition={{ delay: i * 0.04, duration: 0.25 }}
+                          whileHover={disabled ? {} : { scale: 1.03 }}
+                          whileTap={disabled ? {} : { scale: 0.95 }}
+                          className={`flex items-center gap-3 p-3.5 rounded-xl border text-left ${
+                            disabled ? 'cursor-not-allowed' : 'cursor-pointer'
+                          } ${selected ? 'text-white' : 'text-happi-muted'}`}
                           style={{
                             borderColor: selected ? color : 'transparent',
                             background:  selected ? `${color}15` : 'rgba(255,255,255,0.03)',
+                            boxShadow:   selected ? `0 0 14px ${color}20` : 'none',
                           }}
                         >
-                          <span className="text-xl flex-shrink-0">{f.icon}</span>
+                          <motion.span
+                            className="text-xl flex-shrink-0"
+                            animate={{ rotate: selected ? [0, -10, 10, 0] : 0 }}
+                            transition={{ duration: 0.4 }}
+                          >{f.icon}</motion.span>
                           <span className="text-xs font-medium leading-tight flex-1">{fr ? f.fr : f.en}</span>
-                          {selected && <Check size={11} style={{ color }} className="flex-shrink-0" strokeWidth={3} />}
-                        </button>
+                          <AnimatePresence>
+                            {selected && (
+                              <motion.span
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0, opacity: 0 }}
+                                transition={{ type: 'spring', stiffness: 400, damping: 18 }}
+                              >
+                                <Check size={11} style={{ color }} className="flex-shrink-0" strokeWidth={3} />
+                              </motion.span>
+                            )}
+                          </AnimatePresence>
+                        </motion.button>
                       );
                     })}
                   </div>
                   <div className="flex justify-end mt-5">
-                    <button
-                      onClick={() => goToStep(4)}
-                      className="px-6 py-2.5 rounded-xl text-sm font-bold text-white transition-all hover:opacity-90"
-                      style={{ background: color }}
-                    >
-                      {fr ? 'Continuer →' : 'Continue →'}
-                    </button>
+                    <MagneticButton strength={0.25}>
+                      <motion.button
+                        onClick={() => goToStep(4)}
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
+                        className="px-6 py-2.5 rounded-xl text-sm font-bold text-white flex items-center gap-2"
+                        style={{ background: color, boxShadow: `0 4px 16px ${color}40` }}
+                      >
+                        {fr ? 'Continuer' : 'Continue'}
+                        <motion.span whileHover={{ x: 4 }} transition={{ type: 'spring', stiffness: 300 }}>→</motion.span>
+                      </motion.button>
+                    </MagneticButton>
                   </div>
                 </>
               )}
@@ -517,61 +650,95 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
               {/* ── Step 4: Tone ── */}
               {step === 4 && (
                 <div className="flex flex-col gap-3">
-                  {TONES.map(t => {
+                  {TONES.map((t, i) => {
                     const sel = cfg.tone === t.id;
                     return (
-                      <button
+                      <motion.button
                         key={t.id}
                         onClick={() => pickSingle({ tone: t.id }, t.id, TOTAL_STEPS)}
-                        className="group flex items-center gap-4 p-5 rounded-2xl border text-left transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.08, duration: 0.3 }}
+                        whileHover={{ scale: 1.02, boxShadow: `0 0 28px ${t.color}35` }}
+                        whileTap={{ scale: 0.97 }}
+                        className="group flex items-center gap-4 p-5 rounded-2xl border text-left"
                         style={{
-                          borderColor: sel ? t.color : 'transparent',
+                          borderColor: sel ? t.color : `${t.color}20`,
                           background:  sel ? `${t.color}15` : 'rgba(255,255,255,0.04)',
+                          boxShadow:   sel ? `0 0 24px ${t.color}30` : 'none',
                         }}
                       >
-                        <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-                          style={{ background: sel ? `${t.color}30` : 'rgba(255,255,255,0.06)' }}>
+                        <motion.div
+                          className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+                          animate={{ background: sel ? `${t.color}30` : 'rgba(255,255,255,0.06)' }}
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
                           {t.emoji}
-                        </div>
+                        </motion.div>
                         <div className="flex-1">
                           <div className={`text-base font-bold leading-tight transition-colors ${sel ? 'text-white' : 'text-white/80 group-hover:text-white'}`}>
                             {fr ? t.fr : t.en}
                           </div>
                           <div className="text-xs text-happi-muted mt-1 leading-relaxed">{fr ? t.descFr : t.descEn}</div>
                         </div>
-                        {sel && (
-                          <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: t.color }}>
-                            <Check size={12} className="text-white" strokeWidth={3} />
-                          </div>
-                        )}
-                      </button>
+                        <AnimatePresence>
+                          {sel && (
+                            <motion.div
+                              initial={{ scale: 0, rotate: -180 }}
+                              animate={{ scale: 1, rotate: 0 }}
+                              exit={{ scale: 0, rotate: 180 }}
+                              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                              className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                              style={{ background: t.color }}
+                            >
+                              <Check size={12} className="text-white" strokeWidth={3} />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.button>
                     );
                   })}
                 </div>
               )}
+              </motion.div>
+            </AnimatePresence>
             </div>
 
             {/* Nav footer */}
             <div className="px-7 pb-6 pt-4 border-t border-happi-border/50 flex items-center justify-between">
-              <button
+              <motion.button
                 onClick={() => goToStep(Math.max(0, step - 1))}
                 disabled={step === 0}
+                whileHover={step > 0 ? { x: -3 } : {}}
+                whileTap={step > 0 ? { scale: 0.95 } : {}}
                 className="flex items-center gap-1.5 text-sm text-happi-muted hover:text-white disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
               >
                 <ArrowLeft size={14} />
                 {fr ? 'Précédent' : 'Back'}
-              </button>
+              </motion.button>
 
-              {isComplete && step === 4 && (
-                <button
-                  onClick={() => setShowForm(true)}
-                  className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white transition-all hover:opacity-90 animate-pulse"
-                  style={{ background: `linear-gradient(135deg, ${color}, ${color}cc)`, boxShadow: `0 8px 24px ${color}35` }}
-                >
-                  <Sparkles size={14} />
-                  {fr ? 'Je veux ce bot !' : 'I want this bot!'}
-                </button>
-              )}
+              <AnimatePresence>
+                {isComplete && step === 4 && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.85 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.85 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+                  >
+                    <MagneticButton strength={0.3}>
+                      <button
+                        onClick={() => setShowForm(true)}
+                        className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white"
+                        style={{ background: `linear-gradient(135deg, ${color}, ${color}cc)`, boxShadow: `0 8px 24px ${color}40` }}
+                      >
+                        <Sparkles size={14} />
+                        {fr ? 'Je veux ce bot !' : 'I want this bot!'}
+                      </button>
+                    </MagneticButton>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
 
@@ -579,10 +746,12 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
           <div className="lg:col-span-2 flex flex-col gap-4 lg:sticky lg:top-24">
 
             {/* Recipe card */}
-            <div className="bg-happi-surface border border-happi-border rounded-3xl overflow-hidden">
-              <div
+            <TiltCard intensity={3}>
+            <div className="glass-card rounded-3xl overflow-hidden">
+              <motion.div
+                animate={{ background: `linear-gradient(135deg, ${color}10, transparent)` }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="px-5 py-4 flex items-center gap-3 border-b border-happi-border/50"
-                style={{ background: `linear-gradient(135deg, ${color}10, transparent)` }}
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0 transition-all duration-500"
@@ -602,29 +771,50 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                     ✓ {fr ? 'Complet' : 'Complete'}
                   </span>
                 )}
-              </div>
+              </motion.div>
 
-              {/* Slots */}
+              {/* Slots — animés à l'apparition de chaque valeur */}
               <div className="p-4 flex flex-col gap-2">
                 {recipe.map((slot, i) => (
-                  <div
+                  <motion.div
                     key={i}
-                    className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all duration-400"
-                    style={{
-                      background:  slot.value ? `${color}0d` : 'rgba(255,255,255,0.02)',
-                      borderLeft:  slot.value ? `2px solid ${color}60` : '2px solid transparent',
+                    animate={{
+                      background: slot.value ? `${color}0d` : 'rgba(255,255,255,0.02)',
+                      borderLeftColor: slot.value ? `${color}60` : 'transparent',
                     }}
+                    transition={{ duration: 0.4 }}
+                    className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl"
+                    style={{ borderLeft: '2px solid transparent' }}
                   >
                     <div className="text-[10px] font-bold text-happi-muted/30 w-5 flex-shrink-0">{String(i + 1).padStart(2, '0')}</div>
                     <div className="text-[11px] text-happi-muted/40 w-14 flex-shrink-0 leading-tight">{slot.label}</div>
-                    {slot.value ? (
-                      <div className="text-xs font-semibold text-white flex-1 truncate">{slot.value}</div>
-                    ) : (
-                      <div className="flex-1 h-2.5 rounded-full bg-white/5">
-                        {i === step && <div className="h-full w-1/3 rounded-full animate-pulse" style={{ background: `${color}50` }} />}
-                      </div>
-                    )}
-                  </div>
+                    <div className="flex-1 min-w-0">
+                      <AnimatePresence mode="wait">
+                        {slot.value ? (
+                          <motion.div
+                            key="value"
+                            initial={{ opacity: 0, scale: 0.85, y: 4 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.85 }}
+                            transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+                            className="text-xs font-semibold text-white truncate"
+                          >
+                            {slot.value}
+                          </motion.div>
+                        ) : (
+                          <motion.div
+                            key="empty"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="h-2.5 rounded-full bg-white/5"
+                          >
+                            {i === step && <div className="h-full w-1/3 rounded-full animate-pulse" style={{ background: `${color}50` }} />}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
 
@@ -646,9 +836,11 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                 </div>
               )}
             </div>
+            </TiltCard>
 
             {/* Chat preview */}
-            <div className="bg-happi-surface border border-happi-border rounded-3xl overflow-hidden">
+            <TiltCard intensity={3}>
+            <div className="glass-card rounded-3xl overflow-hidden">
               <div className="px-4 py-3 border-b border-happi-border/50 flex items-center gap-2">
                 <MessageCircle size={13} className="text-happi-muted" />
                 <span className="text-xs font-semibold text-happi-muted">{fr ? 'Aperçu de conversation' : 'Conversation preview'}</span>
@@ -657,27 +849,55 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                 )}
               </div>
               <div className="p-4 flex flex-col gap-3 min-h-[120px]">
+                <AnimatePresence mode="wait">
                 {cfg.sector && cfg.goal ? (
-                  preview.map((msg, i) =>
+                  <motion.div
+                    key={`${cfg.sector}-${cfg.goal}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="flex flex-col gap-3"
+                  >
+                  {preview.map((msg, i) =>
                     msg.role === 'bot' ? (
-                      <div key={i} className="flex items-start gap-2">
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.12, duration: 0.3 }}
+                        className="flex items-start gap-2"
+                      >
                         <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5" style={{ background: `${color}25` }}>{icon}</div>
                         <div className="bg-white/6 rounded-xl rounded-tl-sm px-3 py-2 text-[11px] text-white leading-relaxed max-w-[88%]">{msg.text}</div>
-                      </div>
+                      </motion.div>
                     ) : (
-                      <div key={i} className="flex items-start gap-2 justify-end">
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.12, duration: 0.3 }}
+                        className="flex items-start gap-2 justify-end"
+                      >
                         <div className="rounded-xl rounded-tr-sm px-3 py-2 text-[11px] text-white leading-relaxed max-w-[88%]" style={{ background: color }}>{msg.text}</div>
                         <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10 text-[10px] mt-0.5">👤</div>
-                      </div>
+                      </motion.div>
                     )
-                  )
+                  )}
+                  </motion.div>
                 ) : (
-                  <div className="flex items-center justify-center py-8">
+                  <motion.div
+                    key="empty"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="flex items-center justify-center py-8"
+                  >
                     <p className="text-[11px] text-happi-muted/40 text-center leading-relaxed">
                       {fr ? 'Choisissez un secteur\npour voir votre bot en action' : 'Pick an industry\nto see your bot in action'}
                     </p>
-                  </div>
+                  </motion.div>
                 )}
+                </AnimatePresence>
               </div>
               {cfg.sector && cfg.goal && (
                 <div className="px-4 pb-4">
@@ -690,79 +910,131 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                 </div>
               )}
             </div>
+            </TiltCard>
           </div>
         </div>
       </div>
 
-      {/* ── Lead form modal ── */}
-      {showForm && (
-        <div
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4"
-          onClick={e => { if (e.target === e.currentTarget) setShowForm(false); }}
-        >
-          <div
-            className="w-full sm:max-w-md bg-happi-surface border border-happi-border rounded-t-3xl sm:rounded-3xl overflow-hidden"
-            style={{ borderTopWidth: '2px', borderTopColor: color }}
+      {/* ── Lead form modal — AnimatePresence entry ── */}
+      <AnimatePresence>
+        {showForm && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4"
+            onClick={e => { if (e.target === e.currentTarget) setShowForm(false); }}
           >
-            {!sent ? (
-              <>
-                <div className="px-6 py-5 border-b border-happi-border/50" style={{ background: `linear-gradient(135deg, ${color}12, transparent)` }}>
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: `${color}25` }}>{icon}</div>
-                      <div>
-                        <div className="text-white font-bold text-sm">{name}</div>
-                        <div className="text-happi-muted text-xs mt-0.5">{fr ? 'Configuration complète ✓' : 'Config complete ✓'}</div>
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 30, scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 260, damping: 24 }}
+              className="w-full sm:max-w-md glass-card rounded-t-3xl sm:rounded-3xl overflow-hidden"
+              style={{ borderTopWidth: '2px', borderTopColor: color }}
+            >
+              <AnimatePresence mode="wait">
+                {!sent ? (
+                  <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                    <div className="px-6 py-5 border-b border-happi-border/50" style={{ background: `linear-gradient(135deg, ${color}12, transparent)` }}>
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: `${color}25` }}>{icon}</div>
+                          <div>
+                            <div className="text-white font-bold text-sm">{name}</div>
+                            <div className="text-happi-muted text-xs mt-0.5">{fr ? 'Configuration complète ✓' : 'Config complete ✓'}</div>
+                          </div>
+                        </div>
+                        <motion.button
+                          whileHover={{ scale: 1.1, rotate: 90 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{ duration: 0.2 }}
+                          onClick={() => setShowForm(false)}
+                          className="text-happi-muted hover:text-white transition-colors text-lg leading-none flex-shrink-0"
+                        >✕</motion.button>
                       </div>
                     </div>
-                    <button onClick={() => setShowForm(false)} className="text-happi-muted hover:text-white transition-colors text-lg leading-none flex-shrink-0">✕</button>
-                  </div>
-                </div>
-                <div className="px-6 py-5">
-                  <p className="text-happi-muted text-sm mb-5 leading-relaxed">
-                    {fr
-                      ? "Laissez vos coordonnées. Je vous envoie une proposition personnalisée basée sur votre configuration sous 24h."
-                      : "Leave your details. I'll send a personalized proposal based on your config within 24h."}
-                  </p>
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                    <input required placeholder={fr ? 'Prénom' : 'First name'} value={form.prenom}
-                      onChange={e => setForm(f => ({ ...f, prenom: e.target.value }))}
-                      className="bg-happi-dark border border-happi-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-happi-muted/40 outline-none focus:border-happi-blue/60 transition-colors" />
-                    <input required placeholder={fr ? 'Entreprise' : 'Company'} value={form.entreprise}
-                      onChange={e => setForm(f => ({ ...f, entreprise: e.target.value }))}
-                      className="bg-happi-dark border border-happi-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-happi-muted/40 outline-none focus:border-happi-blue/60 transition-colors" />
-                    <input required type="email" placeholder={fr ? 'Email professionnel' : 'Work email'} value={form.email}
-                      onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                      className="bg-happi-dark border border-happi-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-happi-muted/40 outline-none focus:border-happi-blue/60 transition-colors" />
-                    <button
-                      type="submit" disabled={loading}
-                      className="w-full py-3.5 rounded-xl text-sm font-bold text-white flex items-center justify-center gap-2 mt-1 transition-all hover:opacity-90 disabled:opacity-60"
-                      style={{ background: `linear-gradient(135deg, ${color}, ${color}cc)`, boxShadow: `0 8px 24px ${color}30` }}
+                    <div className="px-6 py-5">
+                      <p className="text-happi-muted text-sm mb-5 leading-relaxed">
+                        {fr
+                          ? "Laissez vos coordonnées. Je vous envoie une proposition personnalisée basée sur votre configuration sous 24h."
+                          : "Leave your details. I'll send a personalized proposal based on your config within 24h."}
+                      </p>
+                      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                        {[
+                          { key: 'prenom',     placeholder: fr ? 'Prénom' : 'First name',        type: 'text'  },
+                          { key: 'entreprise', placeholder: fr ? 'Entreprise' : 'Company',        type: 'text'  },
+                          { key: 'email',      placeholder: fr ? 'Email professionnel' : 'Work email', type: 'email' },
+                        ].map((field, i) => (
+                          <motion.input
+                            key={field.key}
+                            required
+                            type={field.type}
+                            placeholder={field.placeholder}
+                            value={form[field.key as keyof typeof form]}
+                            onChange={e => setForm(f => ({ ...f, [field.key]: e.target.value }))}
+                            initial={{ opacity: 0, x: -12 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: i * 0.07, duration: 0.3 }}
+                            className="bg-happi-dark border border-happi-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-happi-muted/40 outline-none focus:border-happi-blue/60 transition-colors"
+                          />
+                        ))}
+                        <MagneticButton strength={0.2}>
+                          <motion.button
+                            type="submit"
+                            disabled={loading}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.97 }}
+                            className="w-full py-3.5 rounded-xl text-sm font-bold text-white flex items-center justify-center gap-2 mt-1 disabled:opacity-60"
+                            style={{ background: `linear-gradient(135deg, ${color}, ${color}cc)`, boxShadow: `0 8px 24px ${color}30` }}
+                          >
+                            {loading
+                              ? <motion.span animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}><Loader2 size={16} /></motion.span>
+                              : <Sparkles size={14} />}
+                            {loading ? (fr ? 'Envoi…' : 'Sending…') : (fr ? 'Construire mon bot' : 'Build my bot')}
+                          </motion.button>
+                        </MagneticButton>
+                        <p className="text-[11px] text-happi-muted/40 text-center">{fr ? 'Aucun engagement · Réponse sous 24h · Gratuit' : 'No commitment · Reply within 24h · Free'}</p>
+                      </form>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="success"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+                    className="text-center py-14 px-8 flex flex-col items-center gap-4"
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: 'spring', stiffness: 300, damping: 18, delay: 0.1 }}
+                      className="w-16 h-16 rounded-full flex items-center justify-center text-3xl"
+                      style={{ background: `${color}20` }}
+                    >🚀</motion.div>
+                    <h3 className="text-white font-extrabold text-xl">{fr ? 'Votre bot est en route !' : 'Your bot is on its way!'}</h3>
+                    <p className="text-happi-muted text-sm leading-relaxed max-w-sm">
+                      {fr
+                        ? `Merci ${form.prenom}. J'analyse votre configuration ${name} et vous envoie une proposition sous 24h.`
+                        : `Thanks ${form.prenom}. I'm reviewing your ${name} config and will send a proposal within 24h.`}
+                    </p>
+                    <motion.button
+                      onClick={() => { setShowForm(false); setSent(false); }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="mt-2 text-xs text-happi-muted hover:text-white transition-colors"
                     >
-                      {loading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={14} />}
-                      {loading ? (fr ? 'Envoi…' : 'Sending…') : (fr ? 'Construire mon bot' : 'Build my bot')}
-                    </button>
-                    <p className="text-[11px] text-happi-muted/40 text-center">{fr ? 'Aucun engagement · Réponse sous 24h · Gratuit' : 'No commitment · Reply within 24h · Free'}</p>
-                  </form>
-                </div>
-              </>
-            ) : (
-              <div className="text-center py-14 px-8 flex flex-col items-center gap-4">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center text-3xl" style={{ background: `${color}20` }}>🚀</div>
-                <h3 className="text-white font-extrabold text-xl">{fr ? 'Votre bot est en route !' : 'Your bot is on its way!'}</h3>
-                <p className="text-happi-muted text-sm leading-relaxed max-w-sm">
-                  {fr
-                    ? `Merci ${form.prenom}. J'analyse votre configuration ${name} et vous envoie une proposition sous 24h.`
-                    : `Thanks ${form.prenom}. I'm reviewing your ${name} config and will send a proposal within 24h.`}
-                </p>
-                <button onClick={() => { setShowForm(false); setSent(false); }} className="mt-2 text-xs text-happi-muted hover:text-white transition-colors">
-                  {fr ? 'Fermer' : 'Close'}
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+                      {fr ? 'Fermer' : 'Close'}
+                    </motion.button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

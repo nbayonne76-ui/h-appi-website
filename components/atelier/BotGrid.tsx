@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight } from 'lucide-react';
+import TiltCard from '@/components/ui/TiltCard';
 
 type DemoOption = {
   label: string;
@@ -356,72 +358,98 @@ function BotCard({
   const caps    = fr ? bot.capsFr    : bot.capsEn;
 
   return (
-    <div
-      className="bg-happi-surface border border-happi-border rounded-2xl overflow-hidden flex flex-col"
-      style={{ borderTopWidth: '4px', borderTopColor: bot.color }}
-    >
-      <div className="p-6 flex flex-col gap-4 flex-1">
+    <TiltCard intensity={4}>
+      <div
+        className="glass-card rounded-2xl overflow-hidden flex flex-col h-full hover:border-white/15 transition-colors"
+        style={{ borderTopWidth: '3px', borderTopColor: bot.color }}
+      >
+        <div className="p-6 flex flex-col gap-4 flex-1">
 
-        {/* Header */}
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <div className="text-2xl mb-2">{bot.icon}</div>
-            <h2 className="text-base font-bold text-white leading-tight">{name}</h2>
-            <div className="text-happi-muted text-xs mt-0.5">{sector}</div>
+          {/* Header */}
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <motion.div
+                className="text-2xl mb-2"
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+              >
+                {bot.icon}
+              </motion.div>
+              <h2 className="text-base font-bold text-white leading-tight">{name}</h2>
+              <div className="text-happi-muted text-xs mt-0.5">{sector}</div>
+            </div>
+            {/* Pulsing pioneer badge */}
+            <span
+              className="text-[10px] font-bold px-2.5 py-1 rounded-full border flex-shrink-0 text-right leading-tight flex items-center gap-1.5"
+              style={{ color: bot.color, background: `${bot.color}18`, borderColor: `${bot.color}40` }}
+            >
+              <span
+                className="w-1.5 h-1.5 rounded-full flex-shrink-0 animate-pulse"
+                style={{ background: bot.color }}
+              />
+              {pioneer}
+            </span>
           </div>
-          <span
-            className="text-[10px] font-bold px-2.5 py-1 rounded-full border flex-shrink-0 text-right leading-tight"
-            style={{ color: bot.color, background: `${bot.color}18`, borderColor: `${bot.color}40` }}
-          >
-            {pioneer}
-          </span>
+
+          {/* KPIs */}
+          {bot.kpis && (
+            <div
+              className="text-[10px] font-semibold px-3 py-1.5 rounded-lg border"
+              style={{ color: bot.color, background: `${bot.color}10`, borderColor: `${bot.color}30` }}
+            >
+              {bot.kpis}
+            </div>
+          )}
+
+          {/* Capabilities */}
+          <ul className="flex flex-col gap-2 flex-1">
+            {caps.map((cap, i) => (
+              <motion.li
+                key={cap}
+                initial={{ opacity: 0, x: -8 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06, duration: 0.35, ease: 'easeOut' }}
+                className="flex items-start gap-2 text-xs text-happi-muted leading-relaxed"
+              >
+                <span className="mt-0.5 flex-shrink-0" style={{ color: bot.color }}>›</span>
+                {cap}
+              </motion.li>
+            ))}
+          </ul>
+
+          {/* Steps */}
+          <div className="text-[10px] text-happi-muted font-medium pt-3 border-t border-happi-border/60">
+            {bot.steps} {fr ? 'étapes de conversation' : 'conversation steps'}
+          </div>
         </div>
 
-        {/* KPIs */}
-        {bot.kpis && (
-          <div
-            className="text-[10px] font-semibold px-3 py-1.5 rounded-lg border"
-            style={{ color: bot.color, background: `${bot.color}10`, borderColor: `${bot.color}30` }}
+        {/* CTA buttons */}
+        <div className="px-5 pb-5 flex flex-col gap-2.5">
+          <motion.button
+            onClick={onDemo}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+            className="w-full py-2.5 rounded-xl text-xs font-semibold text-white flex items-center justify-center gap-2"
+            style={{ background: bot.color }}
           >
-            {bot.kpis}
-          </div>
-        )}
-
-        {/* Capabilities */}
-        <ul className="flex flex-col gap-2 flex-1">
-          {caps.map((cap) => (
-            <li key={cap} className="flex items-start gap-2 text-xs text-happi-muted leading-relaxed">
-              <span className="mt-0.5 flex-shrink-0" style={{ color: bot.color }}>›</span>
-              {cap}
-            </li>
-          ))}
-        </ul>
-
-        {/* Steps */}
-        <div className="text-[10px] text-happi-muted font-medium pt-3 border-t border-happi-border">
-          {bot.steps} {fr ? 'étapes de conversation' : 'conversation steps'}
+            {fr ? 'Voir en action' : 'See it in action'}
+            <motion.span whileHover={{ x: 3 }} transition={{ type: 'spring', stiffness: 300 }}>
+              <ArrowRight size={13} />
+            </motion.span>
+          </motion.button>
+          <motion.button
+            onClick={onAdapt}
+            whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.05)' }}
+            whileTap={{ scale: 0.97 }}
+            className="w-full py-2.5 rounded-xl text-xs font-semibold border transition-colors flex items-center justify-center gap-1.5"
+            style={{ color: bot.color, borderColor: `${bot.color}45` }}
+          >
+            {fr ? 'Adapter à mon secteur' : 'Adapt to my sector'}
+          </motion.button>
         </div>
       </div>
-
-      {/* CTA buttons */}
-      <div className="px-5 pb-5 flex flex-col gap-2.5">
-        <button
-          onClick={onDemo}
-          className="w-full py-2.5 rounded-xl text-xs font-semibold text-white transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
-          style={{ background: bot.color }}
-        >
-          {fr ? 'Voir en action' : 'See it in action'}
-          <ArrowRight size={13} />
-        </button>
-        <button
-          onClick={onAdapt}
-          className="w-full py-2.5 rounded-xl text-xs font-semibold border transition-colors hover:bg-white/5 flex items-center justify-center gap-1.5"
-          style={{ color: bot.color, borderColor: `${bot.color}45` }}
-        >
-          {fr ? 'Adapter à mon secteur' : 'Adapt to my sector'}
-        </button>
-      </div>
-    </div>
+    </TiltCard>
   );
 }
 
@@ -508,59 +536,97 @@ function ChatModal({
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-3 min-h-0">
-          {messages.map((msg, i) =>
-            msg.role === 'bot' ? (
-              <div key={i} className="flex items-start gap-2">
-                <div
-                  className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-sm mt-0.5"
-                  style={{ background: `${bot.color}25` }}
+          <AnimatePresence initial={false}>
+            {messages.map((msg, i) =>
+              msg.role === 'bot' ? (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.25, ease: 'easeOut' }}
+                  className="flex items-start gap-2"
                 >
-                  {bot.icon}
-                </div>
-                <div className="bg-white/6 rounded-xl rounded-tl-sm px-3 py-2.5 text-sm text-white leading-relaxed max-w-[85%]">
-                  {msg.text}
-                </div>
-              </div>
-            ) : (
-              <div key={i} className="flex items-start gap-2 justify-end">
-                <div
-                  className="rounded-xl rounded-tr-sm px-3 py-2.5 text-sm text-white leading-relaxed max-w-[85%]"
-                  style={{ background: bot.color }}
+                  <div
+                    className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-sm mt-0.5"
+                    style={{ background: `${bot.color}25` }}
+                  >
+                    {bot.icon}
+                  </div>
+                  <div className="bg-white/6 rounded-xl rounded-tl-sm px-3 py-2.5 text-sm text-white leading-relaxed max-w-[85%]">
+                    {msg.text}
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.25, ease: 'easeOut' }}
+                  className="flex items-start gap-2 justify-end"
                 >
-                  {msg.text}
-                </div>
-                <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10 text-xs mt-0.5">
-                  👤
-                </div>
-              </div>
-            )
-          )}
+                  <div
+                    className="rounded-xl rounded-tr-sm px-3 py-2.5 text-sm text-white leading-relaxed max-w-[85%]"
+                    style={{ background: bot.color }}
+                  >
+                    {msg.text}
+                  </div>
+                  <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10 text-xs mt-0.5">
+                    👤
+                  </div>
+                </motion.div>
+              )
+            )}
 
-          {isTyping && <TypingIndicator icon={bot.icon} color={bot.color} />}
+            {isTyping && (
+              <motion.div
+                key="typing"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 4 }}
+                transition={{ duration: 0.2 }}
+              >
+                <TypingIndicator icon={bot.icon} color={bot.color} />
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           <div ref={messagesEndRef} />
         </div>
 
         {/* Options / CTA */}
         <div className="px-4 py-3 border-t border-happi-border flex-shrink-0">
-          {currentOpts.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {currentOpts.map((opt) => (
-                <button
-                  key={opt.label}
-                  onClick={() => onPickOption(opt)}
-                  className="text-xs px-3 py-1.5 rounded-full border transition-colors hover:opacity-90"
-                  style={{
-                    color: bot.color,
-                    borderColor: `${bot.color}50`,
-                    background: `${bot.color}0d`,
-                  }}
-                >
-                  {opt.label}
-                </button>
-              ))}
-            </div>
-          )}
+          <AnimatePresence mode="wait">
+            {currentOpts.length > 0 && (
+              <motion.div
+                key="opts"
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.2 }}
+                className="flex flex-wrap gap-2"
+              >
+                {currentOpts.map((opt, i) => (
+                  <motion.button
+                    key={opt.label}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: i * 0.05, duration: 0.2 }}
+                    whileHover={{ scale: 1.04 }}
+                    whileTap={{ scale: 0.96 }}
+                    onClick={() => onPickOption(opt)}
+                    className="text-xs px-3 py-1.5 rounded-full border"
+                    style={{
+                      color: bot.color,
+                      borderColor: `${bot.color}50`,
+                      background: `${bot.color}0d`,
+                    }}
+                  >
+                    {opt.label}
+                  </motion.button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {showCTA && (
             <button
@@ -591,7 +657,7 @@ function LeadForm({
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     await new Promise((r) => setTimeout(r, 900));
@@ -763,14 +829,21 @@ export default function BotGrid({ fr }: { fr: boolean }) {
     <>
       {/* Cards grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bots.map((bot) => (
-          <BotCard
+        {bots.map((bot, i) => (
+          <motion.div
             key={bot.nameFr}
-            bot={bot}
-            fr={fr}
-            onDemo={() => openModal(bot)}
-            onAdapt={() => openLeadForm(fr ? bot.nameFr : bot.nameEn)}
-          />
+            initial={{ opacity: 0, scale: 0.96, y: 16 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.45, delay: i * 0.09, ease: 'easeOut' }}
+          >
+            <BotCard
+              bot={bot}
+              fr={fr}
+              onDemo={() => openModal(bot)}
+              onAdapt={() => openLeadForm(fr ? bot.nameFr : bot.nameEn)}
+            />
+          </motion.div>
         ))}
       </div>
 
