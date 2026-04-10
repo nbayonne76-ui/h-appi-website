@@ -173,8 +173,19 @@ function isSpam(title: string): boolean {
 // Matches Cyrillic, Arabic, CJK, Hebrew, Hindi, Thai, and other non-Latin scripts
 const NON_LATIN_RE = /[\u0400-\u04FF\u0600-\u06FF\u4E00-\u9FFF\u3040-\u30FF\uAC00-\uD7AF\u0590-\u05FF\u0900-\u097F\u0E00-\u0E7F]/;
 
+// Turkish-specific characters (unique to Turkish, absent from EN/FR)
+// ı (U+0131), İ (U+0130), ğ (U+011F), Ğ (U+011E)
+const TURKISH_RE = /[\u0130\u0131\u011E\u011F]/;
+
+// Polish/Czech/Slovak specific characters not used in EN/FR
+// ą ę ś ź ż ć ń ł ő ű
+const POLISH_CZECH_RE = /[\u0105\u0119\u015B\u017A\u017C\u0107\u0144\u0142\u0150\u0151\u0170\u0171]/;
+
 function isEnglishOrFrench(text: string): boolean {
-  return !NON_LATIN_RE.test(text);
+  if (NON_LATIN_RE.test(text)) return false;
+  if (TURKISH_RE.test(text)) return false;
+  if (POLISH_CZECH_RE.test(text)) return false;
+  return true;
 }
 
 // ── HTML & entity cleaning ─────────────────────────────────────────────────────
