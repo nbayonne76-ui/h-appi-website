@@ -68,32 +68,58 @@
   },
   "features": {
     "badge": "Features",
-    "title": "Everything you need to <highlight>transform</highlight> your service",
-    "subtitle": "A complete AI chatbot platform, designed for French businesses that want to combine technology and human excellence.",
+    "title": "10 AI capabilities to <highlight>transform</highlight> your service",
+    "subtitle": "H'appi combines the best AI technologies — Claude, Vapi.ai, ElevenLabs, Deepgram — in a custom solution for French and European businesses.",
     "items": [
       {
-        "title": "AI that learns your business",
-        "description": "Our chatbots understand your industry-specific terminology (CX, Supply Chain) and adapt to your specific business processes."
+        "title": "Business NLP Understanding",
+        "description": "Claude analyzes your industry-specific terminology (CX, Supply Chain, legal) and adapts to your internal processes without extra training.",
+        "tech": "Claude"
       },
       {
-        "title": "Fast deployment",
-        "description": "Operational in days, not months. Simple integration with your existing tools (CRM, ERP, databases)."
+        "title": "24/7 AI Voice",
+        "description": "Answer every incoming call, take appointments and relay messages with a natural voice. Latency < 500ms.",
+        "tech": "Vapi · ElevenLabs · Deepgram"
       },
       {
-        "title": "AI analytics & insights",
-        "description": "Real-time KPIs: resolution rate, customer satisfaction, response time. Predictive insights to anticipate needs."
+        "title": "Vision & Photo Analysis",
+        "description": "Automatically analyze photos of product defects, documents or deliverables. After-sales resolution without human intervention.",
+        "tech": "Claude Vision"
       },
       {
-        "title": "Native omnichannel",
-        "description": "Deploy on your website, WhatsApp, Messenger, Teams and more. A consistent experience across all channels."
+        "title": "Native Multilingual",
+        "description": "Converse in FR, EN, AR, IT, DE and more. Automatic language detection, response in the client's language.",
+        "tech": "Claude"
       },
       {
-        "title": "GDPR & Made in France",
-        "description": "Data hosted in France, full GDPR compliance. Data security and sovereignty guaranteed."
+        "title": "Sentiment Detection",
+        "description": "Identify VIP customers, urgent situations or dissatisfaction before they escalate. Intelligent real-time routing.",
+        "tech": "Claude"
       },
       {
-        "title": "Continuous evolution",
-        "description": "The chatbot learns from every interaction and develops new SaaS features: analytics, predictions, optimizations."
+        "title": "Analytics & Predictive",
+        "description": "Real-time KPIs: resolution rate, satisfaction, response time. Predictive insights to anticipate customer needs.",
+        "tech": "Claude"
+      },
+      {
+        "title": "CRM/ERP Integration",
+        "description": "Native connection with HubSpot, Salesforce, SAP, Shopify, ServiceNow via webhooks and REST API. Zero double entry.",
+        "tech": "API · Webhooks"
+      },
+      {
+        "title": "Smart Ticketing P0–P3",
+        "description": "Automatic ticket creation with priority level, categorization and assignment. Automatic escalation of critical cases.",
+        "tech": "Claude"
+      },
+      {
+        "title": "3-Phase Lead Qualification",
+        "description": "Identify, qualify and score your leads in natural conversation. Direct integration into your CRM pipeline.",
+        "tech": "Claude"
+      },
+      {
+        "title": "GDPR & AI Sovereignty",
+        "description": "Data hosted in France/Europe (Scaleway, Hetzner). ISO 27001 compliant. No client data leaves your perimeter.",
+        "tech": "Made in France"
       }
     ]
   },
@@ -1203,6 +1229,74 @@
     "badge": "Features",
     "title": "All your features to <highlight>scale up</highlight>",
     "subtitle": "H'appi combines generative AI, industry customization and GDPR compliance to offer a chatbot solution tailored to French businesses.",
+    "stackTitle": "The H'appi AI Stack",
+    "stackSubtitle": "We select the best technologies for each need.",
+    "stack": [
+      {
+        "name": "Claude (Anthropic)",
+        "role": "NLP · Analysis · Generation",
+        "description": "Reference AI model for business understanding and complex response generation."
+      },
+      {
+        "name": "Vapi.ai",
+        "role": "AI Telephony",
+        "description": "Voice infrastructure with < 500ms latency. Ideal for voice secretaries and callbots."
+      },
+      {
+        "name": "ElevenLabs",
+        "role": "Voice Synthesis",
+        "description": "Ultra-realistic natural voices in FR, EN, AR and 29 other languages."
+      },
+      {
+        "name": "Deepgram",
+        "role": "Speech Recognition",
+        "description": "Real-time transcription with 99%+ accuracy in real conditions."
+      }
+    ],
+    "compareTitle": "H'appi vs generic solutions",
+    "compareSubtitle": "Why French businesses choose H'appi over Zendesk Bot, Intercom AI or raw ChatGPT.",
+    "compareHeaders": [
+      "Criterion",
+      "H'appi",
+      "Generic solutions"
+    ],
+    "compareRows": [
+      [
+        "Business customization",
+        "Fully custom",
+        "Fixed templates"
+      ],
+      [
+        "Hosting",
+        "France/Europe (GDPR)",
+        "USA (CLOUD Act)"
+      ],
+      [
+        "Languages",
+        "FR, EN, AR, IT, DE...",
+        "EN mainly"
+      ],
+      [
+        "AI Voice",
+        "Built-in (Vapi + ElevenLabs)",
+        "Optional / extra cost"
+      ],
+      [
+        "Ticketing",
+        "P0–P3 native",
+        "Basic or missing"
+      ],
+      [
+        "Deployment time",
+        "1–2 weeks",
+        "2–6 months"
+      ],
+      [
+        "Support",
+        "Dedicated team + SLA",
+        "Self-service"
+      ]
+    ],
     "whyTitle": "Why choose H'appi?",
     "details": [
       {

@@ -68,32 +68,58 @@
   },
   "features": {
     "badge": "Fonctionnalités",
-    "title": "Tout ce dont vous avez besoin pour <highlight>transformer</highlight> votre service",
-    "subtitle": "Une plateforme complète de chatbots IA, conçue pour les entreprises françaises qui veulent allier technologie et excellence humaine.",
+    "title": "10 capacités IA pour <highlight>transformer</highlight> votre service",
+    "subtitle": "H'appi réunit les meilleures technologies IA — Claude, Vapi.ai, ElevenLabs, Deepgram — dans une solution sur-mesure pour les entreprises françaises.",
     "items": [
       {
-        "title": "IA qui apprend votre métier",
-        "description": "Nos chatbots comprennent votre terminologie sectorielle (CX, Supply Chain) et s'adaptent à vos processus métier spécifiques."
+        "title": "Compréhension métier NLP",
+        "description": "Claude analyse votre terminologie sectorielle (CX, Supply Chain, juridique) et s'adapte à vos processus internes sans formation supplémentaire.",
+        "tech": "Claude"
       },
       {
-        "title": "Déploiement rapide",
-        "description": "Opérationnel en quelques jours, pas en mois. Intégration simple avec vos outils existants (CRM, ERP, bases de données)."
+        "title": "Voix IA 24h/24",
+        "description": "Répondez à chaque appel entrant, prenez des rendez-vous et transmettez les messages avec une voix naturelle. Latence < 500ms.",
+        "tech": "Vapi · ElevenLabs · Deepgram"
       },
       {
-        "title": "Analytics et insights IA",
-        "description": "KPIs en temps réel : taux de résolution, satisfaction client, temps de réponse. Des insights prédictifs pour anticiper les besoins."
+        "title": "Vision & analyse photo",
+        "description": "Analysez automatiquement les photos de défauts produits, documents ou livrables. Résolution SAV sans intervention humaine.",
+        "tech": "Claude Vision"
       },
       {
-        "title": "Omnicanal natif",
-        "description": "Déployez sur votre site web, WhatsApp, Messenger, Teams et plus encore. Une expérience cohérente sur tous les canaux."
+        "title": "Multilingue natif",
+        "description": "Dialoguez en FR, EN, AR, IT, DE et plus encore. Détection automatique de la langue, réponse dans la langue du client.",
+        "tech": "Claude"
       },
       {
-        "title": "RGPD & Made in France",
-        "description": "Données hébergées en France, conformité RGPD totale. Sécurité et souveraineté des données garanties."
+        "title": "Détection de sentiment",
+        "description": "Identifiez les clients VIP, les situations urgentes ou les insatisfactions avant qu'elles escaladent. Routage intelligent en temps réel.",
+        "tech": "Claude"
       },
       {
-        "title": "Évolution continue",
-        "description": "Le chatbot apprend de chaque interaction et développe de nouvelles fonctionnalités SaaS : analytics, prédictions, optimisations."
+        "title": "Analytics & prédictif",
+        "description": "KPIs en temps réel : taux de résolution, satisfaction, temps de réponse. Insights prédictifs pour anticiper les besoins clients.",
+        "tech": "Claude"
+      },
+      {
+        "title": "Intégration CRM/ERP",
+        "description": "Connexion native avec HubSpot, Salesforce, SAP, Shopify, ServiceNow via webhooks et API REST. Zéro double saisie.",
+        "tech": "API · Webhooks"
+      },
+      {
+        "title": "Ticketing intelligent P0–P3",
+        "description": "Création automatique de tickets avec niveau de priorité, catégorisation et assignation. Escalade automatique des cas critiques.",
+        "tech": "Claude"
+      },
+      {
+        "title": "Qualification leads 3 phases",
+        "description": "Identifiez, qualifiez et scorez vos leads en conversation naturelle. Intégration directe vers votre pipeline CRM.",
+        "tech": "Claude"
+      },
+      {
+        "title": "RGPD & souveraineté IA",
+        "description": "Données hébergées en France/Europe (Scaleway, Hetzner). Conformité ISO 27001. Aucune donnée client ne quitte votre périmètre.",
+        "tech": "Made in France"
       }
     ]
   },
@@ -1203,6 +1229,74 @@
     "badge": "Fonctionnalités",
     "title": "Toutes vos fonctionnalités pour <highlight>passer à l'échelle</highlight>",
     "subtitle": "H'appi combine IA générative, personnalisation sectorielle et conformité RGPD pour offrir une solution de chatbot adaptée aux entreprises françaises.",
+    "stackTitle": "La stack IA H'appi",
+    "stackSubtitle": "Nous sélectionnons les meilleures technologies pour chaque besoin.",
+    "stack": [
+      {
+        "name": "Claude (Anthropic)",
+        "role": "NLP · Analyse · Génération",
+        "description": "Modèle IA de référence pour la compréhension métier et la génération de réponses complexes."
+      },
+      {
+        "name": "Vapi.ai",
+        "role": "Téléphonie IA",
+        "description": "Infrastructure voix avec latence < 500ms. Idéal pour le secrétariat vocal et les callbots."
+      },
+      {
+        "name": "ElevenLabs",
+        "role": "Synthèse vocale",
+        "description": "Voix naturelles ultra-réalistes en FR, EN, AR et 29 autres langues."
+      },
+      {
+        "name": "Deepgram",
+        "role": "Reconnaissance vocale",
+        "description": "Transcription en temps réel avec 99%+ de précision en conditions réelles."
+      }
+    ],
+    "compareTitle": "H'appi vs solutions génériques",
+    "compareSubtitle": "Pourquoi les entreprises françaises choisissent H'appi plutôt que Zendesk Bot, Intercom IA ou ChatGPT brut.",
+    "compareHeaders": [
+      "Critère",
+      "H'appi",
+      "Solutions génériques"
+    ],
+    "compareRows": [
+      [
+        "Personnalisation métier",
+        "Sur-mesure complet",
+        "Templates fixes"
+      ],
+      [
+        "Hébergement",
+        "France/Europe (RGPD)",
+        "USA (CLOUD Act)"
+      ],
+      [
+        "Langues",
+        "FR, EN, AR, IT, DE...",
+        "EN principalement"
+      ],
+      [
+        "Voix IA",
+        "Intégrée (Vapi + ElevenLabs)",
+        "Optionnel / payant"
+      ],
+      [
+        "Ticketing",
+        "P0–P3 natif",
+        "Basique ou absent"
+      ],
+      [
+        "Délai de déploiement",
+        "1–2 semaines",
+        "2–6 mois"
+      ],
+      [
+        "Support",
+        "Équipe dédiée + SLA",
+        "Self-service"
+      ]
+    ],
     "whyTitle": "Pourquoi choisir H'appi ?",
     "details": [
       {
