@@ -16,7 +16,7 @@ export default function TarifsPage() {
   return (
     <>
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 bg-happi-darker">
         <Pricing />
       </main>
       <Footer />
