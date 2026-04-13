@@ -1110,65 +1110,65 @@
   "blogData": {
     "articles": [
       {
-        "title": "The real cost of a failed delivery (and how to reduce it)",
-        "excerpt": "Every failed delivery costs far more than a simple refund. Direct costs, after-sales calls, disputes, reputation: here's how to calculate the real amount and act on it.",
-        "category": "Guide",
-        "date": "January 15, 2026",
-        "readTime": "9 min",
-        "author": "H'appi Team",
-        "authorRole": "Strategy & Operations"
-      },
-      {
-        "title": "Furniture After-Sales: why your team is drowning in calls",
-        "excerpt": "65% of after-sales calls in furniture retail cover the same 5 topics. Understanding why is the first step to automating intelligently.",
+        "title": "Mobilier de France: −65% after-sales calls with our bot — real case study",
+        "excerpt": "How we deployed the Mobilier de France SAV-Bot in 14 days. P0-P3 ticketing, photo upload, multilingual FR/EN/AR/IT/DE: real numbers and deployment lessons.",
         "category": "Product",
-        "date": "January 22, 2026",
-        "readTime": "7 min",
-        "author": "H'appi Team",
-        "authorRole": "Product & CX"
-      },
-      {
-        "title": "How to measure an after-sales chatbot's ROI before buying",
-        "excerpt": "90% of chatbot projects fail to prove their ROI. Here are the 4 metrics that matter, the calculation formula, and a real-world furniture example.",
-        "category": "Guide",
-        "date": "January 29, 2026",
-        "readTime": "8 min",
-        "author": "H'appi Team",
-        "authorRole": "Strategy & Consulting"
-      },
-      {
-        "title": "H'appi Chatbot: how we customize each bot for your business",
-        "excerpt": "Discover why generic chatbots frustrate your customers and how industry customization can transform the customer experience.",
-        "category": "Product",
-        "date": "February 12, 2026",
+        "date": "April 3, 2026",
         "readTime": "8 min",
         "author": "H'appi Team",
         "authorRole": "Product & Engineering"
       },
       {
-        "title": "Custom application vs standardized solution: how to choose?",
-        "excerpt": "Detailed comparison of both approaches with comparison table, use cases and decision guide to make the right choice for your situation.",
+        "title": "Happi Secretary: 24/7 AI voice receptionist with Vapi.ai + ElevenLabs",
+        "excerpt": "Latency < 500ms, live appointment booking, sentiment detection, Claude-powered post-call summaries — everything our voice AI stack can do for your business.",
+        "category": "Product",
+        "date": "March 25, 2026",
+        "readTime": "7 min",
+        "author": "H'appi Team",
+        "authorRole": "Product & Voice AI"
+      },
+      {
+        "title": "3-phase lead qualification: the system that boosts conversions by 34%",
+        "excerpt": "Identification → Qualification → Conversion. The H'appi pattern built into every bot, born from the INnatural project. How it works and why it outperforms generic chatbots.",
+        "category": "Product",
+        "date": "March 18, 2026",
+        "readTime": "6 min",
+        "author": "H'appi Team",
+        "authorRole": "Product & CX"
+      },
+      {
+        "title": "Claude vs GPT-4o in 2026: which AI for your business chatbot?",
+        "excerpt": "Why we chose Claude (Anthropic) as our reference model — a comparative analysis on business understanding, French language, post-call analysis and cost-efficiency.",
+        "category": "Trends",
+        "date": "March 10, 2026",
+        "readTime": "9 min",
+        "author": "H'appi Team",
+        "authorRole": "Research & AI Stack"
+      },
+      {
+        "title": "How to measure an after-sales chatbot's ROI before buying",
+        "excerpt": "The 4 metrics that matter (cost avoided, hours freed, NPS, resolution time) + a tested formula from the Mobilier de France case: from 2.5 days to 4 hours.",
         "category": "Guide",
-        "date": "February 5, 2026",
-        "readTime": "10 min",
+        "date": "February 28, 2026",
+        "readTime": "8 min",
         "author": "H'appi Team",
         "authorRole": "Strategy & Consulting"
       },
       {
-        "title": "Generative AI in 2026: 5 advances changing chatbots",
-        "excerpt": "Proactive support, emotional intelligence, multimodality... The concrete innovations transforming chatbots into true strategic assistants.",
-        "category": "Trends",
-        "date": "January 28, 2026",
+        "title": "From HTML demo to production bot: our 14-day deployment method",
+        "excerpt": "D1-D3 discovery, D4-D8 dev, D9-D12 integrations, D13-D14 production. The H'appi lean method, applied across 17+ projects in 11 sectors — no bad surprises.",
+        "category": "Guide",
+        "date": "February 15, 2026",
         "readTime": "7 min",
         "author": "H'appi Team",
-        "authorRole": "Research & Innovation"
+        "authorRole": "Delivery & Operations"
       },
       {
-        "title": "Chatbots and GDPR: complete compliance guide for France and Europe",
-        "excerpt": "GDPR + AI Act: everything you need to know to deploy a compliant chatbot. Actionable checklist and detailed obligations.",
+        "title": "GDPR + AI Act 2026: deploying a compliant chatbot — complete checklist",
+        "excerpt": "French/European hosting, consent management, right to erasure, AI Act category 2 obligations. Everything a compliant deployment requires with our stack (Scaleway, Hetzner).",
         "category": "Compliance",
-        "date": "January 20, 2026",
-        "readTime": "12 min",
+        "date": "February 5, 2026",
+        "readTime": "11 min",
         "author": "H'appi Team",
         "authorRole": "Legal & Compliance"
       }

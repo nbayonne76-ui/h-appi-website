@@ -16,13 +16,13 @@ export type Article = {
 };
 
 const slugs = [
-  'vrai-cout-livraison-ratee',
-  'sav-ameublement-equipe-appels',
+  'mobilier-de-france-65-pct-sav-retour-experience',
+  'happi-secretary-secretariat-vocal-ia-vapi-elevenlabs',
+  'qualification-leads-3-phases-conversion',
+  'claude-vs-gpt4o-2026-chatbot-metier',
   'roi-chatbot-sav-mesure',
-  'chatbot-personnalisation-metier',
-  'application-sur-mesure-vs-standardisee',
-  'ia-generative-2026-tendances',
-  'chatbots-rgpd-conformite-guide',
+  'demo-html-bot-production-14-jours',
+  'rgpd-ai-act-2026-chatbot-conforme',
 ];
 
 const categoryColors: Record<string, string> = {
