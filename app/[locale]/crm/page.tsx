@@ -14,22 +14,86 @@ import {
 
 // 16 modules CRM (Brain)
 const modules = [
-  { icon: BarChart3, label: 'Dashboard', desc: 'KPIs, stalled deals, alertes IA', color: '#3B82F6' },
-  { icon: Users, label: 'Contacts', desc: 'Table + drawer 7 onglets + AI search', color: '#10B981' },
-  { icon: Building2, label: 'Companies', desc: 'Grid + dedup domaine auto', color: '#A78BFA' },
-  { icon: TrendingUp, label: 'Pipeline Deals', desc: 'Kanban DnD + forecast catégories', color: '#F59E0B' },
-  { icon: Brain, label: 'Leads IA', desc: 'Kanban lead_status + lead scoring Claude', color: '#3B82F6' },
-  { icon: FileText, label: 'Devis', desc: 'Quotes + line items + PDF (fpdf2)', color: '#10B981' },
-  { icon: Package, label: 'Catalogue produits', desc: 'CRUD produits liés aux deals', color: '#A78BFA' },
-  { icon: Mail, label: 'Emails & Séquences', desc: 'Templates + séquences + tracking open/click', color: '#F59E0B' },
-  { icon: Activity, label: 'Activités', desc: 'Timeline + complétion + @mentions', color: '#3B82F6' },
-  { icon: Ticket, label: 'Tickets P0-P3', desc: 'Board priorité + drawer + commentaires', color: '#EF4444' },
-  { icon: BarChart3, label: 'Analytics', desc: '9 onglets + CSV export + win rate', color: '#10B981' },
-  { icon: TrendingUp, label: 'Forecast', desc: 'Rollup par rep, quota inline-edit', color: '#A78BFA' },
-  { icon: Users, label: 'Team', desc: 'Manager overview + notifications', color: '#F59E0B' },
-  { icon: Puzzle, label: 'Intégrations', desc: 'Slack, Cal.com, Gmail, Zapier', color: '#3B82F6' },
-  { icon: Brain, label: 'Module IA', desc: 'Chat, Next Action, Win Prob, Opportunity', color: '#10B981' },
-  { icon: Settings, label: 'Paramètres', desc: 'Team, webhooks, API keys (hck_...)', color: '#A78BFA' },
+  { icon: BarChart3,
+    labelFr: 'Tableau de bord', labelEn: 'Dashboard',
+    descFr: 'Vos chiffres clés, alertes et opportunités à saisir en un coup d\'œil',
+    descEn: 'Key metrics, alerts and opportunities to act on at a glance',
+    color: '#3B82F6' },
+  { icon: Users,
+    labelFr: 'Contacts', labelEn: 'Contacts',
+    descFr: 'Tous vos contacts centralisés avec leur historique complet',
+    descEn: 'All your contacts in one place with their full history',
+    color: '#10B981' },
+  { icon: Building2,
+    labelFr: 'Entreprises', labelEn: 'Companies',
+    descFr: 'Gérez vos clients et prospects par entreprise, sans doublons',
+    descEn: 'Manage clients and prospects by company, duplicate-free',
+    color: '#A78BFA' },
+  { icon: TrendingUp,
+    labelFr: 'Pipeline de ventes', labelEn: 'Sales Pipeline',
+    descFr: 'Visualisez vos affaires en cours et anticipez vos revenus',
+    descEn: 'See your active deals and forecast upcoming revenue',
+    color: '#F59E0B' },
+  { icon: Brain,
+    labelFr: 'Leads qualifiés par IA', labelEn: 'AI-Scored Leads',
+    descFr: 'L\'IA identifie et priorise vos leads les plus chauds automatiquement',
+    descEn: 'AI automatically identifies and ranks your hottest leads',
+    color: '#3B82F6' },
+  { icon: FileText,
+    labelFr: 'Devis', labelEn: 'Quotes',
+    descFr: 'Créez et envoyez des devis professionnels en PDF en quelques clics',
+    descEn: 'Create and send professional PDF quotes in seconds',
+    color: '#10B981' },
+  { icon: Package,
+    labelFr: 'Catalogue produits', labelEn: 'Product Catalog',
+    descFr: 'Vos produits et tarifs prêts à insérer dans chaque devis',
+    descEn: 'Your products and pricing ready to add to any quote',
+    color: '#A78BFA' },
+  { icon: Mail,
+    labelFr: 'Emails & Campagnes', labelEn: 'Emails & Campaigns',
+    descFr: 'Envoyez des emails ciblés et voyez en temps réel qui ouvre et clique',
+    descEn: 'Send targeted emails and see in real time who opens and clicks',
+    color: '#F59E0B' },
+  { icon: Activity,
+    labelFr: 'Activités', labelEn: 'Activities',
+    descFr: 'Toutes vos tâches, appels et réunions réunies au même endroit',
+    descEn: 'All your tasks, calls and meetings in one place',
+    color: '#3B82F6' },
+  { icon: Ticket,
+    labelFr: 'Support client', labelEn: 'Customer Support',
+    descFr: 'Gérez les demandes clients classées du plus urgent au moins urgent',
+    descEn: 'Handle customer requests ranked from most to least urgent',
+    color: '#EF4444' },
+  { icon: BarChart3,
+    labelFr: 'Analyses & Rapports', labelEn: 'Analytics & Reports',
+    descFr: 'Des tableaux de bord clairs pour piloter votre performance commerciale',
+    descEn: 'Clear dashboards to track and drive your sales performance',
+    color: '#10B981' },
+  { icon: TrendingUp,
+    labelFr: 'Prévisions de ventes', labelEn: 'Sales Forecast',
+    descFr: 'Estimez vos revenus futurs et suivez les objectifs de chaque commercial',
+    descEn: 'Estimate future revenue and track each rep\'s quota',
+    color: '#A78BFA' },
+  { icon: Users,
+    labelFr: 'Équipe', labelEn: 'Team',
+    descFr: 'Vue d\'ensemble de votre équipe commerciale avec alertes pour les managers',
+    descEn: 'Full overview of your sales team with manager alerts',
+    color: '#F59E0B' },
+  { icon: Puzzle,
+    labelFr: 'Intégrations', labelEn: 'Integrations',
+    descFr: 'Connecté à Slack, Gmail, Cal.com et Zapier sans configuration complexe',
+    descEn: 'Connected to Slack, Gmail, Cal.com and Zapier out of the box',
+    color: '#3B82F6' },
+  { icon: Brain,
+    labelFr: 'Assistant IA', labelEn: 'AI Assistant',
+    descFr: 'Votre assistant intelligent qui recommande, prédit et automatise à votre place',
+    descEn: 'Your smart assistant that recommends, predicts and automates for you',
+    color: '#10B981' },
+  { icon: Settings,
+    labelFr: 'Paramètres', labelEn: 'Settings',
+    descFr: 'Configurez votre CRM, vos équipes et vos connexions en quelques minutes',
+    descEn: 'Set up your CRM, teams and integrations in minutes',
+    color: '#A78BFA' },
 ];
 
 // 6 features IA Claude-powered (Brain)
@@ -160,33 +224,39 @@ export default function CrmPage() {
                 {fr ? 'Couverture complète' : 'Full coverage'}
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-white">
-                {fr ? '16 modules, ' : '16 modules, '}
-                <span className="gradient-text">{fr ? 'zéro lacune' : 'zero gaps'}</span>
+                {fr ? 'Tout ce qu\'il vous faut pour ' : 'Everything you need to '}
+                <span className="gradient-text">{fr ? 'vendre plus' : 'sell more'}</span>
               </h2>
               <p className="text-happi-muted text-sm mt-3 max-w-xl mx-auto">
                 {fr
-                  ? 'De la prospection à la facturation, chaque étape du cycle commercial est couverte.'
-                  : 'From prospecting to invoicing, every stage of the sales cycle is covered.'}
+                  ? 'De la première prise de contact à la signature, chaque étape de votre cycle de vente est couverte en un seul outil.'
+                  : 'From first contact to closing, every step of your sales cycle is covered in a single tool.'}
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {modules.map((m, i) => {
                 const Icon = m.icon;
                 return (
                   <div
                     key={i}
-                    className="rounded-xl p-4 border hover:-translate-y-0.5 transition-transform duration-200"
-                    style={{ background: `${m.color}08`, borderColor: `${m.color}20` }}
+                    className="group rounded-2xl p-5 border hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-default"
+                    style={{
+                      background: `${m.color}08`,
+                      borderColor: `${m.color}20`,
+                      boxShadow: `0 0 0 0 ${m.color}00`,
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 8px 24px ${m.color}18`)}
+                    onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 0 0 ${m.color}00`)}
                   >
                     <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center mb-3"
-                      style={{ background: `${m.color}15` }}
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+                      style={{ background: `${m.color}18` }}
                     >
-                      <Icon size={15} style={{ color: m.color }} />
+                      <Icon size={18} style={{ color: m.color }} />
                     </div>
-                    <div className="text-white text-xs font-semibold mb-1">{m.label}</div>
-                    <div className="text-happi-muted text-[10px] leading-snug">{m.desc}</div>
+                    <div className="text-white text-sm font-bold mb-1.5">{fr ? m.labelFr : m.labelEn}</div>
+                    <div className="text-happi-muted text-xs leading-relaxed">{fr ? m.descFr : m.descEn}</div>
                   </div>
                 );
               })}
