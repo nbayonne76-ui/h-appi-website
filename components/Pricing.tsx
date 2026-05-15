@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Check, Mail, Info, ArrowRight, Users, Zap, Shield, TrendingDown, Coins, Building2, Hotel, Scale } from 'lucide-react';
+import { Check, Mail, Info, ArrowRight, Users, Zap, Shield, TrendingDown, Coins, Building2, ShoppingBag } from 'lucide-react';
 import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -19,7 +19,7 @@ const brainStats = [
   { value: '−50/70%', label: 'vs agences trad.', color: '#F59E0B' },
 ];
 
-// Brain client proofs
+// Vrais clients (uniquement)
 const clientProofs = [
   {
     icon: Building2,
@@ -30,20 +30,12 @@ const clientProofs = [
     color: '#3B82F6',
   },
   {
-    icon: Scale,
-    name: 'Groupe Monassier',
-    sector: 'Notariat',
-    metric: '−80%',
-    detail: 'appels non qualifiés',
+    icon: ShoppingBag,
+    name: 'INnatural',
+    sector: 'E-commerce',
+    metric: '3 phases',
+    detail: 'de qualification leads',
     color: '#10B981',
-  },
-  {
-    icon: Hotel,
-    name: 'Lavorel Hotels',
-    sector: 'Hôtellerie',
-    metric: '24h/7j',
-    detail: 'concierge IA actif',
-    color: '#A78BFA',
   },
 ];
 

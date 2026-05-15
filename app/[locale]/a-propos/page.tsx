@@ -10,7 +10,7 @@ import {
   Eye, Heart, Coins, Users, ArrowRight,
   Brain, Phone, Camera, Globe, Zap,
   BarChart3, Plug, Ticket, Filter, Shield,
-  Sofa, Hotel, Truck, Scale, ShoppingBag, Building2,
+  Sofa, ShoppingBag,
 } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -45,28 +45,22 @@ const aiCaps = [
   { icon: Shield, label: 'RGPD & Souveraineté', tech: 'Made in France', color: '#10B981' },
 ];
 
-// Client showcase from Brain
+// Vrais clients (uniquement)
 const clients = [
   { icon: Sofa, name: 'Mobilier de France', sector: 'Meublement', metric: '−65% appels SAV' },
-  { icon: Hotel, name: 'Lavorel Hotels', sector: 'Hôtellerie', metric: '24h/7j concierge' },
   { icon: ShoppingBag, name: 'INnatural', sector: 'E-commerce', metric: 'Qual. 3 phases' },
-  { icon: Truck, name: 'Groupe Trouillet', sector: 'Transport', metric: '−40% dispatch' },
-  { icon: Scale, name: 'Groupe Monassier', sector: 'Notariat', metric: '−80% appels non qualifiés' },
-  { icon: Building2, name: 'Plastivaloire', sector: 'Industrie', metric: 'Support technique IA' },
 ];
 
 // Real Brain stats
 const keyNumbers = [
-  { value: '17+', label: 'Démos clients livrées' },
-  { value: '11', label: 'Secteurs couverts' },
+  { value: '2', label: 'Clients actifs' },
   { value: '14j', label: 'Délai déploiement moyen' },
+  { value: '−65%', label: 'Appels SAV Mobilier de France' },
   { value: '0', label: 'Faux témoignage sur ce site' },
 ];
 
 export default async function AProposPage() {
   const t = await getTranslations('pageAbout');
-  const fr = true; // server component, locale handled by layout
-
   return (
     <>
       <Header />
@@ -188,7 +182,7 @@ export default async function AProposPage() {
                 Ils nous font confiance
               </p>
               <h2 className="text-xl font-extrabold text-white">
-                17+ entreprises, <span className="gradient-text">11 secteurs</span>
+                Nos <span className="gradient-text">premiers clients</span>
               </h2>
             </FadeInUp>
 
@@ -214,11 +208,6 @@ export default async function AProposPage() {
               })}
             </Stagger>
 
-            <FadeInUp className="text-center mt-6">
-              <p className="text-happi-muted text-xs">
-                + Charier, Labeyrie, Saint-Jean, Mademoiselle Desserts, Icelec, KingKong, Benta, Audit Expert, Cabinet Arc, Uqudo...
-              </p>
-            </FadeInUp>
           </div>
         </section>
 
