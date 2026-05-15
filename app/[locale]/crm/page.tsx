@@ -46,7 +46,7 @@ const aiFeatures = [
 const integrations = [
   { icon: Zap, label: 'Slack', desc: 'Notifications deals + alertes P0', color: '#4A154B' },
   { icon: Calendar, label: 'Cal.com', desc: 'Webhook → Activity automatique', color: '#3B82F6' },
-  { icon: Mail, label: 'Gmail', desc: 'OAuth2 PKCE — sync emails', color: '#EF4444' },
+  { icon: Mail, label: 'Gmail', desc: 'OAuth2 PKCE · sync emails', color: '#EF4444' },
   { icon: Zap, label: 'Zapier / Make', desc: 'Outbound webhooks configurables', color: '#FF4A00' },
   { icon: Globe, label: 'H\'appi Secretary', desc: 'Appels vocaux → CRM auto (X-Happi-Key)', color: '#10B981' },
   { icon: Brain, label: 'H\'appi Chatbot', desc: 'Leads chatbot → CRM auto', color: '#A78BFA' },
@@ -54,7 +54,7 @@ const integrations = [
 
 // Sécurité (Brain Sprints A-F)
 const security = [
-  { icon: Lock, label: 'JWT + Redis blacklist', desc: 'jti UUID révocable — token invalidé à la déconnexion' },
+  { icon: Lock, label: 'JWT + Redis blacklist', desc: 'jti UUID révocable, token invalidé à la déconnexion' },
   { icon: Shield, label: 'IDOR protection', desc: 'require_admin sur tous les endpoints destructifs' },
   { icon: Activity, label: 'Rate limiting', desc: 'slowapi : enrichissement 10/h, auth refresh 30/min' },
   { icon: Database, label: 'Audit trail', desc: 'deleted_at + deleted_by sur 5 entités (Alembic)' },
@@ -86,13 +86,13 @@ export default function CrmPage() {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
               {fr
-                ? <>Happi CRM — Le CRM IA conçu pour les <span className="gradient-text">équipes qui veulent gagner</span></>
-                : <>Happi CRM — The AI CRM built for <span className="gradient-text">teams that want to win</span></>}
+                ? <>Happi CRM : Le CRM IA conçu pour les <span className="gradient-text">équipes qui veulent gagner</span></>
+                : <>Happi CRM : The AI CRM built for <span className="gradient-text">teams that want to win</span></>}
             </h1>
             <p className="text-lg text-happi-muted mb-4 max-w-2xl mx-auto leading-relaxed">
               {fr
-                ? 'Pipeline Kanban, lead scoring IA, devis PDF, séquences email, 6 features Claude — tout ce dont une équipe commerciale a besoin, sans le prix d\'un HubSpot.'
-                : 'Kanban pipeline, AI lead scoring, PDF quotes, email sequences, 6 Claude features — everything a sales team needs, without the HubSpot price tag.'}
+                ? 'Pipeline Kanban, lead scoring IA, devis PDF, séquences email, 6 features Claude : tout ce dont une équipe commerciale a besoin, sans le prix d\'un HubSpot.'
+                : 'Kanban pipeline, AI lead scoring, PDF quotes, email sequences, 6 Claude features : everything a sales team needs, without the HubSpot price tag.'}
             </p>
             <p className="text-happi-muted text-sm mb-10">
               {fr
@@ -115,6 +115,27 @@ export default function CrmPage() {
               >
                 GitHub
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Dashboard screenshot ── */}
+        <section className="pb-12 px-4 sm:px-6 lg:px-8 bg-happi-darker">
+          <div className="max-w-6xl mx-auto">
+            <div className="rounded-2xl overflow-hidden border border-happi-border/40 shadow-2xl shadow-black/50">
+              <div className="bg-happi-dark flex items-center gap-2 px-4 py-2.5 border-b border-happi-border/50">
+                <span className="w-3 h-3 rounded-full bg-red-500/60" />
+                <span className="w-3 h-3 rounded-full bg-yellow-500/60" />
+                <span className="w-3 h-3 rounded-full bg-green-500/60" />
+                <span className="flex-1 mx-4 bg-happi-surface/60 rounded px-3 py-1 text-[11px] text-happi-muted/50 font-mono">
+                  happi-crm.com/dashboard
+                </span>
+              </div>
+              <img
+                src="/images/crm-dashboard.png"
+                alt="Happi CRM Dashboard"
+                className="w-full block"
+              />
             </div>
           </div>
         </section>
@@ -186,8 +207,8 @@ export default function CrmPage() {
               </h2>
               <p className="text-happi-muted text-sm mt-3 max-w-xl mx-auto">
                 {fr
-                  ? 'Pas un module optionnel payant — l\'IA est au cœur de chaque workflow du CRM.'
-                  : 'Not an optional paid add-on — AI is at the heart of every CRM workflow.'}
+                  ? 'Pas un module optionnel payant : l\'IA est au cœur de chaque workflow du CRM.'
+                  : 'Not an optional paid add-on : AI is at the heart of every CRM workflow.'}
               </p>
             </div>
 
@@ -264,8 +285,8 @@ export default function CrmPage() {
                 </h2>
                 <p className="text-happi-muted text-sm leading-relaxed mb-8">
                   {fr
-                    ? '6 sprints dédiés à la sécurité, aux performances et à la qualité de code — avant la mise en production.'
-                    : '6 dedicated sprints on security, performance and code quality — before going live.'}
+                    ? '6 sprints dédiés à la sécurité, aux performances et à la qualité de code, avant la mise en production.'
+                    : '6 dedicated sprints on security, performance and code quality, before going live.'}
                 </p>
 
                 <div className="space-y-4">
