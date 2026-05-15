@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
-import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useInView, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 import TiltCard from '@/components/ui/TiltCard';
 import {
   ChevronDown,
@@ -415,31 +415,48 @@ export default function CasUsageAccordion() {
 
       {/* Accordion */}
       <div className="space-y-3">
-        {stepsData.map((step) => {
+        {stepsData.map((step, stepIdx) => {
           const isOpen = open === step.id;
           const Icon = step.icon;
 
           return (
-            <div
+            <motion.div
               key={step.id}
-              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                isOpen ? `${step.activeBorderClass} bg-happi-surface` : 'border-happi-border bg-happi-dark hover:border-happi-border/80'
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.4, delay: stepIdx * 0.1, ease: 'easeOut' }}
+              animate={{
+                borderColor: isOpen ? step.activeBorderClass : 'transparent',
+              }}
+              className={`rounded-2xl border overflow-hidden ${
+                isOpen ? `${step.activeBorderClass} bg-happi-surface` : 'border-happi-border bg-happi-dark'
               }`}
             >
-              {/* Header */}
-              <button
+              {/* ── Header button ── */}
+              <motion.button
                 onClick={() => setOpen(isOpen ? null : step.id)}
+                whileHover={{ backgroundColor: isOpen ? undefined : 'rgba(255,255,255,0.02)' }}
+                whileTap={{ scale: 0.995 }}
                 className="w-full flex items-start md:items-center gap-4 p-6 text-left"
               >
-                {/* Number */}
-                <div className={`text-xs font-bold ${step.colorClass} opacity-50 w-6 flex-shrink-0 pt-0.5 md:pt-0`}>
+                {/* Step number — pulses on open */}
+                <motion.div
+                  animate={isOpen ? { scale: [1, 1.15, 1] } : { scale: 1 }}
+                  transition={{ duration: 0.35 }}
+                  className={`text-xs font-bold ${step.colorClass} opacity-50 w-6 flex-shrink-0 pt-0.5 md:pt-0`}
+                >
                   {step.number}
-                </div>
+                </motion.div>
 
                 {/* Icon */}
-                <div className={`w-10 h-10 ${step.bgClass} border ${step.borderClass} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                  className={`w-10 h-10 ${step.bgClass} border ${step.borderClass} rounded-xl flex items-center justify-center flex-shrink-0`}
+                >
                   <Icon size={20} className={step.colorClass} />
-                </div>
+                </motion.div>
 
                 {/* Text */}
                 <div className="flex-1 min-w-0">
@@ -449,225 +466,355 @@ export default function CasUsageAccordion() {
                   <div className="text-white font-semibold text-base md:text-lg leading-snug">
                     {step.title}
                   </div>
-                  {!isOpen && (
-                    <p className="text-happi-muted text-xs mt-1.5 leading-relaxed max-w-xl">
-                      {step.teaser}
-                    </p>
-                  )}
+                  <AnimatePresence initial={false}>
+                    {!isOpen && (
+                      <motion.p
+                        key="teaser"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-happi-muted text-xs mt-1.5 leading-relaxed max-w-xl overflow-hidden"
+                      >
+                        {step.teaser}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
                 </div>
 
-                {/* Chevron */}
-                <div className={`flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
+                {/* Chevron — spring rotation */}
+                <motion.div
+                  animate={{ rotate: isOpen ? 180 : 0 }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+                  className="flex-shrink-0"
+                >
                   <ChevronDown size={20} className="text-happi-muted" />
-                </div>
-              </button>
+                </motion.div>
+              </motion.button>
 
-              {/* Content */}
-              {isOpen && (
-                <div className="px-6 pb-8 border-t border-happi-border/50 pt-6">
-                  {/* ── Step 1 content ── */}
-                  {step.id === 'sav' && (
-                    <div className="space-y-6">
-                      {/* Teaser stat */}
-                      <div className={`flex items-start gap-3 ${step.bgClass} border ${step.borderClass} rounded-xl p-4`}>
-                        <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
-                        <p className="text-sm text-happi-muted leading-relaxed">
-                          {step.teaser}
-                          <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
-                        </p>
-                      </div>
+              {/* ── Animated content panel ── */}
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.32, ease: [0.33, 1, 0.68, 1] }}
+                    style={{ overflow: 'hidden' }}
+                  >
+                    <div className="px-6 pb-8 border-t border-happi-border/50 pt-6">
 
-                      {/* Problem */}
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
-                          <span className="text-xs font-semibold text-red-400 uppercase tracking-wide">
-                            {step.content.problem.label}
-                          </span>
-                        </div>
-                        <p className="text-happi-muted text-sm leading-relaxed pl-3.5">
-                          {step.content.problem.text}
-                        </p>
-                      </div>
-
-                      {/* Flow */}
-                      <div>
-                        <div className="flex items-center gap-2 mb-4">
-                          <div className={`w-1.5 h-1.5 rounded-full ${step.dotClass}`} />
-                          <span className={`text-xs font-semibold ${step.colorClass} uppercase tracking-wide`}>
-                            {step.content.solution.label}
-                          </span>
-                        </div>
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-start flex-wrap pl-3.5">
-                          {step.content.solution.flow.map((node: any, i: number) => {
-                            const NodeIcon = node.icon;
-                            return (
-                              <div key={i} className="flex items-center gap-3">
-                                <div className={`text-center ${node.accent ? `${step.bgClass} border ${step.borderClass}` : 'bg-happi-dark border border-happi-border'} rounded-xl p-3 flex items-center gap-3`}>
-                                  <NodeIcon size={18} className={node.accent ? step.colorClass : 'text-happi-muted'} />
-                                  <div>
-                                    <div className="text-white text-xs font-medium whitespace-nowrap">{node.label}</div>
-                                    <div className="text-happi-muted text-[10px] whitespace-nowrap">{node.sub}</div>
-                                  </div>
-                                </div>
-                                {i < step.content.solution.flow.length - 1 && (
-                                  <ArrowRight size={14} className="text-happi-border flex-shrink-0 hidden sm:block" />
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-
-                      {/* Mini stats grid */}
-                      <div className="grid grid-cols-2 gap-3">
-                        {step.content.miniStats.map((s: any) => (
-                          <div key={s.value} className="bg-happi-dark border border-happi-border rounded-xl p-4">
-                            <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
-                            <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
-                            <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Result */}
-                      <div>
-                        <div className="flex items-center gap-2 mb-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-happi-green" />
-                          <span className="text-xs font-semibold text-happi-green uppercase tracking-wide">
-                            {step.content.result.label}
-                          </span>
-                        </div>
-                        <ul className="space-y-2 pl-3.5">
-                          {step.content.result.items.map((item: string) => (
-                            <li key={item} className="flex items-start gap-2 text-happi-muted text-sm">
-                              <CheckCircle2 size={14} className="text-happi-green mt-0.5 flex-shrink-0" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                    </div>
-                  )}
-
-                  {/* ── Step 2 content ── */}
-                  {step.id === 'app' && (
-                    <div className="space-y-6">
-                      {/* Teaser stat */}
-                      <div className={`flex items-start gap-3 ${step.bgClass} border ${step.borderClass} rounded-xl p-4`}>
-                        <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
-                        <p className="text-sm text-happi-muted leading-relaxed">
-                          {step.teaser}
-                          <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
-                        </p>
-                      </div>
-
-                      {/* 3 actors */}
-                      <div className="grid md:grid-cols-3 gap-4">
-                        {step.content.actors.map((actor: any) => {
-                          const ActorIcon = actor.icon;
-                          return (
-                            <div key={actor.title} className={`bg-happi-darker border ${actor.borderClass} rounded-xl p-5`}>
-                              <div className="flex items-center gap-2 mb-3">
-                                <div className={`w-8 h-8 ${actor.bgClass} border ${actor.borderClass} rounded-lg flex items-center justify-center`}>
-                                  <ActorIcon size={16} className={actor.colorClass} />
-                                </div>
-                                <h4 className="font-semibold text-white text-sm">{actor.title}</h4>
-                              </div>
-                              <ul className="space-y-1.5">
-                                {actor.items.map((item: string) => (
-                                  <li key={item} className="flex items-start gap-2 text-happi-muted text-xs">
-                                    <CheckCircle2 size={12} className={`${actor.colorClass} mt-0.5 flex-shrink-0`} />
-                                    {item}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          );
-                        })}
-                      </div>
-
-                      {/* Mini stats grid */}
-                      <div className="grid grid-cols-2 gap-3">
-                        {step.content.miniStats.map((s: any) => (
-                          <div key={s.value} className="bg-happi-darker border border-happi-border rounded-xl p-4">
-                            <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
-                            <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
-                            <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Interconnect */}
-                      <div className="bg-gradient-to-r from-happi-blue/10 to-happi-green/10 border border-happi-blue/30 rounded-xl p-5">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 bg-happi-blue/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Link2 size={16} className="text-happi-blue" />
-                          </div>
-                          <div>
-                            <h4 className="text-white font-semibold text-sm mb-1">
-                              {step.content.interconnect.title}
-                            </h4>
-                            <p className="text-happi-muted text-xs leading-relaxed">
-                              {step.content.interconnect.text}
+                      {/* ── Step 1: After-Sales Bot ── */}
+                      {step.id === 'sav' && (
+                        <div className="space-y-6">
+                          {/* Teaser stat */}
+                          <motion.div
+                            initial={{ opacity: 0, x: -12 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.05, duration: 0.28 }}
+                            className={`flex items-start gap-3 ${step.bgClass} border ${step.borderClass} rounded-xl p-4`}
+                          >
+                            <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
+                            <p className="text-sm text-happi-muted leading-relaxed">
+                              {step.teaser}
+                              <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
                             </p>
+                          </motion.div>
+
+                          {/* Problem */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1, duration: 0.28 }}
+                          >
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                              <span className="text-xs font-semibold text-red-400 uppercase tracking-wide">
+                                {step.content.problem.label}
+                              </span>
+                            </div>
+                            <p className="text-happi-muted text-sm leading-relaxed pl-3.5">
+                              {step.content.problem.text}
+                            </p>
+                          </motion.div>
+
+                          {/* Flow diagram — nodes stagger in */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.15, duration: 0.28 }}
+                          >
+                            <div className="flex items-center gap-2 mb-4">
+                              <div className={`w-1.5 h-1.5 rounded-full ${step.dotClass}`} />
+                              <span className={`text-xs font-semibold ${step.colorClass} uppercase tracking-wide`}>
+                                {step.content.solution.label}
+                              </span>
+                            </div>
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-start flex-wrap pl-3.5">
+                              {step.content.solution.flow.map((node: any, i: number) => {
+                                const NodeIcon = node.icon;
+                                return (
+                                  <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, x: -10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.18 + i * 0.07, duration: 0.25 }}
+                                    className="flex items-center gap-3"
+                                  >
+                                    <motion.div
+                                      whileHover={{ scale: 1.05, y: -2 }}
+                                      transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                                      className={`${node.accent ? `${step.bgClass} border ${step.borderClass}` : 'bg-happi-dark border border-happi-border'} rounded-xl p-3 flex items-center gap-3`}
+                                    >
+                                      <NodeIcon size={18} className={node.accent ? step.colorClass : 'text-happi-muted'} />
+                                      <div>
+                                        <div className="text-white text-xs font-medium whitespace-nowrap">{node.label}</div>
+                                        <div className="text-happi-muted text-[10px] whitespace-nowrap">{node.sub}</div>
+                                      </div>
+                                    </motion.div>
+                                    {i < step.content.solution.flow.length - 1 && (
+                                      <ArrowRight size={14} className="text-happi-border flex-shrink-0 hidden sm:block" />
+                                    )}
+                                  </motion.div>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+
+                          {/* Mini stats — TiltCard */}
+                          <div className="grid grid-cols-2 gap-3">
+                            {step.content.miniStats.map((s: any, i: number) => (
+                              <motion.div
+                                key={s.value}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.22 + i * 0.07, duration: 0.28 }}
+                              >
+                                <TiltCard intensity={3}>
+                                  <div className="bg-happi-dark border border-happi-border rounded-xl p-4 h-full">
+                                    <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
+                                    <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
+                                    <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
+                                  </div>
+                                </TiltCard>
+                              </motion.div>
+                            ))}
                           </div>
+
+                          {/* Result checklist */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.38, duration: 0.28 }}
+                          >
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-1.5 h-1.5 rounded-full bg-happi-green" />
+                              <span className="text-xs font-semibold text-happi-green uppercase tracking-wide">
+                                {step.content.result.label}
+                              </span>
+                            </div>
+                            <ul className="space-y-2 pl-3.5">
+                              {step.content.result.items.map((item: string, i: number) => (
+                                <motion.li
+                                  key={item}
+                                  initial={{ opacity: 0, x: -8 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{ delay: 0.42 + i * 0.07, duration: 0.25 }}
+                                  className="flex items-start gap-2 text-happi-muted text-sm"
+                                >
+                                  <CheckCircle2 size={14} className="text-happi-green mt-0.5 flex-shrink-0" />
+                                  {item}
+                                </motion.li>
+                              ))}
+                            </ul>
+                          </motion.div>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      )}
 
-                  {/* ── Step 3 content ── */}
-                  {step.id === 'saas' && (
-                    <div className="space-y-6">
-                      {/* Teaser stat */}
-                      <div className={`flex items-start gap-3 ${step.bgClass} border ${step.borderClass} rounded-xl p-4`}>
-                        <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
-                        <p className="text-sm text-happi-muted leading-relaxed">
-                          {step.teaser}
-                          <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
-                        </p>
-                      </div>
+                      {/* ── Step 2: Traceability App ── */}
+                      {step.id === 'app' && (
+                        <div className="space-y-6">
+                          {/* Teaser stat */}
+                          <motion.div
+                            initial={{ opacity: 0, x: -12 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.05, duration: 0.28 }}
+                            className={`flex items-start gap-3 ${step.bgClass} border ${step.borderClass} rounded-xl p-4`}
+                          >
+                            <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
+                            <p className="text-sm text-happi-muted leading-relaxed">
+                              {step.teaser}
+                              <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
+                            </p>
+                          </motion.div>
 
-                      <p className="text-happi-muted text-sm leading-relaxed">
-                        {step.content.intro}
-                      </p>
+                          {/* 3 actor cards — TiltCard + stagger */}
+                          <div className="grid md:grid-cols-3 gap-4">
+                            {step.content.actors.map((actor: any, i: number) => {
+                              const ActorIcon = actor.icon;
+                              return (
+                                <motion.div
+                                  key={actor.title}
+                                  initial={{ opacity: 0, y: 14 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  transition={{ delay: 0.1 + i * 0.1, duration: 0.3 }}
+                                >
+                                  <TiltCard intensity={3}>
+                                    <div className={`bg-happi-darker border ${actor.borderClass} rounded-xl p-5 h-full`}>
+                                      <div className="flex items-center gap-2 mb-3">
+                                        <div className={`w-8 h-8 ${actor.bgClass} border ${actor.borderClass} rounded-lg flex items-center justify-center`}>
+                                          <ActorIcon size={16} className={actor.colorClass} />
+                                        </div>
+                                        <h4 className="font-semibold text-white text-sm">{actor.title}</h4>
+                                      </div>
+                                      <ul className="space-y-1.5">
+                                        {actor.items.map((item: string, j: number) => (
+                                          <motion.li
+                                            key={item}
+                                            initial={{ opacity: 0, x: -6 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.18 + i * 0.1 + j * 0.06, duration: 0.22 }}
+                                            className="flex items-start gap-2 text-happi-muted text-xs"
+                                          >
+                                            <CheckCircle2 size={12} className={`${actor.colorClass} mt-0.5 flex-shrink-0`} />
+                                            {item}
+                                          </motion.li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  </TiltCard>
+                                </motion.div>
+                              );
+                            })}
+                          </div>
 
-                      {/* Modules grid */}
-                      <div className="grid md:grid-cols-2 gap-4">
-                        {step.content.modules.map((mod: any) => {
-                          const ModIcon = mod.icon;
-                          return (
-                            <div key={mod.title} className={`bg-happi-darker border ${mod.borderClass} rounded-xl p-5`}>
+                          {/* Mini stats — TiltCard */}
+                          <div className="grid grid-cols-2 gap-3">
+                            {step.content.miniStats.map((s: any, i: number) => (
+                              <motion.div
+                                key={s.value}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.32 + i * 0.07, duration: 0.28 }}
+                              >
+                                <TiltCard intensity={3}>
+                                  <div className="bg-happi-darker border border-happi-border rounded-xl p-4 h-full">
+                                    <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
+                                    <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
+                                    <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
+                                  </div>
+                                </TiltCard>
+                              </motion.div>
+                            ))}
+                          </div>
+
+                          {/* Interconnect banner */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.48, duration: 0.28 }}
+                            className="relative rounded-xl p-px overflow-hidden"
+                            style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.5), rgba(16,185,129,0.3))' }}
+                          >
+                            <div className="bg-happi-darker rounded-xl p-5">
                               <div className="flex items-start gap-3">
-                                <div className={`w-8 h-8 ${mod.bgClass} border ${mod.borderClass} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                                  <ModIcon size={16} className={mod.colorClass} />
+                                <div className="w-8 h-8 bg-happi-blue/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                  <Link2 size={16} className="text-happi-blue" />
                                 </div>
                                 <div>
-                                  <h4 className="font-semibold text-white text-sm mb-1">{mod.title}</h4>
-                                  <p className="text-happi-muted text-xs leading-relaxed">{mod.desc}</p>
+                                  <h4 className="text-white font-semibold text-sm mb-1">
+                                    {step.content.interconnect.title}
+                                  </h4>
+                                  <p className="text-happi-muted text-xs leading-relaxed">
+                                    {step.content.interconnect.text}
+                                  </p>
                                 </div>
                               </div>
                             </div>
-                          );
-                        })}
-                      </div>
+                          </motion.div>
+                        </div>
+                      )}
 
-                      {/* Philosophy note */}
-                      <div className="flex items-start gap-3 bg-happi-darker border border-happi-border rounded-xl p-4">
-                        <Shield size={16} className="text-happi-muted mt-0.5 flex-shrink-0" />
-                        <p className="text-happi-muted text-xs leading-relaxed">
-                          {fr
-                            ? 'Ces modules s\'activent sur votre instance, avec votre branding, vos règles métier. Nous ne livrons pas un produit standard que vous adaptez. Nous construisons à votre image.'
-                            : 'These modules activate on your instance, with your branding, your business rules. We don\'t deliver a standard product you adapt. We build in your image.'}
-                        </p>
-                      </div>
+                      {/* ── Step 3: SaaS Platform ── */}
+                      {step.id === 'saas' && (
+                        <div className="space-y-6">
+                          {/* Teaser stat */}
+                          <motion.div
+                            initial={{ opacity: 0, x: -12 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.05, duration: 0.28 }}
+                            className={`flex items-start gap-3 ${step.bgClass} border ${step.borderClass} rounded-xl p-4`}
+                          >
+                            <AlertTriangle size={16} className={`${step.colorClass} mt-0.5 flex-shrink-0`} />
+                            <p className="text-sm text-happi-muted leading-relaxed">
+                              {step.teaser}
+                              <span className="text-happi-muted/50 ml-1 text-xs">({step.teaserSource})</span>
+                            </p>
+                          </motion.div>
+
+                          <motion.p
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1, duration: 0.28 }}
+                            className="text-happi-muted text-sm leading-relaxed"
+                          >
+                            {step.content.intro}
+                          </motion.p>
+
+                          {/* Modules grid — stagger + hover lift */}
+                          <div className="grid md:grid-cols-2 gap-4">
+                            {step.content.modules.map((mod: any, i: number) => {
+                              const ModIcon = mod.icon;
+                              return (
+                                <motion.div
+                                  key={mod.title}
+                                  initial={{ opacity: 0, y: 14 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  transition={{ delay: 0.14 + i * 0.09, duration: 0.3 }}
+                                  whileHover={{ y: -3, boxShadow: '0 8px 24px rgba(0,0,0,0.25)' }}
+                                  className={`bg-happi-darker border ${mod.borderClass} rounded-xl p-5 cursor-default`}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <motion.div
+                                      whileHover={{ rotate: 8, scale: 1.1 }}
+                                      transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                                      className={`w-8 h-8 ${mod.bgClass} border ${mod.borderClass} rounded-lg flex items-center justify-center flex-shrink-0`}
+                                    >
+                                      <ModIcon size={16} className={mod.colorClass} />
+                                    </motion.div>
+                                    <div>
+                                      <h4 className="font-semibold text-white text-sm mb-1">{mod.title}</h4>
+                                      <p className="text-happi-muted text-xs leading-relaxed">{mod.desc}</p>
+                                    </div>
+                                  </div>
+                                </motion.div>
+                              );
+                            })}
+                          </div>
+
+                          {/* Philosophy note */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 0.28 }}
+                            className="flex items-start gap-3 bg-happi-darker border border-happi-border rounded-xl p-4"
+                          >
+                            <Shield size={16} className="text-happi-muted mt-0.5 flex-shrink-0" />
+                            <p className="text-happi-muted text-xs leading-relaxed">
+                              {fr
+                                ? 'Ces modules s\'activent sur votre instance, avec votre branding, vos règles métier. Nous ne livrons pas un produit standard que vous adaptez. Nous construisons à votre image.'
+                                : 'These modules activate on your instance, with your branding, your business rules. We don\'t deliver a standard product you adapt. We build in your image.'}
+                            </p>
+                          </motion.div>
+                        </div>
+                      )}
+
                     </div>
-                  )}
-                </div>
-              )}
-            </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           );
         })}
       </div>

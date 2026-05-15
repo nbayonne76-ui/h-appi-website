@@ -74,8 +74,8 @@ const sectors: Sector[] = [
     metricLabelEn: 'voice latency',
     solution: 'Secrétaire IA vocale 24h/24 : RDV, FAQ, résumé email + SMS post-appel.',
     solutionEn: '24/7 AI voice secretary: appointments, FAQ, email + SMS post-call summary.',
-    tags: ['Vapi.ai', 'ElevenLabs', 'Cal.com'],
-    tagsEn: ['Vapi.ai', 'ElevenLabs', 'Cal.com'],
+    tags: ['Voix IA', 'Multilingue', 'Agenda intégré'],
+    tagsEn: ['AI Voice', 'Multilingual', 'Integrated Calendar'],
   },
   {
     id: 'ecommerce',

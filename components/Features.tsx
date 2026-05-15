@@ -31,10 +31,10 @@ const colorMap = {
 };
 
 const techColorMap: Record<string, string> = {
-  'Claude': 'bg-happi-blue/10 text-happi-blue border-happi-blue/20',
-  'Claude Vision': 'bg-happi-blue/10 text-happi-blue border-happi-blue/20',
-  'Vapi · ElevenLabs · Deepgram': 'bg-happi-green/10 text-happi-green border-happi-green/20',
-  'API · Webhooks': 'bg-happi-yellow/10 text-happi-yellow border-happi-yellow/20',
+  'IA Générative': 'bg-happi-blue/10 text-happi-blue border-happi-blue/20',
+  'IA Vision': 'bg-happi-blue/10 text-happi-blue border-happi-blue/20',
+  'Voix IA': 'bg-happi-green/10 text-happi-green border-happi-green/20',
+  'API · Intégrations': 'bg-happi-yellow/10 text-happi-yellow border-happi-yellow/20',
   'Made in France': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
 };
 

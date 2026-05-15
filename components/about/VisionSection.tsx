@@ -1,41 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Sparkles, Eye, Target, Brain, Phone, Mic, Radio, ArrowRight } from 'lucide-react';
+import { Sparkles, Eye, Target, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { FadeInUp } from '@/components/ui/Animate';
 
-// Stack IA de référence H'appi (depuis le Brain)
-const aiStack = [
-  {
-    name: 'Claude (Anthropic)',
-    role: 'NLP · Analyse · Génération',
-    description: 'Modèle de référence pour la compréhension métier, les analyses post-appel et la génération de réponses complexes en FR/EN/AR.',
-    color: '#3B82F6',
-    icon: Brain,
-  },
-  {
-    name: 'Vapi.ai',
-    role: 'Téléphonie IA',
-    description: 'Infrastructure voix IA avec latence < 500ms. Utilisé pour le secrétariat vocal 24h/24 et les callbots.',
-    color: '#10B981',
-    icon: Phone,
-  },
-  {
-    name: 'ElevenLabs',
-    role: 'Synthèse vocale',
-    description: 'Voix naturelles ultra-réalistes en FR, EN, AR et 29 autres langues pour tous les projets vocaux.',
-    color: '#A78BFA',
-    icon: Mic,
-  },
-  {
-    name: 'Deepgram',
-    role: 'Reconnaissance vocale',
-    description: 'Transcription en temps réel avec 99%+ de précision. Traitement des accents régionaux et du bruit de fond.',
-    color: '#F59E0B',
-    icon: Radio,
-  },
-];
 
 // Roadmap 2026 → 2030
 const roadmap = [
@@ -144,58 +113,6 @@ export default function VisionSection() {
         </div>
       </section>
 
-      {/* Stack IA de référence */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
-        <div className="max-w-5xl mx-auto">
-          <FadeInUp className="text-center mb-12">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
-              Notre arsenal technologique
-            </p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-white">
-              La <span className="gradient-text">stack IA H&apos;appi</span>
-            </h2>
-            <p className="text-happi-muted text-sm mt-2 max-w-xl mx-auto">
-              Nous sélectionnons les meilleures technologies IA disponibles — pas les plus populaires, les plus adaptées à chaque besoin.
-            </p>
-          </FadeInUp>
-
-          <div className="grid md:grid-cols-2 gap-5">
-            {aiStack.map((tech, i) => {
-              const Icon = tech.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.08 }}
-                  className="rounded-2xl p-6 border flex gap-4"
-                  style={{ background: `${tech.color}08`, borderColor: `${tech.color}25` }}
-                >
-                  <div
-                    className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: `${tech.color}15` }}
-                  >
-                    <Icon size={20} style={{ color: tech.color }} />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-1 flex-wrap">
-                      <span className="text-white font-bold text-sm">{tech.name}</span>
-                      <span
-                        className="text-[10px] font-semibold px-2 py-0.5 rounded-full border"
-                        style={{ background: `${tech.color}12`, color: tech.color, borderColor: `${tech.color}25` }}
-                      >
-                        {tech.role}
-                      </span>
-                    </div>
-                    <p className="text-happi-muted text-xs leading-relaxed">{tech.description}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Roadmap 2026 → 2030 */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">

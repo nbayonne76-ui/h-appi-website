@@ -31,18 +31,18 @@ const sectionColors = [
 ];
 const sectionHrefs = ['/a-propos/vision', '/a-propos/valeurs', '/a-propos/strategie', '/a-propos/rejoindre'];
 
-// 10 AI capabilities (from fonctionnalites page)
+// 10 AI capabilities
 const aiCaps = [
-  { icon: Brain, label: 'NLP Métier', tech: 'Claude', color: '#3B82F6' },
-  { icon: Phone, label: 'Voix IA 24h/24', tech: 'Vapi · ElevenLabs', color: '#10B981' },
-  { icon: Camera, label: 'Vision & Photo', tech: 'Claude Vision', color: '#F59E0B' },
-  { icon: Globe, label: 'Multilingue natif', tech: 'Claude', color: '#3B82F6' },
-  { icon: Zap, label: 'Sentiment', tech: 'Claude', color: '#A78BFA' },
-  { icon: BarChart3, label: 'Analytics & Prédictif', tech: 'Claude', color: '#10B981' },
-  { icon: Plug, label: 'CRM / ERP', tech: 'API · Webhooks', color: '#F59E0B' },
-  { icon: Ticket, label: 'Ticketing P0–P3', tech: 'Claude', color: '#EF4444' },
-  { icon: Filter, label: 'Qualification 3 phases', tech: 'Claude', color: '#3B82F6' },
-  { icon: Shield, label: 'RGPD & Souveraineté', tech: 'Made in France', color: '#10B981' },
+  { icon: Brain, label: 'NLP Métier', color: '#3B82F6' },
+  { icon: Phone, label: 'Voix IA 24h/24', color: '#10B981' },
+  { icon: Camera, label: 'Vision & Photo', color: '#F59E0B' },
+  { icon: Globe, label: 'Multilingue natif', color: '#3B82F6' },
+  { icon: Zap, label: 'Analyse de sentiment', color: '#A78BFA' },
+  { icon: BarChart3, label: 'Analytics & Prédictif', color: '#10B981' },
+  { icon: Plug, label: 'Connexion CRM / ERP', color: '#F59E0B' },
+  { icon: Ticket, label: 'Gestion des incidents', color: '#EF4444' },
+  { icon: Filter, label: 'Qualification 3 phases', color: '#3B82F6' },
+  { icon: Shield, label: 'RGPD & Souveraineté', color: '#10B981' },
 ];
 
 // Vrais clients (uniquement)
@@ -118,7 +118,7 @@ export default async function AProposPage() {
                 10 capacités IA <span className="gradient-text">au service de votre métier</span>
               </h2>
               <p className="text-happi-muted text-sm mt-2 max-w-xl mx-auto">
-                Claude, Vapi.ai, ElevenLabs, Deepgram — les meilleures IA sélectionnées pour chaque besoin.
+                Nous sélectionnons les meilleures technologies pour chaque besoin spécifique.
               </p>
             </FadeInUp>
 
@@ -138,12 +138,6 @@ export default async function AProposPage() {
                         <Icon size={15} style={{ color: cap.color }} />
                       </div>
                       <div className="text-white text-xs font-semibold leading-snug">{cap.label}</div>
-                      <span
-                        className="text-[10px] font-medium px-2 py-0.5 rounded-full self-start border"
-                        style={{ background: `${cap.color}10`, color: cap.color, borderColor: `${cap.color}25` }}
-                      >
-                        {cap.tech}
-                      </span>
                     </div>
                   </StaggerItem>
                 );

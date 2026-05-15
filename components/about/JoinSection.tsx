@@ -9,18 +9,18 @@ import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations } from 'next-intl';
 import { FadeInUp } from '@/components/ui/Animate';
 
-// Stack tech H'appi (depuis Brain)
+// Compétences recherchées (sans mentionner les outils internes)
 const techStack = [
-  { label: 'Next.js 14', color: '#3B82F6' },
+  { label: 'Next.js', color: '#3B82F6' },
   { label: 'React Native', color: '#10B981' },
   { label: 'FastAPI', color: '#A78BFA' },
-  { label: 'Claude API', color: '#F59E0B' },
-  { label: 'Vapi.ai', color: '#10B981' },
-  { label: 'ElevenLabs', color: '#A78BFA' },
+  { label: 'Intelligence artificielle', color: '#F59E0B' },
+  { label: 'Voix & audio IA', color: '#10B981' },
   { label: 'PostgreSQL', color: '#3B82F6' },
   { label: 'TypeScript', color: '#3B82F6' },
   { label: 'Docker', color: '#0EA5E9' },
-  { label: 'Railway', color: '#EF4444' },
+  { label: 'API & Intégrations', color: '#A78BFA' },
+  { label: 'UX / Design', color: '#EF4444' },
 ];
 
 // 11 secteurs couverts (depuis Brain)
