@@ -96,40 +96,70 @@ const modules = [
     color: '#A78BFA' },
 ];
 
-// 6 features IA Claude-powered (Brain)
+// 6 features IA
 const aiFeatures = [
-  { label: 'NL Search', desc: 'Recherche en langage naturel dans les contacts et deals', color: '#3B82F6' },
-  { label: 'Smart Paste', desc: 'Colle un email, Claude extrait les champs automatiquement', color: '#10B981' },
-  { label: 'Lead Scoring', desc: 'Score 0-100 calculé par Claude selon comportement et profil', color: '#A78BFA' },
-  { label: 'Next Best Action', desc: 'Claude recommande la prochaine action par deal', color: '#F59E0B' },
-  { label: 'Win Probability', desc: 'Prédiction IA de probabilité de closing par deal', color: '#EF4444' },
-  { label: 'Opportunity Research', desc: 'Brief IA complet sur l\'entreprise cible avant l\'appel', color: '#3B82F6' },
+  {
+    labelFr: 'Recherche intelligente', labelEn: 'Smart Search',
+    descFr: 'Posez n\'importe quelle question en français, le CRM trouve instantanément ce que vous cherchez.',
+    descEn: 'Ask anything in plain English, the CRM instantly finds what you\'re looking for.',
+    color: '#3B82F6',
+  },
+  {
+    labelFr: 'Import automatique', labelEn: 'Auto-fill from anywhere',
+    descFr: 'Copiez-collez un email ou un profil, le CRM remplit toutes les fiches contacts tout seul.',
+    descEn: 'Copy-paste an email or profile, the CRM fills in all contact fields automatically.',
+    color: '#10B981',
+  },
+  {
+    labelFr: 'Qualification automatique', labelEn: 'Automatic Lead Scoring',
+    descFr: 'Chaque prospect reçoit automatiquement une note selon son potentiel commercial.',
+    descEn: 'Every prospect automatically receives a score based on their commercial potential.',
+    color: '#A78BFA',
+  },
+  {
+    labelFr: 'Conseil d\'action', labelEn: 'Next Step Guidance',
+    descFr: 'Pour chaque affaire en cours, le CRM vous dit exactement quoi faire pour avancer.',
+    descEn: 'For every open deal, the CRM tells you exactly what to do next to move forward.',
+    color: '#F59E0B',
+  },
+  {
+    labelFr: 'Prédiction de signature', labelEn: 'Closing Prediction',
+    descFr: 'Sachez à l\'avance quelles affaires vous allez probablement gagner ou perdre.',
+    descEn: 'Know in advance which deals you\'re likely to win or lose.',
+    color: '#EF4444',
+  },
+  {
+    labelFr: 'Fiche prospect instantanée', labelEn: 'Instant Prospect Brief',
+    descFr: 'Avant chaque appel, recevez un résumé complet et prêt à l\'emploi sur votre prospect.',
+    descEn: 'Before every call, get a complete ready-to-use summary of your prospect.',
+    color: '#3B82F6',
+  },
 ];
 
-// Intégrations (Brain)
+// Intégrations
 const integrations = [
-  { icon: Zap, label: 'Slack', desc: 'Notifications deals + alertes P0', color: '#4A154B' },
-  { icon: Calendar, label: 'Cal.com', desc: 'Webhook → Activity automatique', color: '#3B82F6' },
-  { icon: Mail, label: 'Gmail', desc: 'OAuth2 PKCE · sync emails', color: '#EF4444' },
-  { icon: Zap, label: 'Zapier / Make', desc: 'Outbound webhooks configurables', color: '#FF4A00' },
-  { icon: Globe, label: 'H\'appi Secretary', desc: 'Appels vocaux → CRM auto (X-Happi-Key)', color: '#10B981' },
-  { icon: Brain, label: 'H\'appi Chatbot', desc: 'Leads chatbot → CRM auto', color: '#A78BFA' },
+  { icon: Zap, label: 'Slack', descFr: 'Recevez une alerte dans Slack dès qu\'un deal évolue ou qu\'une urgence arrive', descEn: 'Get a Slack alert the moment a deal moves or an issue needs attention', color: '#4A154B' },
+  { icon: Calendar, label: 'Agenda', descFr: 'Vos rendez-vous se créent automatiquement dans le CRM après chaque réunion', descEn: 'Your meetings are automatically logged in the CRM after every appointment', color: '#3B82F6' },
+  { icon: Mail, label: 'Gmail', descFr: 'Vos emails s\'affichent directement dans les fiches contacts, sans rien faire', descEn: 'Your emails appear directly in contact profiles, without lifting a finger', color: '#EF4444' },
+  { icon: Zap, label: 'Automatisations', descFr: 'Connectez le CRM à tous vos autres outils et automatisez vos processus', descEn: 'Connect the CRM to all your other tools and automate your workflows', color: '#FF4A00' },
+  { icon: Globe, label: 'H\'appi Secretary', descFr: 'Chaque appel téléphonique est automatiquement enregistré et résumé dans le CRM', descEn: 'Every phone call is automatically logged and summarized in the CRM', color: '#10B981' },
+  { icon: Brain, label: 'H\'appi Chatbot', descFr: 'Les leads de votre chatbot arrivent directement dans votre pipeline de vente', descEn: 'Leads from your chatbot land directly in your sales pipeline', color: '#A78BFA' },
 ];
 
-// Sécurité (Brain Sprints A-F)
+// Sécurité
 const security = [
-  { icon: Lock, label: 'JWT + Redis blacklist', desc: 'jti UUID révocable, token invalidé à la déconnexion' },
-  { icon: Shield, label: 'IDOR protection', desc: 'require_admin sur tous les endpoints destructifs' },
-  { icon: Activity, label: 'Rate limiting', desc: 'slowapi : enrichissement 10/h, auth refresh 30/min' },
-  { icon: Database, label: 'Audit trail', desc: 'deleted_at + deleted_by sur 5 entités (Alembic)' },
+  { icon: Lock, labelFr: 'Connexions sécurisées', labelEn: 'Secure sessions', descFr: 'Chaque session est protégée et automatiquement fermée à la déconnexion', descEn: 'Every session is protected and automatically closed on logout' },
+  { icon: Shield, labelFr: 'Accès contrôlé', labelEn: 'Controlled access', descFr: 'Seuls les bons profils ont accès aux données sensibles de l\'équipe', descEn: 'Only the right profiles can access your team\'s sensitive data' },
+  { icon: Activity, labelFr: 'Système stable', labelEn: 'Stable system', descFr: 'Le CRM reste rapide et fiable même en cas d\'utilisation intensive', descEn: 'The CRM stays fast and reliable even under heavy use' },
+  { icon: Database, labelFr: 'Traçabilité complète', labelEn: 'Full audit trail', descFr: 'Chaque modification est enregistrée : qui a fait quoi et quand', descEn: 'Every change is recorded: who did what and when' },
 ];
 
-// Stats Brain
+// Stats
 const stats = [
-  { value: '17', label: 'Sprints livrés', color: '#3B82F6' },
-  { value: '120+', label: 'Endpoints API', color: '#10B981' },
-  { value: '16', label: 'Pages frontend', color: '#A78BFA' },
-  { value: '54', label: 'Tests backend', color: '#F59E0B' },
+  { value: '16', labelFr: 'Modules tout-en-un', labelEn: 'All-in-one modules', color: '#3B82F6' },
+  { value: '6', labelFr: 'Fonctionnalités IA incluses', labelEn: 'AI features included', color: '#10B981' },
+  { value: '14j', labelFr: 'Pour déployer', labelEn: 'To deploy', color: '#A78BFA' },
+  { value: '100%', labelFr: 'Conforme RGPD', labelEn: 'GDPR compliant', color: '#F59E0B' },
 ];
 
 export default function CrmPage() {
@@ -210,7 +240,7 @@ export default function CrmPage() {
             {stats.map((s, i) => (
               <div key={i} className="text-center">
                 <div className="text-3xl font-extrabold mb-1" style={{ color: s.color }}>{s.value}</div>
-                <div className="text-xs text-happi-muted">{s.label}</div>
+                <div className="text-xs text-happi-muted">{fr ? s.labelFr : s.labelEn}</div>
               </div>
             ))}
           </div>
@@ -264,21 +294,21 @@ export default function CrmPage() {
           </div>
         </section>
 
-        {/* ── 6 Features IA Claude ── */}
+        {/* ── 6 Features IA ── */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
-                {fr ? 'Propulsé par Claude (Anthropic)' : 'Powered by Claude (Anthropic)'}
+                {fr ? 'Intelligence artificielle' : 'Artificial intelligence'}
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-white">
-                {fr ? '6 features IA ' : '6 AI features '}
-                <span className="gradient-text">{fr ? 'intégrées nativement' : 'built in natively'}</span>
+                {fr ? 'Un CRM qui ' : 'A CRM that '}
+                <span className="gradient-text">{fr ? 'pense pour vous' : 'thinks for you'}</span>
               </h2>
               <p className="text-happi-muted text-sm mt-3 max-w-xl mx-auto">
                 {fr
-                  ? 'Pas un module optionnel payant : l\'IA est au cœur de chaque workflow du CRM.'
-                  : 'Not an optional paid add-on : AI is at the heart of every CRM workflow.'}
+                  ? 'L\'intelligence artificielle est intégrée dans chaque étape de votre journée, pas vendue en option.'
+                  : 'Artificial intelligence is built into every step of your day, not sold as an add-on.'}
               </p>
             </div>
 
@@ -286,17 +316,17 @@ export default function CrmPage() {
               {aiFeatures.map((f, i) => (
                 <div
                   key={i}
-                  className="rounded-2xl p-6 border"
+                  className="rounded-2xl p-6 border hover:-translate-y-1 transition-transform duration-200"
                   style={{ background: `${f.color}08`, borderColor: `${f.color}25` }}
                 >
-                  <span
-                    className="inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border mb-3"
-                    style={{ background: `${f.color}12`, color: f.color, borderColor: `${f.color}30` }}
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center mb-4"
+                    style={{ background: `${f.color}18` }}
                   >
-                    Claude
-                  </span>
-                  <h4 className="text-white font-bold text-sm mb-2">{f.label}</h4>
-                  <p className="text-happi-muted text-xs leading-relaxed">{f.desc}</p>
+                    <Brain size={15} style={{ color: f.color }} />
+                  </div>
+                  <h4 className="text-white font-bold text-sm mb-2">{fr ? f.labelFr : f.labelEn}</h4>
+                  <p className="text-happi-muted text-xs leading-relaxed">{fr ? f.descFr : f.descEn}</p>
                 </div>
               ))}
             </div>
@@ -332,7 +362,7 @@ export default function CrmPage() {
                     </div>
                     <div>
                       <div className="text-white font-semibold text-sm mb-1">{int.label}</div>
-                      <div className="text-happi-muted text-xs leading-relaxed">{int.desc}</div>
+                      <div className="text-happi-muted text-xs leading-relaxed">{fr ? int.descFr : int.descEn}</div>
                     </div>
                   </div>
                 );
@@ -347,7 +377,7 @@ export default function CrmPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-3">
-                  {fr ? 'Sprints A-F sécurité' : 'Security Sprints A-F'}
+                  {fr ? 'Fiabilité & Sécurité' : 'Reliability & Security'}
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   {fr ? 'Production-ready ' : 'Production-ready '}
@@ -368,8 +398,8 @@ export default function CrmPage() {
                           <Icon size={16} className="text-happi-green" />
                         </div>
                         <div>
-                          <div className="text-white text-sm font-semibold">{s.label}</div>
-                          <div className="text-happi-muted text-xs mt-0.5">{s.desc}</div>
+                          <div className="text-white text-sm font-semibold">{fr ? s.labelFr : s.labelEn}</div>
+                          <div className="text-happi-muted text-xs mt-0.5">{fr ? s.descFr : s.descEn}</div>
                         </div>
                       </div>
                     );
@@ -377,72 +407,32 @@ export default function CrmPage() {
                 </div>
               </div>
 
-              {/* Tests */}
-              <div className="bg-happi-surface rounded-2xl p-7 border border-happi-border">
-                <h3 className="text-white font-bold mb-5 text-sm uppercase tracking-wide">
-                  {fr ? 'Couverture de tests' : 'Test coverage'}
+              {/* Garanties qualité */}
+              <div className="bg-happi-surface rounded-2xl p-7 border border-happi-border space-y-4">
+                <h3 className="text-white font-bold text-base mb-2">
+                  {fr ? 'Un CRM prêt pour votre équipe dès le premier jour' : 'A CRM ready for your team from day one'}
                 </h3>
-                <div className="space-y-3 mb-6">
-                  {[
-                    { label: fr ? '13 tests Auth (login, refresh, logout, invite)' : '13 Auth tests (login, refresh, logout, invite)', color: '#3B82F6' },
-                    { label: fr ? '11 tests Contacts (CRUD, bulk, export CSV)' : '11 Contacts tests (CRUD, bulk, CSV export)', color: '#10B981' },
-                    { label: fr ? '12 tests Deals (CRUD, stage move, won/lost)' : '12 Deals tests (CRUD, stage move, won/lost)', color: '#A78BFA' },
-                    { label: fr ? '8 tests Tickets (CRUD, filtres, commentaires)' : '8 Tickets tests (CRUD, filters, comments)', color: '#F59E0B' },
-                    { label: fr ? '3 tests Health (/health + /health/ready)' : '3 Health tests (/health + /health/ready)', color: '#10B981' },
-                    { label: fr ? 'E2E Playwright : auth, contacts, deals' : 'Playwright E2E: auth, contacts, deals', color: '#3B82F6' },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <Check size={13} className="mt-0.5 flex-shrink-0" style={{ color: item.color }} />
-                      <span className="text-happi-muted text-xs">{item.label}</span>
+                {[
+                  { icon: Check, text: fr ? 'Connexions et données protégées en permanence' : 'Connections and data permanently protected', color: '#10B981' },
+                  { icon: Check, text: fr ? 'Accès personnalisés selon les rôles de chaque collaborateur' : 'Custom access levels for each team member', color: '#10B981' },
+                  { icon: Check, text: fr ? 'Performances vérifiées avant chaque mise à jour' : 'Performance verified before every update', color: '#10B981' },
+                  { icon: Check, text: fr ? 'Historique complet de toutes les modifications' : 'Full history of every change made', color: '#10B981' },
+                  { icon: Check, text: fr ? 'Hébergement 100% France / Europe (RGPD)' : '100% France / Europe hosting (GDPR)', color: '#10B981' },
+                  { icon: Check, text: fr ? 'Support réactif inclus dans votre abonnement' : 'Responsive support included in your subscription', color: '#10B981' },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i} className="flex items-start gap-3">
+                      <Icon size={15} className="mt-0.5 flex-shrink-0" style={{ color: item.color }} />
+                      <span className="text-happi-muted text-sm leading-snug">{item.text}</span>
                     </div>
-                  ))}
-                </div>
-                <div className="rounded-xl bg-happi-darker border border-happi-border p-4 text-center">
-                  <div className="text-2xl font-extrabold text-happi-green mb-1">54</div>
-                  <div className="text-happi-muted text-xs">{fr ? 'tests backend verts (~5s)' : 'green backend tests (~5s)'}</div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Stack technique ── */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-darker">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-xl font-bold text-white">
-                {fr ? 'Stack technique' : 'Technical stack'}
-              </h2>
-            </div>
-            <div className="flex flex-wrap justify-center gap-2">
-              {[
-                { label: 'Next.js 16', color: '#3B82F6' },
-                { label: 'FastAPI', color: '#10B981' },
-                { label: 'PostgreSQL', color: '#A78BFA' },
-                { label: 'Claude Sonnet 4.6', color: '#F59E0B' },
-                { label: 'Redis (JWT blacklist)', color: '#EF4444' },
-                { label: 'SQLAlchemy', color: '#3B82F6' },
-                { label: 'Alembic', color: '#10B981' },
-                { label: 'Resend (email)', color: '#A78BFA' },
-                { label: 'slowapi (rate limit)', color: '#F59E0B' },
-                { label: 'fpdf2 (PDF)', color: '#3B82F6' },
-                { label: 'Playwright E2E', color: '#10B981' },
-                { label: 'Docker + Compose', color: '#A78BFA' },
-                { label: '@dnd-kit (Kanban)', color: '#3B82F6' },
-                { label: 'Zustand', color: '#10B981' },
-                { label: 'Tailwind CSS', color: '#F59E0B' },
-              ].map((t, i) => (
-                <span
-                  key={i}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full border"
-                  style={{ background: `${t.color}10`, color: t.color, borderColor: `${t.color}30` }}
-                >
-                  {t.label}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ── CTA ── */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-dark">
