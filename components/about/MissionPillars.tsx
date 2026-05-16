@@ -83,10 +83,10 @@ export default function MissionPillars() {
                             />
                           </svg>
                           <div>
-                            <span className="font-semibold text-white">
+                            <p className="font-semibold text-white">
                               {t(`pillars.${idx}.items.${i}.label`)}
-                            </span>
-                            <span className="text-happi-muted"> — {t(`pillars.${idx}.items.${i}.desc`)}</span>
+                            </p>
+                            <p className="text-happi-muted text-sm mt-0.5">{t(`pillars.${idx}.items.${i}.desc`)}</p>
                           </div>
                         </div>
                       ))}
