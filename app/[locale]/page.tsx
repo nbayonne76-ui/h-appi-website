@@ -3,6 +3,8 @@ import Hero from '@/components/Hero';
 import ProblemSolution from '@/components/ProblemSolution';
 import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
+import ComparisonTable from '@/components/ComparisonTable';
+import HomeFAQ from '@/components/HomeFAQ';
 import GuaranteeStrip from '@/components/GuaranteeStrip';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -26,6 +28,7 @@ export default async function Home() {
         <ProblemSolution />
         <HowItWorks fr={fr} />
         <Testimonials />
+        <ComparisonTable fr={fr} />
 
         {/* Quiz */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-darker">
@@ -46,6 +49,7 @@ export default async function Home() {
         </section>
 
         <LiveChatDemo fr={fr} />
+        <HomeFAQ fr={fr} />
         <GuaranteeStrip fr={fr} />
         <CTASection />
       </main>
