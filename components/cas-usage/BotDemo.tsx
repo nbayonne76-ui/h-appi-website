@@ -98,8 +98,8 @@ export function BotDemo({ fr }: { fr?: boolean }) {
       {/* Caption */}
       <p className="text-center text-[11px] text-happi-muted/50 mt-3">
         {fr
-          ? 'Bot en production chez Mobilier de France — aucune inscription requise'
-          : 'Live bot deployed at Mobilier de France — no sign-up required'}
+          ? 'Bot en production chez Mobilier de France, sans inscription requise'
+          : 'Live bot deployed at Mobilier de France, no sign-up required'}
       </p>
     </div>
   );

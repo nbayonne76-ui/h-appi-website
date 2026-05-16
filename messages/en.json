@@ -338,11 +338,11 @@
       },
       {
         "question": "What is H'appi's After-Sales Bot and how does it work?",
-        "answer": "The After-Sales Bot replaces phone calls to after-sales support. The customer opens the bot interface and enters three pieces of information: their ticket number, their name, and a description of their issue (e.g., broken table leg corner). The conversation happens through the interface — even if an agent is assisting by phone at the same time. All information is automatically structured in a dedicated dashboard for the technical team. Concrete results: 50% of after-sales calls are avoided, handling time drops from 2.5 days to 4 hours, and NPS increases by 38 points on average. (Sources: Narvar, Salesforce, Intercom)"
+        "answer": "The After-Sales Bot replaces phone calls to after-sales support. The customer opens the bot interface and enters three pieces of information: their ticket number, their name, and a description of their issue (e.g., broken table leg corner). The conversation happens through the interface — even if an agent is assisting by phone at the same time. All information is automatically structured in a dedicated dashboard for the technical team. Concrete results: 50% of after-sales calls are avoided, handling time drops from 2.5 days to 4 hours, and NPS increases by 38 points on average."
       },
       {
         "question": "How does the furniture traceability app work?",
-        "answer": "The mobile app connects three actors in real time. The supplier creates the product file and generates a unique QR code per piece of furniture. The driver scans the QR code in 2 seconds, takes timestamped geolocated photos and captures the customer's electronic signature. The end customer tracks their delivery on an interactive map and receives automatic notifications at each step. 7.6% of furniture arrives damaged — without digital proof, the dispute is almost always lost. With the app, companies reduce disputes by 80% and increase customer satisfaction by 60%. (Sources: DispatchTrack, Furniture Retail 2025)"
+        "answer": "The mobile app connects three actors in real time. The supplier creates the product file and generates a unique QR code per piece of furniture. The driver scans the QR code in 2 seconds, takes timestamped geolocated photos and captures the customer's electronic signature. The end customer tracks their delivery on an interactive map and receives automatic notifications at each step. 7.6% of furniture arrives damaged. Without digital proof, the dispute is almost always lost. With the app, companies reduce disputes by 80% and increase customer satisfaction by 60%."
       },
       {
         "question": "How are the After-Sales Bot and the traceability app connected?",
@@ -1111,7 +1111,7 @@
   "blogData": {
     "articles": [
       {
-        "title": "Mobilier de France: −65% after-sales calls with our bot — real case study",
+        "title": "Mobilier de France: 65% fewer after-sales calls, real case study",
         "excerpt": "How we deployed the Mobilier de France SAV-Bot in 14 days. P0-P3 ticketing, photo upload, multilingual FR/EN/AR/IT/DE: real numbers and deployment lessons.",
         "category": "Product",
         "date": "April 3, 2026",
@@ -1121,7 +1121,7 @@
       },
       {
         "title": "Happi Secretary: 24/7 AI voice receptionist with Vapi.ai + ElevenLabs",
-        "excerpt": "Latency < 500ms, live appointment booking, sentiment detection, Claude-powered post-call summaries — everything our voice AI stack can do for your business.",
+        "excerpt": "Under 500ms latency, live appointment booking, sentiment detection, automatic post-call summaries: everything our voice assistant can do for your business.",
         "category": "Product",
         "date": "March 25, 2026",
         "readTime": "7 min",
@@ -1139,7 +1139,7 @@
       },
       {
         "title": "Claude vs GPT-4o in 2026: which AI for your business chatbot?",
-        "excerpt": "Why we chose Claude (Anthropic) as our reference model — a comparative analysis on business understanding, French language, post-call analysis and cost-efficiency.",
+        "excerpt": "How to choose the right AI model for your chatbot: a comparison on business understanding, French language, post-call analysis and cost.",
         "category": "Trends",
         "date": "March 10, 2026",
         "readTime": "9 min",
@@ -1165,7 +1165,7 @@
         "authorRole": "Delivery & Operations"
       },
       {
-        "title": "GDPR + AI Act 2026: deploying a compliant chatbot — complete checklist",
+        "title": "GDPR + AI Act 2026: how to deploy a compliant chatbot, complete checklist",
         "excerpt": "French/European hosting, consent management, right to erasure, AI Act category 2 obligations. Everything a compliant deployment requires with our stack (Scaleway, Hetzner).",
         "category": "Compliance",
         "date": "February 5, 2026",
@@ -1488,7 +1488,7 @@
     "subtitle": "Whether you're a company, a tech talent or a potential partner, there's a place for you in the H'appi story."
   },
   "securitePage": {
-    "metaTitle": "Hosting & Security — H'appi",
+    "metaTitle": "Hosting & Security | H'appi",
     "metaDescription": "Discover how H'appi protects your data: 100% European hosting (Scaleway, Hetzner), full GDPR compliance, ISO 27001 and HDS certifications, end-to-end encryption.",
     "badge": "Security & GDPR Compliance",
     "title": "Your data, <highlight>protected in Europe</highlight>",
@@ -1497,15 +1497,15 @@
     "introP2": "The difference: we achieve this with certified European cloud partners, at revolutionary costs, without compromising your data sovereignty.",
     "hostingTitle": "100% European Hosting",
     "hostingSubtitle": "Two certified partners, chosen for their performance, compliance and commitment to European digital sovereignty.",
-    "rgpdTitle": "GDPR Compliance — Our 8 Commitments",
+    "rgpdTitle": "GDPR Compliance: our 8 commitments",
     "rgpdSubtitle": "Every H'appi project includes a Data Processing Agreement (DPA) compliant with Article 28 of the GDPR. Here is what we guarantee contractually.",
     "certsTitle": "Certifications Overview",
     "securityTitle": "Multi-Layer Security",
     "sovereigntyTitle": "European Digital Sovereignty",
-    "sovereigntySubtitle": "Your data stays under European jurisdiction — protected by GDPR, not exposed to US laws.",
+    "sovereigntySubtitle": "Your data stays under European jurisdiction, protected by GDPR and never exposed to US laws.",
     "faqTitle": "Security FAQ",
     "summaryTitle": "In Summary",
     "summarySubtitle": "What you get with every H'appi project.",
-    "summaryConclusion": "Your security is our responsibility. Not an option, not an extra cost — a foundation."
+    "summaryConclusion": "Your security is our responsibility. Not an option, not an extra cost: it is our foundation."
   }
 }

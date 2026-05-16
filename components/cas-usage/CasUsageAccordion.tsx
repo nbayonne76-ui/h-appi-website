@@ -293,7 +293,7 @@ const globalStats = (fr: boolean): StatDef[] => [
   {
     numeric: 0,
     display: fr ? '0 litige\nperdu' : '0 dispute\nlost',
-    label: fr ? 'depuis le lancement — chaque problème est documenté et résolu' : 'since launch — every issue is documented and resolved',
+    label: fr ? 'depuis le lancement : chaque problème est documenté et résolu' : 'since launch: every issue is documented and resolved',
     sublabel: fr ? 'Avant : 1 dossier sur 4 n\'avait aucune preuve écrite' : 'Before: 1 in 4 cases had no written proof',
     color: '#A78BFA',
     source: '',
@@ -366,8 +366,8 @@ export default function CasUsageAccordion() {
           <Building2 size={13} className="text-happi-muted/50" />
           <span className="text-[11px] text-happi-muted/50 font-medium">
             {fr
-              ? 'Résultats mesurés — Mobilier de France · Déployé 2024'
-              : 'Measured results — Mobilier de France · Deployed 2024'}
+              ? 'Résultats mesurés · Mobilier de France · Déployé 2024'
+              : 'Measured results · Mobilier de France · Deployed 2024'}
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-happi-green animate-pulse" />
         </div>

@@ -6,7 +6,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const lang = locale === 'en' ? 'en' : 'fr';
   return {
-    title: lang === 'fr' ? 'Mentions légales — H\'appi' : 'Legal Notice — H\'appi',
+    title: lang === 'fr' ? 'Mentions légales | H\'appi' : 'Legal Notice | H\'appi',
     description: lang === 'fr'
       ? 'Mentions légales du site H\'appi : éditeur, hébergement, propriété intellectuelle, responsabilité.'
       : 'Legal notice for the H\'appi website: publisher, hosting, intellectual property, liability.',

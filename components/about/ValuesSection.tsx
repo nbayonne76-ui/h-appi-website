@@ -22,11 +22,11 @@ const valueColors = [
 // Brain proof points par valeur
 const brainProofs = [
   { metric: '14 jours', label: 'délai moyen déploiement', client: 'Mobilier de France' },
-  { metric: '−50 à −70%', label: 'vs agences traditionnelles', client: 'Tous clients' },
-  { metric: '4 phases', label: 'évolution sur-mesure → SaaS', client: 'Modèle H\'appi' },
-  { metric: '1–2 sem.', label: 'itérations de livraison', client: 'Standard H\'appi' },
-  { metric: '0 ticket', label: 'anonyme — interlocuteur dédié', client: 'Tous clients' },
-  { metric: 'ISO 27001', label: 'partenaires certifiés', client: 'Scaleway, Hetzner' },
+  { metric: '50 à 70%', label: 'moins cher que les agences traditionnelles', client: 'Tous clients' },
+  { metric: '4 phases', label: 'du sur-mesure jusqu\'au SaaS', client: 'Modèle H\'appi' },
+  { metric: '1 à 2 sem.', label: 'par itération de livraison', client: 'Standard H\'appi' },
+  { metric: '0 ticket', label: 'anonyme : un interlocuteur dédié', client: 'Tous clients' },
+  { metric: 'ISO 27001', label: 'partenaires certifiés sécurité', client: 'Hébergeurs UE' },
   { metric: '100%', label: 'code source appartient au client', client: 'Politique H\'appi' },
   { metric: '17+', label: 'démos sans surcoût caché', client: 'Catalogue Brain' },
 ];

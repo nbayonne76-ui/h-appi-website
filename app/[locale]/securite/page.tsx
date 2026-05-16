@@ -24,14 +24,14 @@ const certifications = [
 ];
 
 const gdprCommitments = [
-  { fr: 'Hébergement UE exclusif — aucun transfert de données hors Union Européenne', en: 'EU-only hosting — no data transfer outside the European Union' },
-  { fr: 'DPA conforme Article 28 RGPD — accord de sous-traitance signé avec chaque client', en: 'Article 28 GDPR-compliant DPA — data processing agreement signed with every client' },
-  { fr: 'Chiffrement de bout en bout — données chiffrées en transit (TLS 1.3) et au repos (AES-256)', en: 'End-to-end encryption — data encrypted in transit (TLS 1.3) and at rest (AES-256)' },
-  { fr: 'Contrôle d\'accès strict — authentification multi-facteurs, principe du moindre privilège', en: 'Strict access control — multi-factor authentication, least privilege principle' },
-  { fr: 'Notification rapide des incidents — sous 48h en cas de violation de données', en: 'Rapid incident notification — within 48h in case of data breach' },
-  { fr: 'Droits des personnes — procédures pour accès, rectification, effacement (Articles 15-22)', en: 'Data subject rights — procedures for access, correction, erasure (Articles 15-22)' },
-  { fr: 'Audits réguliers — possibilité d\'audit ou de demande de rapports de conformité', en: 'Regular audits — possibility to audit or request compliance reports' },
-  { fr: 'Destruction sécurisée — suppression certifiée des données en fin de contrat', en: 'Secure destruction — certified data deletion at end of contract' },
+  { fr: 'Hébergement UE exclusif : aucun transfert de données hors Union Européenne', en: 'EU-only hosting: no data transfer outside the European Union' },
+  { fr: 'Accord de sous-traitance signé avec chaque client, conforme à l\'Article 28 RGPD', en: 'Data processing agreement signed with every client, compliant with Article 28 GDPR' },
+  { fr: 'Chiffrement de bout en bout : données protégées en transit et au repos', en: 'End-to-end encryption: data protected both in transit and at rest' },
+  { fr: 'Contrôle d\'accès strict avec authentification multi-facteurs', en: 'Strict access control with multi-factor authentication' },
+  { fr: 'Notification des incidents sous 48h en cas de violation de données', en: 'Incident notification within 48 hours in case of a data breach' },
+  { fr: 'Procédures claires pour l\'accès, la rectification et l\'effacement de vos données', en: 'Clear procedures for accessing, correcting and deleting your data' },
+  { fr: 'Audits de conformité disponibles sur demande', en: 'Compliance audits available on request' },
+  { fr: 'Suppression certifiée de toutes les données en fin de contrat', en: 'Certified deletion of all data at end of contract' },
 ];
 
 const securityLevels = [
@@ -76,7 +76,7 @@ const securityLevels = [
 const faqItems = [
   {
     q: { fr: 'Mes données sont-elles vraiment en sécurité ?', en: 'Is my data truly secure?' },
-    a: { fr: 'Oui. Nous appliquons les mêmes standards de sécurité que Microsoft et Oracle — chiffrement, MFA, monitoring 24/7, audits réguliers — mais à des coûts optimisés grâce à nos partenaires européens.', en: 'Yes. We apply the same security standards as Microsoft and Oracle — encryption, MFA, 24/7 monitoring, regular audits — but at optimized costs thanks to our European partners.' },
+    a: { fr: 'Oui. Nous appliquons les mêmes standards de sécurité que Microsoft et Oracle : chiffrement, MFA, monitoring 24/7, audits réguliers, mais à des coûts optimisés grâce à nos partenaires européens.', en: 'Yes. We apply the same security standards as Microsoft and Oracle: encryption, MFA, 24/7 monitoring, and regular audits, at optimized costs thanks to our European partners.' },
   },
   {
     q: { fr: 'Que se passe-t-il si mon hébergeur a une panne ?', en: 'What happens if my hosting provider goes down?' },
@@ -84,7 +84,7 @@ const faqItems = [
   },
   {
     q: { fr: 'Puis-je changer d\'hébergeur après le déploiement ?', en: 'Can I switch hosting providers after deployment?' },
-    a: { fr: 'Oui, absolument. Vous êtes propriétaire à 100% de votre code et de vos données. Nous pouvons migrer vers tout hébergeur européen de votre choix sans vendor lock-in.', en: 'Yes, absolutely. You own 100% of your code and data. We can migrate to any European hosting provider of your choice — no vendor lock-in.' },
+    a: { fr: 'Oui, absolument. Vous êtes propriétaire à 100% de votre code et de vos données. Nous pouvons migrer vers tout hébergeur européen de votre choix, sans aucun engagement de notre côté.', en: 'Yes, absolutely. You own 100% of your code and data. We can migrate to any European hosting provider of your choice, with no lock-in whatsoever.' },
   },
   {
     q: { fr: 'Que se passe-t-il avec mes données en fin de contrat ?', en: 'What happens to my data at end of contract?' },
@@ -317,7 +317,7 @@ export default async function SecuritePage({ params }: { params: Promise<{ local
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-xs font-bold text-happi-muted">{level.level}</span>
                       <h3 className="font-bold text-white">
-                        {lang === 'fr' ? `Niveau ${level.level} — ${level.titleFr}` : `Level ${level.level} — ${level.titleEn}`}
+                        {lang === 'fr' ? `Niveau ${level.level} : ${level.titleFr}` : `Level ${level.level}: ${level.titleEn}`}
                       </h3>
                     </div>
                     <ul className="space-y-2">

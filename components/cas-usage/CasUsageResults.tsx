@@ -41,7 +41,7 @@ const getOutcomes = (fr: boolean): OutcomeCard[] => [
     icon: <Zap size={22} />,
     color: '#F59E0B',
     value: fr ? '14 jours' : '14 days',
-    label: fr ? 'Contrat → Production' : 'Contract → Production',
+    label: fr ? 'De la signature à la mise en ligne' : 'From signing to going live',
     description: fr
       ? 'Bot configuré, app installée, équipe formée, connexions opérationnelles. En 2 semaines, pas 6 mois.'
       : 'Bot configured, app installed, team trained, connections live. In 2 weeks, not 6 months.',
@@ -97,8 +97,8 @@ export default function CasUsageResults({ fr }: { fr: boolean }) {
           </h2>
           <p className="text-happi-muted text-sm mt-3 max-w-xl mx-auto">
             {fr
-              ? 'Chiffres issus du déploiement réel — mesurés sur les 3 premiers mois de production.'
-              : 'Figures from the real deployment — measured over the first 3 months in production.'}
+              ? 'Chiffres issus du déploiement réel, mesurés sur les 3 premiers mois de production.'
+              : 'Figures from the real deployment, measured over the first 3 months in production.'}
           </p>
         </motion.div>
 

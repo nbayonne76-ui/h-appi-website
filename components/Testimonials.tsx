@@ -127,7 +127,7 @@ export default function Testimonials() {
             onClick={openContactModal}
             className="btn-shimmer inline-flex items-center gap-2 px-7 py-3.5 bg-happi-blue text-white rounded-xl hover:bg-happi-blue/90 transition-all font-semibold shadow-lg shadow-happi-blue/20 text-sm"
           >
-            {fr ? 'Voir une démo gratuite — 15 min' : 'See a free demo — 15 min'}
+            {fr ? 'Voir une démo gratuite en 15 min' : 'See a free demo in 15 min'}
           </button>
         </FadeInUp>
 
