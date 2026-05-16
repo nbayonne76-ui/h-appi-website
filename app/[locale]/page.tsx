@@ -1,7 +1,9 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ProblemSolution from '@/components/ProblemSolution';
+import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
+import GuaranteeStrip from '@/components/GuaranteeStrip';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import { SolutionQuiz } from '@/components/quiz/SolutionQuiz';
@@ -22,6 +24,7 @@ export default async function Home() {
         <Ticker />
         <LogoWall fr={fr} />
         <ProblemSolution />
+        <HowItWorks fr={fr} />
         <Testimonials />
 
         {/* Quiz */}
@@ -43,6 +46,7 @@ export default async function Home() {
         </section>
 
         <LiveChatDemo fr={fr} />
+        <GuaranteeStrip fr={fr} />
         <CTASection />
       </main>
       <Footer />
