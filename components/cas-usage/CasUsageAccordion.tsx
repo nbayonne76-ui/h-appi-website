@@ -79,24 +79,24 @@ const steps = (fr: boolean) => [
       },
       miniStats: [
         {
-          value: '−65 %',
-          label: fr ? "d'appels entrants grâce à l'automatisation" : 'fewer incoming calls with automation',
-          source: 'Narvar / Gorgias',
+          value: '65 %',
+          label: fr ? "d'appels en moins grâce à l'automatisation" : 'fewer incoming calls thanks to automation',
+          source: '',
         },
         {
           value: '85 %',
-          label: fr ? 'des demandes traitées sans intervention humaine' : 'of requests handled without human intervention',
-          source: 'Gorgias / Zendesk',
+          label: fr ? 'des demandes résolues sans qu\'un humain intervienne' : 'of requests resolved without human involvement',
+          source: '',
         },
         {
           value: '2,5 j → 4 h',
-          label: fr ? 'de délai de traitement SAV avec automatisation' : 'after-sales processing time with automation',
-          source: 'Salesforce',
+          label: fr ? 'le délai de traitement passe de 2,5 jours à 4 heures' : 'processing time drops from 2.5 days to 4 hours',
+          source: '',
         },
         {
           value: '+38 pts',
-          label: fr ? 'NPS après 3 mois d\'utilisation du bot SAV' : 'NPS after 3 months of after-sales bot',
-          source: 'Intercom / Gorgias',
+          label: fr ? 'de satisfaction client en plus après 3 mois d\'utilisation' : 'more customer satisfaction after 3 months of use',
+          source: '',
         },
       ],
       result: {
@@ -130,7 +130,7 @@ const steps = (fr: boolean) => [
     teaser: fr
       ? '7,6 % des meubles arrivent endommagés, générant un coût moyen de 45 € par retour. Sans preuve numérique, le litige est presque toujours perdu.'
       : '7.6% of furniture arrives damaged, generating an average cost of €45 per return. Without digital proof, disputes are almost always lost.',
-    teaserSource: 'DispatchTrack / Furniture Retail 2025',
+    teaserSource: '',
     content: {
       actors: [
         {
@@ -166,24 +166,24 @@ const steps = (fr: boolean) => [
       ],
       miniStats: [
         {
-          value: '−80 %',
-          label: fr ? 'de litiges grâce à la preuve numérique (photo + signature + GPS)' : 'fewer disputes with digital proof (photo + signature + GPS)',
-          source: 'DispatchTrack',
+          value: '80 %',
+          label: fr ? 'de litiges en moins grâce aux photos et signatures numériques' : 'fewer disputes thanks to photos and digital signatures',
+          source: '',
         },
         {
           value: '+60 %',
-          label: fr ? 'de satisfaction client avec preuve de livraison transparente' : 'client satisfaction with transparent delivery proof',
-          source: 'DispatchTrack / Zendesk',
+          label: fr ? 'de clients satisfaits quand la livraison est transparente et tracée' : 'more satisfied customers with transparent tracked deliveries',
+          source: '',
         },
         {
           value: '+42 %',
-          label: fr ? 'de livraisons réussies au 1er passage grâce aux notifications' : 'successful first-pass deliveries thanks to notifications',
-          source: 'DispatchTrack',
+          label: fr ? 'de livraisons réussies du premier coup grâce aux alertes automatiques' : 'more first-attempt successful deliveries with automatic alerts',
+          source: '',
         },
         {
           value: '82 %',
-          label: fr ? 'des clients veulent un suivi temps réel → +35 % de rétention' : 'of clients want real-time tracking → +35% retention',
-          source: 'Inbound Logistics / Salesforce',
+          label: fr ? 'des clients veulent savoir en temps réel où est leur colis' : 'of customers want to know in real time where their order is',
+          source: '',
         },
       ],
       interconnect: {
@@ -277,34 +277,34 @@ const globalStats = (fr: boolean): StatDef[] => [
   {
     numeric: 300,
     suffix: fr ? '/mois' : '/mo',
-    label: fr ? 'appels évités chaque mois' : 'calls avoided every month',
-    sublabel: fr ? 'Avant : équipe saturée dès 200 appels' : 'Before: team overwhelmed at 200 calls',
+    label: fr ? 'clients aidés automatiquement chaque mois, sans décrocher' : 'customers helped automatically every month',
+    sublabel: fr ? 'Avant : l\'équipe était submergée dès 200 appels' : 'Before: the team was overwhelmed at 200 calls',
     color: '#3B82F6',
-    source: 'Narvar / Gorgias',
+    source: '',
   },
   {
     numeric: 14400,
-    prefix: '−€',
-    label: fr ? 'économisés sur la main-d\'œuvre SAV / an' : 'saved on after-sales labour / year',
-    sublabel: fr ? 'Avant : €1 200/mois en appels non automatisés' : 'Before: €1,200/mo on unautomated calls',
+    prefix: '€',
+    label: fr ? 'économisés chaque année sur le service client' : 'saved every year on customer service',
+    sublabel: fr ? 'Avant : 1 200 €/mois en appels manuels non automatisés' : 'Before: €1,200/month in manual unautomated calls',
     color: '#10B981',
-    source: 'H\'appi — Mobilier de France 2024',
+    source: '',
   },
   {
     numeric: 0,
     display: fr ? '0 litige\nperdu' : '0 dispute\nlost',
-    label: fr ? 'litige perdu depuis le déploiement' : 'disputes lost since deployment',
-    sublabel: fr ? 'Avant : 1 litige sur 4 non documenté' : 'Before: 1 in 4 disputes undocumented',
+    label: fr ? 'depuis le lancement — chaque problème est documenté et résolu' : 'since launch — every issue is documented and resolved',
+    sublabel: fr ? 'Avant : 1 dossier sur 4 n\'avait aucune preuve écrite' : 'Before: 1 in 4 cases had no written proof',
     color: '#A78BFA',
-    source: 'DispatchTrack / H\'appi',
+    source: '',
   },
   {
     numeric: 14,
     suffix: fr ? ' jours' : ' days',
-    label: fr ? 'contrat → production' : 'contract → production',
-    sublabel: fr ? 'Avant : 3–6 mois avec un éditeur standard' : 'Before: 3–6 months with a standard vendor',
+    label: fr ? 'pour être opérationnel, de la signature à la mise en ligne' : 'from signing to going live',
+    sublabel: fr ? 'Avant : 3 à 6 mois avec un prestataire classique' : 'Before: 3–6 months with a traditional vendor',
     color: '#F59E0B',
-    source: 'H\'appi — avg. client go-live',
+    source: '',
   },
 ];
 
@@ -402,10 +402,6 @@ export default function CasUsageAccordion() {
                     {stat.sublabel}
                   </div>
 
-                  {/* Source */}
-                  <div className="text-[10px] text-happi-muted/40 uppercase tracking-wider mt-2">
-                    {stat.source}
-                  </div>
                 </div>
               </TiltCard>
             </motion.div>
@@ -595,7 +591,6 @@ export default function CasUsageAccordion() {
                                   <div className="bg-happi-dark border border-happi-border rounded-xl p-4 h-full">
                                     <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
                                     <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
-                                    <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
                                   </div>
                                 </TiltCard>
                               </motion.div>
@@ -702,7 +697,6 @@ export default function CasUsageAccordion() {
                                   <div className="bg-happi-darker border border-happi-border rounded-xl p-4 h-full">
                                     <div className={`text-xl font-bold ${step.colorClass} mb-1`}>{s.value}</div>
                                     <div className="text-happi-muted text-xs leading-snug mb-1">{s.label}</div>
-                                    <div className="text-happi-muted/40 text-[10px] uppercase tracking-wider">{s.source}</div>
                                   </div>
                                 </TiltCard>
                               </motion.div>
