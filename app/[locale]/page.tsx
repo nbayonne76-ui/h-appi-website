@@ -5,6 +5,7 @@ import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
 import ComparisonTable from '@/components/ComparisonTable';
 import HomeFAQ from '@/components/HomeFAQ';
+import NewsletterSection from '@/components/NewsletterSection';
 import GuaranteeStrip from '@/components/GuaranteeStrip';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -50,6 +51,7 @@ export default async function Home() {
 
         <LiveChatDemo fr={fr} />
         <HomeFAQ fr={fr} />
+        <NewsletterSection />
         <GuaranteeStrip fr={fr} />
         <CTASection />
       </main>
