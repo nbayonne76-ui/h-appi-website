@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { locales } from '@/i18n/config';
 import { getTranslations } from 'next-intl/server';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
+import { ExitIntentPopup } from '@/components/ui/ExitIntentPopup';
 import { ContactModal } from '@/components/ui/ContactModal';
 import { Analytics } from '@vercel/analytics/next';
 import SmoothScroll from '@/components/ui/SmoothScroll';
@@ -139,6 +140,7 @@ export default async function LocaleLayout({
           <CustomCursor />
           {children}
           <FloatingCTA />
+          <ExitIntentPopup />
           <ContactModal />
           <Analytics />
         </NextIntlClientProvider>
