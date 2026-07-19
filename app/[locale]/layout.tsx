@@ -83,6 +83,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'max-snippet': -1,
       },
     },
+    verification: {
+      google: 'UN0GjoBzs_UKneSPFaH05COvjYA2WKN_3SoT6ur3xbw',
+    },
   };
 }
 
