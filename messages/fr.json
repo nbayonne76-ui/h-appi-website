@@ -1172,6 +1172,51 @@
         "readTime": "11 min",
         "author": "Équipe H'appi",
         "authorRole": "Legal & Compliance"
+      },
+      {
+        "title": "Le vrai coût d'une livraison ratée : ce que vous ne mesurez pas",
+        "excerpt": "Coût direct, coût SAV caché, coût de réputation : voici comment calculer l'impact réel d'une livraison ratée sur votre activité, avec la formule que nous utilisons chez nos clients ameublement.",
+        "category": "Guide",
+        "date": "22 janvier 2026",
+        "readTime": "7 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Delivery & Operations"
+      },
+      {
+        "title": "Pourquoi votre SAV ameublement croule sous les appels (et comment y remédier)",
+        "excerpt": "47 % de contacts en plus que le retail standard : le SAV ameublement a un problème structurel. Les 5 raisons du volume d'appels, les chiffres, et comment l'automatisation change la donne.",
+        "category": "Guide",
+        "date": "15 janvier 2026",
+        "readTime": "7 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Customer Success & Support"
+      },
+      {
+        "title": "La personnalisation d'un chatbot, ce n'est pas afficher un prénom",
+        "excerpt": "Un chatbot générique frustre plus qu'il n'aide. Voici ce que signifie vraiment la personnalisation métier — et notre méthode pour entraîner un modèle sur votre réalité opérationnelle.",
+        "category": "Produit",
+        "date": "8 janvier 2026",
+        "readTime": "6 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Product & Engineering"
+      },
+      {
+        "title": "Application sur-mesure ou solution standardisée : comment choisir",
+        "excerpt": "SaaS à 300 €/mois ou développement sur-mesure ? Comparatif objectif, calcul du coût réel sur 5 ans, et notre recommandation selon votre situation.",
+        "category": "Guide",
+        "date": "20 décembre 2025",
+        "readTime": "7 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Strategy & Consulting"
+      },
+      {
+        "title": "5 tendances qui transforment les chatbots IA en 2026",
+        "excerpt": "Support proactif, mémoire longue durée, multimodalité, détection d'émotions, agents autonomes : les avancées qui rendent les chatbots enfin utiles au quotidien.",
+        "category": "Tendances",
+        "date": "10 décembre 2025",
+        "readTime": "8 min",
+        "author": "Équipe H'appi",
+        "authorRole": "Research & AI Stack"
       }
     ]
   },

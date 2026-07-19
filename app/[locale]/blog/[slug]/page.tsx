@@ -10,7 +10,7 @@ const slugs = [
   'chatbot-personnalisation-metier',
   'application-sur-mesure-vs-standardisee',
   'ia-generative-2026-tendances',
-  'chatbots-rgpd-conformite-guide',
+  'rgpd-ai-act-2026-chatbot-conforme',
 ];
 
 export async function generateStaticParams() {
@@ -915,7 +915,7 @@ const tocData: Record<string, Record<string, { id: string; label: string }[]>> =
       { id: 'avance5', label: '5. Autonomous agents' },
     ],
   },
-  'chatbots-rgpd-conformite-guide': {
+  'rgpd-ai-act-2026-chatbot-conforme': {
     fr: [
       { id: 'contexte', label: 'Le cadre réglementaire en 2026' },
       { id: 'rgpd-chatbot', label: 'Ce que le RGPD impose aux chatbots' },
@@ -964,7 +964,7 @@ const sourcesData: Record<string, { name: string; url: string; detail: string }[
     { name: 'MIT Technology Review — AI Agents 2025', url: 'https://www.technologyreview.com', detail: 'Autonomous AI agents entering enterprise workflows' },
     { name: 'Stanford HAI — AI Index Report 2025', url: 'https://aiindex.stanford.edu', detail: 'Annual benchmark of AI capabilities and adoption' },
   ],
-  'chatbots-rgpd-conformite-guide': [
+  'rgpd-ai-act-2026-chatbot-conforme': [
     { name: 'CNIL — Recommandations IA 2024', url: 'https://www.cnil.fr/fr/intelligence-artificielle', detail: 'Recommandations françaises sur l\'IA et les données personnelles' },
     { name: 'EU AI Act — Official Text', url: 'https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32024R1689', detail: 'Règlement (UE) 2024/1689 — Règles sur l\'IA' },
     { name: 'EDPB — Guidelines on Chatbots', url: 'https://www.edpb.europa.eu', detail: 'European Data Protection Board guidance on chatbot compliance' },
@@ -979,7 +979,7 @@ const contentMap: Record<string, Record<string, React.ReactNode>> = {
   'chatbot-personnalisation-metier': { fr: <Article1_FR />, en: <Article1_EN /> },
   'application-sur-mesure-vs-standardisee': { fr: <Article2_FR />, en: <Article2_EN /> },
   'ia-generative-2026-tendances': { fr: <Article3_FR />, en: <Article3_EN /> },
-  'chatbots-rgpd-conformite-guide': { fr: <Article4_FR />, en: <Article4_EN /> },
+  'rgpd-ai-act-2026-chatbot-conforme': { fr: <Article4_FR />, en: <Article4_EN /> },
 };
 
 // ─── Page ────────────────────────────────────────────────────────────────────

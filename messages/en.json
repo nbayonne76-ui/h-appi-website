@@ -1172,6 +1172,51 @@
         "readTime": "11 min",
         "author": "H'appi Team",
         "authorRole": "Legal & Compliance"
+      },
+      {
+        "title": "The real cost of a failed delivery: what you're not measuring",
+        "excerpt": "Direct cost, hidden after-sales cost, reputation cost: here's how to calculate the real impact of a failed delivery on your business, with the formula we use with our furniture clients.",
+        "category": "Guide",
+        "date": "January 22, 2026",
+        "readTime": "7 min",
+        "author": "H'appi Team",
+        "authorRole": "Delivery & Operations"
+      },
+      {
+        "title": "Why your furniture after-sales team is drowning in calls (and how to fix it)",
+        "excerpt": "47% more contacts than standard retail: furniture after-sales has a structural problem. The 5 reasons behind the call volume, the numbers, and how automation changes the equation.",
+        "category": "Guide",
+        "date": "January 15, 2026",
+        "readTime": "7 min",
+        "author": "H'appi Team",
+        "authorRole": "Customer Success & Support"
+      },
+      {
+        "title": "Chatbot personalisation isn't about displaying a first name",
+        "excerpt": "A generic chatbot frustrates more than it helps. Here's what business personalisation really means — and our method for training a model on your operational reality.",
+        "category": "Product",
+        "date": "January 8, 2026",
+        "readTime": "6 min",
+        "author": "H'appi Team",
+        "authorRole": "Product & Engineering"
+      },
+      {
+        "title": "Custom application or off-the-shelf solution: how to choose",
+        "excerpt": "SaaS at €300/month or custom development? An objective comparison, the real 5-year cost breakdown, and our recommendation depending on your situation.",
+        "category": "Guide",
+        "date": "December 20, 2025",
+        "readTime": "7 min",
+        "author": "H'appi Team",
+        "authorRole": "Strategy & Consulting"
+      },
+      {
+        "title": "5 trends transforming AI chatbots in 2026",
+        "excerpt": "Proactive support, long-term memory, multimodality, emotion detection, autonomous agents: the advances finally making chatbots genuinely useful day-to-day.",
+        "category": "Trends",
+        "date": "December 10, 2025",
+        "readTime": "8 min",
+        "author": "H'appi Team",
+        "authorRole": "Research & AI Stack"
       }
     ]
   },

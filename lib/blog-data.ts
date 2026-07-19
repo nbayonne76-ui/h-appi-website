@@ -23,6 +23,11 @@ const slugs = [
   'roi-chatbot-sav-mesure',
   'demo-html-bot-production-14-jours',
   'rgpd-ai-act-2026-chatbot-conforme',
+  'vrai-cout-livraison-ratee',
+  'sav-ameublement-equipe-appels',
+  'chatbot-personnalisation-metier',
+  'application-sur-mesure-vs-standardisee',
+  'ia-generative-2026-tendances',
 ];
 
 const categoryColors: Record<string, string> = {
