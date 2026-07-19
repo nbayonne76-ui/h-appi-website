@@ -1,7 +1,38 @@
 import { notFound } from 'next/navigation';
 import { getArticleBySlug, getRelatedArticles } from '@/lib/blog-data';
 import ArticleLayout from '@/components/blog/ArticleLayout';
+import { JsonLd } from '@/components/ui/JsonLd';
 import type { Article } from '@/lib/blog-data';
+
+const BASE = 'https://happi-bot.com';
+
+const FR_MONTHS: Record<string, number> = {
+  janvier: 0, février: 1, mars: 2, avril: 3, mai: 4, juin: 5,
+  juillet: 6, août: 7, septembre: 8, octobre: 9, novembre: 10, décembre: 11,
+};
+
+const EN_MONTHS: Record<string, number> = {
+  january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
+  july: 6, august: 7, september: 8, october: 9, november: 10, december: 11,
+};
+
+// Article dates are stored as display strings ("3 avril 2026" / "April 3, 2026")
+// rather than ISO — parse them explicitly in UTC for schema.org's datePublished
+// (avoids drifting a day depending on the server's local timezone).
+function parseArticleDate(date: string, locale: string): string {
+  const months = locale === 'fr' ? FR_MONTHS : EN_MONTHS;
+  const pattern = locale === 'fr' ? /(\d+)\s+(\S+)\s+(\d{4})/ : /(\S+)\s+(\d+),\s+(\d{4})/;
+  const match = date.match(pattern);
+  if (match) {
+    const [, a, b, year] = match;
+    const [day, monthName] = locale === 'fr' ? [a, b] : [b, a];
+    const month = months[monthName.toLowerCase()];
+    if (month !== undefined) {
+      return new Date(Date.UTC(Number(year), month, Number(day))).toISOString();
+    }
+  }
+  return new Date().toISOString();
+}
 
 const slugs = [
   'vrai-cout-livraison-ratee',
@@ -999,14 +1030,42 @@ export default async function BlogArticlePage({
   const sources = sourcesData[slug] ?? [];
   const content = contentMap[slug]?.[locale] ?? contentMap[slug]?.fr ?? null;
 
+  const articleUrl = locale === 'fr' ? `${BASE}/blog/${slug}` : `${BASE}/en/blog/${slug}`;
+  const datePublished = parseArticleDate(article.date, locale);
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.excerpt,
+    image: `${BASE}/opengraph-image`,
+    datePublished,
+    dateModified: datePublished,
+    author: {
+      '@type': 'Organization',
+      name: article.author,
+      description: article.authorRole,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: "H'appi",
+      logo: { '@type': 'ImageObject', url: `${BASE}/icon.png` },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    articleSection: article.category,
+    inLanguage: locale === 'fr' ? 'fr-FR' : 'en-US',
+  };
+
   return (
-    <ArticleLayout
-      article={article as Article}
-      sources={sources}
-      toc={toc}
-      relatedArticles={relatedArticles}
-    >
-      {content}
-    </ArticleLayout>
+    <>
+      <JsonLd data={articleSchema} />
+      <ArticleLayout
+        article={article as Article}
+        sources={sources}
+        toc={toc}
+        relatedArticles={relatedArticles}
+      >
+        {content}
+      </ArticleLayout>
+    </>
   );
 }
