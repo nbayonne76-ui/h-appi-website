@@ -8,9 +8,28 @@ import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import AtelierStats from '@/components/atelier/AtelierStats';
 import { FadeInUp } from '@/components/ui/Animate';
 import { Link } from '@/i18n/navigation';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { Sparkles, ArrowRight, Phone } from 'lucide-react';
 
 const TOTAL_STEPS = 134; // 14+28+26+30+36
+
+const LIVE_TOOLS = [
+  {
+    href: '/atelier/design-studio',
+    icon: Sparkles,
+    titleFr: 'Notre moteur multi-agents, en direct',
+    titleEn: 'Our multi-agent engine, live',
+    descFr: "4 agents IA spécialisés tournent en parallèle et classent 9 designs par consensus.",
+    descEn: '4 specialized AI agents run in parallel and rank 9 designs by consensus.',
+  },
+  {
+    href: '/atelier/secretary-agent',
+    icon: Phone,
+    titleFr: 'Notre agent secrétaire, en direct',
+    titleEn: 'Our secretary agent, live',
+    descFr: "Discutez avec l'agent, il détecte votre intention et génère la fiche d'analyse d'appel.",
+    descEn: 'Chat with the agent — it detects your intent and generates the call analysis card.',
+  },
+];
 
 export default async function AtelierPage({
   params,
@@ -65,33 +84,36 @@ export default async function AtelierPage({
           </div>
         </section>
 
-        {/* ── Design Studio callout ── */}
+        {/* ── Live agents callouts ── */}
         <section className="px-4 sm:px-6 lg:px-8 pb-14">
-          <div className="max-w-4xl mx-auto">
-            <FadeInUp>
-              <Link
-                href="/atelier/design-studio"
-                className="group glass-card rounded-2xl p-6 border border-happi-border hover:border-happi-blue/40 transition-colors flex items-center gap-5 flex-col sm:flex-row text-center sm:text-left"
-              >
-                <div className="w-12 h-12 rounded-xl bg-happi-blue/10 flex items-center justify-center text-happi-blue flex-shrink-0">
-                  <Sparkles size={20} />
-                </div>
-                <div className="flex-1">
-                  <div className="text-sm font-bold text-white mb-1">
-                    {fr ? 'Nouveau : notre moteur multi-agents, en direct' : 'New: our multi-agent engine, live'}
-                  </div>
-                  <div className="text-xs text-happi-muted leading-relaxed">
-                    {fr
-                      ? "4 agents IA spécialisés tournent en parallèle et classent 9 designs par consensus — testez-le sur votre propre brief."
-                      : "4 specialized AI agents run in parallel and rank 9 designs by consensus — try it on your own brief."}
-                  </div>
-                </div>
-                <div className="flex items-center gap-1.5 text-happi-blue text-xs font-semibold flex-shrink-0">
-                  {fr ? 'Essayer' : 'Try it'}
-                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                </div>
-              </Link>
-            </FadeInUp>
+          <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-4">
+            {LIVE_TOOLS.map((tool, i) => {
+              const Icon = tool.icon;
+              return (
+                <FadeInUp key={tool.href} delay={i * 0.08}>
+                  <Link
+                    href={tool.href}
+                    className="group glass-card rounded-2xl p-6 border border-happi-border hover:border-happi-blue/40 transition-colors flex flex-col gap-4 h-full"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-happi-blue/10 flex items-center justify-center text-happi-blue flex-shrink-0">
+                      <Icon size={20} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm font-bold text-white mb-1">
+                        {fr ? tool.titleFr : tool.titleEn}
+                      </div>
+                      <div className="text-xs text-happi-muted leading-relaxed">
+                        {fr ? tool.descFr : tool.descEn}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-happi-blue text-xs font-semibold flex-shrink-0">
+                      {fr ? 'Essayer' : 'Try it'}
+                      <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </FadeInUp>
+              );
+            })}
           </div>
         </section>
 
