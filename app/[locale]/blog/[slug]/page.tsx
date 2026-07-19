@@ -44,6 +44,9 @@ const slugs = [
   'rgpd-ai-act-2026-chatbot-conforme',
   'qualification-leads-3-phases-conversion',
   'claude-vs-gpt4o-2026-chatbot-metier',
+  'mobilier-de-france-65-pct-sav-retour-experience',
+  'happi-secretary-secretariat-vocal-ia-vapi-elevenlabs',
+  'demo-html-bot-production-14-jours',
 ];
 
 export async function generateStaticParams() {
@@ -647,6 +650,282 @@ function Article6_EN() {
   );
 }
 
+// ─── Priority 3 articles (case studies / methodology) ─────────────────────────
+
+function Article7_FR() {
+  return (
+    <>
+      <h2 id="contexte">Le problème : un SAV débordé par des demandes répétitives</h2>
+      <p>
+        Mobilier de France recevait des centaines d&apos;appels et emails par semaine pour des questions récurrentes : statut de livraison, délai de retour, défaut visible sur un meuble reçu. La plupart de ces demandes n&apos;avaient pas besoin d&apos;un agent humain — elles avaient besoin d&apos;une réponse rapide et d&apos;un suivi structuré.
+      </p>
+
+      <h2 id="solution">Ce qu&apos;on a construit : le SAV-Bot Mobilier de France</h2>
+      <p>Le bot combine plusieurs briques pensées spécifiquement pour le secteur meuble :</p>
+      <ul>
+        <li><strong>Dialogue multilingue</strong> : français, anglais, arabe, italien, allemand — critique pour une enseigne avec une clientèle internationale</li>
+        <li><strong>Recommandations produits intelligentes</strong> basées sur le catalogue et l&apos;historique client</li>
+        <li><strong>Upload photo + analyse des défauts visuels</strong> : le client prend une photo du meuble endommagé, le bot pré-qualifie la nature du problème</li>
+        <li><strong>Support vocal</strong> : reconnaissance et synthèse vocale pour les clients qui préfèrent parler plutôt qu&apos;écrire</li>
+      </ul>
+
+      <h2 id="priorite">Le système de priorité qui change tout</h2>
+      <p>
+        Chaque ticket généré par le bot est automatiquement classé selon 4 niveaux de priorité, avec un délai de traitement associé :
+      </p>
+      <ul>
+        <li><strong>P0 — Urgence</strong> (sécurité, défaut grave) : notification immédiate à l&apos;équipe</li>
+        <li><strong>P1 — Haute priorité</strong> (produit inutilisable) : traitement sous 4h</li>
+        <li><strong>P2 — Normale</strong> (problème fonctionnel) : traitement sous 24h</li>
+        <li><strong>P3 — Basse</strong> (cosmétique, information) : traitement sous 72h</li>
+      </ul>
+      <p>
+        Ce classement automatique évite qu&apos;un défaut de sécurité mineur en apparence attende son tour derrière dix questions génériques sur les délais de livraison.
+      </p>
+
+      <h2 id="chiffres">Les chiffres du déploiement</h2>
+      <p>
+        Le bot tourne sur une stack FastAPI + React + PostgreSQL + Redis, conteneurisée et déployée sur Railway. Côté qualité, le projet est couvert par plus de <strong>351 tests automatisés</strong> (62 % de couverture backend, 53 % frontend) avec un pipeline CI/CD complet — pas de déploiement à l&apos;aveugle.
+      </p>
+      <p>
+        Résultat mesuré après mise en production : <strong>−65 % d&apos;appels SAV entrants</strong>, la majorité des demandes de statut et de retour étant désormais traitées directement par le bot.
+      </p>
+
+      <h2 id="lecons">Ce qu&apos;on retient</h2>
+      <p>
+        Trois leçons qu&apos;on réapplique sur chaque nouveau projet SAV depuis ce déploiement :
+      </p>
+      <ul>
+        <li>Un système de priorité de tickets n&apos;est pas optionnel — sans lui, tout finit par ressembler à une urgence</li>
+        <li>Les clients SAV veulent montrer, pas seulement décrire : l&apos;upload photo réduit drastiquement les allers-retours de clarification</li>
+        <li>Le multilingue n&apos;est pas un nice-to-have en France — c&apos;est souvent la première barrière à la résolution du premier contact</li>
+      </ul>
+      <p>
+        <strong>Vous gérez un SAV avec un volume similaire ? Discutons de votre situation</strong> — on vous dira honnêtement si un bot est pertinent pour vous.
+      </p>
+    </>
+  );
+}
+
+function Article7_EN() {
+  return (
+    <>
+      <h2 id="contexte">The problem: after-sales overwhelmed by repetitive requests</h2>
+      <p>
+        Mobilier de France was receiving hundreds of calls and emails per week for recurring questions: delivery status, return timelines, a visible defect on a received item. Most of these requests didn&apos;t need a human agent — they needed a fast answer and structured follow-up.
+      </p>
+
+      <h2 id="solution">What we built: the Mobilier de France SAV-Bot</h2>
+      <p>The bot combines several building blocks designed specifically for the furniture sector:</p>
+      <ul>
+        <li><strong>Multilingual dialogue</strong>: French, English, Arabic, Italian, German — critical for a retailer with an international customer base</li>
+        <li><strong>Smart product recommendations</strong> based on catalogue and purchase history</li>
+        <li><strong>Photo upload + visual defect analysis</strong>: the customer photographs the damaged item, the bot pre-qualifies the issue</li>
+        <li><strong>Voice support</strong>: speech recognition and synthesis for customers who prefer talking over typing</li>
+      </ul>
+
+      <h2 id="priorite">The priority system that changes everything</h2>
+      <p>
+        Every ticket the bot generates is automatically classified into 4 priority levels, each with a target resolution time:
+      </p>
+      <ul>
+        <li><strong>P0 — Emergency</strong> (safety, severe defect): immediate team notification</li>
+        <li><strong>P1 — High priority</strong> (product unusable): handled within 4h</li>
+        <li><strong>P2 — Normal</strong> (functional issue): handled within 24h</li>
+        <li><strong>P3 — Low</strong> (cosmetic, informational): handled within 72h</li>
+      </ul>
+      <p>
+        This automatic classification prevents a seemingly minor safety issue from sitting behind ten generic delivery-timeline questions.
+      </p>
+
+      <h2 id="chiffres">Deployment numbers</h2>
+      <p>
+        The bot runs on a FastAPI + React + PostgreSQL + Redis stack, containerised and deployed on Railway. On the quality side, the project is covered by over <strong>351 automated tests</strong> (62% backend coverage, 53% frontend) with a full CI/CD pipeline — no blind deployments.
+      </p>
+      <p>
+        Measured result after going live: <strong>−65% inbound after-sales calls</strong>, with most status and return requests now handled directly by the bot.
+      </p>
+
+      <h2 id="lecons">What we took away</h2>
+      <p>
+        Three lessons we now apply to every new after-sales project since this deployment:
+      </p>
+      <ul>
+        <li>A ticket priority system isn&apos;t optional — without one, everything ends up feeling like an emergency</li>
+        <li>After-sales customers want to show, not just describe: photo upload drastically cuts back-and-forth clarification</li>
+        <li>Multilingual support isn&apos;t a nice-to-have in France — it&apos;s often the first barrier to first-contact resolution</li>
+      </ul>
+    </>
+  );
+}
+
+function Article8_FR() {
+  return (
+    <>
+      <h2 id="probleme">Le coût réel d&apos;un appel manqué</h2>
+      <p>
+        Un appel manqué en dehors des horaires d&apos;ouverture, c&apos;est souvent un client perdu au profit d&apos;un concurrent joignable. Happi Secretary répond à ce problème : un secrétariat IA vocal disponible 24h/24, capable de tenir une vraie conversation, pas juste un répondeur qui prend un message.
+      </p>
+
+      <h2 id="stack">Une stack pensée pour la latence</h2>
+      <p>
+        En téléphonie IA, la latence est ce qui trahit un bot. Notre stack combine <strong>Vapi.ai</strong> pour l&apos;infrastructure d&apos;appel (moins de 500 ms de latence), <strong>Deepgram</strong> pour la reconnaissance vocale et <strong>ElevenLabs</strong> pour une voix de synthèse naturelle. En dessous de cette barre des 500 ms, la conversation reste fluide ; au-delà, l&apos;interlocuteur sent qu&apos;il parle à une machine.
+      </p>
+
+      <h2 id="flow">Le parcours d&apos;un appel, de bout en bout</h2>
+      <p>Concrètement, voici ce qui se passe entre le moment où le téléphone sonne et la fin de l&apos;appel :</p>
+      <ul>
+        <li>L&apos;appelant est accueilli, avec une reconnaissance immédiate s&apos;il s&apos;agit d&apos;un client VIP</li>
+        <li>Claude analyse la demande en temps réel et décide de l&apos;action : prise de rendez-vous, transfert, ou prise de message</li>
+        <li>Pour un rendez-vous, l&apos;assistant vérifie les disponibilités réelles via Cal.com et confirme en direct, pendant l&apos;appel</li>
+        <li>À la fin de l&apos;appel, Claude génère un résumé, détecte le sentiment (positif, neutre, négatif, urgent) et déclenche l&apos;envoi d&apos;un email + SMS de synthèse</li>
+      </ul>
+
+      <h2 id="fonctionnalites">Ce que l&apos;assistant sait faire</h2>
+      <ul>
+        <li>Réponse aux appels entrants 24h/24, 7j/7</li>
+        <li>FAQ alimentée par votre base de connaissance (PDF, URL, texte)</li>
+        <li>Routage intelligent vers la bonne personne avec résumé du contexte</li>
+        <li>Escalade automatique en cas de demande hors périmètre (support niveau 1)</li>
+        <li>Détection de sentiment et priorisation des appels urgents</li>
+        <li>Webhook vers votre CRM (HubSpot, Pipedrive, Zapier, Make)</li>
+        <li>Détection automatique de la langue (FR/EN/ES)</li>
+      </ul>
+
+      <h2 id="claude-choix">Pourquoi Claude pour l&apos;analyse post-appel</h2>
+      <p>
+        On a testé Claude et GPT-4o sur cette tâche spécifique avant de trancher (le détail dans notre <a href="/blog/claude-vs-gpt4o-2026-chatbot-metier">comparatif complet</a>). Pour résumer un appel selon une grille précise — intention, sentiment, issue, action suivante — Claude s&apos;est montré plus régulier d&apos;un appel à l&apos;autre, ce qui compte quand le résumé part directement par email au client.
+      </p>
+
+      <h2 id="essai">Testez-le vous-même</h2>
+      <p>
+        Plutôt qu&apos;une démo scriptée, on a mis en ligne une version simplifiée de ce moteur de conversation, directement testable dans votre navigateur : <a href="/atelier/secretary-agent">essayez l&apos;agent secrétaire en direct</a>. Tapez comme si vous appeliez, et regardez la fiche d&apos;analyse se générer à la fin de l&apos;échange.
+      </p>
+    </>
+  );
+}
+
+function Article8_EN() {
+  return (
+    <>
+      <h2 id="probleme">The real cost of a missed call</h2>
+      <p>
+        A missed call outside business hours is often a customer lost to a reachable competitor. Happi Secretary addresses exactly that: a 24/7 AI voice secretary capable of holding a real conversation, not just an answering machine that takes a message.
+      </p>
+
+      <h2 id="stack">A stack built for latency</h2>
+      <p>
+        In AI telephony, latency is what gives a bot away. Our stack combines <strong>Vapi.ai</strong> for call infrastructure (under 500ms latency), <strong>Deepgram</strong> for speech recognition, and <strong>ElevenLabs</strong> for natural voice synthesis. Below that 500ms threshold, the conversation stays fluid; above it, the caller can feel they&apos;re talking to a machine.
+      </p>
+
+      <h2 id="flow">A call&apos;s journey, end to end</h2>
+      <p>Concretely, here is what happens between the phone ringing and the call ending:</p>
+      <ul>
+        <li>The caller is greeted, with immediate recognition if they&apos;re a VIP client</li>
+        <li>Claude analyses the request in real time and decides the action: booking an appointment, transferring, or taking a message</li>
+        <li>For an appointment, the assistant checks real availability via Cal.com and confirms live, during the call</li>
+        <li>At the end of the call, Claude generates a summary, detects sentiment (positive, neutral, negative, urgent), and triggers an email + SMS summary</li>
+      </ul>
+
+      <h2 id="fonctionnalites">What the assistant can do</h2>
+      <ul>
+        <li>24/7 inbound call answering</li>
+        <li>FAQ powered by your knowledge base (PDF, URL, text)</li>
+        <li>Smart routing to the right person with context summary</li>
+        <li>Automatic escalation for out-of-scope requests (L1 support)</li>
+        <li>Sentiment detection and urgent call prioritisation</li>
+        <li>Webhook to your CRM (HubSpot, Pipedrive, Zapier, Make)</li>
+        <li>Automatic language detection (FR/EN/ES)</li>
+      </ul>
+
+      <h2 id="claude-choix">Why Claude for post-call analysis</h2>
+      <p>
+        We tested Claude and GPT-4o on this specific task before deciding (full detail in our <a href="/en/blog/claude-vs-gpt4o-2026-chatbot-metier">complete comparison</a>). For summarising a call against a precise grid — intent, sentiment, outcome, next action — Claude was more consistent call to call, which matters when the summary goes straight to the client by email.
+      </p>
+
+      <h2 id="essai">Try it yourself</h2>
+      <p>
+        Rather than a scripted demo, we put a simplified version of this conversation engine online, directly testable in your browser: <a href="/en/atelier/secretary-agent">try the live secretary agent</a>. Type as if you were calling, and watch the analysis card generate itself at the end of the exchange.
+      </p>
+    </>
+  );
+}
+
+function Article9_FR() {
+  return (
+    <>
+      <h2 id="pourquoi">Pourquoi commencer par une démo statique</h2>
+      <p>
+        Avant d&apos;écrire une ligne de backend, on livre une démo HTML statique déployée sur Vercel — souvent en moins d&apos;une journée. C&apos;est la façon la plus rapide d&apos;obtenir un accord client avant d&apos;investir dans le vrai développement, et ça évite de construire six semaines sur une hypothèse jamais validée.
+      </p>
+
+      <h2 id="j1j3">J1-J3 — Immersion</h2>
+      <p>
+        On documente les 20 à 30 requêtes les plus fréquentes des clients, le vocabulaire métier spécifique, les cas limites qui nécessitent une escalade humaine, et le ton de voix souhaité. Cette phase seule détermine si le bot final ressemblera à un outil générique ou à quelqu&apos;un qui travaille chez vous depuis des années.
+      </p>
+
+      <h2 id="j4j8">J4-J8 — Développement</h2>
+      <p>
+        Construction du backend (API, base de connaissance, intégrations prévues), entraînement du modèle sur le corpus collecté en phase d&apos;immersion, et premiers tests internes sur les cas d&apos;usage documentés.
+      </p>
+
+      <h2 id="j9j12">J9-J12 — Intégrations</h2>
+      <p>
+        Connexion aux systèmes réels du client : CRM, ERP, calendrier, base produits. C&apos;est la phase où les surprises arrivent habituellement — d&apos;où l&apos;intérêt d&apos;avoir déjà un bot fonctionnel à tester plutôt que de découvrir les problèmes d&apos;intégration en même temps que le développement du cœur du bot.
+      </p>
+
+      <h2 id="j13j14">J13-J14 — Mise en production</h2>
+      <p>
+        Déploiement final, monitoring en place, et documentation transmise à l&apos;équipe cliente. Le bot est en production avec un plan de suivi, pas juste &quot;lâché dans la nature&quot;.
+      </p>
+
+      <h2 id="secteurs">17+ projets, 11 secteurs, une méthode qui tient</h2>
+      <p>
+        Cette méthode n&apos;est pas théorique — elle a été appliquée sur plus de 17 projets dans 11 secteurs différents : meuble et décoration, hôtellerie, agroalimentaire, BTP, industrie, transport et logistique, notariat, finance, sport, e-commerce, et identité numérique (KYC). Le cœur du processus reste identique ; ce qui change, c&apos;est le vocabulaire et les intégrations spécifiques à chaque métier.
+      </p>
+      <p>
+        <strong>Envie de voir à quoi ressemblerait votre démo ?</strong> On peut en construire une en moins d&apos;une journée, sans engagement.
+      </p>
+    </>
+  );
+}
+
+function Article9_EN() {
+  return (
+    <>
+      <h2 id="pourquoi">Why start with a static demo</h2>
+      <p>
+        Before writing a single line of backend code, we ship a static HTML demo deployed on Vercel — often in under a day. It&apos;s the fastest way to get client buy-in before investing in real development, and it avoids building for six weeks on an assumption that was never validated.
+      </p>
+
+      <h2 id="j1j3">D1-D3 — Discovery</h2>
+      <p>
+        We document the customer&apos;s 20 to 30 most frequent requests, business-specific vocabulary, edge cases that require human escalation, and the desired tone of voice. This phase alone determines whether the final bot feels generic or like someone who&apos;s worked at your company for years.
+      </p>
+
+      <h2 id="j4j8">D4-D8 — Development</h2>
+      <p>
+        Building the backend (API, knowledge base, planned integrations), training the model on the corpus collected during discovery, and initial internal tests against the documented use cases.
+      </p>
+
+      <h2 id="j9j12">D9-D12 — Integrations</h2>
+      <p>
+        Connecting to the client&apos;s real systems: CRM, ERP, calendar, product catalogue. This is usually where surprises show up — which is exactly why it helps to already have a working bot to test against, rather than discovering integration issues at the same time as building the bot&apos;s core.
+      </p>
+
+      <h2 id="j13j14">D13-D14 — Production</h2>
+      <p>
+        Final deployment, monitoring in place, documentation handed to the client team. The bot goes live with a follow-up plan, not just &quot;released into the wild&quot;.
+      </p>
+
+      <h2 id="secteurs">17+ projects, 11 sectors, one method that holds up</h2>
+      <p>
+        This method isn&apos;t theoretical — it&apos;s been applied across more than 17 projects in 11 different sectors: furniture and decor, hospitality, food and agribusiness, construction, manufacturing, transport and logistics, notarial law, finance, sport, e-commerce, and digital identity (KYC). The core process stays the same; what changes is the vocabulary and integrations specific to each business.
+      </p>
+    </>
+  );
+}
+
 // ─── Priority 1 articles ─────────────────────────────────────────────────────
 
 function ArticleP1_FR() {
@@ -1179,6 +1458,58 @@ const tocData: Record<string, Record<string, { id: string; label: string }[]>> =
       { id: 'notre-choix', label: "Our choice at H'appi" },
     ],
   },
+  'mobilier-de-france-65-pct-sav-retour-experience': {
+    fr: [
+      { id: 'contexte', label: 'Le problème : un SAV débordé' },
+      { id: 'solution', label: 'Ce qu\'on a construit' },
+      { id: 'priorite', label: 'Le système de priorité' },
+      { id: 'chiffres', label: 'Les chiffres du déploiement' },
+      { id: 'lecons', label: 'Ce qu\'on retient' },
+    ],
+    en: [
+      { id: 'contexte', label: 'The problem: after-sales overwhelmed' },
+      { id: 'solution', label: 'What we built' },
+      { id: 'priorite', label: 'The priority system' },
+      { id: 'chiffres', label: 'Deployment numbers' },
+      { id: 'lecons', label: 'What we took away' },
+    ],
+  },
+  'happi-secretary-secretariat-vocal-ia-vapi-elevenlabs': {
+    fr: [
+      { id: 'probleme', label: 'Le coût réel d\'un appel manqué' },
+      { id: 'stack', label: 'Une stack pensée pour la latence' },
+      { id: 'flow', label: 'Le parcours d\'un appel' },
+      { id: 'fonctionnalites', label: 'Ce que l\'assistant sait faire' },
+      { id: 'claude-choix', label: 'Pourquoi Claude pour l\'analyse post-appel' },
+      { id: 'essai', label: 'Testez-le vous-même' },
+    ],
+    en: [
+      { id: 'probleme', label: 'The real cost of a missed call' },
+      { id: 'stack', label: 'A stack built for latency' },
+      { id: 'flow', label: 'A call\'s journey' },
+      { id: 'fonctionnalites', label: 'What the assistant can do' },
+      { id: 'claude-choix', label: 'Why Claude for post-call analysis' },
+      { id: 'essai', label: 'Try it yourself' },
+    ],
+  },
+  'demo-html-bot-production-14-jours': {
+    fr: [
+      { id: 'pourquoi', label: 'Pourquoi commencer par une démo statique' },
+      { id: 'j1j3', label: 'J1-J3 — Immersion' },
+      { id: 'j4j8', label: 'J4-J8 — Développement' },
+      { id: 'j9j12', label: 'J9-J12 — Intégrations' },
+      { id: 'j13j14', label: 'J13-J14 — Mise en production' },
+      { id: 'secteurs', label: '17+ projets, 11 secteurs' },
+    ],
+    en: [
+      { id: 'pourquoi', label: 'Why start with a static demo' },
+      { id: 'j1j3', label: 'D1-D3 — Discovery' },
+      { id: 'j4j8', label: 'D4-D8 — Development' },
+      { id: 'j9j12', label: 'D9-D12 — Integrations' },
+      { id: 'j13j14', label: 'D13-D14 — Production' },
+      { id: 'secteurs', label: '17+ projects, 11 sectors' },
+    ],
+  },
 };
 
 const sourcesData: Record<string, { name: string; url: string; detail: string }[]> = {
@@ -1229,6 +1560,11 @@ const sourcesData: Record<string, { name: string; url: string; detail: string }[
     { name: 'Anthropic — Pricing', url: 'https://www.anthropic.com/pricing', detail: 'Tarifs officiels Claude Sonnet : 3 $/1M tokens en entrée, 15 $/1M en sortie' },
     { name: 'OpenAI — API Pricing', url: 'https://openai.com/api/pricing', detail: 'Tarifs officiels GPT-4o : 2,50 $/1M tokens en entrée, 10 $/1M en sortie' },
   ],
+  'happi-secretary-secretariat-vocal-ia-vapi-elevenlabs': [
+    { name: 'Vapi.ai — Voice AI Infrastructure', url: 'https://vapi.ai', detail: 'Infrastructure de téléphonie IA, latence sub-500ms' },
+    { name: 'ElevenLabs — Text to Speech', url: 'https://elevenlabs.io', detail: 'Synthèse vocale naturelle utilisée pour la voix de l\'assistant' },
+    { name: 'Deepgram — Speech Recognition', url: 'https://deepgram.com', detail: 'Reconnaissance vocale temps réel' },
+  ],
 };
 
 const contentMap: Record<string, Record<string, React.ReactNode>> = {
@@ -1241,6 +1577,9 @@ const contentMap: Record<string, Record<string, React.ReactNode>> = {
   'rgpd-ai-act-2026-chatbot-conforme': { fr: <Article4_FR />, en: <Article4_EN /> },
   'qualification-leads-3-phases-conversion': { fr: <Article5_FR />, en: <Article5_EN /> },
   'claude-vs-gpt4o-2026-chatbot-metier': { fr: <Article6_FR />, en: <Article6_EN /> },
+  'mobilier-de-france-65-pct-sav-retour-experience': { fr: <Article7_FR />, en: <Article7_EN /> },
+  'happi-secretary-secretariat-vocal-ia-vapi-elevenlabs': { fr: <Article8_FR />, en: <Article8_EN /> },
+  'demo-html-bot-production-14-jours': { fr: <Article9_FR />, en: <Article9_EN /> },
 };
 
 // ─── Page ────────────────────────────────────────────────────────────────────
