@@ -7,6 +7,8 @@ import LogoWall from '@/components/ui/LogoWall';
 import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import AtelierStats from '@/components/atelier/AtelierStats';
 import { FadeInUp } from '@/components/ui/Animate';
+import { Link } from '@/i18n/navigation';
+import { Sparkles, ArrowRight } from 'lucide-react';
 
 const TOTAL_STEPS = 134; // 14+28+26+30+36
 
@@ -60,6 +62,36 @@ export default async function AtelierPage({
               { end: 5,            suffix: '',  label: fr ? 'Secteurs inédits' : 'Untapped sectors' },
               { end: 100,          suffix: '%', label: fr ? 'Sur mesure'       : 'Bespoke'          },
             ]} />
+          </div>
+        </section>
+
+        {/* ── Design Studio callout ── */}
+        <section className="px-4 sm:px-6 lg:px-8 pb-14">
+          <div className="max-w-4xl mx-auto">
+            <FadeInUp>
+              <Link
+                href="/atelier/design-studio"
+                className="group glass-card rounded-2xl p-6 border border-happi-border hover:border-happi-blue/40 transition-colors flex items-center gap-5 flex-col sm:flex-row text-center sm:text-left"
+              >
+                <div className="w-12 h-12 rounded-xl bg-happi-blue/10 flex items-center justify-center text-happi-blue flex-shrink-0">
+                  <Sparkles size={20} />
+                </div>
+                <div className="flex-1">
+                  <div className="text-sm font-bold text-white mb-1">
+                    {fr ? 'Nouveau : notre moteur multi-agents, en direct' : 'New: our multi-agent engine, live'}
+                  </div>
+                  <div className="text-xs text-happi-muted leading-relaxed">
+                    {fr
+                      ? "4 agents IA spécialisés tournent en parallèle et classent 9 designs par consensus — testez-le sur votre propre brief."
+                      : "4 specialized AI agents run in parallel and rank 9 designs by consensus — try it on your own brief."}
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 text-happi-blue text-xs font-semibold flex-shrink-0">
+                  {fr ? 'Essayer' : 'Try it'}
+                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+            </FadeInUp>
           </div>
         </section>
 
