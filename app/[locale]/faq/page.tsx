@@ -3,6 +3,9 @@ import Header from '@/components/Header';
 import FAQ from '@/components/FAQ';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import { JsonLd } from '@/components/ui/JsonLd';
+
+const FAQ_COUNT = 12;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -15,9 +18,24 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function FAQPage() {
   const t = await getTranslations('pageFaq');
+  const tFaq = await getTranslations('faq');
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: Array.from({ length: FAQ_COUNT }).map((_, i) => ({
+      '@type': 'Question',
+      name: tFaq(`items.${i}.question`),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: tFaq(`items.${i}.answer`),
+      },
+    })),
+  };
 
   return (
     <>
+      <JsonLd data={faqSchema} />
       <Header />
       <main>
         <FAQ />

@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -9,6 +10,15 @@ import AtelierStats from '@/components/atelier/AtelierStats';
 import { FadeInUp } from '@/components/ui/Animate';
 import { Link } from '@/i18n/navigation';
 import { Sparkles, ArrowRight, Phone } from 'lucide-react';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('atelier.title'),
+    description: t('atelier.description'),
+  };
+}
 
 const TOTAL_STEPS = 134; // 14+28+26+30+36
 

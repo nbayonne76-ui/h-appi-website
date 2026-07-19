@@ -20,9 +20,9 @@ export default function FAQ() {
           <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">
             {t('badge')}
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
             {t('title')}
-          </h2>
+          </h1>
           <p className="text-lg text-happi-muted">
             {t('subtitle')}
           </p>

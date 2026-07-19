@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CTASection from '@/components/CTASection';
@@ -7,11 +7,14 @@ import { FadeInUp } from '@/components/ui/Animate';
 import DesignStudio from '@/components/atelier/DesignStudio';
 import { Palette, LayoutGrid, Type, Boxes } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Design Studio — Multi-Agent Engine | HappiBot',
-  description:
-    '4 specialized AI agents running in parallel — color, layout, typography, components — generating and ranking real design systems live.',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('designStudio.title'),
+    description: t('designStudio.description'),
+  };
+}
 
 const PILLARS = [
   { icon: Palette, fr: 'Agent Couleur', en: 'Color Agent', descFr: 'Palettes par secteur + psychologie des couleurs', descEn: 'Industry palettes + color psychology' },

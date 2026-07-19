@@ -5,7 +5,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const lang = locale === 'en' ? 'en' : 'fr';
   return {
-    title: lang === 'fr' ? 'CGV | Conditions Générales de Vente | H\'appi' : 'Terms of Service | H\'appi',
+    title: lang === 'fr' ? 'CGV | Conditions Générales de Vente' : 'Terms of Service',
     description: lang === 'fr'
       ? 'Conditions générales de vente H\'appi : services, tarification, paiement, propriété intellectuelle, garanties.'
       : 'H\'appi terms of service: services, pricing, payment, intellectual property, warranties.',

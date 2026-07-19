@@ -5,7 +5,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const lang = locale === 'en' ? 'en' : 'fr';
   return {
-    title: lang === 'fr' ? 'Politique de confidentialité — H\'appi' : 'Privacy Policy — H\'appi',
+    title: lang === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy',
     description: lang === 'fr'
       ? 'Politique de confidentialité H\'appi : données collectées, finalités, durées de conservation, droits RGPD.'
       : 'H\'appi privacy policy: data collected, purposes, retention periods, GDPR rights.',

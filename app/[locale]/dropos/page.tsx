@@ -1,7 +1,17 @@
+import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Flame, Lock, MessageSquare, Check } from 'lucide-react';
 import WaitlistForm from '@/components/dropos/WaitlistForm';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('dropos.title'),
+    description: t('dropos.description'),
+  };
+}
 
 // ── Spot counter ───────────────────────────────────────────────────────────────
 

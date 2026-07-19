@@ -1201,20 +1201,48 @@
       "description": "Discover H'appi's vision: democratize custom digital solutions, revolutionize IT market prices and transform your applications into business intelligence platforms."
     },
     "vision": {
-      "title": "Vision & Mission - H'appi",
+      "title": "Vision & Mission",
       "description": "Discover H'appi's vision: democratize custom digital solutions and transform your applications into business intelligence platforms."
     },
     "valeurs": {
-      "title": "Our Values - H'appi",
+      "title": "Our Values",
       "description": "8 core values that guide H'appi: radical customization, fair pricing, transparency, agility, long-term partnership and uncompromising security."
     },
     "strategie": {
-      "title": "Strategy & Pricing - H'appi",
+      "title": "Strategy & Pricing",
       "description": "How H'appi offers solutions 50 to 70% cheaper than the market through next-generation cloud infrastructure and its smart upsell model."
     },
     "rejoindre": {
       "title": "Join H'appi - Companies, Talents and Partners",
       "description": "Company looking for a tech partner, developer or designer talent, potential partner: discover how to join the H'appi adventure."
+    },
+    "atelier": {
+      "title": "Atelier Studio - Pioneer bots by sector",
+      "description": "Try our pioneer AI bots live: architecture, notarial law, debt recovery, accounting, KYC. Every bot adapts to your sector in 3 to 4 weeks."
+    },
+    "secretary": {
+      "title": "24/7 AI Voice Secretary",
+      "description": "An AI secretary that answers calls, books appointments, and transcribes messages 24/7. Zero missed calls, zero scheduling conflicts."
+    },
+    "crm": {
+      "title": "Custom AI-Powered CRM",
+      "description": "16 modular CRM modules: contacts, deals, tickets, email campaigns, analytics, and AI automations. A CRM that adapts to your business, not the other way around."
+    },
+    "dropos": {
+      "title": "DropOS - The OS for dropshipping",
+      "description": "Real-time Shopify sync, live analytics, multi-store control. Join the first 100 founding members and get 1 year free."
+    },
+    "blog": {
+      "title": "H'appi Blog - AI, chatbots and tech news",
+      "description": "Guides, trends, and news on AI chatbots, automation, and GDPR compliance, with a live tech feed updated every hour."
+    },
+    "designStudio": {
+      "title": "Design Studio - Live multi-agent engine",
+      "description": "4 specialized AI agents run in parallel and rank 9 designs by consensus. Try the real multi-agent orchestration engine on your own brief."
+    },
+    "secretaryAgent": {
+      "title": "AI Secretary Agent - Live Demo",
+      "description": "Chat with our AI secretary agent: real-time intent detection, appointment booking with conversation memory, auto-generated call analysis card."
     }
   },
   "aboutSubNav": {
@@ -1488,7 +1516,7 @@
     "subtitle": "Whether you're a company, a tech talent or a potential partner, there's a place for you in the H'appi story."
   },
   "securitePage": {
-    "metaTitle": "Hosting & Security | H'appi",
+    "metaTitle": "Hosting & Security",
     "metaDescription": "Discover how H'appi protects your data: 100% European hosting (Scaleway, Hetzner), full GDPR compliance, ISO 27001 and HDS certifications, end-to-end encryption.",
     "badge": "Security & GDPR Compliance",
     "title": "Your data, <highlight>protected in Europe</highlight>",

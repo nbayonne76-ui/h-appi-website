@@ -1,9 +1,19 @@
+import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { Check, Phone, Calendar, MessageSquare, Mic, Clock, Zap, X } from 'lucide-react';
 import SecretaryCTA from '@/components/secretary/SecretaryCTA';
 import LogoWall from '@/components/ui/LogoWall';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('secretary.title'),
+    description: t('secretary.description'),
+  };
+}
 
 // ── Data ────────────────────────────────────────────────────────────────────
 

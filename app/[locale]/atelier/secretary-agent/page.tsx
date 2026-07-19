@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CTASection from '@/components/CTASection';
@@ -7,11 +7,14 @@ import { FadeInUp } from '@/components/ui/Animate';
 import SecretaryAgent from '@/components/atelier/SecretaryAgent';
 import { Phone, Brain, FileCheck } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Agent Secrétaire IA — Live Demo | HappiBot',
-  description:
-    'Talk to our AI secretary agent live — real-time intent detection, appointment booking, and an auto-generated call analysis card, exactly like the real product.',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('secretaryAgent.title'),
+    description: t('secretaryAgent.description'),
+  };
+}
 
 const PILLARS = [
   { icon: Phone, fr: 'Compréhension en direct', en: 'Live understanding', descFr: 'Détection d\'intention à chaque message, en FR ou EN', descEn: 'Intent detection on every message, FR or EN' },

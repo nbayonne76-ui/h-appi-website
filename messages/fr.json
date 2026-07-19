@@ -1201,20 +1201,48 @@
       "description": "Découvrez la vision de H'appi : démocratiser le digital sur-mesure, révolutionner les prix du marché IT et transformer vos applications en plateformes d'intelligence métier."
     },
     "vision": {
-      "title": "Vision & Mission - H'appi",
+      "title": "Vision & Mission",
       "description": "Découvrez la vision de H'appi : démocratiser le digital sur-mesure et transformer vos applications en plateformes d'intelligence métier."
     },
     "valeurs": {
-      "title": "Nos Valeurs - H'appi",
+      "title": "Nos Valeurs",
       "description": "8 valeurs fondamentales qui guident H'appi : sur-mesure radical, prix justes, transparence, agilité, partenariat long terme et sécurité sans compromis."
     },
     "strategie": {
-      "title": "Stratégie & Prix - H'appi",
+      "title": "Stratégie & Prix",
       "description": "Comment H'appi offre des solutions 50 à 70% moins chères que le marché grâce aux infrastructures cloud nouvelle génération et à son modèle d'upsell intelligent."
     },
     "rejoindre": {
       "title": "Rejoindre H'appi - Entreprises, Talents et Partenaires",
       "description": "Entreprise cherchant un partenaire tech, talent développeur ou designer, partenaire potentiel : découvrez comment rejoindre l'aventure H'appi."
+    },
+    "atelier": {
+      "title": "Atelier Studio - Bots pionniers par secteur",
+      "description": "Testez en direct nos bots IA pionniers : architecture, notariat, recouvrement, expertise comptable, KYC. Chaque bot est adaptable à votre secteur en 3 à 4 semaines."
+    },
+    "secretary": {
+      "title": "Secrétaire IA vocal 24h/24",
+      "description": "Un secrétaire IA qui répond aux appels, prend les rendez-vous et transcrit les messages 24h/24, 7j/7. Zéro appel manqué, zéro conflit d'agenda."
+    },
+    "crm": {
+      "title": "CRM sur-mesure propulsé par l'IA",
+      "description": "16 modules CRM modulables : contacts, deals, tickets, campagnes email, analytics et automatisations IA. Un CRM qui s'adapte à votre métier, pas l'inverse."
+    },
+    "dropos": {
+      "title": "DropOS - L'OS pour le dropshipping",
+      "description": "Synchronisation Shopify en temps réel, analytics live, contrôle multi-boutiques. Rejoignez les 100 premiers membres fondateurs et obtenez 1 an gratuit."
+    },
+    "blog": {
+      "title": "Blog H'appi - IA, chatbots et actualités tech",
+      "description": "Guides, tendances et actualités sur les chatbots IA, l'automatisation et la conformité RGPD, avec une veille tech en direct actualisée toutes les heures."
+    },
+    "designStudio": {
+      "title": "Design Studio - Moteur multi-agents en direct",
+      "description": "4 agents IA spécialisés tournent en parallèle et classent 9 designs par consensus. Testez le vrai moteur d'orchestration multi-agents sur votre propre brief."
+    },
+    "secretaryAgent": {
+      "title": "Agent Secrétaire IA - Démo en direct",
+      "description": "Discutez avec notre agent secrétaire IA : détection d'intention en temps réel, réservation de rendez-vous avec mémoire de conversation, fiche d'analyse d'appel automatique."
     }
   },
   "aboutSubNav": {
@@ -1488,7 +1516,7 @@
     "subtitle": "Que vous soyez une entreprise, un talent tech ou un partenaire potentiel, il y a une place pour vous dans l'histoire H'appi."
   },
   "securitePage": {
-    "metaTitle": "Hébergement & Sécurité | H'appi",
+    "metaTitle": "Hébergement & Sécurité",
     "metaDescription": "Découvrez comment H'appi protège vos données : hébergement 100% européen (Scaleway, Hetzner), conformité RGPD totale, certifications ISO 27001, HDS, chiffrement bout-en-bout.",
     "badge": "Sécurité & Conformité RGPD",
     "title": "Vos données, <highlight>protégées en Europe</highlight>",
