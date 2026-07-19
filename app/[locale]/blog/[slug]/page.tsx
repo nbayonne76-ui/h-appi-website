@@ -42,6 +42,8 @@ const slugs = [
   'application-sur-mesure-vs-standardisee',
   'ia-generative-2026-tendances',
   'rgpd-ai-act-2026-chatbot-conforme',
+  'qualification-leads-3-phases-conversion',
+  'claude-vs-gpt4o-2026-chatbot-metier',
 ];
 
 export async function generateStaticParams() {
@@ -459,6 +461,188 @@ function Article4_EN() {
         <li>☑ No data transfer outside EU without appropriate guarantees</li>
         <li>☑ DPA signed with your chatbot provider</li>
       </ul>
+    </>
+  );
+}
+
+// ─── Priority 2 articles (SEO: real search-demand topics) ────────────────────
+
+function Article5_FR() {
+  return (
+    <>
+      <h2 id="probleme">Le problème des chatbots qui posent les mauvaises questions</h2>
+      <p>
+        La plupart des chatbots suivent un script rigide : les mêmes questions, dans le même ordre, pour tout le monde. Un acheteur prêt à signer et un simple curieux reçoivent exactement le même parcours. Résultat : le premier s&apos;impatiente, le second abandonne, et le taux de conversion stagne.
+      </p>
+      <p>
+        Une qualification structurée change la donne. Selon Téléaction, une méthode de qualification bien construite peut faire passer un taux de conversion de <strong>8 % à 31 %</strong> sur un pipeline B2B.
+      </p>
+
+      <h2 id="trois-phases">Le système en 3 phases : Identification → Qualification → Conversion</h2>
+      <p>
+        C&apos;est le pattern que nous intégrons dans chaque bot H&apos;appi. Il est né du projet INnatural (cosmétiques naturels) : notre client avait un chatbot qui posait des questions produit avant même de savoir si son interlocuteur cherchait à acheter, revendre, ou simplement se renseigner.
+      </p>
+
+      <h2 id="phase1">Phase 1 — Identification : qui avez-vous en face de vous ?</h2>
+      <p>Avant de qualifier quoi que ce soit, le bot détermine en 1 à 2 échanges :</p>
+      <ul>
+        <li>Le profil du visiteur (particulier, professionnel, revendeur, partenaire potentiel)</li>
+        <li>L&apos;intention générale (achat, support, information, recrutement)</li>
+        <li>Le niveau d&apos;urgence perçu dans le message</li>
+      </ul>
+      <p>
+        Cette première passe évite l&apos;erreur classique : poser des questions de qualification commerciale à quelqu&apos;un qui voulait juste connaître les horaires d&apos;ouverture.
+      </p>
+
+      <h2 id="phase2">Phase 2 — Qualification : la bonne question, au bon moment</h2>
+      <p>
+        La méthode de référence en B2B reste <strong>BANT</strong> (Budget, Authority, Need, Timeline). C&apos;est solide, mais littéralement appliquée dans un chat, elle sonne comme un interrogatoire — quatre questions fermées d&apos;affilée font fuir plus qu&apos;elles ne convertissent.
+      </p>
+      <p>
+        Notre approche : qualifier progressivement, en s&apos;appuyant sur les réponses précédentes plutôt que sur un formulaire figé. Si le visiteur mentionne déjà un budget ou un délai dans sa première phrase, le bot ne repose pas la question — il avance directement à l&apos;étape suivante.
+      </p>
+
+      <h2 id="phase3">Phase 3 — Conversion : proposer l&apos;action qui a du sens</h2>
+      <p>
+        Un lead chaud et un lead froid ne devraient jamais recevoir le même bouton. Selon le niveau de qualification atteint, le bot propose :
+      </p>
+      <ul>
+        <li><strong>Lead chaud, budget et délai clairs</strong> : prise de rendez-vous directe avec un commercial</li>
+        <li><strong>Lead tiède, besoin identifié mais flou sur le calendrier</strong> : envoi de documentation ciblée + collecte email pour relance</li>
+        <li><strong>Simple curieux</strong> : réponse à sa question, sans forcer la conversion</li>
+      </ul>
+
+      <h2 id="lecons">Ce qu&apos;on a appris avec INnatural</h2>
+      <p>
+        Après le déploiement de ce système en 3 phases sur le widget INnatural, le taux de conversion des visites en leads qualifiés a progressé de 34 %. Le changement le plus impactant n&apos;était pas une question précise, mais l&apos;ordre : identifier avant de qualifier, qualifier avant de convertir.
+      </p>
+      <p>
+        Ce pattern est aujourd&apos;hui le squelette par défaut de tous les bots H&apos;appi, adapté au vocabulaire et aux critères de qualification propres à chaque secteur. <strong>Discutons de comment l&apos;adapter à votre activité.</strong>
+      </p>
+    </>
+  );
+}
+
+function Article5_EN() {
+  return (
+    <>
+      <h2 id="probleme">The problem with chatbots that ask the wrong questions</h2>
+      <p>
+        Most chatbots follow a rigid script: the same questions, in the same order, for everyone. A buyer ready to sign and a casual browser get the exact same journey. Result: the former gets impatient, the latter drops off, and conversion rates stall.
+      </p>
+      <p>
+        Structured qualification changes that. According to Téléaction, a well-built qualification method can take a B2B pipeline&apos;s conversion rate from <strong>8% to 31%</strong>.
+      </p>
+
+      <h2 id="trois-phases">The 3-phase system: Identification → Qualification → Conversion</h2>
+      <p>
+        This is the pattern we build into every H&apos;appi bot. It was born from the INnatural project (natural cosmetics): our client&apos;s chatbot was asking product questions before even knowing whether the visitor wanted to buy, resell, or just browse.
+      </p>
+
+      <h2 id="phase1">Phase 1 — Identification: who are you actually talking to?</h2>
+      <p>Before qualifying anything, the bot determines within 1-2 exchanges:</p>
+      <ul>
+        <li>Visitor profile (individual, business, reseller, potential partner)</li>
+        <li>General intent (purchase, support, information, recruitment)</li>
+        <li>Perceived urgency in the message</li>
+      </ul>
+      <p>
+        This first pass avoids the classic mistake: asking sales-qualification questions to someone who just wanted to know the opening hours.
+      </p>
+
+      <h2 id="phase2">Phase 2 — Qualification: the right question, at the right time</h2>
+      <p>
+        The B2B reference method is still <strong>BANT</strong> (Budget, Authority, Need, Timeline). It&apos;s solid, but applied literally in a chat, it feels like an interrogation — four closed questions in a row drives people away more than it converts them.
+      </p>
+      <p>
+        Our approach: qualify progressively, building on previous answers rather than a fixed form. If the visitor already mentions a budget or timeline in their first message, the bot doesn&apos;t ask again — it moves straight to the next step.
+      </p>
+
+      <h2 id="phase3">Phase 3 — Conversion: offer the action that actually makes sense</h2>
+      <p>
+        A hot lead and a cold lead should never get the same button. Depending on the qualification level reached, the bot offers:
+      </p>
+      <ul>
+        <li><strong>Hot lead, clear budget and timeline</strong>: direct meeting booking with a sales rep</li>
+        <li><strong>Warm lead, identified need but unclear timeline</strong>: targeted documentation + email capture for follow-up</li>
+        <li><strong>Casual browser</strong>: answer their question, without forcing conversion</li>
+      </ul>
+
+      <h2 id="lecons">What we learned with INnatural</h2>
+      <p>
+        After deploying this 3-phase system on the INnatural widget, the visit-to-qualified-lead conversion rate improved by 34%. The most impactful change wasn&apos;t a specific question — it was the order: identify before qualifying, qualify before converting.
+      </p>
+      <p>
+        This pattern is now the default skeleton of every H&apos;appi bot, adapted to the vocabulary and qualification criteria specific to each industry.
+      </p>
+    </>
+  );
+}
+
+function Article6_FR() {
+  return (
+    <>
+      <h2 id="parite">Deux modèles à égalité, mais pas sur les mêmes usages</h2>
+      <p>
+        En 2026, Claude (Anthropic) et GPT-4o (OpenAI) sont globalement à égalité de performance brute. La vraie question n&apos;est pas &quot;lequel est le meilleur&quot;, mais &quot;lequel est le meilleur pour un chatbot métier&quot; — et là, les deux modèles prennent des chemins différents.
+      </p>
+
+      <h2 id="raisonnement">Compréhension métier et raisonnement complexe</h2>
+      <p>
+        Pour des tâches qui demandent de tenir plusieurs contraintes en tête simultanément — trier des tickets SAV par priorité, résumer un document technique, analyser une conversation selon une grille précise — Claude montre une précision et une régularité supérieures. Sa fenêtre de contexte longue (jusqu&apos;à 200K tokens) &quot;oublie&quot; moins en milieu de tâche que GPT-4o, un avantage réel pour l&apos;analyse post-appel ou le traitement de documents longs.
+      </p>
+
+      <h2 id="ecosysteme">Écosystème et intégrations</h2>
+      <p>
+        GPT-4o a l&apos;avantage sur le nombre de connecteurs tiers prêts à l&apos;emploi (Zapier, Salesforce, GPTs personnalisés) et sur le multimodal natif — texte, image, audio et vidéo dans une seule interface. Si votre bot doit se brancher sur une dizaine d&apos;outils existants sans développement sur-mesure, cet écosystème pèse dans la balance.
+      </p>
+
+      <h2 id="prix">Le prix : un calcul qui dépasse le coût par token</h2>
+      <p>
+        Sur le papier, GPT-4o est moins cher : environ 2,50 $ par million de tokens en entrée et 10 $ en sortie, contre 3 $ et 15 $ pour Claude Sonnet. Mais le coût réel d&apos;un chatbot métier ne se limite pas au prix du token — un modèle qui comprend mieux le contexte du premier coup demande moins de relances, moins de correctifs de prompt, et moins d&apos;escalades vers un humain.
+      </p>
+
+      <h2 id="notre-choix">Notre choix chez H&apos;appi</h2>
+      <p>
+        Nous n&apos;imposons pas un modèle unique à tous nos clients. Pour l&apos;analyse post-appel de Happi Secretary par exemple, nous avons choisi Claude après avoir testé les deux : la régularité du résumé et la détection de sentiment étaient nettement plus fiables dans nos tests internes. Pour d&apos;autres bots avec de fortes contraintes d&apos;intégration, GPT-4o reste le choix pragmatique.
+      </p>
+      <p>
+        Notre position honnête : le bon modèle dépend de votre cas d&apos;usage, pas d&apos;une préférence de principe. <strong>Discutons de votre projet</strong> — on vous dira franchement lequel convient le mieux, même si ce n&apos;est pas celui qu&apos;on préfère utiliser en interne.
+      </p>
+    </>
+  );
+}
+
+function Article6_EN() {
+  return (
+    <>
+      <h2 id="parite">Two models at parity, but not for the same use cases</h2>
+      <p>
+        In 2026, Claude (Anthropic) and GPT-4o (OpenAI) are broadly at parity on raw performance. The real question isn&apos;t &quot;which is better&quot;, but &quot;which is better for a business chatbot&quot; — and there, the two models take different paths.
+      </p>
+
+      <h2 id="raisonnement">Business understanding and complex reasoning</h2>
+      <p>
+        For tasks that require holding several constraints in mind at once — triaging support tickets by priority, summarising a technical document, analysing a conversation against a precise scoring grid — Claude shows stronger precision and consistency. Its long context window (up to 200K tokens) &quot;forgets&quot; less mid-task than GPT-4o, a real advantage for post-call analysis or long document processing.
+      </p>
+
+      <h2 id="ecosysteme">Ecosystem and integrations</h2>
+      <p>
+        GPT-4o has the edge on ready-to-use third-party connectors (Zapier, Salesforce, custom GPTs) and native multimodality — text, image, audio and video in one interface. If your bot needs to plug into a dozen existing tools without custom development, this ecosystem matters.
+      </p>
+
+      <h2 id="prix">Pricing: a calculation that goes beyond cost per token</h2>
+      <p>
+        On paper, GPT-4o is cheaper: roughly $2.50 per million input tokens and $10 output, versus $3 and $15 for Claude Sonnet. But the real cost of a business chatbot isn&apos;t just the token price — a model that understands context correctly the first time needs fewer retries, fewer prompt patches, and fewer escalations to a human.
+      </p>
+
+      <h2 id="notre-choix">Our choice at H&apos;appi</h2>
+      <p>
+        We don&apos;t force a single model on every client. For Happi Secretary&apos;s post-call analysis, for instance, we chose Claude after testing both — summary consistency and sentiment detection were noticeably more reliable in our internal tests. For other bots with heavy integration requirements, GPT-4o remains the pragmatic choice.
+      </p>
+      <p>
+        Our honest position: the right model depends on your use case, not a default preference. <strong>Let&apos;s talk about your project</strong> — we&apos;ll tell you frankly which one fits best, even when it isn&apos;t the one we prefer to use internally.
+      </p>
     </>
   );
 }
@@ -961,6 +1145,40 @@ const tocData: Record<string, Record<string, { id: string; label: string }[]>> =
       { id: 'checklist', label: 'Practical checklist' },
     ],
   },
+  'qualification-leads-3-phases-conversion': {
+    fr: [
+      { id: 'probleme', label: 'Le problème des chatbots qui posent les mauvaises questions' },
+      { id: 'trois-phases', label: 'Le système en 3 phases' },
+      { id: 'phase1', label: 'Phase 1 — Identification' },
+      { id: 'phase2', label: 'Phase 2 — Qualification' },
+      { id: 'phase3', label: 'Phase 3 — Conversion' },
+      { id: 'lecons', label: "Ce qu'on a appris avec INnatural" },
+    ],
+    en: [
+      { id: 'probleme', label: 'The problem with chatbots that ask the wrong questions' },
+      { id: 'trois-phases', label: 'The 3-phase system' },
+      { id: 'phase1', label: 'Phase 1 — Identification' },
+      { id: 'phase2', label: 'Phase 2 — Qualification' },
+      { id: 'phase3', label: 'Phase 3 — Conversion' },
+      { id: 'lecons', label: 'What we learned with INnatural' },
+    ],
+  },
+  'claude-vs-gpt4o-2026-chatbot-metier': {
+    fr: [
+      { id: 'parite', label: 'Deux modèles à égalité, mais pas sur les mêmes usages' },
+      { id: 'raisonnement', label: 'Compréhension métier et raisonnement complexe' },
+      { id: 'ecosysteme', label: 'Écosystème et intégrations' },
+      { id: 'prix', label: 'Le prix : un calcul qui dépasse le coût par token' },
+      { id: 'notre-choix', label: "Notre choix chez H'appi" },
+    ],
+    en: [
+      { id: 'parite', label: 'Two models at parity, but not for the same use cases' },
+      { id: 'raisonnement', label: 'Business understanding and complex reasoning' },
+      { id: 'ecosysteme', label: 'Ecosystem and integrations' },
+      { id: 'prix', label: 'Pricing: beyond cost per token' },
+      { id: 'notre-choix', label: "Our choice at H'appi" },
+    ],
+  },
 };
 
 const sourcesData: Record<string, { name: string; url: string; detail: string }[]> = {
@@ -1001,6 +1219,16 @@ const sourcesData: Record<string, { name: string; url: string; detail: string }[
     { name: 'EDPB — Guidelines on Chatbots', url: 'https://www.edpb.europa.eu', detail: 'European Data Protection Board guidance on chatbot compliance' },
     { name: 'RGPD — Texte officiel', url: 'https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679', detail: 'Règlement (UE) 2016/679 — RGPD' },
   ],
+  'qualification-leads-3-phases-conversion': [
+    { name: 'Téléaction — Qualification de leads B2B', url: 'https://teleaction.fr/qualification-de-leads/', detail: 'Une méthode structurée peut faire passer le taux de conversion de 8 % à 31 %' },
+    { name: 'Agence Insight — Qualifier ses leads B2B : méthode et critères', url: 'https://agenceinsight.fr/qualifier-leads-methode/', detail: 'La méthode BANT et les critères de qualification B2B' },
+  ],
+  'claude-vs-gpt4o-2026-chatbot-metier': [
+    { name: 'UX Continuum — Claude vs GPT-4o in 2026', url: 'https://uxcontinuum.com/blog/ai-engineering/claude-vs-gpt4o-comparison-2026', detail: 'Comparaison détaillée pour les équipes produit : raisonnement, contexte long, cas d\'usage métier' },
+    { name: 'Layer3 Labs — ChatGPT vs Claude for Business', url: 'https://www.layer3labs.io/comparisons/chatgpt-vs-claude-for-business', detail: 'Verdict par cas d\'usage pour l\'adoption IA en entreprise' },
+    { name: 'Anthropic — Pricing', url: 'https://www.anthropic.com/pricing', detail: 'Tarifs officiels Claude Sonnet : 3 $/1M tokens en entrée, 15 $/1M en sortie' },
+    { name: 'OpenAI — API Pricing', url: 'https://openai.com/api/pricing', detail: 'Tarifs officiels GPT-4o : 2,50 $/1M tokens en entrée, 10 $/1M en sortie' },
+  ],
 };
 
 const contentMap: Record<string, Record<string, React.ReactNode>> = {
@@ -1011,6 +1239,8 @@ const contentMap: Record<string, Record<string, React.ReactNode>> = {
   'application-sur-mesure-vs-standardisee': { fr: <Article2_FR />, en: <Article2_EN /> },
   'ia-generative-2026-tendances': { fr: <Article3_FR />, en: <Article3_EN /> },
   'rgpd-ai-act-2026-chatbot-conforme': { fr: <Article4_FR />, en: <Article4_EN /> },
+  'qualification-leads-3-phases-conversion': { fr: <Article5_FR />, en: <Article5_EN /> },
+  'claude-vs-gpt4o-2026-chatbot-metier': { fr: <Article6_FR />, en: <Article6_EN /> },
 };
 
 // ─── Page ────────────────────────────────────────────────────────────────────
