@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getArticles } from '@/lib/blog-data';
 
 const BASE = 'https://happi-bot.com';
 
@@ -29,7 +30,13 @@ const ROUTES = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  return ROUTES.flatMap(({ path, changeFrequency, priority }) => [
+  const blogRoutes = getArticles('fr').map((article) => ({
+    path: `/blog/${article.slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...ROUTES, ...blogRoutes].flatMap(({ path, changeFrequency, priority }) => [
     // French (default, no prefix)
     {
       url: `${BASE}${path || '/'}`,
