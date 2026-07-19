@@ -1,6 +1,6 @@
 'use client';
 
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -27,13 +27,22 @@ export default function Footer() {
             <p className="text-happi-muted leading-relaxed mb-6 text-sm">
               {t('tagline')}
             </p>
-            <a
-              href="mailto:contact@happi-bot.com"
-              className="inline-flex items-center space-x-2 text-happi-muted hover:text-white transition-colors text-sm"
-            >
-              <MessageCircle size={16} />
-              <span>contact@happi-bot.com</span>
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href="mailto:contact@happi-bot.com"
+                className="inline-flex items-center space-x-2 text-happi-muted hover:text-white transition-colors text-sm"
+              >
+                <MessageCircle size={16} />
+                <span>contact@happi-bot.com</span>
+              </a>
+              <a
+                href="tel:+201061613358"
+                className="inline-flex items-center space-x-2 text-happi-muted hover:text-white transition-colors text-sm"
+              >
+                <Phone size={16} />
+                <span>+20 10 61613358</span>
+              </a>
+            </div>
           </div>
 
           {/* Links Columns */}

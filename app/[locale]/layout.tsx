@@ -109,11 +109,21 @@ export default async function LocaleLayout({
       ? "Startup French-Égyptienne spécialisée dans les chatbots IA sur-mesure pour entreprises."
       : "French-Egyptian startup specialising in custom AI chatbots for businesses.",
     foundingLocation: { '@type': 'Place', name: 'France' },
+    telephone: '+20 10 61613358',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
+      telephone: '+20 10 61613358',
       availableLanguage: ['French', 'English'],
     },
+    // Service-area business — matches the Google Business Profile listing
+    // (no public storefront address, service area only).
+    areaServed: [
+      'Luxembourg', 'Nice, France', 'Lille, France', 'Madrid, Spain',
+      'Paris, France', 'Barcelona, Spain', 'Bordeaux, France', 'Toulouse, France',
+      'Marseille, France', 'London, UK', 'Biarritz, France', 'Amsterdam, Netherlands',
+      'Rome, Italy',
+    ],
     sameAs: ['https://www.linkedin.com/company/happi-foundry'],
   };
 
