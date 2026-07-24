@@ -96,7 +96,8 @@ const modules = [
     color: '#A78BFA' },
 ];
 
-// 6 features IA
+// 4 features IA — 2 removed (Qualification automatique, Conseil d'action)
+// as they duplicated the "Leads qualifiés par IA" / "Assistant IA" modules above.
 const aiFeatures = [
   {
     labelFr: 'Recherche intelligente', labelEn: 'Smart Search',
@@ -109,18 +110,6 @@ const aiFeatures = [
     descFr: 'Copiez-collez un email ou un profil, le CRM remplit toutes les fiches contacts tout seul.',
     descEn: 'Copy-paste an email or profile, the CRM fills in all contact fields automatically.',
     color: '#10B981',
-  },
-  {
-    labelFr: 'Qualification automatique', labelEn: 'Automatic Lead Scoring',
-    descFr: 'Chaque prospect reçoit automatiquement une note selon son potentiel commercial.',
-    descEn: 'Every prospect automatically receives a score based on their commercial potential.',
-    color: '#A78BFA',
-  },
-  {
-    labelFr: 'Conseil d\'action', labelEn: 'Next Step Guidance',
-    descFr: 'Pour chaque affaire en cours, le CRM vous dit exactement quoi faire pour avancer.',
-    descEn: 'For every open deal, the CRM tells you exactly what to do next to move forward.',
-    color: '#F59E0B',
   },
   {
     labelFr: 'Prédiction de signature', labelEn: 'Closing Prediction',
@@ -157,7 +146,7 @@ const security = [
 // Stats
 const stats = [
   { value: '16', labelFr: 'Modules tout-en-un', labelEn: 'All-in-one modules', color: '#3B82F6' },
-  { value: '6', labelFr: 'Fonctionnalités IA incluses', labelEn: 'AI features included', color: '#10B981' },
+  { value: '4', labelFr: 'Fonctionnalités IA incluses', labelEn: 'AI features included', color: '#10B981' },
   { value: '14j', labelFr: 'Pour déployer', labelEn: 'To deploy', color: '#A78BFA' },
   { value: '100%', labelFr: 'Conforme RGPD', labelEn: 'GDPR compliant', color: '#F59E0B' },
 ];
@@ -185,8 +174,8 @@ export default function CrmContent() {
             </h1>
             <p className="text-lg text-happi-muted mb-4 max-w-2xl mx-auto leading-relaxed">
               {fr
-                ? 'Pipeline Kanban, lead scoring IA, devis PDF, séquences email, 6 features Claude : tout ce dont une équipe commerciale a besoin, sans le prix d\'un HubSpot.'
-                : 'Kanban pipeline, AI lead scoring, PDF quotes, email sequences, 6 Claude features : everything a sales team needs, without the HubSpot price tag.'}
+                ? 'Pipeline Kanban, lead scoring IA, devis PDF, séquences email, 4 features Claude. Tout ce qu\'il faut, sans le prix d\'un HubSpot.'
+                : 'Kanban pipeline, AI lead scoring, PDF quotes, email sequences, 4 Claude features. Everything you need, without the HubSpot price tag.'}
             </p>
             <p className="text-happi-muted text-sm mb-10">
               {fr
@@ -312,7 +301,7 @@ export default function CrmContent() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {aiFeatures.map((f, i) => (
                 <div
                   key={i}
@@ -448,8 +437,8 @@ export default function CrmContent() {
                 </h2>
                 <p className="text-white/80 mb-8 text-sm leading-relaxed max-w-xl mx-auto">
                   {fr
-                    ? 'On vous montre les 16 modules, les 6 features IA et le pipeline Kanban en 30 minutes. Sans engagement, sans blabla commercial.'
-                    : 'We\'ll walk you through all 16 modules, 6 AI features and the Kanban pipeline in 30 minutes. No commitment, no sales pitch.'}
+                    ? 'On vous montre les 16 modules, les 4 features IA et le pipeline Kanban en 30 minutes. Sans engagement, sans blabla commercial.'
+                    : 'We\'ll walk you through all 16 modules, 4 AI features and the Kanban pipeline in 30 minutes. No commitment, no sales pitch.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button
