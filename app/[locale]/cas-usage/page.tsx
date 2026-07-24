@@ -4,7 +4,6 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import CasUsageAccordion from '@/components/cas-usage/CasUsageAccordion';
 import CasUsageTimeline from '@/components/cas-usage/CasUsageTimeline';
-import CasUsageResults from '@/components/cas-usage/CasUsageResults';
 import SectorNavigator from '@/components/cas-usage/SectorNavigator';
 import RoiCalculator from '@/components/cas-usage/RoiCalculator';
 import { BotDemo } from '@/components/cas-usage/BotDemo';
@@ -151,8 +150,8 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
                     </h2>
                     <p className="text-happi-muted text-sm leading-relaxed">
                       {fr
-                        ? 'Chaque bot, chaque application est conçu autour de vous. Votre branding, vos flux métier, vos équipes. Nous ne reproduisons pas un modèle standard. Nous apprenons votre réalité et construisons en conséquence. Ce cas Mobilier de France illustre exactement cette approche : un bot après-vente sur mesure, une app de traçabilité à votre image, interconnectés dès le premier jour.'
-                        : 'Every bot, every application is designed around you. Your branding, your business flows, your teams. We don\'t replicate a standard model. We learn your reality and build accordingly. This Mobilier de France case illustrates exactly that: a custom after-sales bot, a traceability app in your image, interconnected from day one.'}
+                        ? 'Pas de modèle standard. On apprend votre réalité et on construit en conséquence — comme ici, un bot SAV et une app de traçabilité interconnectés dès le premier jour.'
+                        : 'No standard model. We learn your reality and build accordingly — like here, an after-sales bot and a traceability app interconnected from day one.'}
                     </p>
                   </div>
                 </div>
@@ -180,9 +179,6 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
             <CasUsageAccordion />
           </div>
         </section>
-
-        {/* Results */}
-        <CasUsageResults fr={fr} />
 
         {/* ── Section 4 — ROI Calculator ── */}
         <RoiCalculator fr={fr} />

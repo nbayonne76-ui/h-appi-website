@@ -41,15 +41,15 @@ const steps = (fr: boolean) => [
     badge: fr ? 'Bot SAV · Terminé' : 'After-Sales Bot · Complete',
     title: fr ? 'Fini les appels au service après-vente' : 'No more after-sales phone calls',
     teaser: fr
-      ? '50 % des appels SAV sont liés au suivi de commande, représentant un coût moyen de 5 € par appel.'
-      : '50% of after-sales calls are order-tracking related, costing an average of €5 each.',
+      ? '50 % des appels SAV concernent le suivi de commande — 5 € par appel.'
+      : '50% of after-sales calls are order-tracking related — €5 each.',
     teaserSource: 'Narvar',
     content: {
       problem: {
         label: fr ? 'Le problème' : 'The problem',
         text: fr
-          ? 'Un client reçoit un meuble endommagé ou une pièce manquante. Il appelle le service après-vente. Un agent note manuellement le numéro de commande, le nom, le problème. L\'info se perd, les équipes cherchent dans leurs emails, les délais s\'allongent. La frustration monte des deux côtés.'
-          : 'A client receives damaged furniture or a missing part. They call after-sales. An agent manually notes the order number, name, problem. The info gets lost, teams search through emails, delays grow. Frustration builds on both sides.',
+          ? 'Meuble endommagé, pièce manquante. Un agent note tout à la main. L\'info se perd, les délais s\'allongent, la frustration monte.'
+          : 'Damaged furniture, missing part. An agent notes it all by hand. Info gets lost, delays grow, frustration builds.',
       },
       solution: {
         label: fr ? 'Comment ça marche' : 'How it works',
@@ -80,22 +80,22 @@ const steps = (fr: boolean) => [
       miniStats: [
         {
           value: '65 %',
-          label: fr ? "d'appels en moins grâce à l'automatisation" : 'fewer incoming calls thanks to automation',
+          label: fr ? "d'appels en moins" : 'fewer calls',
           source: '',
         },
         {
           value: '85 %',
-          label: fr ? 'des demandes résolues sans qu\'un humain intervienne' : 'of requests resolved without human involvement',
+          label: fr ? 'résolu sans humain' : 'resolved without a human',
           source: '',
         },
         {
           value: '2,5 j → 4 h',
-          label: fr ? 'le délai de traitement passe de 2,5 jours à 4 heures' : 'processing time drops from 2.5 days to 4 hours',
+          label: fr ? 'délai de traitement' : 'processing time',
           source: '',
         },
         {
           value: '+38 pts',
-          label: fr ? 'de satisfaction client en plus après 3 mois d\'utilisation' : 'more customer satisfaction after 3 months of use',
+          label: fr ? 'satisfaction client' : 'customer satisfaction',
           source: '',
         },
       ],
@@ -128,8 +128,8 @@ const steps = (fr: boolean) => [
     badge: fr ? 'App Traçabilité · Déployé en même temps' : 'Traceability App · Deployed simultaneously',
     title: fr ? 'Visibilité totale sur le parcours du meuble' : 'Total visibility over furniture journeys',
     teaser: fr
-      ? '7,6 % des meubles arrivent endommagés, générant un coût moyen de 45 € par retour. Sans preuve numérique, le litige est presque toujours perdu.'
-      : '7.6% of furniture arrives damaged, generating an average cost of €45 per return. Without digital proof, disputes are almost always lost.',
+      ? '7,6 % des meubles arrivent endommagés. Sans preuve numérique, le litige est presque toujours perdu.'
+      : '7.6% of furniture arrives damaged. Without digital proof, disputes are almost always lost.',
     teaserSource: '',
     content: {
       actors: [
@@ -167,30 +167,30 @@ const steps = (fr: boolean) => [
       miniStats: [
         {
           value: '80 %',
-          label: fr ? 'de litiges en moins grâce aux photos et signatures numériques' : 'fewer disputes thanks to photos and digital signatures',
+          label: fr ? 'de litiges en moins' : 'fewer disputes',
           source: '',
         },
         {
           value: '+60 %',
-          label: fr ? 'de clients satisfaits quand la livraison est transparente et tracée' : 'more satisfied customers with transparent tracked deliveries',
+          label: fr ? 'de clients satisfaits' : 'more satisfied customers',
           source: '',
         },
         {
           value: '+42 %',
-          label: fr ? 'de livraisons réussies du premier coup grâce aux alertes automatiques' : 'more first-attempt successful deliveries with automatic alerts',
+          label: fr ? 'de livraisons réussies du 1er coup' : 'more first-attempt deliveries',
           source: '',
         },
         {
           value: '82 %',
-          label: fr ? 'des clients veulent savoir en temps réel où est leur colis' : 'of customers want to know in real time where their order is',
+          label: fr ? 'veulent le suivi temps réel' : 'want real-time tracking',
           source: '',
         },
       ],
       interconnect: {
         title: fr ? 'La connexion qui fait tout' : 'The connection that makes it all work',
         text: fr
-          ? 'Le dossier client créé par l\'app (meuble livré, photos, signature, date) est automatiquement accessible dans le bot SAV. Quand un client ouvre un ticket de réclamation, l\'équipe technique voit immédiatement l\'historique complet. Zéro double saisie. Zéro recherche manuelle.'
-          : 'The client file created by the app (furniture delivered, photos, signature, date) is automatically accessible in the after-sales bot. When a client opens a claim ticket, the technical team immediately sees the full history. Zero double entry. Zero manual search.',
+          ? 'Le dossier créé par l\'app est automatiquement accessible dans le bot SAV. Zéro double saisie, zéro recherche manuelle.'
+          : 'The file created by the app is automatically accessible in the after-sales bot. Zero double entry, zero manual search.',
       },
     },
   },
@@ -207,13 +207,13 @@ const steps = (fr: boolean) => [
     badge: fr ? 'Plateforme SaaS · Activation progressive' : 'SaaS Platform · Progressive activation',
     title: fr ? 'Après 2-3 mois, la plateforme s\'éveille' : 'After 2-3 months, the platform awakens',
     teaser: fr
-      ? '53 % du coût de livraison est lié au dernier kilomètre. L\'optimisation des tournées par IA permet de réduire ce poste jusqu\'à 20 %.'
-      : '53% of delivery cost comes from the last mile. AI-driven route optimization can cut this by up to 20%.',
+      ? '53 % du coût de livraison vient du dernier kilomètre. L\'IA peut réduire ce poste de 20 %.'
+      : '53% of delivery cost comes from the last mile. AI can cut this by 20%.',
     teaserSource: 'Capgemini / MIT Sloan / McKinsey',
     content: {
       intro: fr
-        ? 'Une fois que l\'assistant a appris vos processus, vos patterns clients, et vos contraintes métier, des modules s\'activent automatiquement. Sans migration ni projet supplémentaire.'
-        : 'Once the assistant has learned your processes, client patterns, and business constraints, modules activate automatically. No migration, no extra project.',
+        ? 'Une fois vos processus appris, les modules s\'activent automatiquement. Sans migration, sans projet supplémentaire.'
+        : 'Once your processes are learned, modules activate automatically. No migration, no extra project.',
       modules: [
         {
           icon: TrendingUp,
