@@ -70,56 +70,56 @@
   "features": {
     "badge": "Fonctionnalités",
     "title": "10 capacités IA pour <highlight>transformer</highlight> votre service",
-    "subtitle": "H'appi réunit les meilleures technologies IA — Claude, Vapi.ai, ElevenLabs, Deepgram — dans une solution sur-mesure pour les entreprises françaises.",
+    "subtitle": "Claude, Vapi.ai, ElevenLabs, Deepgram — réunis dans une solution sur-mesure.",
     "items": [
       {
         "title": "Compréhension métier NLP",
-        "description": "Claude analyse votre terminologie sectorielle (CX, Supply Chain, juridique) et s'adapte à vos processus internes sans formation supplémentaire.",
+        "description": "Claude analyse votre terminologie sectorielle et s'adapte à vos process sans formation.",
         "tech": "Claude"
       },
       {
         "title": "Voix IA 24h/24",
-        "description": "Répondez à chaque appel entrant, prenez des rendez-vous et transmettez les messages avec une voix naturelle. Latence < 500ms.",
+        "description": "Répond aux appels, prend RDV, transmet les messages. Voix naturelle, latence < 500ms.",
         "tech": "Vapi · ElevenLabs · Deepgram"
       },
       {
         "title": "Vision & analyse photo",
-        "description": "Analysez automatiquement les photos de défauts produits, documents ou livrables. Résolution SAV sans intervention humaine.",
+        "description": "Analyse automatique des photos de défauts. Résolution SAV sans intervention humaine.",
         "tech": "Claude Vision"
       },
       {
         "title": "Multilingue natif",
-        "description": "Dialoguez en FR, EN, AR, IT, DE et plus encore. Détection automatique de la langue, réponse dans la langue du client.",
+        "description": "FR, EN, AR, IT, DE et plus. Détection automatique, réponse dans la langue du client.",
         "tech": "Claude"
       },
       {
         "title": "Détection de sentiment",
-        "description": "Identifiez les clients VIP, les situations urgentes ou les insatisfactions avant qu'elles escaladent. Routage intelligent en temps réel.",
+        "description": "Clients VIP, urgences, insatisfaction — repérés avant l'escalade. Routage intelligent.",
         "tech": "Claude"
       },
       {
         "title": "Analytics & prédictif",
-        "description": "KPIs en temps réel : taux de résolution, satisfaction, temps de réponse. Insights prédictifs pour anticiper les besoins clients.",
+        "description": "KPIs en temps réel. Insights prédictifs pour anticiper les besoins clients.",
         "tech": "Claude"
       },
       {
         "title": "Intégration CRM/ERP",
-        "description": "Connexion native avec HubSpot, Salesforce, SAP, Shopify, ServiceNow via webhooks et API REST. Zéro double saisie.",
+        "description": "HubSpot, Salesforce, SAP, Shopify, ServiceNow via webhooks et API. Zéro double saisie.",
         "tech": "API · Webhooks"
       },
       {
         "title": "Ticketing intelligent P0–P3",
-        "description": "Création automatique de tickets avec niveau de priorité, catégorisation et assignation. Escalade automatique des cas critiques.",
+        "description": "Tickets créés, priorisés et assignés automatiquement. Escalade auto des cas critiques.",
         "tech": "Claude"
       },
       {
         "title": "Qualification leads 3 phases",
-        "description": "Identifiez, qualifiez et scorez vos leads en conversation naturelle. Intégration directe vers votre pipeline CRM.",
+        "description": "Identifiez, qualifiez, scorez vos leads en conversation naturelle. Direct vers votre CRM.",
         "tech": "Claude"
       },
       {
         "title": "RGPD & souveraineté IA",
-        "description": "Données hébergées en France/Europe (Scaleway, Hetzner). Conformité ISO 27001. Aucune donnée client ne quitte votre périmètre.",
+        "description": "Hébergement France/Europe. Conformité ISO 27001. Vos données ne quittent pas votre périmètre.",
         "tech": "Made in France"
       }
     ]
@@ -133,37 +133,37 @@
     "cx": [
       {
         "title": "Support client automatisé 24/7",
-        "description": "Répondez instantanément aux demandes les plus fréquentes : suivi de commande, FAQ, assistance produit. Vos clients sont satisfaits, vos équipes sont libérées."
+        "description": "Suivi de commande, FAQ, assistance produit — instantané. Clients satisfaits, équipes libérées."
       },
       {
         "title": "Qualification et routage intelligent",
-        "description": "Pré-qualifiez les demandes avant de les router vers le bon service. Optimisez l'efficacité de vos conseillers en leur transmettant uniquement les cas complexes."
+        "description": "Pré-qualifie les demandes, route vers le bon service. Vos conseillers ne voient que les cas complexes."
       },
       {
         "title": "Onboarding clients automatisé",
-        "description": "Guidez vos nouveaux clients à travers vos services avec un assistant conversationnel personnalisé qui s'adapte à leur profil."
+        "description": "Guide vos nouveaux clients à travers vos services, adapté à leur profil."
       },
       {
         "title": "Recommandations personnalisées",
-        "description": "En s'intégrant à votre CRM, le chatbot reconnaît vos clients et leur propose des recommandations hyper-personnalisées basées sur leur historique."
+        "description": "Intégré à votre CRM, le bot reconnaît vos clients et recommande selon leur historique."
       }
     ],
     "supply": [
       {
         "title": "Suivi et traçabilité en temps réel",
-        "description": "Vos clients et partenaires interrogent le bot sur la localisation d'un colis, les délais estimés, sans mobiliser un agent humain."
+        "description": "Localisation, délais estimés — le bot répond, sans mobiliser un agent."
       },
       {
         "title": "Gestion d'inventaire et stock",
-        "description": "Intégration avec vos systèmes WMS pour fournir des informations en temps réel sur les stocks, emplacements et délais de réapprovisionnement."
+        "description": "Intégré à vos WMS : stocks, emplacements, délais de réapprovisionnement en temps réel."
       },
       {
         "title": "Notifications proactives",
-        "description": "Alertes automatiques en cas de retard, exception logistique ou changement de statut. Anticipez les problèmes avant qu'ils n'impactent vos clients."
+        "description": "Alertes automatiques sur retard ou exception logistique. Anticipez avant l'impact client."
       },
       {
         "title": "Coordination des livraisons",
-        "description": "Planification intelligente des créneaux de livraison, gestion des reprogrammations et optimisation des tournées en temps réel."
+        "description": "Planification des créneaux, reprogrammations, tournées optimisées en temps réel."
       }
     ],
     "stats": {
@@ -189,12 +189,12 @@
     "heroBadge": "4x moins cher que le marché",
     "roiBadge": "Calculateur ROI: Votre chiffre, pas le nôtre",
     "heroTitle": "Des chatbots sur-mesure à <highlight>prix révolutionnaire</highlight>",
-    "heroSubtitle": "Nous créons des chatbots personnalisés pour votre métier, avec une tarification transparente adaptée à vos besoins réels. Pas de grille figée : chaque projet est unique.",
+    "heroSubtitle": "Tarification transparente, adaptée à vos besoins réels. Pas de grille figée.",
     "heroCta": "Contactez-nous pour un devis gratuit",
     "heroNote": "Réponse sous 48h avec une estimation détaillée",
     "implementTitle": "Implémentation de votre chatbot",
     "implementSubtitle": "Le coût d'implémentation varie selon la complexité de votre projet",
-    "implementDescription": "Chaque chatbot est conçu sur-mesure pour votre métier. Le tarif dépend de vos besoins spécifiques : nombre de scénarios, intégrations, volume prévu... C'est pourquoi nous préférons discuter directement avec vous plutôt que d'afficher un prix générique qui ne correspondrait pas à votre réalité.",
+    "implementDescription": "Le tarif dépend de vos besoins réels : scénarios, intégrations, volume. Discutons-en plutôt que d'afficher un prix générique.",
     "implementCta": "Demander un devis",
     "implementItemsLabel": "Inclus dans chaque projet",
     "implementItems": [
@@ -256,28 +256,28 @@
     },
     "transparencyTitle": "Transparence totale sur nos prix",
     "transparencySubtitle": "Pourquoi un devis sur-mesure plutôt qu'une grille fixe ?",
-    "transparencyIntro": "Nous refusons les prix mystérieux. Voici ce qui influence le coût de votre chatbot :",
+    "transparencyIntro": "Voici ce qui influence le prix — pas de zones grises.",
     "transparencyFactors": [
       {
         "title": "Complexité du chatbot",
-        "description": "Nombre de scénarios conversationnels, arborescence des réponses, personnalisation du ton et du style."
+        "description": "Scénarios conversationnels, arborescence des réponses, ton et style."
       },
       {
         "title": "Intégrations nécessaires",
-        "description": "Connexion à vos outils (CRM, ERP, base de données, API tierces) pour des réponses contextualisées."
+        "description": "Connexion à vos outils (CRM, ERP, API) pour des réponses contextualisées."
       },
       {
         "title": "Volume de conversations",
-        "description": "Le nombre d'interactions mensuelles estimé détermine l'infrastructure nécessaire."
+        "description": "Le volume mensuel estimé détermine l'infrastructure nécessaire."
       },
       {
         "title": "Consommation de tokens LLM",
-        "description": "Chaque réponse générée par l'IA consomme des tokens. Plus les réponses sont longues et complexes, plus le coût augmente."
+        "description": "Chaque réponse IA consomme des tokens. Plus c'est long et complexe, plus ça coûte."
       }
     ],
-    "transparencyConclusion": "Chaque devis détaille ligne par ligne ce que vous payez. Pas de surprises, pas de frais cachés.",
+    "transparencyConclusion": "Devis détaillé, ligne par ligne. Zéro surprise, zéro frais caché.",
     "finalCtaTitle": "Prêt à discuter de votre projet ?",
-    "finalCtaSubtitle": "Chaque projet est unique. Parlons du vôtre pour vous proposer une solution et un tarif parfaitement adaptés.",
+    "finalCtaSubtitle": "Chaque projet est unique. Parlons du vôtre.",
     "finalCtaPrimary": "Demander mon devis",
     "finalCtaSecondary": "Voir la FAQ",
     "finalCtaNote": "Devis gratuit • Sans engagement • Réponse sous 48h"
@@ -286,19 +286,19 @@
     "badge": "Nos débuts",
     "title": "Nous sommes une <highlight>jeune startup</highlight>",
     "subtitle": "H'appi a été lancée début 2026. Nous accompagnons nos premiers clients et construisons notre réputation projet après projet.",
-    "honesty": "Nous n'avons pas encore de témoignages clients à afficher ici, et nous préférons être honnêtes plutôt que d'inventer de faux avis.",
+    "honesty": "Pas encore de témoignages clients ici. On préfère être honnêtes plutôt qu'inventer de faux avis.",
     "commitments": [
       {
         "title": "Transparence totale",
-        "description": "Pas de faux témoignages, pas de chiffres gonflés. Ce que vous voyez ici, c'est la réalité de notre jeune entreprise."
+        "description": "Pas de faux témoignages, pas de chiffres gonflés. La réalité, telle quelle."
       },
       {
         "title": "Premiers clients accompagnés",
-        "description": "Nous travaillons actuellement avec nos premiers partenaires. Leurs retours arriveront ici dès qu'ils seront prêts à témoigner."
+        "description": "On travaille avec nos premiers partenaires. Leurs retours arriveront dès qu'ils seront prêts."
       },
       {
         "title": "Qualité avant quantité",
-        "description": "Nous préférons livrer un travail excellent à quelques clients plutôt que de promettre la lune à tout le monde."
+        "description": "Un travail excellent pour quelques clients plutôt que la lune promise à tout le monde."
       }
     ],
     "cta": "Devenez l'un de nos premiers clients et bénéficiez d'un accompagnement privilégié."
@@ -1008,14 +1008,14 @@
     "title": "Rejoignez l'Aventure <highlight>H'appi</highlight>",
     "enterprise": {
       "title": "Vous êtes une Entreprise ?",
-      "description1": "Vous en avez assez des solutions standardisées, des devis exorbitants, des prestataires qui disparaissent et des infrastructures cloud qui explosent votre budget ?",
+      "description1": "Solutions standardisées, devis exorbitants, prestataires qui disparaissent ? On connaît.",
       "description2": "Parlons de votre projet. Solution sur-mesure, tarif révolutionnaire, accompagnement long terme.",
       "cta": "Demandez un devis gratuit",
       "ctaNote": "Réponse sous 48h avec estimation transparente"
     },
     "talent": {
       "title": "Vous êtes un Talent Tech ?",
-      "description": "Nous recherchons des passionnés qui partagent nos valeurs de sur-mesure, de prix justes et d'innovation technique.",
+      "description": "Des passionnés de sur-mesure, de prix justes et d'innovation technique.",
       "positionsLabel": "Postes ouverts :",
       "positions": [
         "Développeurs Full-Stack (Node.js, React, Python)",
@@ -1040,8 +1040,8 @@
     },
     "history": {
       "title": "Notre Histoire (En Bref)",
-      "paragraph1": "H'appi est née d'une frustration simple mais profonde : <strong>pourquoi le digital sur-mesure coûte-t-il si cher alors que les technologies sont de plus en plus accessibles ?</strong>",
-      "paragraph2": "Fondée en 2026 par une équipe d'ingénieurs passionnés et d'entrepreneurs pragmatiques, H'appi s'est donnée pour mission de révolutionner les prix du marché sans compromis sur la qualité, en s'appuyant sur :",
+      "paragraph1": "Une frustration simple : <strong>pourquoi le sur-mesure coûte-t-il si cher quand la technologie est si accessible ?</strong>",
+      "paragraph2": "Fondée en 2026, H'appi révolutionne les prix du marché sans compromis sur la qualité, grâce à :",
       "pillars": [
         "Infrastructures cloud nouvelle génération (40-60% moins cher)",
         "Stack open-source moderne (zéro coûts de licences)",
@@ -1052,7 +1052,7 @@
     },
     "contact": {
       "title": "Parlons de Votre Projet",
-      "subtitle": "Prêt à créer l'application, le chatbot ou le site web qui va propulser votre entreprise ? Nous répondons rapidement, avec transparence, par des humains qui connaissent vraiment le sujet.",
+      "subtitle": "Prêt à lancer votre projet ? On répond vite, avec transparence, par de vrais humains qui s'y connaissent.",
       "channels": [
         {
           "label": "Email",
@@ -1302,7 +1302,7 @@
   "pageFonctionnalites": {
     "badge": "Fonctionnalités",
     "title": "Toutes vos fonctionnalités pour <highlight>passer à l'échelle</highlight>",
-    "subtitle": "H'appi combine IA générative, personnalisation sectorielle et conformité RGPD pour offrir une solution de chatbot adaptée aux entreprises françaises.",
+    "subtitle": "IA générative, personnalisation sectorielle, conformité RGPD — pensé pour les entreprises françaises.",
     "stackTitle": "La stack IA H'appi",
     "stackSubtitle": "Nous sélectionnons les meilleures technologies pour chaque besoin.",
     "stack": [
@@ -1328,7 +1328,7 @@
       }
     ],
     "compareTitle": "H'appi vs solutions génériques",
-    "compareSubtitle": "Pourquoi les entreprises françaises choisissent H'appi plutôt que Zendesk Bot, Intercom IA ou ChatGPT brut.",
+    "compareSubtitle": "Pourquoi H'appi plutôt que Zendesk Bot, Intercom IA ou ChatGPT brut.",
     "compareHeaders": [
       "Critère",
       "H'appi",
@@ -1375,7 +1375,7 @@
     "details": [
       {
         "title": "Personnalisation sectorielle unique",
-        "description": "Contrairement aux plateformes génériques, H'appi crée des chatbots avec une connaissance métier intégrée dès la conception. La terminologie CX, les processus Supply Chain, les workflows spécifiques à votre secteur sont compris nativement.",
+        "description": "Connaissance métier intégrée dès la conception : terminologie CX, workflows Supply Chain, compris nativement.",
         "items": [
           "Templates sectoriels prêts à l'emploi (e-commerce, services B2B, logistique)",
           "Apprentissage continu de votre vocabulaire métier",
@@ -1386,15 +1386,15 @@
       },
       {
         "title": "Intégration avec votre écosystème",
-        "description1": "H'appi peut se connecter à vos CRM, ERP, outils de messaging et plateformes e-commerce via API. Chaque connexion est développée sur mesure selon votre environnement technique.*",
-        "description2": "Chaque solution H'appi se connecte à vos logiciels existants. Pas de migration, pas de double saisie. Vous gardez vos outils, on ajoute l'intelligence par-dessus.",
+        "description1": "Connexion à vos CRM, ERP, messaging, e-commerce via API — sur mesure selon votre stack.*",
+        "description2": "Pas de migration, pas de double saisie. Vous gardez vos outils, on ajoute l'intelligence.",
         "integrationsTitle": "Outils connectables via API",
-        "note": "Chaque connexion est développée sur mesure lors du projet. L'intégration avec certains outils peut nécessiter la collaboration de votre prestataire ou éditeur logiciel."
+        "note": "Développée sur mesure lors du projet. Certains outils nécessitent la collaboration de votre prestataire."
       },
       {
         "title": "L'approche hybride humain-IA",
-        "description1": "51% des entreprises cherchent à concilier contact humain et technologie. H'appi est conçu pour renforcer vos équipes, pas les remplacer. Le chatbot gère les demandes répétitives (jusqu'à 80% du volume) et transfère les cas complexes à vos conseillers avec tout le contexte nécessaire.",
-        "description2": "Résultat : vos agents sont plus efficaces, vos clients sont mieux servis, et vos coûts de support diminuent.",
+        "description1": "H'appi renforce vos équipes, ne les remplace pas. Le bot gère le répétitif (jusqu'à 80% du volume), transfère le complexe avec tout le contexte.",
+        "description2": "Résultat : agents plus efficaces, clients mieux servis, coûts en baisse.",
         "stats": [
           {
             "value": "51%",

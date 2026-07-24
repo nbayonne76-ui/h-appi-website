@@ -70,56 +70,56 @@
   "features": {
     "badge": "Features",
     "title": "10 AI capabilities to <highlight>transform</highlight> your service",
-    "subtitle": "H'appi combines the best AI technologies — Claude, Vapi.ai, ElevenLabs, Deepgram — in a custom solution for French and European businesses.",
+    "subtitle": "Claude, Vapi.ai, ElevenLabs, Deepgram — combined into one custom solution.",
     "items": [
       {
         "title": "Business NLP Understanding",
-        "description": "Claude analyzes your industry-specific terminology (CX, Supply Chain, legal) and adapts to your internal processes without extra training.",
+        "description": "Claude analyzes your industry terminology and adapts to your processes without extra training.",
         "tech": "Claude"
       },
       {
         "title": "24/7 AI Voice",
-        "description": "Answer every incoming call, take appointments and relay messages with a natural voice. Latency < 500ms.",
+        "description": "Answers calls, books appointments, relays messages. Natural voice, latency < 500ms.",
         "tech": "Vapi · ElevenLabs · Deepgram"
       },
       {
         "title": "Vision & Photo Analysis",
-        "description": "Automatically analyze photos of product defects, documents or deliverables. After-sales resolution without human intervention.",
+        "description": "Automatic analysis of defect photos. After-sales resolution without human intervention.",
         "tech": "Claude Vision"
       },
       {
         "title": "Native Multilingual",
-        "description": "Converse in FR, EN, AR, IT, DE and more. Automatic language detection, response in the client's language.",
+        "description": "FR, EN, AR, IT, DE and more. Auto-detected, answered in the client's language.",
         "tech": "Claude"
       },
       {
         "title": "Sentiment Detection",
-        "description": "Identify VIP customers, urgent situations or dissatisfaction before they escalate. Intelligent real-time routing.",
+        "description": "VIP customers, urgency, dissatisfaction — caught before escalation. Smart routing.",
         "tech": "Claude"
       },
       {
         "title": "Analytics & Predictive",
-        "description": "Real-time KPIs: resolution rate, satisfaction, response time. Predictive insights to anticipate customer needs.",
+        "description": "Real-time KPIs. Predictive insights to anticipate customer needs.",
         "tech": "Claude"
       },
       {
         "title": "CRM/ERP Integration",
-        "description": "Native connection with HubSpot, Salesforce, SAP, Shopify, ServiceNow via webhooks and REST API. Zero double entry.",
+        "description": "HubSpot, Salesforce, SAP, Shopify, ServiceNow via webhooks and API. Zero double entry.",
         "tech": "API · Webhooks"
       },
       {
         "title": "Smart Ticketing P0–P3",
-        "description": "Automatic ticket creation with priority level, categorization and assignment. Automatic escalation of critical cases.",
+        "description": "Tickets created, prioritized and assigned automatically. Critical cases auto-escalate.",
         "tech": "Claude"
       },
       {
         "title": "3-Phase Lead Qualification",
-        "description": "Identify, qualify and score your leads in natural conversation. Direct integration into your CRM pipeline.",
+        "description": "Identify, qualify and score leads in natural conversation. Straight into your CRM.",
         "tech": "Claude"
       },
       {
         "title": "GDPR & AI Sovereignty",
-        "description": "Data hosted in France/Europe (Scaleway, Hetzner). ISO 27001 compliant. No client data leaves your perimeter.",
+        "description": "Hosted in France/Europe. ISO 27001 compliant. Your data never leaves your perimeter.",
         "tech": "Made in France"
       }
     ]
@@ -133,37 +133,37 @@
     "cx": [
       {
         "title": "24/7 automated customer support",
-        "description": "Instantly respond to the most frequent requests: order tracking, FAQ, product assistance. Your customers are satisfied, your teams are freed up."
+        "description": "Order tracking, FAQ, product help — instant. Customers satisfied, teams freed up."
       },
       {
         "title": "Smart qualification & routing",
-        "description": "Pre-qualify requests before routing them to the right department. Optimize your advisors' efficiency by only forwarding complex cases."
+        "description": "Pre-qualifies requests, routes to the right team. Advisors only see complex cases."
       },
       {
         "title": "Automated client onboarding",
-        "description": "Guide your new customers through your services with a personalized conversational assistant that adapts to their profile."
+        "description": "Guides new customers through your services, adapted to their profile."
       },
       {
         "title": "Personalized recommendations",
-        "description": "By integrating with your CRM, the chatbot recognizes your customers and offers hyper-personalized recommendations based on their history."
+        "description": "Integrated with your CRM, the bot recognizes customers and recommends based on history."
       }
     ],
     "supply": [
       {
         "title": "Real-time tracking & traceability",
-        "description": "Your customers and partners query the bot about package location, estimated delivery times, without mobilizing a human agent."
+        "description": "Package location, delivery estimates — answered by the bot, no human needed."
       },
       {
         "title": "Inventory & stock management",
-        "description": "Integration with your WMS systems to provide real-time information on stock levels, locations and replenishment timelines."
+        "description": "Integrated with your WMS: stock levels, locations, replenishment in real time."
       },
       {
         "title": "Proactive notifications",
-        "description": "Automatic alerts for delays, logistics exceptions or status changes. Anticipate problems before they impact your customers."
+        "description": "Automatic alerts on delays or logistics exceptions. Anticipate before customer impact."
       },
       {
         "title": "Delivery coordination",
-        "description": "Smart delivery slot planning, rescheduling management and real-time route optimization."
+        "description": "Slot planning, rescheduling, real-time route optimization."
       }
     ],
     "stats": {
@@ -189,12 +189,12 @@
     "heroBadge": "4x cheaper than the market",
     "roiBadge": "ROI Calculator: Your number, not ours",
     "heroTitle": "Custom chatbots at <highlight>revolutionary prices</highlight>",
-    "heroSubtitle": "We create personalized chatbots for your business, with transparent pricing tailored to your real needs. No fixed grid: every project is unique.",
+    "heroSubtitle": "Transparent pricing, tailored to your real needs. No fixed grid.",
     "heroCta": "Contact us for a free quote",
     "heroNote": "Response within 48h with a detailed estimate",
     "implementTitle": "Your chatbot implementation",
     "implementSubtitle": "Implementation cost varies based on your project's complexity",
-    "implementDescription": "Each chatbot is custom-designed for your business. The price depends on your specific needs: number of scenarios, integrations, expected volume... That's why we prefer to discuss directly with you rather than display a generic price that wouldn't match your reality.",
+    "implementDescription": "Price depends on your real needs: scenarios, integrations, volume. Let's talk instead of showing a generic price.",
     "implementCta": "Request a quote",
     "implementItemsLabel": "Included in every project",
     "implementItems": [
@@ -256,28 +256,28 @@
     },
     "transparencyTitle": "Total price transparency",
     "transparencySubtitle": "Why a custom quote rather than a fixed grid?",
-    "transparencyIntro": "We refuse mysterious pricing. Here's what influences your chatbot's cost:",
+    "transparencyIntro": "What actually drives the price — no gray areas.",
     "transparencyFactors": [
       {
         "title": "Chatbot complexity",
-        "description": "Number of conversational scenarios, response trees, tone and style customization."
+        "description": "Conversational scenarios, response trees, tone and style."
       },
       {
         "title": "Required integrations",
-        "description": "Connection to your tools (CRM, ERP, databases, third-party APIs) for contextual responses."
+        "description": "Connection to your tools (CRM, ERP, APIs) for contextual responses."
       },
       {
         "title": "Conversation volume",
-        "description": "The estimated number of monthly interactions determines the required infrastructure."
+        "description": "Estimated monthly volume determines the infrastructure needed."
       },
       {
         "title": "LLM token consumption",
-        "description": "Each AI-generated response consumes tokens. The longer and more complex the responses, the higher the cost."
+        "description": "Every AI response consumes tokens. Longer and more complex costs more."
       }
     ],
-    "transparencyConclusion": "Every quote details line by line what you're paying for. No surprises, no hidden fees.",
+    "transparencyConclusion": "Line-by-line quote. Zero surprises, zero hidden fees.",
     "finalCtaTitle": "Ready to discuss your project?",
-    "finalCtaSubtitle": "Every project is unique. Let's talk about yours to offer you a perfectly tailored solution and price.",
+    "finalCtaSubtitle": "Every project is unique. Let's talk about yours.",
     "finalCtaPrimary": "Get my quote",
     "finalCtaSecondary": "See the FAQ",
     "finalCtaNote": "Free quote • No commitment • Response within 48h"
@@ -286,19 +286,19 @@
     "badge": "Our beginnings",
     "title": "We are a <highlight>young startup</highlight>",
     "subtitle": "H'appi was launched in early 2026. We are supporting our first clients and building our reputation project by project.",
-    "honesty": "We don't have any client testimonials to display here yet, and we'd rather be honest than make up fake reviews.",
+    "honesty": "No client testimonials here yet. We'd rather be honest than fake reviews.",
     "commitments": [
       {
         "title": "Total transparency",
-        "description": "No fake testimonials, no inflated numbers. What you see here is the reality of our young company."
+        "description": "No fake testimonials, no inflated numbers. Reality, as it is."
       },
       {
         "title": "First clients onboarded",
-        "description": "We are currently working with our first partners. Their feedback will appear here as soon as they are ready to share."
+        "description": "We're working with our first partners. Their feedback lands here once they're ready."
       },
       {
         "title": "Quality over quantity",
-        "description": "We prefer delivering excellent work to a few clients rather than overpromising to everyone."
+        "description": "Excellent work for a few clients, not overpromises to everyone."
       }
     ],
     "cta": "Become one of our first clients and benefit from personalized support."
@@ -1008,14 +1008,14 @@
     "title": "Join the <highlight>H'appi</highlight> Adventure",
     "enterprise": {
       "title": "Are you a Company?",
-      "description1": "Tired of standardized solutions, outrageous quotes, providers who disappear and cloud infrastructure that blows your budget?",
+      "description1": "Standardized solutions, outrageous quotes, providers who disappear? We know.",
       "description2": "Let's talk about your project. Custom solution, revolutionary pricing, long-term support.",
       "cta": "Request a free quote",
       "ctaNote": "Response within 48h with transparent estimate"
     },
     "talent": {
       "title": "Are you a Tech Talent?",
-      "description": "We're looking for passionate people who share our values of customization, fair pricing and technical innovation.",
+      "description": "Passionate people who share our values: customization, fair pricing, technical innovation.",
       "positionsLabel": "Open positions:",
       "positions": [
         "Full-Stack Developers (Node.js, React, Python)",
@@ -1040,7 +1040,7 @@
     },
     "history": {
       "title": "Our Story (In Brief)",
-      "paragraph1": "H'appi was born from a simple but deep frustration: <strong>why do custom digital solutions cost so much when technologies are increasingly accessible?</strong>",
+      "paragraph1": "A simple frustration: <strong>why does custom cost so much when technology is this accessible?</strong>",
       "paragraph2": "Launched in 2026, H'appi is a young startup on a mission to revolutionize market prices without compromising quality, building on:",
       "pillars": [
         "Next-generation cloud infrastructure (40-60% cheaper)",
@@ -1052,7 +1052,7 @@
     },
     "contact": {
       "title": "Let's Talk About Your Project",
-      "subtitle": "Ready to create the application, chatbot or website that will propel your business? We respond quickly, transparently, by humans who truly know the subject.",
+      "subtitle": "Ready to launch your project? We reply fast, transparently, from real humans who know the subject.",
       "channels": [
         {
           "label": "Email",
@@ -1302,7 +1302,7 @@
   "pageFonctionnalites": {
     "badge": "Features",
     "title": "All your features to <highlight>scale up</highlight>",
-    "subtitle": "H'appi combines generative AI, industry customization and GDPR compliance to offer a chatbot solution tailored to French businesses.",
+    "subtitle": "Generative AI, industry customization, GDPR compliance — built for French businesses.",
     "stackTitle": "The H'appi AI Stack",
     "stackSubtitle": "We select the best technologies for each need.",
     "stack": [
@@ -1328,7 +1328,7 @@
       }
     ],
     "compareTitle": "H'appi vs generic solutions",
-    "compareSubtitle": "Why French businesses choose H'appi over Zendesk Bot, Intercom AI or raw ChatGPT.",
+    "compareSubtitle": "Why H'appi over Zendesk Bot, Intercom AI or raw ChatGPT.",
     "compareHeaders": [
       "Criterion",
       "H'appi",
@@ -1375,7 +1375,7 @@
     "details": [
       {
         "title": "Unique industry customization",
-        "description": "Unlike generic platforms, H'appi creates chatbots with built-in industry knowledge from the design phase. CX terminology, Supply Chain processes, sector-specific workflows are natively understood.",
+        "description": "Built-in industry knowledge from day one: CX terminology, Supply Chain workflows, natively understood.",
         "items": [
           "Ready-to-use industry templates (e-commerce, B2B services, logistics)",
           "Continuous learning of your business vocabulary",
@@ -1386,15 +1386,15 @@
       },
       {
         "title": "Integration with your ecosystem",
-        "description1": "H'appi can connect to your CRMs, ERPs, messaging tools and e-commerce platforms via API. Each connection is custom-built to fit your technical environment.*",
-        "description2": "Every H'appi solution connects to your existing software. No migration, no double entry. You keep your tools, we add intelligence on top.",
+        "description1": "Connects to your CRMs, ERPs, messaging, e-commerce via API — custom-built to your stack.*",
+        "description2": "No migration, no double entry. You keep your tools, we add intelligence on top.",
         "integrationsTitle": "Tools connectable via API",
-        "note": "Each connection is custom-developed for your project. Integration with certain tools may require collaboration from your software provider or integrator."
+        "note": "Custom-developed for your project. Some tools require collaboration from your provider."
       },
       {
         "title": "The hybrid human-AI approach",
-        "description1": "51% of companies seek to balance human contact and technology. H'appi is designed to empower your teams, not replace them. The chatbot handles repetitive requests (up to 80% of volume) and transfers complex cases to your advisors with all the necessary context.",
-        "description2": "Result: your agents are more efficient, your customers are better served, and your support costs decrease.",
+        "description1": "H'appi empowers your teams, doesn't replace them. The bot handles repetitive requests (up to 80% of volume), transfers complex cases with full context.",
+        "description2": "Result: more efficient agents, better-served customers, lower support costs.",
         "stats": [
           {
             "value": "51%",
