@@ -80,28 +80,28 @@ export default async function DropOSPage({
 
   const whoFor = fr
     ? [
-        { label: 'Debutants',              desc: 'Vous venez de lancer votre premiere boutique Shopify et voulez connaitre vos vraies marges des le depart.' },
-        { label: 'Vendeurs en croissance', desc: 'Vous gerez 2 a 5 boutiques et vous noyez dans les tableurs. Vous avez besoin d\'un seul tableau de bord.' },
-        { label: 'Operateurs avances',     desc: 'Vous gerez une operation serieuse avec plusieurs fournisseurs. Vous voulez des decisions basees sur les donnees.' },
+        { label: 'Debutants',              desc: 'Boutique Shopify tout juste lancee. Vous voulez connaitre vos vraies marges des le depart.' },
+        { label: 'Vendeurs en croissance', desc: '2 a 5 boutiques, noye dans les tableurs. Un seul tableau de bord suffit.' },
+        { label: 'Operateurs avances',     desc: 'Operation serieuse, plusieurs fournisseurs. Des decisions basees sur la donnee, pas l\'instinct.' },
       ]
     : [
-        { label: 'Beginners',           desc: 'Just launched your first Shopify store and want to know your real margins from day one.' },
-        { label: 'Growing sellers',     desc: 'Managing 2-5 stores and drowning in spreadsheets. You need one dashboard for all of it.' },
-        { label: 'Advanced operators',  desc: 'Running a serious operation with multiple suppliers. You want data-driven decisions, not gut feelings.' },
+        { label: 'Beginners',           desc: 'Just launched your first Shopify store. You want your real margins from day one.' },
+        { label: 'Growing sellers',     desc: '2-5 stores, drowning in spreadsheets. One dashboard is all you need.' },
+        { label: 'Advanced operators',  desc: 'Serious operation, multiple suppliers. Data-driven decisions, not gut feelings.' },
       ];
 
   const features = fr
     ? [
-        { icon: '📊', title: 'Suivi des profits en temps reel',    desc: 'Profit net reel sur chaque commande. Cout fournisseur, livraison, frais, pub, retours, tout decompte automatiquement.' },
-        { icon: '💰', title: 'Calculateur de cout de revient',     desc: 'Sachez exactement ce que coute un produit avant de le vendre. 8 couches de cout, prix conseille a votre marge cible.' },
+        { icon: '📊', title: 'Suivi des profits en temps reel',    desc: 'Profit net reel par commande — couts, frais, pub, retours decomptes automatiquement.' },
+        { icon: '💰', title: 'Calculateur de cout de revient',     desc: 'Cout reel d\'un produit avant de le vendre. 8 couches de cout, prix conseille.' },
         { icon: '🏪', title: 'Dashboard multi-boutiques',          desc: 'Connectez plusieurs boutiques Shopify. Comparez revenus, couts et profits cote a cote sur un seul ecran.' },
         { icon: '⚡', title: 'Synchronisation automatique',        desc: 'Synchronisation des commandes via GraphQL en temps reel. Historique complet. Aucune saisie manuelle.' },
         { icon: '📦', title: 'Scorecards fournisseurs',            desc: 'Taux de livraison, precision des stocks, taux de litiges par fournisseur. Identifiez vos meilleurs partenaires.' },
         { icon: '🔒', title: 'Securite enterprise',                desc: 'OAuth 2.0 Shopify avec PKCE, tokens chiffres, ORM strict. Zero CVE connu. Vos donnees restent les votres.' },
       ]
     : [
-        { icon: '📊', title: 'Real-time profit tracking',          desc: 'True net profit on every order. Supplier cost, shipping, fees, ad spend, returns, all deducted automatically.' },
-        { icon: '💰', title: 'Landed cost calculator',             desc: 'Know exactly what a product costs before you sell it. 8 cost layers, suggested price at your target margin.' },
+        { icon: '📊', title: 'Real-time profit tracking',          desc: 'True net profit per order — costs, fees, ad spend, returns deducted automatically.' },
+        { icon: '💰', title: 'Landed cost calculator',             desc: 'Real product cost before you sell it. 8 cost layers, suggested price.' },
         { icon: '🏪', title: 'Multi-store dashboard',              desc: 'Connect multiple Shopify stores. Compare revenue, costs, and profit side-by-side on one screen.' },
         { icon: '⚡', title: 'Automatic sync',                     desc: 'GraphQL order sync in real time. Full history. No manual entry ever.' },
         { icon: '📦', title: 'Supplier scorecards',                desc: 'Delivery rates, stock accuracy, dispute rates per supplier. Surface your best and worst partners instantly.' },
@@ -133,8 +133,8 @@ export default async function DropOSPage({
 
             <p className="text-lg text-happi-muted max-w-2xl mx-auto mb-4 leading-relaxed">
               {fr
-                ? 'DropOS est une plateforme de suivi des profits et d\'analytique pour les dropshippers. J\'ouvre 100 places founding member, entierement gratuites pendant 1 an, en echange de 30 jours de retours honnetes.'
-                : 'DropOS is a profit tracking and analytics platform for dropshippers. I\'m opening 100 founding member spots, completely free for 1 year, in exchange for 30 days of honest feedback.'}
+                ? 'Plateforme de suivi des profits pour dropshippers. 100 places founding member, gratuites 1 an, contre 30 jours de retours honnetes.'
+                : 'Profit tracking platform for dropshippers. 100 founding member spots, free for 1 year, in exchange for 30 days of honest feedback.'}
             </p>
 
             <p className="text-sm text-happi-muted/60 mb-10">

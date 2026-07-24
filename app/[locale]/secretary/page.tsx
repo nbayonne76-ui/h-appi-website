@@ -19,20 +19,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const features = {
   fr: [
-    { icon: Phone,         color: '#3B82F6', title: 'Gestion des appels',         desc: 'Répond aux appels professionnels, identifie les appelants et les dirige vers la bonne personne ou enregistre leurs messages avec précision.' },
-    { icon: Calendar,      color: '#22C55E', title: 'Prise de rendez-vous',        desc: 'Planifie automatiquement des rendez-vous en fonction de votre calendrier en temps réel. Zéro conflit, zéro oubli.' },
-    { icon: MessageSquare, color: '#8B5CF6', title: 'Messages intelligents',       desc: 'Transcrit automatiquement les messages vocaux en texte structuré, avec résumé et niveau de priorité.' },
-    { icon: Mic,           color: '#F97316', title: 'Répondeur professionnel',     desc: 'Voix naturelle, ton adapté à votre secteur. Vos clients ne savent pas qu\'ils parlent à une IA.' },
-    { icon: Clock,         color: '#06B6D4', title: 'Disponibilité 24h/24',        desc: 'Jamais de congés, jamais de pause. Votre secrétaire IA répond à toute heure, 7 jours sur 7, 365 jours par an.' },
-    { icon: Zap,           color: '#D4AF37', title: 'Intégration en 48h',          desc: 'Compatible Google Calendar, Outlook, votre CRM et vos outils existants. Opérationnel en moins de 2 jours.' },
+    { icon: Phone,         color: '#3B82F6', title: 'Gestion des appels',         desc: 'Identifie l\'appelant, route vers la bonne personne ou prend le message.' },
+    { icon: Calendar,      color: '#22C55E', title: 'Prise de rendez-vous',        desc: 'Planification automatique selon votre calendrier. Zéro conflit, zéro oubli.' },
+    { icon: MessageSquare, color: '#8B5CF6', title: 'Messages intelligents',       desc: 'Messages vocaux transcrits, résumés et priorisés automatiquement.' },
+    { icon: Mic,           color: '#F97316', title: 'Répondeur professionnel',     desc: 'Voix naturelle, ton adapté à votre secteur. Indétectable.' },
+    { icon: Clock,         color: '#06B6D4', title: 'Disponibilité 24h/24',        desc: 'Jamais de pause, jamais de congé. 7j/7, 365 jours par an.' },
+    { icon: Zap,           color: '#D4AF37', title: 'Intégration en 48h',          desc: 'Google Calendar, Outlook, votre CRM. Opérationnel en 2 jours.' },
   ],
   en: [
-    { icon: Phone,         color: '#3B82F6', title: 'Call management',            desc: 'Answers professional calls, identifies callers and routes them to the right person or records their messages accurately.' },
-    { icon: Calendar,      color: '#22C55E', title: 'Appointment booking',        desc: 'Automatically schedules appointments based on your real-time calendar. Zero conflicts, zero missed slots.' },
-    { icon: MessageSquare, color: '#8B5CF6', title: 'Smart messages',             desc: 'Automatically transcribes voice messages into structured text with a summary and priority level.' },
-    { icon: Mic,           color: '#F97316', title: 'Professional voicebot',      desc: 'Natural voice, tone adapted to your industry. Your clients won\'t know they\'re talking to an AI.' },
-    { icon: Clock,         color: '#06B6D4', title: '24/7 availability',          desc: 'No holidays, no breaks. Your AI secretary responds at any hour, 7 days a week, 365 days a year.' },
-    { icon: Zap,           color: '#D4AF37', title: 'Live in 48h',               desc: 'Works with Google Calendar, Outlook, your CRM and existing tools. Operational in under 2 days.' },
+    { icon: Phone,         color: '#3B82F6', title: 'Call management',            desc: 'Identifies the caller, routes to the right person, or takes the message.' },
+    { icon: Calendar,      color: '#22C55E', title: 'Appointment booking',        desc: 'Automatic scheduling from your real-time calendar. Zero conflicts, zero misses.' },
+    { icon: MessageSquare, color: '#8B5CF6', title: 'Smart messages',             desc: 'Voice messages transcribed, summarized and prioritized automatically.' },
+    { icon: Mic,           color: '#F97316', title: 'Professional voicebot',      desc: 'Natural voice, tone matched to your industry. Undetectable.' },
+    { icon: Clock,         color: '#06B6D4', title: '24/7 availability',          desc: 'No breaks, no holidays. 7 days a week, 365 days a year.' },
+    { icon: Zap,           color: '#D4AF37', title: 'Live in 48h',               desc: 'Google Calendar, Outlook, your CRM. Operational in 2 days.' },
   ],
 };
 
@@ -214,28 +214,6 @@ export default async function SecretaryPage({
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ── What is it ── */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-6 border border-happi-blue/20">
-              {fr ? 'Le concept' : 'The concept'}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              {fr ? "Qu'est-ce que Happi-Secretary ?" : 'What is Happi-Secretary?'}
-            </h2>
-            <p className="text-happi-muted leading-relaxed text-base mb-5">
-              {fr
-                ? "Happi-Secretary est une intelligence artificielle vocale qui fonctionne comme un véritable secrétaire pour votre entreprise. Disponible jour et nuit, elle répond aux appels, prend des messages, planifie des rendez-vous et s'intègre à vos outils. Sans pause et sans congés."
-                : "Happi-Secretary is a voice AI that works as a real secretary for your business. Available day and night, it answers calls, takes messages, schedules appointments and integrates with your tools. No breaks. No holidays."}
-            </p>
-            <p className="text-happi-muted/70 leading-relaxed text-sm">
-              {fr
-                ? "C'est comme avoir un collaborateur virtuel ultra-compétent qui maîtrise votre calendrier, vos priorités et votre image, tout en restant professionnel et discret."
-                : "Think of it as a highly competent virtual colleague who knows your calendar, your priorities and your brand. Always professional, always discreet."}
-            </p>
           </div>
         </section>
 
