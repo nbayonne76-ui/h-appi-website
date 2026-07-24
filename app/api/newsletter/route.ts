@@ -15,14 +15,18 @@ export async function POST(req: NextRequest) {
 
     const isFr = locale !== 'en';
 
-    await resend.emails.send({
+    const founderResult = await resend.emails.send({
       from: "H'appi <contact@happi-bot.com>",
       to: 'contact@happi-bot.com',
       subject: `Newsletter H'appi — Nouvelle inscription : ${email}`,
       html: `<p style="font-family:sans-serif">Nouvelle inscription newsletter H'appi : <strong>${email}</strong> (locale : ${locale ?? 'fr'})</p>`,
     });
 
-    await resend.emails.send({
+    if (founderResult.error) {
+      console.error('Newsletter: founder notification failed to send', founderResult.error);
+    }
+
+    const subscriberResult = await resend.emails.send({
       from: "H'appi <contact@happi-bot.com>",
       replyTo: 'contact@happi-bot.com',
       to: email,
@@ -54,6 +58,11 @@ export async function POST(req: NextRequest) {
         </div>
       `,
     });
+
+    if (subscriberResult.error) {
+      console.error('Newsletter: subscriber confirmation failed to send', subscriberResult.error);
+      return NextResponse.json({ error: 'Failed to subscribe' }, { status: 502 });
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

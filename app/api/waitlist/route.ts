@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     const isFr = locale !== 'en';
 
     // Notify the founder
-    await resend.emails.send({
+    const founderResult = await resend.emails.send({
       from: 'DropOS <contact@happi-bot.com>',
       to: 'contact@happi-bot.com',
       subject: `🚀 New DropOS Founding Member — ${email}`,
@@ -45,8 +45,12 @@ export async function POST(req: NextRequest) {
       `,
     });
 
+    if (founderResult.error) {
+      console.error('Waitlist: founder notification failed to send', founderResult.error);
+    }
+
     // Send confirmation to the subscriber
-    await resend.emails.send({
+    const subscriberResult = await resend.emails.send({
       from: 'DropOS <contact@happi-bot.com>',
       replyTo: 'contact@happi-bot.com',
       to: email,
@@ -91,6 +95,11 @@ export async function POST(req: NextRequest) {
         </div>
       `,
     });
+
+    if (subscriberResult.error) {
+      console.error('Waitlist: subscriber confirmation failed to send', subscriberResult.error);
+      return NextResponse.json({ error: 'Failed to register' }, { status: 502 });
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

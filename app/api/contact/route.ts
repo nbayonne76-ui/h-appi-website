@@ -60,13 +60,18 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: 'H\'appi Contact <contact@happi-bot.com>',
       to: 'contact@happi-bot.com',
       replyTo: email,
       subject,
       html,
     });
+
+    if (result.error) {
+      console.error('Contact form: email failed to send', result.error);
+      return NextResponse.json({ error: 'Failed to send email' }, { status: 502 });
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
