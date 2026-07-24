@@ -659,76 +659,76 @@
     "pillars": [
       {
         "number": "01",
-        "title": "We Build Your Custom Digital Solutions",
-        "intro": "We don't sell templates. We don't offer generic \"turnkey\" solutions. Every H'appi project is unique because your company is unique.",
+        "title": "Custom-Built, Not Templated",
+        "intro": "Generic custom software doesn't exist. Either it's really yours, or it isn't custom.",
         "items": [
           {
             "label": "Web and mobile applications",
-            "desc": "Developed according to your vision, your business processes, your visual identity"
+            "desc": "Your vision, your process, your identity"
           },
           {
             "label": "Intelligent chatbots",
-            "desc": "Designed to speak your language, understand your industry, and interact naturally with your customers"
+            "desc": "Speak your language, understand your industry"
           },
           {
             "label": "Professional websites",
-            "desc": "From showcase sites to e-commerce portals, always customized, high-performing and SEO-optimized"
+            "desc": "Showcase or e-commerce, always fast and SEO-ready"
           }
         ],
-        "footnote": "Every project starts with a deep immersion phase in your business. We take the time to understand your needs, your users, your constraints. Then we design and develop a solution that truly reflects you."
+        "footnote": "Immersion first, code second. We don't build anything until we've understood how you actually work."
       },
       {
         "number": "02",
-        "title": "We Transform Your Applications into Business Intelligence Engines",
-        "intro": "Your fundamental differentiator: your H'appi solutions are not static. Once deployed and interacting with your users, we collect valuable data (with GDPR consent) to develop advanced SaaS features.",
+        "title": "Your Applications Learn",
+        "intro": "Your H'appi solutions don't stay static. Every interaction, with your GDPR consent, feeds advanced AI features.",
         "subSections": [
           {
             "title": "CX Modules (Customer Experience)",
             "items": [
-              "Behavioral analytics: understand the journey and pain points",
+              "Behavioral analytics: journey and pain points",
               "Smart personalization: automatic recommendations",
-              "Churn prediction: identify at-risk customers",
-              "Real-time satisfaction: automatic NPS and CSAT measurement",
-              "Support automation: knowledge base-powered responses"
+              "Churn prediction: at-risk customers, before they leave",
+              "Real-time satisfaction: automatic NPS and CSAT",
+              "Support automation: answers grounded in your knowledge base"
             ]
           },
           {
             "title": "Supply Chain Modules",
             "items": [
-              "Demand forecasting: volume anticipation",
+              "Demand forecasting",
               "Stock optimization: replenishment alerts",
-              "Advanced tracking: complete visibility on your flows",
-              "Multi-stakeholder coordination: supplier/distributor synchronization",
-              "Operational analytics: real-time dashboards"
+              "Advanced tracking across all flows",
+              "Synchronized supplier/distributor coordination",
+              "Real-time operational analytics"
             ]
           }
         ],
-        "footnote": "You start with a custom application or bot at an optimized price. After a few months, we offer to activate these SaaS modules that transform your solution into a true business intelligence platform. You only pay for what you need."
+        "footnote": "You start with a custom solution at a fair price. When you're ready, activate the SaaS modules. You only pay for what you use."
       },
       {
         "number": "03",
-        "title": "We Revolutionize Market Prices",
-        "intro": "We made a radical strategic choice: refuse the pricing inflation of IT giants.",
+        "title": "We Break IT Market Pricing",
+        "intro": "A radical choice: refuse the pricing inflation of IT giants.",
         "items": [
           {
             "label": "Next-gen cloud infrastructure",
-            "desc": "Equivalent performance to AWS/Azure/GCP for 40 to 60% less"
+            "desc": "AWS/Azure/GCP performance, 40 to 60% less"
           },
           {
             "label": "Quality open-source tools",
-            "desc": "Robust and proven technologies rather than expensive proprietary licenses"
+            "desc": "Robust and proven, no proprietary licenses"
           },
           {
             "label": "Optimized architecture",
-            "desc": "Lightweight and high-performing architectures, drastically reducing hosting costs"
+            "desc": "Lightweight, high-performing, hosted at a fair price"
           }
         ],
-        "footnote": "Result: an H'appi solution costs 50 to 70% less than an equivalent solution on traditional infrastructure, with zero compromise on quality."
+        "footnote": "Result: 50 to 70% less than an equivalent solution. Zero compromise on quality."
       },
       {
         "number": "04",
-        "title": "We Support Your Long-Term Growth",
-        "intro": "We're not just a vendor who delivers a product and disappears. H'appi becomes your long-term tech partner.",
+        "title": "We Stay After Launch",
+        "intro": "We don't deliver and disappear. H'appi stays your tech partner, for the long haul.",
         "items": [
           {
             "label": "Responsive technical support",
@@ -736,11 +736,11 @@
           },
           {
             "label": "Regular updates",
-            "desc": "Continuous improvements to your solution"
+            "desc": "Continuous improvements"
           },
           {
             "label": "Team training",
-            "desc": "For autonomous usage"
+            "desc": "Autonomous usage"
           },
           {
             "label": "Continuous evolution",
@@ -748,15 +748,15 @@
           },
           {
             "label": "Proactive suggestions",
-            "desc": "New features based on your actual usage"
+            "desc": "Based on your real usage"
           }
         ]
       },
       {
         "number": "05",
-        "title": "We Guarantee Compliance, Security and Transparency",
-        "intro": "All our solutions are hosted in Europe, GDPR compliant, and benefit from the highest security standards.",
-        "footnote": "Your data and your customers' data are protected with the same level of rigor as the largest companies, but at accessible prices."
+        "title": "Compliance, Security, Transparency",
+        "intro": "European hosting. GDPR compliant. Security standards matching the biggest players.",
+        "footnote": "Your data protected with the same rigor as the largest companies. At an accessible price."
       }
     ]
   },
@@ -810,50 +810,50 @@
       {
         "title": "Radical Customization",
         "quote": "Your company is unique. Your digital solutions should be too.",
-        "description": "We categorically refuse generic templates. Every line of code is designed for YOUR business, YOUR users, YOUR goals.",
-        "practice": "Before developing, we spend several days understanding your company. We create a co-built specification with you. Throughout development, you're involved with regular demos."
+        "description": "Zero generic templates. Every line of code built for YOUR business.",
+        "practice": "Several days of immersion. Co-built specification. Regular demos throughout development."
       },
       {
         "title": "Fair and Transparent Pricing",
         "quote": "Custom digital should no longer be a privilege for the wealthy.",
-        "description": "We built H'appi on a strong conviction: the prices charged by the IT industry are unjustifiable. The same skills can cost 50 to 70% less.",
-        "practice": "Detailed quotes with every line explained. Disruptive pricing through our optimized infrastructure. Flexible payment adapted to SMEs. Satisfaction guarantee included."
+        "description": "IT industry pricing is unjustifiable. Same skills, 50 to 70% less.",
+        "practice": "Detailed quote, line by line. Flexible payment. Satisfaction guarantee included."
       },
       {
         "title": "Scalable Growth",
         "quote": "Today's solution becomes tomorrow's business intelligence platform.",
-        "description": "We don't create static solutions. We build solid foundations that evolve with your company.",
-        "practice": "Phase 1: Custom app. Phase 2: Data collection. Phase 3: Personalized recommendations. Phase 4: Activation of à la carte SaaS modules."
+        "description": "No static solutions. Foundations that evolve with you.",
+        "practice": "Phase 1: Custom app. Phase 2: Data collection. Phase 3: Personalized recommendations. Phase 4: À la carte SaaS modules."
       },
       {
         "title": "Agility and Speed",
         "quote": "Waiting 6 months for an application is no longer acceptable.",
-        "description": "Traditional cycles are endless. We deliver functional prototypes 60% faster than traditional providers.",
-        "practice": "Kick-off within 48h. First functional version in 2-3 weeks. 1-2 week iterations. Continuous delivery rather than a \"big bang\" final."
+        "description": "No more endless cycles. Functional prototypes 60% faster than the competition.",
+        "practice": "Kick-off within 48h. First version in 2-3 weeks. 1-2 week iterations. No \"big bang\" final."
       },
       {
         "title": "Long-Term Partnership",
         "quote": "We're not a vendor, we're your outsourced tech team.",
-        "description": "Too many digital projects fail because the provider delivers and disappears. At H'appi, we stay by your side.",
-        "practice": "Every client has a dedicated contact. Responsive support during business days. Proactive maintenance. Regular strategic advice. No anonymous tickets. A real human relationship."
+        "description": "Most providers deliver and disappear. We stay.",
+        "practice": "Dedicated contact. Responsive support. Proactive maintenance. No anonymous tickets."
       },
       {
         "title": "Uncompromising Security",
         "quote": "Accessible prices don't mean compromised security.",
-        "description": "Even as we revolutionize prices, we never cut corners on security and compliance.",
-        "practice": "European hosting. End-to-end encryption. Daily automatic backups. Quarterly security audits. ISO 27001, SOC 2 certified partners."
+        "description": "Cutting prices doesn't mean cutting corners on security.",
+        "practice": "European hosting. End-to-end encryption. Daily backups. Quarterly audits. ISO 27001, SOC 2 certified partners."
       },
       {
         "title": "Radical Transparency",
         "quote": "You have the right to know where every euro spent goes.",
-        "description": "Pricing opacity is a plague of the IT industry. At H'appi, we practice total transparency.",
-        "practice": "Detailed quotes in plain language. Accessible source code (you own 100%). Open technologies. Weekly reporting with time spent."
+        "description": "Pricing opacity is the IT industry's plague. We do the opposite.",
+        "practice": "Quotes in plain language. Source code accessible, you own 100%. Open technologies. Weekly reporting."
       },
       {
         "title": "International Excellence, Competitive Pricing",
         "quote": "The best technical quality at the most accessible prices.",
-        "description": "We combine high-level expertise + optimized cloud infrastructure + lean organization to offer professional quality and disruptive pricing.",
-        "practice": "International team with the best technologies. Costs optimized through our infrastructure choices. We charge for the real value created, not the prestige of a logo."
+        "description": "High-level expertise + optimized infra + lean organization = disruptive pricing.",
+        "practice": "International team. Costs optimized by our infrastructure choices. We charge for value created, not a logo."
       }
     ]
   },

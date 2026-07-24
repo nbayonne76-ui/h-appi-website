@@ -659,76 +659,76 @@
     "pillars": [
       {
         "number": "01",
-        "title": "Construisons Vos Solutions Digitales Sur-Mesure",
-        "intro": "Nous ne vendons pas de templates. Nous ne proposons pas de solutions \"clé en main\" génériques. Chaque projet H'appi est unique car votre entreprise est unique.",
+        "title": "Du Sur-Mesure, Pas des Templates",
+        "intro": "Le sur-mesure générique n'existe pas. Soit c'est vraiment à vous, soit ce n'est pas sur-mesure.",
         "items": [
           {
             "label": "Applications web et mobile",
-            "desc": "Développées selon votre vision, vos processus métier, votre identité visuelle"
+            "desc": "Votre vision, vos process, votre identité"
           },
           {
             "label": "Chatbots intelligents",
-            "desc": "Conçus pour parler votre langue, comprendre votre secteur, et interagir naturellement avec vos clients"
+            "desc": "Parlent votre langue, comprennent votre secteur"
           },
           {
             "label": "Sites web professionnels",
-            "desc": "Du site vitrine au portail e-commerce, toujours personnalisés, performants et optimisés SEO"
+            "desc": "Vitrine ou e-commerce, toujours performant et SEO-ready"
           }
         ],
-        "footnote": "Chaque projet commence par une phase d'immersion profonde dans votre métier. Nous prenons le temps de comprendre vos besoins, vos utilisateurs, vos contraintes. Ensuite, nous concevons et développons une solution qui vous ressemble vraiment."
+        "footnote": "Immersion d'abord, code ensuite. On ne développe rien tant qu'on n'a pas compris comment vous travaillez vraiment."
       },
       {
         "number": "02",
-        "title": "Transformons Vos Applications en Moteurs d'Intelligence Métier",
-        "intro": "Votre différence fondamentale : vos solutions H'appi ne sont pas statiques. Une fois déployées et en interaction avec vos utilisateurs, nous collectons des données précieuses (avec consentement RGPD) pour développer des fonctionnalités SaaS avancées.",
+        "title": "Vos Applications Apprennent",
+        "intro": "Vos solutions H'appi ne restent pas figées. Chaque interaction, avec votre consentement RGPD, nourrit des fonctionnalités IA avancées.",
         "subSections": [
           {
             "title": "Modules CX (Expérience Client)",
             "items": [
-              "Analytics comportementaux : comprendre le parcours et les pain points",
+              "Analytics comportementaux : parcours et pain points",
               "Personnalisation intelligente : recommandations automatiques",
-              "Prédiction du churn : identifier les clients à risque",
-              "Satisfaction en temps réel : mesure NPS et CSAT automatique",
-              "Automatisation du support : réponses basées sur la base de connaissances"
+              "Prédiction du churn : les clients à risque, avant qu'ils partent",
+              "Satisfaction en temps réel : NPS et CSAT automatiques",
+              "Support automatisé : réponses ancrées dans votre base de connaissance"
             ]
           },
           {
             "title": "Modules Supply Chain",
             "items": [
-              "Prévision de la demande : anticipation des volumes",
+              "Prévision de la demande",
               "Optimisation des stocks : alertes de réapprovisionnement",
-              "Tracking avancé : visibilité complète sur vos flux",
-              "Coordination multi-acteurs : synchronisation fournisseurs/distributeurs",
-              "Analytics opérationnels : tableaux de bord temps réel"
+              "Tracking avancé sur tous vos flux",
+              "Coordination fournisseurs/distributeurs synchronisée",
+              "Analytics opérationnels en temps réel"
             ]
           }
         ],
-        "footnote": "Vous commencez avec une application ou un bot sur-mesure à tarif optimisé. Après quelques mois, nous vous proposons d'activer ces modules SaaS qui transforment votre solution en véritable plateforme d'intelligence métier. Vous payez uniquement ce dont vous avez besoin."
+        "footnote": "Vous démarrez avec une solution sur-mesure à prix juste. Quand vous êtes prêt, activez les modules SaaS. Vous ne payez que ce que vous utilisez."
       },
       {
         "number": "03",
-        "title": "Révolutionnons les Prix du Marché",
-        "intro": "Nous avons fait un choix stratégique radical : refuser l'inflation tarifaire des géants de l'IT.",
+        "title": "On Casse les Prix du Marché IT",
+        "intro": "Un choix radical : refuser l'inflation tarifaire des géants de l'IT.",
         "items": [
           {
             "label": "Cloud nouvelle génération",
-            "desc": "Performances équivalentes aux AWS/Azure/GCP pour 40 à 60% moins cher"
+            "desc": "Performances AWS/Azure/GCP, 40 à 60% moins cher"
           },
           {
             "label": "Outils open-source de qualité",
-            "desc": "Technologies robustes et éprouvées plutôt que des licences propriétaires coûteuses"
+            "desc": "Robustes et éprouvés, sans licences propriétaires"
           },
           {
             "label": "Architecture optimisée",
-            "desc": "Architectures légères et performantes, réduisant drastiquement les coûts d'hébergement"
+            "desc": "Légère, performante, hébergement au juste prix"
           }
         ],
-        "footnote": "Résultat : une solution H'appi coûte 50 à 70% moins cher qu'une solution équivalente sur des infrastructures traditionnelles, sans aucun compromis sur la qualité."
+        "footnote": "Résultat : 50 à 70% moins cher qu'une solution équivalente. Zéro compromis sur la qualité."
       },
       {
         "number": "04",
-        "title": "Accompagnons Votre Croissance sur le Long Terme",
-        "intro": "Nous ne sommes pas juste un prestataire qui livre un produit et disparaît. H'appi devient votre partenaire tech sur la durée.",
+        "title": "On Reste Après la Livraison",
+        "intro": "On ne livre pas et on disparaît. H'appi reste votre partenaire tech, dans la durée.",
         "items": [
           {
             "label": "Support technique réactif",
@@ -736,11 +736,11 @@
           },
           {
             "label": "Mises à jour régulières",
-            "desc": "Améliorations continues de votre solution"
+            "desc": "Améliorations continues"
           },
           {
             "label": "Formation de vos équipes",
-            "desc": "Pour une prise en main autonome"
+            "desc": "Prise en main autonome"
           },
           {
             "label": "Évolution continue",
@@ -748,15 +748,15 @@
           },
           {
             "label": "Proposition proactive",
-            "desc": "Nouvelles fonctionnalités basées sur vos usages réels"
+            "desc": "Basée sur vos usages réels"
           }
         ]
       },
       {
         "number": "05",
-        "title": "Garantissons Conformité, Sécurité et Transparence",
-        "intro": "Toutes nos solutions sont hébergées en Europe, conformes RGPD, et bénéficient des plus hauts standards de sécurité.",
-        "footnote": "Vos données et celles de vos clients sont protégées avec le même niveau d'exigence que les plus grandes entreprises, mais à des coûts accessibles."
+        "title": "Conformité, Sécurité, Transparence",
+        "intro": "Hébergement européen. Conformité RGPD. Standards de sécurité au niveau des plus grands.",
+        "footnote": "Vos données protégées avec la même exigence que les plus grandes entreprises. À un prix accessible."
       }
     ]
   },
@@ -810,50 +810,50 @@
       {
         "title": "Sur-Mesure Radical",
         "quote": "Votre entreprise est unique. Vos solutions digitales doivent l'être aussi.",
-        "description": "Nous refusons catégoriquement les templates génériques. Chaque ligne de code est pensée pour VOTRE métier, VOS utilisateurs, VOS objectifs.",
-        "practice": "Avant de développer, nous passons plusieurs jours à comprendre votre entreprise. Nous créons un cahier des charges co-construit avec vous. Tout au long du développement, vous êtes impliqué avec des démos régulières."
+        "description": "Zéro template générique. Chaque ligne de code pensée pour VOTRE métier.",
+        "practice": "Immersion de plusieurs jours. Cahier des charges co-construit. Démos régulières tout au long du développement."
       },
       {
         "title": "Prix Justes et Transparents",
         "quote": "Le digital sur-mesure ne doit plus être un privilège de riches.",
-        "description": "Nous avons bâti H'appi sur une conviction forte : les prix pratiqués par l'industrie IT sont injustifiables. Les mêmes compétences peuvent coûter 50 à 70% moins cher.",
-        "practice": "Devis détaillés avec chaque ligne expliquée. Prix disruptifs grâce à nos infrastructures optimisées. Paiement flexible adapté aux PME. Garantie satisfaction incluse."
+        "description": "Les prix de l'industrie IT sont injustifiables. Mêmes compétences, 50 à 70% moins cher.",
+        "practice": "Devis détaillé, ligne par ligne. Paiement flexible. Garantie satisfaction incluse."
       },
       {
         "title": "Croissance Évolutive",
         "quote": "Votre solution d'aujourd'hui devient votre plateforme d'intelligence métier de demain.",
-        "description": "Nous ne créons pas des solutions figées. Nous construisons des fondations solides qui évoluent avec votre entreprise.",
-        "practice": "Phase 1 : App sur-mesure. Phase 2 : Collecte de données. Phase 3 : Recommandations personnalisées. Phase 4 : Activation de modules SaaS à la carte."
+        "description": "Pas de solutions figées. Des fondations qui évoluent avec vous.",
+        "practice": "Phase 1 : App sur-mesure. Phase 2 : Collecte de données. Phase 3 : Recommandations personnalisées. Phase 4 : Modules SaaS à la carte."
       },
       {
         "title": "Agilité et Rapidité",
         "quote": "Attendre 6 mois pour une application n'est plus acceptable.",
-        "description": "Les cycles traditionnels sont interminables. Nous livrons des prototypes fonctionnels 60% plus rapidement que les prestataires traditionnels.",
-        "practice": "Kick-off sous 48h. Première version fonctionnelle en 2-3 semaines. Itérations de 1-2 semaines. Livraison continue plutôt qu'un \"big bang\" final."
+        "description": "Fini les cycles interminables. Prototypes fonctionnels 60% plus vite que la concurrence.",
+        "practice": "Kick-off sous 48h. Première version en 2-3 semaines. Itérations de 1-2 semaines. Pas de \"big bang\" final."
       },
       {
         "title": "Partenariat Long Terme",
         "quote": "Nous ne sommes pas un prestataire, nous sommes votre équipe tech externalisée.",
-        "description": "Trop de projets digitaux échouent parce que le prestataire livre et disparaît. Chez H'appi, nous restons à vos côtés.",
-        "practice": "Chaque client a un interlocuteur dédié. Support réactif en jours ouvrés. Maintenance proactive. Conseils stratégiques réguliers. Pas de tickets anonymes. Une vraie relation humaine."
+        "description": "La plupart des prestataires livrent et disparaissent. Nous, on reste.",
+        "practice": "Interlocuteur dédié. Support réactif. Maintenance proactive. Pas de tickets anonymes."
       },
       {
         "title": "Sécurité Sans Compromis",
         "quote": "Prix accessibles ne signifie pas compromis sur la sécurité.",
-        "description": "Même si nous révolutionnons les prix, nous n'économisons jamais sur la sécurité et la conformité.",
-        "practice": "Hébergement européen. Chiffrement de bout en bout. Sauvegardes automatiques quotidiennes. Audits de sécurité trimestriels. Partenaires certifiés ISO 27001, SOC 2."
+        "description": "Prix cassés ne veut pas dire sécurité au rabais.",
+        "practice": "Hébergement européen. Chiffrement de bout en bout. Sauvegardes quotidiennes. Audits trimestriels. Partenaires certifiés ISO 27001, SOC 2."
       },
       {
         "title": "Transparence Radicale",
         "quote": "Vous avez le droit de savoir où va chaque euro dépensé.",
-        "description": "L'opacité tarifaire est un fléau de l'industrie IT. Chez H'appi, nous pratiquons la transparence totale.",
-        "practice": "Devis détaillés en langage clair. Code source accessible (vous êtes propriétaire à 100%). Technologies ouvertes. Reporting hebdomadaire avec temps passés."
+        "description": "L'opacité tarifaire est un fléau du secteur. On fait l'inverse.",
+        "practice": "Devis en langage clair. Code source accessible, vous êtes propriétaire à 100%. Technologies ouvertes. Reporting hebdomadaire."
       },
       {
         "title": "Excellence Internationale, Prix Compétitifs",
         "quote": "La meilleure qualité technique aux prix les plus accessibles.",
-        "description": "Nous combinons expertise de haut niveau + infrastructures cloud optimisées + organisation lean pour offrir qualité professionnelle et tarifs disruptifs.",
-        "practice": "Équipe internationale avec les meilleures technologies. Coûts optimisés grâce à nos choix d'infrastructure. Nous facturons la valeur réelle créée, pas le prestige d'un logo."
+        "description": "Expertise de haut niveau + infra optimisée + organisation lean = tarifs disruptifs.",
+        "practice": "Équipe internationale. Coûts optimisés par nos choix d'infrastructure. On facture la valeur créée, pas un logo."
       }
     ]
   },
