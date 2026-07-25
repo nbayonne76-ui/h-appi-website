@@ -11,6 +11,7 @@ import ProductStack from '@/components/playbook/ProductStack';
 import SecurityDetail from '@/components/playbook/SecurityDetail';
 import SecretaryDetail from '@/components/playbook/SecretaryDetail';
 import BusinessModel from '@/components/playbook/BusinessModel';
+import CrmDetail from '@/components/playbook/CrmDetail';
 import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import { FadeInUp, ScaleIn, Stagger, StaggerItem } from '@/components/ui/Animate';
 import { Building2, MapPin, Calendar, Sofa, Users, Zap, Globe, ArrowLeft } from 'lucide-react';
@@ -94,6 +95,7 @@ export default async function PlaybookPage({ params }: { params: Promise<{ local
                 { href: '#securite', label: fr ? 'Sécurité' : 'Security' },
                 { href: '#secretaire', label: fr ? 'Secrétaire IA' : 'AI Secretary' },
                 { href: '#modele', label: fr ? 'Modèle économique' : 'Business model' },
+                { href: '#crm', label: 'CRM' },
                 { href: '#roi', label: 'ROI' },
               ].map((l) => (
                 <a
@@ -289,6 +291,25 @@ export default async function PlaybookPage({ params }: { params: Promise<{ local
             </div>
           </section>
           <BusinessModel fr={fr} />
+        </div>
+
+        {/* ── Happi CRM, le détail ── */}
+        <div id="crm">
+          <section className="pt-4 pb-4 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto text-center">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
+                {fr ? 'Un autre produit H\'appi' : 'Another H\'appi product'}
+              </p>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                {fr ? (
+                  <>Happi CRM, <span className="gradient-text">le détail</span></>
+                ) : (
+                  <>Happi CRM, <span className="gradient-text">in detail</span></>
+                )}
+              </h2>
+            </div>
+          </section>
+          <CrmDetail fr={fr} />
         </div>
 
         {/* ROI Calculator */}
