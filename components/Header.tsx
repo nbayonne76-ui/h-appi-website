@@ -55,7 +55,7 @@ export default function Header() {
             <LanguageSwitcher />
             <button
               onClick={openContactModal}
-              className="btn-shimmer bg-happi-blue text-white px-5 py-2 rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/20 text-sm font-medium active:scale-[0.97]"
+              className="btn-shimmer bg-happi-blue-strong text-white px-5 py-2 rounded-lg hover:bg-happi-blue-strong/90 transition-all hover:shadow-lg hover:shadow-happi-blue/20 text-sm font-medium active:scale-[0.97]"
             >
               {t('cta')}
             </button>
@@ -94,7 +94,7 @@ export default function Header() {
             </div>
             <button
               onClick={() => { setIsMenuOpen(false); openContactModal(); }}
-              className="block w-full bg-happi-blue text-white px-6 py-2 rounded-lg text-center hover:bg-happi-blue/90 transition-all text-sm font-medium"
+              className="block w-full bg-happi-blue-strong text-white px-6 py-2 rounded-lg text-center hover:bg-happi-blue-strong/90 transition-all text-sm font-medium"
             >
               {t('cta')}
             </button>

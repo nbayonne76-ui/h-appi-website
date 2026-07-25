@@ -143,43 +143,48 @@ export default function ComparisonTable({ fr }: { fr: boolean }) {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="rounded-2xl border border-happi-border overflow-hidden"
         >
-          {/* Column headers */}
-          <div className="grid grid-cols-4 bg-happi-surface border-b border-happi-border">
-            {headers.map((h, i) => (
-              <div
-                key={i}
-                className={`px-4 py-4 text-center ${i === 3 ? 'bg-happi-blue/10 border-l border-happi-blue/20' : ''}`}
-              >
-                <p className={`text-sm font-bold ${i === 3 ? 'text-happi-blue' : 'text-white'}`}>{h.label}</p>
-                {h.sub && <p className="text-[10px] text-happi-muted mt-0.5">{h.sub}</p>}
+          {/* Horizontally scrollable on narrow viewports instead of squeezing 4 columns */}
+          <div className="overflow-x-auto">
+            <div className="min-w-[560px]">
+              {/* Column headers */}
+              <div className="grid grid-cols-4 bg-happi-surface border-b border-happi-border">
+                {headers.map((h, i) => (
+                  <div
+                    key={i}
+                    className={`px-4 py-4 text-center ${i === 3 ? 'bg-happi-blue/10 border-l border-happi-blue/20' : ''}`}
+                  >
+                    <p className={`text-sm font-bold ${i === 3 ? 'text-happi-blue' : 'text-white'}`}>{h.label}</p>
+                    {h.sub && <p className="text-[10px] text-happi-muted mt-0.5">{h.sub}</p>}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          {/* Rows */}
-          {rows.map((row, i) => (
-            <div
-              key={i}
-              className={`grid grid-cols-4 border-b border-happi-border/50 last:border-0 ${i % 2 === 0 ? 'bg-happi-darker' : 'bg-happi-surface/30'}`}
-            >
-              {/* Criteria */}
-              <div className="px-4 py-3.5 flex items-center">
-                <span className="text-xs font-medium text-white">{fr ? row.criteriaFr : row.criteriaEn}</span>
-              </div>
-              {/* Agency */}
-              <div className="px-4 py-3.5 flex items-center justify-center">
-                <Cell value={row.agency} />
-              </div>
-              {/* SaaS */}
-              <div className="px-4 py-3.5 flex items-center justify-center">
-                <Cell value={row.saas} />
-              </div>
-              {/* H'appi */}
-              <div className="px-4 py-3.5 flex items-center justify-center bg-happi-blue/5 border-l border-happi-blue/20">
-                <Cell value={row.happi} highlight />
-              </div>
+              {/* Rows */}
+              {rows.map((row, i) => (
+                <div
+                  key={i}
+                  className={`grid grid-cols-4 border-b border-happi-border/50 last:border-0 ${i % 2 === 0 ? 'bg-happi-darker' : 'bg-happi-surface/30'}`}
+                >
+                  {/* Criteria */}
+                  <div className="px-4 py-3.5 flex items-center">
+                    <span className="text-xs font-medium text-white">{fr ? row.criteriaFr : row.criteriaEn}</span>
+                  </div>
+                  {/* Agency */}
+                  <div className="px-4 py-3.5 flex items-center justify-center">
+                    <Cell value={row.agency} />
+                  </div>
+                  {/* SaaS */}
+                  <div className="px-4 py-3.5 flex items-center justify-center">
+                    <Cell value={row.saas} />
+                  </div>
+                  {/* H'appi */}
+                  <div className="px-4 py-3.5 flex items-center justify-center bg-happi-blue/5 border-l border-happi-blue/20">
+                    <Cell value={row.happi} highlight />
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </motion.div>
 
         {/* Bottom CTA nudge */}

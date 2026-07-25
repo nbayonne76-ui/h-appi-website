@@ -719,7 +719,7 @@ function LeadForm({
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3 bg-happi-blue hover:bg-happi-blue/90 disabled:opacity-50 rounded-xl text-sm font-bold text-white transition-colors flex items-center justify-center gap-2 mt-1"
+                className="w-full py-3 bg-happi-blue-strong hover:bg-happi-blue-strong/90 disabled:opacity-50 rounded-xl text-sm font-bold text-white transition-colors flex items-center justify-center gap-2 mt-1"
               >
                 {loading
                   ? (fr ? 'Envoi...' : 'Sending...')

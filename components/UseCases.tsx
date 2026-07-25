@@ -63,7 +63,7 @@ export default function UseCases() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium text-sm transition-all ${
                     activeTab === tab.id
-                      ? 'bg-happi-blue text-white shadow-sm'
+                      ? 'bg-happi-blue-strong text-white shadow-sm'
                       : 'text-happi-muted hover:text-white'
                   }`}
                 >

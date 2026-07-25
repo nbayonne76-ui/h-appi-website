@@ -125,7 +125,7 @@ export default function Testimonials() {
           </p>
           <button
             onClick={openContactModal}
-            className="btn-shimmer inline-flex items-center gap-2 px-7 py-3.5 bg-happi-blue text-white rounded-xl hover:bg-happi-blue/90 transition-all font-semibold shadow-lg shadow-happi-blue/20 text-sm"
+            className="btn-shimmer inline-flex items-center gap-2 px-7 py-3.5 bg-happi-blue-strong text-white rounded-xl hover:bg-happi-blue-strong/90 transition-all font-semibold shadow-lg shadow-happi-blue/20 text-sm"
           >
             {fr ? 'Voir une démo gratuite en 15 min' : 'See a free demo in 15 min'}
           </button>

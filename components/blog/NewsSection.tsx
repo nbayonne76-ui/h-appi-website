@@ -142,7 +142,7 @@ export default function NewsSection({ fr }: { fr: boolean }) {
               whileTap={{ scale: 0.95 }}
               className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 active
-                  ? 'bg-happi-blue text-white'
+                  ? 'bg-happi-blue-strong text-white'
                   : 'bg-happi-surface text-happi-muted hover:text-white border border-happi-border'
               }`}
             >

@@ -122,7 +122,7 @@ export default function Pricing() {
             </p>
             <MagneticButton
               onClick={openContactModal}
-              className="inline-flex items-center px-8 py-3.5 bg-happi-blue text-white rounded-xl hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-semibold"
+              className="inline-flex items-center px-8 py-3.5 bg-happi-blue-strong text-white rounded-xl hover:bg-happi-blue-strong/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-semibold"
             >
               <Mail className="mr-2" size={18} />
               {t('heroCta')}
@@ -308,7 +308,7 @@ export default function Pricing() {
 
               <button
                 onClick={openContactModal}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-happi-blue text-white rounded-xl hover:bg-happi-blue/90 transition-all font-semibold text-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-happi-blue-strong text-white rounded-xl hover:bg-happi-blue-strong/90 transition-all font-semibold text-sm"
               >
                 {t('implementCta')}
                 <ArrowRight size={15} />

@@ -104,7 +104,7 @@ export default function JoinSection() {
 
             <button
               onClick={openContactModal}
-              className="btn-shimmer w-full text-center bg-happi-blue text-white py-2.5 rounded-xl hover:bg-opacity-90 transition-all font-semibold text-xs flex items-center justify-center gap-2"
+              className="btn-shimmer w-full text-center bg-happi-blue-strong text-white py-2.5 rounded-xl hover:bg-opacity-90 transition-all font-semibold text-xs flex items-center justify-center gap-2"
             >
               {t('enterprise.cta')}
               <ArrowRight size={13} />

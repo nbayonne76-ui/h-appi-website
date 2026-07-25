@@ -153,7 +153,7 @@ export default function BlogContent() {
                     whileTap={{ scale: 0.95 }}
                     className={`flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
                       isActive
-                        ? 'bg-happi-blue text-white'
+                        ? 'bg-happi-blue-strong text-white'
                         : 'text-happi-muted hover:text-white hover:bg-happi-surface border border-happi-border'
                     }`}
                   >

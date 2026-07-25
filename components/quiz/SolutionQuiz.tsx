@@ -255,7 +255,7 @@ export function SolutionQuiz() {
         <div className="flex flex-col sm:flex-row gap-3">
           <button
             onClick={openContactModal}
-            className="flex-1 flex items-center justify-center gap-2 bg-happi-blue hover:bg-happi-blue/90 text-white text-sm font-medium px-5 py-3 rounded-xl transition-all hover:shadow-lg hover:shadow-happi-blue/20"
+            className="flex-1 flex items-center justify-center gap-2 bg-happi-blue-strong hover:bg-happi-blue-strong/90 text-white text-sm font-medium px-5 py-3 rounded-xl transition-all hover:shadow-lg hover:shadow-happi-blue/20"
           >
             {r.cta}
             <ArrowRight size={15} />

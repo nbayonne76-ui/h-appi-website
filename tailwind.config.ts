@@ -9,6 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         'happi-blue': '#3B82F6',
+        // Slightly deeper shade of happi-blue used behind white button/tab text —
+        // #3B82F6 only gives 3.68:1 white-on-blue contrast (fails WCAG AA 4.5:1 for text).
+        'happi-blue-strong': '#2563EB',
         'happi-green': '#10B981',
         'happi-yellow': '#FBBF24',
         'happi-dark': '#0F172A',

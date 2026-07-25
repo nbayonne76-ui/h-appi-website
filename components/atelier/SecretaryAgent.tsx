@@ -136,7 +136,7 @@ export default function SecretaryAgent({ fr }: { fr: boolean }) {
             onClick={startCall}
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full py-3 rounded-xl text-sm font-bold text-white bg-happi-blue hover:bg-happi-blue/90 transition-colors flex items-center justify-center gap-2"
+            className="w-full py-3 rounded-xl text-sm font-bold text-white bg-happi-blue-strong hover:bg-happi-blue-strong/90 transition-colors flex items-center justify-center gap-2"
           >
             <Phone size={15} />
             {fr ? 'Démarrer l\'appel' : 'Start the call'}
@@ -175,7 +175,7 @@ export default function SecretaryAgent({ fr }: { fr: boolean }) {
                       {msg.role === 'caller' ? '👤' : '📞'}
                     </div>
                     <div
-                      className={`rounded-xl px-3 py-2.5 text-sm leading-relaxed max-w-[80%] text-white ${msg.role === 'caller' ? 'rounded-tr-sm bg-happi-blue' : 'rounded-tl-sm bg-white/6'}`}
+                      className={`rounded-xl px-3 py-2.5 text-sm leading-relaxed max-w-[80%] text-white ${msg.role === 'caller' ? 'rounded-tr-sm bg-happi-blue-strong' : 'rounded-tl-sm bg-white/6'}`}
                     >
                       {msg.text}
                     </div>
@@ -227,7 +227,7 @@ export default function SecretaryAgent({ fr }: { fr: boolean }) {
                 <button
                   type="submit"
                   disabled={!input.trim() || isTyping}
-                  className="w-10 h-10 rounded-xl bg-happi-blue hover:bg-happi-blue/90 disabled:opacity-40 transition-colors flex items-center justify-center text-white flex-shrink-0"
+                  className="w-10 h-10 rounded-xl bg-happi-blue-strong hover:bg-happi-blue-strong/90 disabled:opacity-40 transition-colors flex items-center justify-center text-white flex-shrink-0"
                   aria-label={fr ? 'Envoyer' : 'Send'}
                 >
                   {isTyping ? <Loader2 size={15} className="animate-spin" /> : <Send size={15} />}
