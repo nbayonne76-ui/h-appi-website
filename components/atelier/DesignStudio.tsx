@@ -314,7 +314,7 @@ export default function DesignStudio({ fr }: { fr: boolean }) {
           disabled={running}
           whileHover={{ scale: running ? 1 : 1.01 }}
           whileTap={{ scale: running ? 1 : 0.98 }}
-          className="w-full py-3 rounded-xl text-sm font-bold text-white bg-happi-blue hover:bg-happi-blue/90 disabled:opacity-60 transition-colors flex items-center justify-center gap-2"
+          className="w-full py-3 rounded-xl text-sm font-bold text-white bg-happi-blue-strong hover:bg-happi-blue-strong/90 disabled:opacity-60 transition-colors flex items-center justify-center gap-2"
         >
           {running ? (
             <>

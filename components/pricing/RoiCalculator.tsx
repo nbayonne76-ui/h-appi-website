@@ -197,7 +197,7 @@ export function RoiCalculator() {
         <div className="flex flex-col sm:flex-row items-center gap-3 pt-1">
           <button
             onClick={openContactModal}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-happi-blue hover:bg-happi-blue/90 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-all hover:shadow-lg hover:shadow-happi-blue/20"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-happi-blue-strong hover:bg-happi-blue-strong/90 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-all hover:shadow-lg hover:shadow-happi-blue/20"
           >
             {fr ? 'Obtenir mon analyse personnalisée' : 'Get my personalised analysis'}
             <ArrowRight size={15} />

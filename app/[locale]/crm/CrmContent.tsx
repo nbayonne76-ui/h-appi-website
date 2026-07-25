@@ -185,7 +185,7 @@ export default function CrmContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={openContactModal}
-                className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-happi-blue text-white rounded-xl hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-semibold"
+                className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-happi-blue-strong text-white rounded-xl hover:bg-happi-blue-strong/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-semibold"
               >
                 {fr ? 'Demander une démo' : 'Request a demo'}
                 <ArrowRight size={16} />

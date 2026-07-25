@@ -66,7 +66,7 @@ export default function BlogNewsletter({ fr }: { fr: boolean }) {
                   onClick={openContactModal}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="px-8 py-3.5 rounded-2xl bg-happi-blue text-white font-bold text-sm hover:bg-happi-blue/90 transition-colors shadow-lg shadow-happi-blue/20"
+                  className="px-8 py-3.5 rounded-2xl bg-happi-blue-strong text-white font-bold text-sm hover:bg-happi-blue-strong/90 transition-colors shadow-lg shadow-happi-blue/20"
                 >
                   {fr ? 'Nous écrire →' : 'Write to us →'}
                 </motion.button>
