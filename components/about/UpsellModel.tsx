@@ -1,17 +1,20 @@
 'use client';
 
-import { ArrowDown, CheckCircle } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-
-const phaseColors = ['bg-happi-blue', 'bg-happi-green', 'bg-happi-yellow', 'bg-gradient-to-r from-happi-blue to-happi-green'];
+import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
+import { FadeInUp } from '@/components/ui/Animate';
+import { ArrowRight } from 'lucide-react';
 
 export default function UpsellModel() {
+  const locale = useLocale();
+  const fr = locale !== 'en';
   const t = useTranslations('upsellModel');
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-happi-darker">
+      <div className="max-w-2xl mx-auto text-center">
+
+        <FadeInUp>
           <span className="inline-block px-4 py-2 bg-happi-blue/10 text-happi-blue rounded-full text-sm font-medium mb-4">
             {t('badge')}
           </span>
@@ -20,96 +23,37 @@ export default function UpsellModel() {
               highlight: (chunks) => <span className="gradient-text">{chunks}</span>,
             })}
           </h2>
-          <p className="text-xl text-happi-muted">
-            {t('subtitle')}
+        </FadeInUp>
+
+        <FadeInUp delay={0.1} className="mt-10">
+          <p className="text-xl md:text-2xl font-bold text-white leading-snug">
+            {fr ? (
+              <>On construit votre outil. On observe comment vous l&apos;utilisez.<br />
+                <span className="gradient-text">Et on vous dit, gratuitement, ce qui vaut la peine d&apos;activer ensuite.</span></>
+            ) : (
+              <>We build your tool. We watch how you use it.<br />
+                <span className="gradient-text">Then we tell you, for free, what&apos;s worth activating next.</span></>
+            )}
           </p>
-        </div>
+          <p className="text-happi-muted text-sm mt-6 max-w-md mx-auto">
+            {fr
+              ? 'Aucun engagement. Vous n\'activez que ce qui a une valeur prouvée sur vos propres données.'
+              : 'No commitment. You only activate what has proven value on your own data.'}
+          </p>
+        </FadeInUp>
 
-        {/* Phases */}
-        <div className="space-y-4 mb-16">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <div key={index}>
-              <div className="bg-happi-surface rounded-2xl p-8 border border-happi-border hover:shadow-md transition-all">
-                <div className="flex items-start space-x-6">
-                  <div
-                    className={`w-14 h-14 ${phaseColors[index]} rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold text-xl`}
-                  >
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">
-                      {t(`phases.${index}.title`)}
-                    </h3>
-                    <span className="text-sm text-happi-blue font-medium">
-                      {t(`phases.${index}.subtitle`)}
-                    </span>
-                    <p className="text-happi-muted leading-relaxed mt-2">
-                      {t(`phases.${index}.description`)}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {index < 3 && (
-                <div className="flex justify-center py-2">
-                  <ArrowDown className="text-happi-blue/30" size={24} />
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+        <FadeInUp delay={0.18} className="mt-12">
+          <Link
+            href="/playbook#modele"
+            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
+          >
+            {fr ? 'Comment fonctionnent les 4 phases ?' : 'How do the 4 phases work?'}
+            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
+              {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
+            </span>
+          </Link>
+        </FadeInUp>
 
-        {/* Concrete Example */}
-        <div className="bg-happi-surface rounded-2xl p-8 border border-happi-blue/20 mb-16">
-          <h3 className="font-bold text-white mb-4">
-            {t('example.title')}
-          </h3>
-          <div className="bg-happi-darker rounded-xl p-6 italic text-happi-muted">
-            {t.rich('example.content', {
-              strong: (chunks) => <strong className="text-white not-italic">{chunks}</strong>,
-            })}
-          </div>
-        </div>
-
-        {/* Win-Win */}
-        <h3 className="text-2xl font-bold text-white mb-8 text-center">
-          {t('winWin.title')}
-        </h3>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-happi-surface rounded-2xl p-8 border border-green-100">
-            <h4 className="text-lg font-bold text-happi-green mb-4">
-              {t('winWin.forYou.title')}
-            </h4>
-            <ul className="space-y-3">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <li key={i} className="flex items-start space-x-3">
-                  <CheckCircle
-                    className="text-happi-green mt-0.5 flex-shrink-0"
-                    size={18}
-                  />
-                  <span className="text-happi-muted">{t(`winWin.forYou.items.${i}`)}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-happi-surface rounded-2xl p-8 border border-blue-100">
-            <h4 className="text-lg font-bold text-happi-blue mb-4">
-              {t('winWin.forUs.title')}
-            </h4>
-            <ul className="space-y-3">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <li key={i} className="flex items-start space-x-3">
-                  <CheckCircle
-                    className="text-happi-blue mt-0.5 flex-shrink-0"
-                    size={18}
-                  />
-                  <span className="text-happi-muted">{t(`winWin.forUs.items.${i}`)}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
   );
