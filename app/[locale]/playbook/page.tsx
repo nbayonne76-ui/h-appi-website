@@ -229,7 +229,7 @@ export default async function PlaybookPage({ params }: { params: Promise<{ local
               </h2>
             </div>
           </section>
-          <ProductStack />
+          <ProductStack locale={locale} />
         </div>
 
         {/* ── Sécurité & conformité ── */}

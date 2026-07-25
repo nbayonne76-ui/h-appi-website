@@ -1,36 +1,14 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { FadeInUp } from '@/components/ui/Animate';
-import { Users, MessageSquare, CheckCircle2, ArrowRight } from 'lucide-react';
-
-// Qualification en 3 phases (depuis le Brain)
-const phases3 = [
-  {
-    num: '01',
-    color: '#3B82F6',
-    title: 'Identification',
-    desc: 'Qui est l\'utilisateur ? Quel est son besoin précis ? Quel canal utilise-t-il ?',
-    icon: Users,
-  },
-  {
-    num: '02',
-    color: '#10B981',
-    title: 'Qualification',
-    desc: 'Quel produit ou service correspond ? Quel est le niveau de priorité (P0-P3) ?',
-    icon: MessageSquare,
-  },
-  {
-    num: '03',
-    color: '#A78BFA',
-    title: 'Conversion',
-    desc: 'Proposition sur-mesure, collecte du lead ou action directe (ticket, RDV, achat).',
-    icon: CheckCircle2,
-  },
-];
+import { ArrowRight } from 'lucide-react';
 
 export default function PricingStrategy() {
+  const locale = useLocale();
+  const fr = locale !== 'en';
   const t = useTranslations('pricingStrategy');
 
   return (
@@ -98,55 +76,6 @@ export default function PricingStrategy() {
           </div>
         </FadeInUp>
 
-        {/* Qualification en 3 phases (Brain) */}
-        <FadeInUp className="mb-14">
-          <div className="text-center mb-8">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
-              Notre différenciateur
-            </p>
-            <h3 className="text-2xl font-bold text-white">
-              Qualification leads en <span className="gradient-text">3 phases</span>
-            </h3>
-            <p className="text-happi-muted text-sm mt-2 max-w-xl mx-auto">
-              Toutes nos solutions intègrent ce système éprouvé qui maximise le taux de conversion — de 34% supérieur aux chatbots génériques.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            {phases3.map((phase, i) => {
-              const Icon = phase.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.1 }}
-                  className="rounded-2xl p-6 border text-center"
-                  style={{ background: `${phase.color}08`, borderColor: `${phase.color}25` }}
-                >
-                  <div
-                    className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4"
-                    style={{ background: `${phase.color}15` }}
-                  >
-                    <Icon size={22} style={{ color: phase.color }} />
-                  </div>
-                  <div className="text-3xl font-extrabold mb-1" style={{ color: phase.color }}>
-                    {phase.num}
-                  </div>
-                  <h4 className="text-white font-bold text-sm mb-2">{phase.title}</h4>
-                  <p className="text-happi-muted text-xs leading-relaxed">{phase.desc}</p>
-                  {i < 2 && (
-                    <div className="hidden md:flex justify-end absolute right-0 top-1/2 -translate-y-1/2">
-                      <ArrowRight size={14} className="text-happi-muted/30" />
-                    </div>
-                  )}
-                </motion.div>
-              );
-            })}
-          </div>
-        </FadeInUp>
-
         {/* Comparison table */}
         <FadeInUp>
           <h3 className="text-2xl font-bold text-white mb-6">{t('comparison.title')}</h3>
@@ -181,6 +110,18 @@ export default function PricingStrategy() {
           </div>
           <p className="mt-4 text-happi-muted text-xs italic text-center">{t('comparison.footnote')}</p>
         </FadeInUp>
+
+        <div className="text-center mt-10">
+          <Link
+            href="/playbook#stack"
+            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
+          >
+            {fr ? 'Comment fonctionne notre système de qualification des leads ?' : 'How does our lead qualification system work?'}
+            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
+              {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
+            </span>
+          </Link>
+        </div>
 
       </div>
     </section>

@@ -1,13 +1,96 @@
 import { getTranslations } from 'next-intl/server';
+import { Users, MessageSquare, CheckCircle2 } from 'lucide-react';
 import { Stagger, StaggerItem } from '@/components/ui/Animate';
 
 const integrations = ['Salesforce', 'HubSpot', 'SAP', 'Oracle', 'Shopify', 'WooCommerce', 'WhatsApp', 'Messenger', 'Microsoft Teams', 'Slack', 'ServiceNow', 'API'];
 
-export default async function ProductStack() {
-  const t = await getTranslations('pageFonctionnalites');
+const phases3 = [
+  {
+    num: '01',
+    color: '#3B82F6',
+    icon: Users,
+    title: { fr: 'Identification', en: 'Identification' },
+    desc: {
+      fr: 'Qui est l\'utilisateur ? Quel est son besoin précis ? Quel canal utilise-t-il ?',
+      en: 'Who is the user? What\'s their precise need? Which channel are they using?',
+    },
+  },
+  {
+    num: '02',
+    color: '#10B981',
+    icon: MessageSquare,
+    title: { fr: 'Qualification', en: 'Qualification' },
+    desc: {
+      fr: 'Quel produit ou service correspond ? Quel est le niveau de priorité (P0-P3) ?',
+      en: 'Which product or service fits? What\'s the priority level (P0-P3)?',
+    },
+  },
+  {
+    num: '03',
+    color: '#A78BFA',
+    icon: CheckCircle2,
+    title: { fr: 'Conversion', en: 'Conversion' },
+    desc: {
+      fr: 'Proposition sur-mesure, collecte du lead ou action directe (ticket, RDV, achat).',
+      en: 'Tailored offer, lead capture or direct action (ticket, booking, purchase).',
+    },
+  },
+] as const;
+
+export default async function ProductStack({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: 'pageFonctionnalites' });
+  const lang = locale === 'en' ? 'en' : 'fr';
 
   return (
     <>
+      {/* Qualification en 3 phases */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-dark">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
+              {lang === 'fr' ? 'Notre différenciateur' : 'Our differentiator'}
+            </p>
+            <h3 className="text-2xl font-bold text-white">
+              {lang === 'fr' ? (
+                <>Qualification leads en <span className="gradient-text">3 phases</span></>
+              ) : (
+                <>Lead qualification in <span className="gradient-text">3 phases</span></>
+              )}
+            </h3>
+            <p className="text-happi-muted text-sm mt-2 max-w-xl mx-auto">
+              {lang === 'fr'
+                ? 'Toutes nos solutions intègrent ce système éprouvé qui maximise le taux de conversion — de 34% supérieur aux chatbots génériques.'
+                : 'Every one of our solutions runs on this proven system, which lifts conversion rates by 34% over generic chatbots.'}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {phases3.map((phase) => {
+              const Icon = phase.icon;
+              return (
+                <div
+                  key={phase.num}
+                  className="rounded-2xl p-6 border text-center"
+                  style={{ background: `${phase.color}08`, borderColor: `${phase.color}25` }}
+                >
+                  <div
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4"
+                    style={{ background: `${phase.color}15` }}
+                  >
+                    <Icon size={22} style={{ color: phase.color }} />
+                  </div>
+                  <div className="text-3xl font-extrabold mb-1" style={{ color: phase.color }}>
+                    {phase.num}
+                  </div>
+                  <h4 className="text-white font-bold text-sm mb-2">{phase.title[lang]}</h4>
+                  <p className="text-happi-muted text-xs leading-relaxed">{phase.desc[lang]}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Stack IA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-darker">
         <div className="max-w-7xl mx-auto">
