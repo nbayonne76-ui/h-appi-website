@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { Check, Phone, Calendar, MessageSquare, Mic, Clock, Zap, X } from 'lucide-react';
+import { Phone, Calendar, MessageSquare, Mic, Clock, Zap, ArrowRight } from 'lucide-react';
 import SecretaryCTA from '@/components/secretary/SecretaryCTA';
 import LogoWall from '@/components/ui/LogoWall';
 
@@ -46,51 +47,6 @@ const stats = {
     { value: '100%', label: 'of calls handled', color: '#3B82F6' },
     { value: '24/7', label: 'guaranteed availability', color: '#22C55E' },
     { value: '-70%', label: 'admin tasks eliminated', color: '#8B5CF6' },
-  ],
-};
-
-const useCases = {
-  fr: [
-    { icon: '🏥', title: 'Cabinets médicaux & dentaires',  desc: 'Gérez rendez-vous et rappels automatiquement. Réduisez les absences de 40%.' },
-    { icon: '🏢', title: 'PME & petites entreprises',       desc: 'Un service client professionnel sans ressources humaines dédiées.' },
-    { icon: '⚖️', title: 'Cabinets juridiques',             desc: 'Triez les appels, prenez RDV et enregistrez les demandes prioritaires.' },
-    { icon: '🏨', title: 'Hôtels & restaurants',            desc: 'Répondez aux réservations 24h/24 sans mobiliser votre personnel.' },
-    { icon: '🎓', title: 'Écoles & universités',            desc: 'Secrétariat virtuel pour demandes d\'info et inscriptions en ligne.' },
-    { icon: '📞', title: 'Centres d\'appels',               desc: 'Traitez plus d\'appels entrants sans augmenter vos effectifs.' },
-  ],
-  en: [
-    { icon: '🏥', title: 'Medical & dental offices',    desc: 'Manage appointments and reminders automatically. Reduce no-shows by 40%.' },
-    { icon: '🏢', title: 'SMEs & small businesses',     desc: 'Professional customer service without dedicated HR resources.' },
-    { icon: '⚖️', title: 'Law firms',                   desc: 'Screen calls, book appointments and record priority client requests.' },
-    { icon: '🏨', title: 'Hotels & restaurants',        desc: 'Handle reservations 24/7 without tying up your staff.' },
-    { icon: '🎓', title: 'Schools & universities',      desc: 'Virtual secretary for information requests and online enrolments.' },
-    { icon: '📞', title: 'Call centres',                desc: 'Handle more inbound calls without growing your headcount.' },
-  ],
-};
-
-const before = {
-  fr: ['Appels manqués', 'Messages oubliés', 'Rendez-vous en double', 'Personnel interrompu', 'Service limité aux heures de bureau', 'Coûts administratifs élevés'],
-  en: ['Missed calls', 'Forgotten messages', 'Double-booked appointments', 'Interrupted staff', 'Service limited to office hours', 'High admin costs'],
-};
-const after = {
-  fr: ['100% des appels traités', 'Tous les messages enregistrés', 'Planification sans erreurs', 'Équipe focalisée sur l\'essentiel', 'Service client 24h/24, 7j/7', 'Économies significatives'],
-  en: ['100% of calls handled', 'All messages recorded', 'Error-free scheduling', 'Team focused on what matters', 'Customer service 24/7', 'Significant cost savings'],
-};
-
-const faqs = {
-  fr: [
-    { q: 'Les clients sauront-ils que c\'est une IA ?',               a: 'Non. Happi-Secretary utilise une voix naturelle et des conversations fluides. La distinction est imperceptible.' },
-    { q: 'Comment ça s\'intègre à mon calendrier ?',                  a: 'Synchronisation automatique avec Google Calendar, Outlook et iCal. Disponibilité vérifiée en temps réel à chaque appel.' },
-    { q: 'Mes données sont-elles sécurisées ?',                       a: 'Oui. Sécurité niveau bancaire, chiffrement bout en bout, hébergement en France et en Europe. Conforme RGPD.' },
-    { q: 'Combien ça coûte ?',                                        a: 'Les tarifs dépendent de votre volume d\'appels. Contactez-nous pour un devis personnalisé et gratuit.' },
-    { q: 'Combien de temps pour la mise en place ?',                  a: '24 à 48 heures. Notre équipe technique s\'occupe de tout, de l\'intégration à la configuration.' },
-  ],
-  en: [
-    { q: 'Will clients know it\'s an AI?',                            a: 'No. Happi-Secretary uses a natural voice and fluid conversation. The difference is imperceptible.' },
-    { q: 'How does it integrate with my calendar?',                   a: 'Automatic sync with Google Calendar, Outlook and iCal. Availability checked in real time on every call.' },
-    { q: 'Is my data secure?',                                        a: 'Yes. Bank-level security, end-to-end encryption, servers hosted in France and Europe. Fully GDPR compliant.' },
-    { q: 'How much does it cost?',                                    a: 'Pricing depends on your call volume. Contact us for a free, personalised quote.' },
-    { q: 'How long to get set up?',                                   a: '24 to 48 hours. Our tech team handles everything, from integration to configuration.' },
   ],
 };
 
@@ -248,100 +204,18 @@ export default async function SecretaryPage({
           </div>
         </section>
 
-        {/* ── Before / After ── */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-happi-border bg-happi-surface/30">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-14">
-              <h2 className="text-3xl font-bold text-white mb-3">
-                {fr ? "L'impact sur votre entreprise" : 'The impact on your business'}
-              </h2>
-              <p className="text-happi-muted text-sm">
-                {fr ? 'La différence avant et après Happi-Secretary.' : 'The difference before and after Happi-Secretary.'}
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Before */}
-              <div className="bg-happi-surface border border-red-500/20 rounded-2xl p-7">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-9 h-9 rounded-xl bg-red-500/15 flex items-center justify-center">
-                    <X className="w-4 h-4 text-red-400" />
-                  </div>
-                  <h3 className="font-bold text-white">{fr ? 'Sans Happi-Secretary' : 'Without Happi-Secretary'}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {before[L].map(t => (
-                    <li key={t} className="flex items-center gap-3 text-sm text-happi-muted">
-                      <X className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {/* After */}
-              <div className="bg-happi-surface border border-happi-green/30 rounded-2xl p-7">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-9 h-9 rounded-xl bg-happi-green/15 flex items-center justify-center">
-                    <Check className="w-4 h-4 text-happi-green" />
-                  </div>
-                  <h3 className="font-bold text-white">{fr ? 'Avec Happi-Secretary' : 'With Happi-Secretary'}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {after[L].map(t => (
-                    <li key={t} className="flex items-center gap-3 text-sm text-happi-muted">
-                      <Check className="w-3.5 h-3.5 text-happi-green flex-shrink-0" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Use Cases ── */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-happi-border">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">
-                {fr ? "Cas d'usage" : 'Use cases'}
-              </span>
-              <h2 className="text-3xl font-bold text-white mb-3">
-                {fr ? 'Qui peut en bénéficier ?' : 'Who can benefit?'}
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {useCases[L].map(({ icon, title, desc }) => (
-                <div key={title} className="bg-happi-surface border border-happi-border rounded-2xl p-6 hover:border-happi-blue/30 transition-colors">
-                  <div className="text-2xl mb-3">{icon}</div>
-                  <h3 className="text-sm font-bold text-white mb-2">{title}</h3>
-                  <p className="text-xs text-happi-muted leading-relaxed">{desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-happi-border bg-happi-surface/30">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-4 border border-happi-blue/20">
-                FAQ
-              </span>
-              <h2 className="text-3xl font-bold text-white">
-                {fr ? 'Questions fréquentes' : 'Frequently asked questions'}
-              </h2>
-            </div>
-            <div className="flex flex-col gap-4">
-              {faqs[L].map(({ q, a }) => (
-                <div key={q} className="bg-happi-surface border border-happi-border rounded-2xl p-6 hover:border-happi-blue/30 transition-colors">
-                  <h4 className="text-sm font-bold text-white mb-2">{q}</h4>
-                  <p className="text-sm text-happi-muted leading-relaxed">{a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* ── Lien playbook ── */}
+        <div className="text-center py-16 px-4 border-t border-happi-border">
+          <Link
+            href="/playbook#secretaire"
+            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
+          >
+            {fr ? "L'impact avant/après, les cas d'usage et la FAQ complète ?" : 'Before/after impact, use cases and the full FAQ?'}
+            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
+              {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
+            </span>
+          </Link>
+        </div>
 
         {/* ── Final CTA ── */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-happi-border">

@@ -1,15 +1,13 @@
+import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
-import CasUsageAccordion from '@/components/cas-usage/CasUsageAccordion';
-import CasUsageTimeline from '@/components/cas-usage/CasUsageTimeline';
-import SectorNavigator from '@/components/cas-usage/SectorNavigator';
-import RoiCalculator from '@/components/cas-usage/RoiCalculator';
+import FlipCards from '@/components/cas-usage/FlipCards';
 import { BotDemo } from '@/components/cas-usage/BotDemo';
 import AnimatedMesh from '@/components/ui/AnimatedMesh';
-import { FadeInUp, ScaleIn, Stagger, StaggerItem } from '@/components/ui/Animate';
-import { Building2, MapPin, Calendar, Sofa, Users, Zap, Globe } from 'lucide-react';
+import { FadeInUp } from '@/components/ui/Animate';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -29,179 +27,65 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
       <Header />
       <main className="bg-happi-darker">
 
-        {/* ── Section 1 — Hero ── */}
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* ── Hero ── */}
+        <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <AnimatedMesh variant="hero" />
-          <div className="max-w-5xl mx-auto relative z-10">
-
-            <FadeInUp className="text-center mb-10">
+          <div className="max-w-3xl mx-auto text-center relative z-10">
+            <FadeInUp>
               <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-semibold uppercase tracking-wide mb-6 border border-happi-blue/20">
-                {fr ? 'H\'appi en action' : 'H\'appi in action'}
+                {fr ? "H'appi en action" : 'H\'appi in action'}
               </span>
-              <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-5">
                 {fr ? (
-                  <>Des résultats <span className="gradient-text">mesurables</span>,<br />dans tous les secteurs</>
+                  <>Un problème. <span className="gradient-text">Un bot.</span> Un résultat.</>
                 ) : (
-                  <>Measurable results,<br />across <span className="gradient-text">every industry</span></>
+                  <>One problem. <span className="gradient-text">One bot.</span> One result.</>
                 )}
               </h1>
-              <p className="text-lg text-happi-muted max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg text-happi-muted">
                 {fr
-                  ? 'Pas de promesses génériques. Des cas réels, des chiffres vérifiables, des solutions construites autour de vos processus.'
-                  : 'No generic promises. Real cases, verifiable figures, solutions built around your processes.'}
+                  ? 'Chez Mobilier de France, le bot a fait tomber les appels SAV de 65%. En production, aujourd\'hui.'
+                  : 'At Mobilier de France, the bot cut after-sales calls by 65%. Live, today.'}
               </p>
             </FadeInUp>
-
-            {/* Global stats bar */}
-            <FadeInUp delay={0.12}>
-              <Stagger className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-                {[
-                  { icon: Building2, value: '17+', label: fr ? 'Démos clients' : 'Client demos' },
-                  { icon: Globe, value: '11', label: fr ? 'Secteurs couverts' : 'Sectors covered' },
-                  { icon: Zap, value: '14j', label: fr ? 'Délai déploiement' : 'Deployment time' },
-                  { icon: Users, value: '3', label: fr ? 'Solutions phares' : 'Flagship solutions' },
-                ].map((stat, i) => (
-                  <StaggerItem key={i}>
-                    <div className="glass-card rounded-2xl p-4 text-center border border-happi-border">
-                      <stat.icon size={18} className="text-happi-blue mx-auto mb-2" />
-                      <div className="text-2xl font-extrabold text-white">{stat.value}</div>
-                      <div className="text-happi-muted text-xs mt-0.5">{stat.label}</div>
-                    </div>
-                  </StaggerItem>
-                ))}
-              </Stagger>
-            </FadeInUp>
-
           </div>
         </section>
 
-        {/* ── Section 2 — Navigateur secteurs ── */}
-        <SectorNavigator fr={fr} />
+        {/* ── Cartes avant/après ── */}
+        <FlipCards fr={fr} />
 
-        {/* ── Section 3 — Cas phare : Mobilier de France ── */}
-        <section className="pt-8 pb-4 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <FadeInUp className="text-center mb-10">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
-                {fr ? 'Cas client documenté · Déploiement réel' : 'Documented client case · Real deployment'}
-              </p>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight mb-3">
-                {fr ? (
-                  <>Deep dive : <span className="gradient-text">Mobilier de France</span></>
-                ) : (
-                  <>Deep dive: <span className="gradient-text">Mobilier de France</span></>
-                )}
-              </h2>
-
-              {/* Client badge */}
-              <div className="inline-flex flex-wrap items-center justify-center gap-3 px-5 py-3 rounded-2xl border border-happi-blue/20 bg-happi-surface/60 backdrop-blur-sm">
-                <div className="w-9 h-9 rounded-xl bg-happi-blue/15 border border-happi-blue/30 flex items-center justify-center flex-shrink-0">
-                  <Sofa size={18} className="text-happi-blue" />
-                </div>
-                <div className="h-8 w-px bg-happi-border hidden sm:block" />
-                <div className="text-left">
-                  <div className="text-white font-bold text-sm leading-tight">Mobilier de France</div>
-                  <div className="text-happi-muted/60 text-[11px]">
-                    {fr ? 'Enseigne nationale · Ameublement' : 'National chain · Furniture retail'}
-                  </div>
-                </div>
-                <div className="h-8 w-px bg-happi-border hidden sm:block" />
-                <div className="flex items-center gap-2 flex-wrap justify-center">
-                  <span className="flex items-center gap-1 text-[11px] text-happi-muted px-2.5 py-1 rounded-lg bg-happi-dark border border-happi-border">
-                    <MapPin size={10} className="text-happi-muted/60" /> France
-                  </span>
-                  <span className="flex items-center gap-1 text-[11px] text-happi-muted px-2.5 py-1 rounded-lg bg-happi-dark border border-happi-border">
-                    <Calendar size={10} className="text-happi-muted/60" />
-                    {fr ? 'Déployé 2024' : 'Deployed 2024'}
-                  </span>
-                  <span className="flex items-center gap-1 text-[11px] text-happi-muted px-2.5 py-1 rounded-lg bg-happi-dark border border-happi-border">
-                    <Building2 size={10} className="text-happi-muted/60" />
-                    {fr ? 'Bot SAV + App Traçabilité' : 'After-Sales Bot + Traceability App'}
-                  </span>
-                </div>
-                <div className="h-8 w-px bg-happi-border hidden sm:block" />
-                <div className="flex items-center gap-1.5 text-[11px] font-semibold text-happi-green">
-                  <span className="w-1.5 h-1.5 rounded-full bg-happi-green animate-pulse" />
-                  {fr ? 'En production' : 'Live in production'}
-                </div>
-              </div>
-            </FadeInUp>
-          </div>
-        </section>
-
-        {/* Timeline */}
-        <CasUsageTimeline fr={fr} />
-
-        {/* Philosophy banner */}
-        <section className="px-4 sm:px-6 lg:px-8 pb-10">
-          <div className="max-w-5xl mx-auto">
-            <ScaleIn>
-              <div
-                className="relative rounded-2xl p-px overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.4), rgba(16,185,129,0.2), rgba(59,130,246,0.1))' }}
-              >
-                <div className="bg-happi-darker rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-5 items-start">
-                  <div className="w-10 h-10 bg-happi-blue/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-happi-blue/20">
-                    <span className="text-happi-blue text-lg">✦</span>
-                  </div>
-                  <div>
-                    <h2 className="text-base font-bold text-white mb-1.5">
-                      {fr ? 'Notre philosophie' : 'Our philosophy'}
-                    </h2>
-                    <p className="text-happi-muted text-sm leading-relaxed">
-                      {fr
-                        ? 'Pas de modèle standard. On apprend votre réalité et on construit en conséquence — comme ici, un bot SAV et une app de traçabilité interconnectés dès le premier jour.'
-                        : 'No standard model. We learn your reality and build accordingly — like here, an after-sales bot and a traceability app interconnected from day one.'}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </ScaleIn>
-          </div>
-        </section>
-
-        {/* 3 couches accordion */}
-        <section className="px-4 sm:px-6 lg:px-8 pb-16 relative overflow-hidden">
-          <AnimatedMesh variant="blue" />
-          <div className="max-w-5xl mx-auto relative z-10">
-            <FadeInUp className="text-center mb-10">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
-                {fr ? 'Comment ça fonctionne' : 'How it works'}
-              </p>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-                {fr ? (
-                  <>Les <span className="gradient-text">3 couches</span> de la plateforme</>
-                ) : (
-                  <>The <span className="gradient-text">3 layers</span> of the platform</>
-                )}
-              </h2>
-            </FadeInUp>
-            <CasUsageAccordion />
-          </div>
-        </section>
-
-        {/* ── Section 4 — ROI Calculator ── */}
-        <RoiCalculator fr={fr} />
-
-        {/* ── Section 5 — Bot Demo live ── */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
+        {/* ── Démo live ── */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-darker">
           <div className="max-w-3xl mx-auto">
             <FadeInUp className="text-center mb-10">
               <span className="inline-block bg-happi-blue/10 text-happi-blue border border-happi-blue/20 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide mb-4">
-                {fr ? '⚡ Démo live' : '⚡ Live demo'}
+                {fr ? '⚡ Essaie-le' : '⚡ Try it'}
               </span>
               <h2 className="text-2xl font-bold text-white tracking-tight mb-2">
-                {fr ? 'Testez le bot en conditions réelles' : 'Test the bot in real conditions'}
+                {fr ? 'Le vrai bot, en vrai' : 'The real bot, for real'}
               </h2>
               <p className="text-happi-muted text-sm">
                 {fr
-                  ? 'C\'est le bot SAV déployé chez Mobilier de France. En production. Aucune inscription.'
-                  : 'This is the after-sales bot deployed at Mobilier de France. In production. No sign-up.'}
+                  ? 'Celui de Mobilier de France. Aucune inscription, tu peux lui parler maintenant.'
+                  : 'The one running at Mobilier de France. No sign-up, talk to it now.'}
               </p>
             </FadeInUp>
             <BotDemo fr={fr} />
           </div>
         </section>
+
+        {/* ── Lien playbook ── */}
+        <div className="text-center pb-16 px-4">
+          <Link
+            href="/playbook"
+            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
+          >
+            {fr ? 'Tu veux tous les chiffres et les détails ?' : 'Want every number and detail?'}
+            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
+              {fr ? 'Le playbook complet' : 'The full playbook'} <ArrowRight size={13} />
+            </span>
+          </Link>
+        </div>
 
         <CTASection />
       </main>

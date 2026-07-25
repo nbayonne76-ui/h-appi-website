@@ -76,7 +76,7 @@ const TIMELINE = {
   ],
 };
 
-export default function CasUsageTimeline({ fr }: { fr: boolean }) {
+export default function DeploymentTimeline({ fr }: { fr: boolean }) {
   const timeline = fr ? TIMELINE.fr : TIMELINE.en;
 
   return (

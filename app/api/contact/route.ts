@@ -6,7 +6,7 @@ export const runtime = 'nodejs';
 export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    const { name, email, company, message, locale } = await req.json();
+    const { name, email, jobTitle, company, message, locale } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -37,6 +37,11 @@ export async function POST(req: NextRequest) {
               <td style="padding: 10px 0; color: #94A3B8; font-size: 13px;">Email</td>
               <td style="padding: 10px 0;"><a href="mailto:${email}" style="color: #3B82F6;">${email}</a></td>
             </tr>
+            ${jobTitle ? `
+            <tr>
+              <td style="padding: 10px 0; color: #94A3B8; font-size: 13px;">${isFr ? 'Poste' : 'Job title'}</td>
+              <td style="padding: 10px 0; color: #fff; font-size: 15px;">${jobTitle}</td>
+            </tr>` : ''}
             ${company ? `
             <tr>
               <td style="padding: 10px 0; color: #94A3B8; font-size: 13px;">${isFr ? 'Entreprise' : 'Company'}</td>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
-import { X, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { X, Send, CheckCircle2, AlertCircle, Loader2, Pencil } from 'lucide-react';
 
 // Module-level reference — set when ContactModal mounts, called by openContactModal()
 let _openFn: (() => void) | null = null;
@@ -17,10 +17,13 @@ const copy = {
     namePlaceholder: 'Jean Dupont',
     email: 'Email professionnel *',
     emailPlaceholder: 'jean@entreprise.fr',
+    jobTitle: 'Poste (optionnel)',
+    jobTitlePlaceholder: 'Directeur commercial',
     company: 'Entreprise (optionnel)',
     companyPlaceholder: 'Votre société',
     message: 'Votre message *',
     messagePlaceholder: 'Dites-nous en plus sur votre projet, votre secteur, vos besoins...',
+    messageCollapsedEmpty: 'Cliquez pour écrire votre message...',
     submit: 'Envoyer la demande',
     sending: 'Envoi en cours...',
     successTitle: 'Message envoyé !',
@@ -36,10 +39,13 @@ const copy = {
     namePlaceholder: 'John Smith',
     email: 'Business email *',
     emailPlaceholder: 'john@company.com',
+    jobTitle: 'Job title (optional)',
+    jobTitlePlaceholder: 'Sales Director',
     company: 'Company (optional)',
     companyPlaceholder: 'Your company',
     message: 'Your message *',
     messagePlaceholder: 'Tell us about your project, industry, and what you need...',
+    messageCollapsedEmpty: 'Click to write your message...',
     submit: 'Send request',
     sending: 'Sending...',
     successTitle: 'Message sent!',
@@ -53,16 +59,19 @@ const copy = {
 export function ContactModal() {
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<Status>('idle');
-  const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', jobTitle: '', company: '', message: '' });
+  const [messageOpen, setMessageOpen] = useState(false);
   const locale = useLocale();
   const t = copy[locale === 'en' ? 'en' : 'fr'];
   const firstInputRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     _openFn = () => {
       setOpen(true);
       setStatus('idle');
-      setForm({ name: '', email: '', company: '', message: '' });
+      setForm({ name: '', email: '', jobTitle: '', company: '', message: '' });
+      setMessageOpen(false);
     };
     return () => { _openFn = null; };
   }, []);
@@ -81,6 +90,10 @@ export function ContactModal() {
       document.body.style.overflow = '';
     };
   }, [open]);
+
+  useEffect(() => {
+    if (messageOpen) messageRef.current?.focus();
+  }, [messageOpen]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -162,6 +175,19 @@ export function ContactModal() {
                   />
                 </div>
                 <div>
+                  <label className="block text-xs font-medium text-happi-muted mb-1.5">{t.jobTitle}</label>
+                  <input
+                    type="text"
+                    value={form.jobTitle}
+                    onChange={(e) => setForm((f) => ({ ...f, jobTitle: e.target.value }))}
+                    placeholder={t.jobTitlePlaceholder}
+                    className="w-full bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-all"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
                   <label className="block text-xs font-medium text-happi-muted mb-1.5">{t.company}</label>
                   <input
                     type="text"
@@ -171,30 +197,42 @@ export function ContactModal() {
                     className="w-full bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-all"
                   />
                 </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-medium text-happi-muted mb-1.5">{t.email}</label>
-                <input
-                  type="email"
-                  required
-                  value={form.email}
-                  onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                  placeholder={t.emailPlaceholder}
-                  className="w-full bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-all"
-                />
+                <div>
+                  <label className="block text-xs font-medium text-happi-muted mb-1.5">{t.email}</label>
+                  <input
+                    type="email"
+                    required
+                    value={form.email}
+                    onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                    placeholder={t.emailPlaceholder}
+                    className="w-full bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-all"
+                  />
+                </div>
               </div>
 
               <div>
                 <label className="block text-xs font-medium text-happi-muted mb-1.5">{t.message}</label>
-                <textarea
-                  required
-                  rows={4}
-                  value={form.message}
-                  onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-                  placeholder={t.messagePlaceholder}
-                  className="w-full bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-all resize-none"
-                />
+                {messageOpen ? (
+                  <textarea
+                    ref={messageRef}
+                    required
+                    rows={4}
+                    value={form.message}
+                    onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
+                    onBlur={() => { if (!form.message) setMessageOpen(false); }}
+                    placeholder={t.messagePlaceholder}
+                    className="w-full bg-happi-surface border border-happi-blue/60 ring-1 ring-happi-blue/30 rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none transition-all resize-none"
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setMessageOpen(true)}
+                    className="w-full flex items-center justify-between gap-2 bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-left text-happi-muted/50 hover:border-happi-blue/40 hover:text-happi-muted transition-all"
+                  >
+                    <span className="truncate">{t.messageCollapsedEmpty}</span>
+                    <Pencil size={13} className="flex-shrink-0 opacity-60" />
+                  </button>
+                )}
               </div>
 
               {status === 'error' && (

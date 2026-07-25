@@ -348,7 +348,7 @@ function AnimatedStat({ stat }: { stat: StatDef }) {
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
-export default function CasUsageAccordion() {
+export default function PlatformAccordion() {
   const locale = useLocale();
   const fr = locale === 'fr';
   const [open, setOpen] = useState<string | null>('sav');

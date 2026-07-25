@@ -1288,6 +1288,10 @@
     "secretaryAgent": {
       "title": "Agent Secrétaire IA - Démo en direct",
       "description": "Discutez avec notre agent secrétaire IA : détection d'intention en temps réel, réservation de rendez-vous avec mémoire de conversation, fiche d'analyse d'appel automatique."
+    },
+    "playbook": {
+      "title": "Playbook - H'appi | Détails, secteurs & ROI",
+      "description": "Le détail complet des cas H'appi : secteurs couverts, déploiement Mobilier de France, mécanique de la plateforme et calcul de ROI."
     }
   },
   "aboutSubNav": {
