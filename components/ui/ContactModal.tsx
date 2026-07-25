@@ -207,7 +207,7 @@ export function ContactModal() {
               <button
                 type="submit"
                 disabled={status === 'sending' || !form.name || !form.email || !form.message}
-                className="w-full flex items-center justify-center gap-2 bg-happi-blue text-white py-3 rounded-lg font-medium text-sm hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/20 disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]"
+                className="w-full flex items-center justify-center gap-2 bg-happi-blue-strong text-white py-3 rounded-lg font-medium text-sm hover:bg-happi-blue-strong/90 transition-all hover:shadow-lg hover:shadow-happi-blue/20 disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]"
               >
                 {status === 'sending' ? (
                   <>

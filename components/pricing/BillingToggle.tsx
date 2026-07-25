@@ -136,7 +136,7 @@ export default function BillingToggle({ fr }: { fr?: boolean }) {
           <button
             onClick={() => setBilling('monthly')}
             className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
-              !isAnnual ? 'bg-happi-blue text-white shadow-sm' : 'text-happi-muted hover:text-white'
+              !isAnnual ? 'bg-happi-blue-strong text-white shadow-sm' : 'text-happi-muted hover:text-white'
             }`}
           >
             {fr ? 'Mensuel' : 'Monthly'}
@@ -144,7 +144,7 @@ export default function BillingToggle({ fr }: { fr?: boolean }) {
           <button
             onClick={() => setBilling('annual')}
             className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 ${
-              isAnnual ? 'bg-happi-blue text-white shadow-sm' : 'text-happi-muted hover:text-white'
+              isAnnual ? 'bg-happi-blue-strong text-white shadow-sm' : 'text-happi-muted hover:text-white'
             }`}
           >
             {fr ? 'Annuel' : 'Annual'}
@@ -162,7 +162,7 @@ export default function BillingToggle({ fr }: { fr?: boolean }) {
             <div className={`glass-card rounded-2xl p-7 border ${plan.borderStyle} transition-all flex flex-col h-full relative`}>
               {plan.recommended && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="flex items-center gap-1 bg-happi-blue text-white text-xs font-semibold px-4 py-1.5 rounded-full whitespace-nowrap">
+                  <span className="flex items-center gap-1 bg-happi-blue-strong text-white text-xs font-semibold px-4 py-1.5 rounded-full whitespace-nowrap">
                     <Star size={11} />
                     {fr ? 'Le plus populaire' : 'Most popular'}
                   </span>

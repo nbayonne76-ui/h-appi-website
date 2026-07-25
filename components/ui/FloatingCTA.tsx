@@ -26,7 +26,8 @@ export function FloatingCTA() {
       onClick={openContactModal}
       onMouseEnter={() => setExpanded(true)}
       onMouseLeave={() => setExpanded(false)}
-      className={`fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-happi-blue text-white shadow-xl shadow-happi-blue/40 hover:bg-happi-blue/90 hover:scale-105 active:scale-95 transition-all duration-300 font-semibold text-sm ${
+      aria-label={fr ? 'Voir une démo · 15 min' : 'Book a demo · 15 min'}
+      className={`fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-happi-blue-strong text-white shadow-xl shadow-happi-blue/40 hover:bg-happi-blue-strong/90 hover:scale-105 active:scale-95 transition-all duration-300 font-semibold text-sm ${
         visible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
       } ${expanded ? 'px-5 py-3.5 rounded-2xl' : 'w-14 h-14 rounded-full justify-center'}`}
     >

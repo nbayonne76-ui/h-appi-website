@@ -77,7 +77,7 @@ export default function Hero() {
             <motion.div {...item(0.4)} className="flex flex-col sm:flex-row gap-4 pt-2">
               <MagneticButton
                 onClick={openContactModal}
-                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-happi-blue text-white rounded-lg hover:bg-happi-blue/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium"
+                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-happi-blue-strong text-white rounded-lg hover:bg-happi-blue-strong/90 transition-all hover:shadow-lg hover:shadow-happi-blue/25 font-medium"
               >
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}

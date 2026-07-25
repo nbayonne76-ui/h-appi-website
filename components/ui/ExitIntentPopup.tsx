@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, TrendingDown, Clock, ArrowRight } from 'lucide-react';
 import { useLocale } from 'next-intl';
@@ -12,6 +12,8 @@ export function ExitIntentPopup() {
   const [show, setShow] = useState(false);
   const locale = useLocale();
   const fr = locale !== 'en';
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
 
   const dismiss = useCallback(() => {
     setShow(false);
@@ -39,6 +41,24 @@ export function ExitIntentPopup() {
     };
   }, []);
 
+  // Focus management + Escape-to-close for keyboard and screen reader users
+  useEffect(() => {
+    if (!show) return;
+
+    previouslyFocused.current = document.activeElement as HTMLElement;
+    closeButtonRef.current?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') dismiss();
+    };
+    document.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      previouslyFocused.current?.focus();
+    };
+  }, [show, dismiss]);
+
   const handleCTA = () => {
     dismiss();
     openContactModal();
@@ -64,6 +84,9 @@ export function ExitIntentPopup() {
 
           {/* Popup */}
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="exit-intent-title"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -74,7 +97,9 @@ export function ExitIntentPopup() {
 
               {/* Close */}
               <button
+                ref={closeButtonRef}
                 onClick={dismiss}
+                aria-label={fr ? 'Fermer' : 'Close'}
                 className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-happi-surface flex items-center justify-center text-happi-muted hover:text-white transition-colors"
               >
                 <X size={16} />
@@ -86,7 +111,7 @@ export function ExitIntentPopup() {
               </span>
 
               {/* Headline */}
-              <h3 className="text-white text-xl font-bold mb-2 leading-tight">
+              <h3 id="exit-intent-title" className="text-white text-xl font-bold mb-2 leading-tight">
                 {fr
                   ? 'Votre service client peut être automatisé cette semaine.'
                   : 'Your customer service could be automated this week.'}
@@ -121,7 +146,7 @@ export function ExitIntentPopup() {
               {/* CTA */}
               <button
                 onClick={handleCTA}
-                className="btn-shimmer w-full flex items-center justify-center gap-2 py-3.5 bg-happi-blue text-white rounded-xl font-bold hover:bg-happi-blue/90 transition-all shadow-lg shadow-happi-blue/25 text-sm"
+                className="btn-shimmer w-full flex items-center justify-center gap-2 py-3.5 bg-happi-blue-strong text-white rounded-xl font-bold hover:bg-happi-blue-strong/90 transition-all shadow-lg shadow-happi-blue/25 text-sm"
               >
                 {fr ? 'Réserver ma démo gratuite' : 'Book my free demo'}
                 <ArrowRight size={16} />

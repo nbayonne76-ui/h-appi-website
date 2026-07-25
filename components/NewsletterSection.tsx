@@ -94,7 +94,7 @@ export default function NewsletterSection() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="flex items-center gap-1.5 px-4 py-2.5 bg-happi-blue text-white text-sm font-semibold rounded-xl hover:bg-happi-blue/90 transition-colors disabled:opacity-60 flex-shrink-0"
+                className="flex items-center gap-1.5 px-4 py-2.5 bg-happi-blue-strong text-white text-sm font-semibold rounded-xl hover:bg-happi-blue-strong/90 transition-colors disabled:opacity-60 flex-shrink-0"
               >
                 {status === 'loading'
                   ? <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />

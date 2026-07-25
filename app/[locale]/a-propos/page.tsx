@@ -255,7 +255,7 @@ export default async function AProposPage() {
               </p>
               <Link
                 href="/a-propos/vision"
-                className="inline-flex items-center px-8 py-3 bg-happi-blue text-white rounded-xl hover:bg-opacity-90 transition-all hover:shadow-lg font-medium"
+                className="inline-flex items-center px-8 py-3 bg-happi-blue-strong text-white rounded-xl hover:bg-opacity-90 transition-all hover:shadow-lg font-medium"
               >
                 {t('historyCta')}
                 <ArrowRight className="ml-2" size={18} />
