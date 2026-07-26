@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { motion, useInView, useSpring, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useInView, useSpring, useMotionValue, useTransform, useReducedMotion } from 'framer-motion';
 import TiltCard from '@/components/ui/TiltCard';
 
 type Stat = { end: number; suffix: string; label: string };
@@ -9,6 +9,7 @@ type Stat = { end: number; suffix: string; label: string };
 function AnimatedNumber({ end, suffix }: { end: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+  const prefersReduced = useReducedMotion();
   const raw = useMotionValue(0);
   const spring = useSpring(raw, { stiffness: 60, damping: 18 });
   const display = useTransform(spring, (v) => `${Math.round(v)}${suffix}`);
@@ -19,8 +20,13 @@ function AnimatedNumber({ end, suffix }: { end: number; suffix: string }) {
   }, [display]);
 
   useEffect(() => {
-    if (inView) raw.set(end);
-  }, [inView, end, raw]);
+    if (!inView) return;
+    if (prefersReduced) {
+      setText(`${end}${suffix}`);
+      return;
+    }
+    raw.set(end);
+  }, [inView, end, suffix, prefersReduced, raw]);
 
   return <span ref={ref}>{text}</span>;
 }

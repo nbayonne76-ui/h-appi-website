@@ -143,7 +143,7 @@ export default function SecretaryAgent({ fr }: { fr: boolean }) {
           </motion.button>
         </div>
       ) : (
-        <div className="glass-card rounded-2xl border border-happi-border overflow-hidden flex flex-col" style={{ height: '560px' }}>
+        <div className="glass-card rounded-2xl border border-happi-border overflow-hidden flex flex-col" style={{ height: 'min(75vh, 560px)' }}>
           <div className="px-4 py-3 border-b border-happi-border flex items-center gap-3 flex-shrink-0">
             <div className="w-9 h-9 rounded-xl bg-happi-blue/20 flex items-center justify-center text-lg flex-shrink-0">📞</div>
             <div className="flex-1 min-w-0">

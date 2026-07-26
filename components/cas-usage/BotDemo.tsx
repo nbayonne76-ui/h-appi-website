@@ -88,7 +88,7 @@ export function BotDemo({ fr }: { fr?: boolean }) {
             src={BOT_URL}
             title={fr ? 'Bot SAV Mobilier de France' : 'Mobilier de France After-Sales Bot'}
             className="w-full bg-happi-dark"
-            style={{ height: '520px', border: 'none', display: 'block' }}
+            style={{ height: 'min(75vh, 520px)', border: 'none', display: 'block' }}
             onError={() => setErrored(true)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

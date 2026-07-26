@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 type Card = {
   id: string;
@@ -107,17 +107,19 @@ const CARDS: Card[] = [
 
 function FlipCard({ card, fr }: { card: Card; fr: boolean }) {
   const [flipped, setFlipped] = useState(false);
+  const prefersReduced = useReducedMotion();
 
   return (
     <button
       onClick={() => setFlipped((f) => !f)}
       className="relative w-full aspect-[4/5] [perspective:1200px] text-left"
       aria-label={fr ? card.sector : card.sectorEn}
+      aria-pressed={flipped}
     >
       <motion.div
         className="relative w-full h-full [transform-style:preserve-3d]"
         animate={{ rotateY: flipped ? 180 : 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        transition={{ duration: prefersReduced ? 0 : 0.5, ease: 'easeInOut' }}
       >
         {/* Front — le problème */}
         <div
