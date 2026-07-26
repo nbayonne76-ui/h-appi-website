@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { Flame, Loader2, CheckCircle2 } from 'lucide-react';
 
 interface Props {
@@ -12,6 +12,7 @@ export default function WaitlistForm({ fr, variant = 'hero' }: Props) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const inputId = useId();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -57,7 +58,11 @@ export default function WaitlistForm({ fr, variant = 'hero' }: Props) {
           ? 'flex flex-col sm:flex-row items-stretch gap-3 max-w-md mx-auto'
           : 'flex flex-col sm:flex-row items-stretch gap-3 w-full'
       }>
+        <label htmlFor={inputId} className="sr-only">
+          {fr ? 'Adresse email' : 'Email address'}
+        </label>
         <input
+          id={inputId}
           type="email"
           required
           value={email}

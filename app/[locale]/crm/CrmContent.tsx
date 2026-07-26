@@ -4,6 +4,7 @@ import { useLocale } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import { openContactModal } from '@/components/ui/ContactModal';
 import { ArrowRight } from 'lucide-react';
@@ -82,10 +83,12 @@ export default function CrmContent() {
                   happi-crm.com/dashboard
                 </span>
               </div>
-              <img
+              <Image
                 src="/images/crm-dashboard.png"
                 alt="Happi CRM Dashboard"
-                className="w-full block"
+                width={1896}
+                height={841}
+                className="w-full h-auto block"
               />
             </div>
           </div>
