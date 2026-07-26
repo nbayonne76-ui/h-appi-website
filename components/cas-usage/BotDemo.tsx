@@ -5,13 +5,16 @@ import { motion } from 'framer-motion';
 import { ExternalLink, RefreshCw } from 'lucide-react';
 
 const BOT_URL = 'https://proactive-nurturing-production.up.railway.app/chat';
+// Cosmetic only — the fake browser chrome shouldn't leak the backend's
+// internal Railway hostname to visitors.
+const DISPLAY_URL = 'happi-bot.com/demo/mobilier-de-france';
 
 export function BotDemo({ fr }: { fr?: boolean }) {
   const [key, setKey] = useState(0);
   const [errored, setErrored] = useState(false);
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto">
       {/* Browser chrome */}
       <div className="rounded-2xl overflow-hidden border border-happi-border shadow-2xl">
 
@@ -28,7 +31,7 @@ export function BotDemo({ fr }: { fr?: boolean }) {
           <div className="flex-1 bg-happi-surface/60 border border-happi-border rounded-lg px-3 py-1.5 flex items-center gap-2 min-w-0">
             <span className="text-happi-green text-[10px] flex-shrink-0">●</span>
             <span className="text-happi-muted text-[11px] truncate font-mono">
-              {BOT_URL.replace('https://', '')}
+              {DISPLAY_URL}
             </span>
           </div>
 

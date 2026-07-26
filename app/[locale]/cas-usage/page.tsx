@@ -56,8 +56,8 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
 
         {/* ── Démo live ── */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-darker">
-          <div className="max-w-3xl mx-auto">
-            <FadeInUp className="text-center mb-10">
+          <div className="max-w-4xl mx-auto">
+            <FadeInUp className="text-center mb-10 max-w-2xl mx-auto">
               <span className="inline-block bg-happi-blue/10 text-happi-blue border border-happi-blue/20 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide mb-4">
                 {fr ? '⚡ Essaie-le' : '⚡ Try it'}
               </span>
