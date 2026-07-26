@@ -2,7 +2,6 @@
   "header": {
     "nav": {
       "about": "About",
-      "features": "Features",
       "useCases": "Use Cases",
       "pricing": "Pricing",
       "faq": "FAQ",
@@ -11,7 +10,8 @@
       "atelier": "Studio",
       "dropos": "DropOS",
       "secretary": "Secretary",
-      "product": "Product"
+      "product": "Product",
+      "playbook": "Playbook"
     },
     "cta": "Request a Demo"
   },
@@ -373,8 +373,8 @@
         "title": "Product",
         "links": [
           {
-            "label": "Features",
-            "href": "/fonctionnalites"
+            "label": "Playbook",
+            "href": "/playbook"
           },
           {
             "label": "Use Cases",

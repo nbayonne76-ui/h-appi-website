@@ -150,17 +150,7 @@ export default function SectorNavigator({ fr }: { fr: boolean }) {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-happi-muted/60 mb-2">
-            {fr ? '11 secteurs couverts' : '11 sectors covered'}
-          </p>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-            {fr ? (
-              <><span className="gradient-text">Votre secteur</span>, notre solution</>
-            ) : (
-              <><span className="gradient-text">Your sector</span>, our solution</>
-            )}
-          </h2>
-          <p className="text-happi-muted text-sm mt-3 max-w-xl mx-auto">
+          <p className="text-happi-muted text-sm max-w-xl mx-auto">
             {fr
               ? 'H\'appi adapte chaque solution à la réalité métier de son client. Sélectionnez votre secteur pour voir comment.'
               : 'H\'appi tailors every solution to the client\'s business reality. Select your sector to see how.'}
