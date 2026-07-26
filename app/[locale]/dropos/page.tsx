@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Flame, Lock, MessageSquare, Check } from 'lucide-react';
 import WaitlistForm from '@/components/dropos/WaitlistForm';
+import { JsonLd } from '@/components/ui/JsonLd';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -108,8 +109,27 @@ export default async function DropOSPage({
         { icon: '🔒', title: 'Enterprise security',                desc: 'Shopify OAuth 2.0 with PKCE, encrypted tokens, strict ORM. Zero known CVEs. Your data stays yours.' },
       ];
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'DropOS',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    description: fr
+      ? 'Plateforme de suivi des profits en temps réel pour boutiques Shopify en dropshipping.'
+      : 'Real-time profit tracking platform for Shopify dropshipping stores.',
+    brand: { '@type': 'Brand', name: "H'appi" },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'EUR',
+      description: fr ? '1 an gratuit pour les 100 premiers membres fondateurs' : 'Free for 1 year for the first 100 founding members',
+    },
+  };
+
   return (
     <>
+      <JsonLd data={schema} />
       <Header />
       <main className="bg-happi-darker">
 

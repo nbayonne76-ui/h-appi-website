@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Phone, Calendar, MessageSquare, Mic, Clock, Zap, ArrowRight } from 'lucide-react';
 import SecretaryCTA from '@/components/secretary/SecretaryCTA';
 import LogoWall from '@/components/ui/LogoWall';
+import { JsonLd } from '@/components/ui/JsonLd';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -61,8 +62,21 @@ export default async function SecretaryPage({
   const fr = locale === 'fr';
   const L = fr ? 'fr' : 'en';
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: fr ? 'Secrétariat IA' : 'AI Secretary',
+    name: 'Happi-Secretary',
+    description: fr
+      ? 'Secrétaire IA vocale disponible 24h/24 : gestion des appels, prise de rendez-vous, messages transcrits.'
+      : '24/7 AI voice secretary: call handling, appointment booking, transcribed messages.',
+    provider: { '@type': 'Organization', name: "H'appi" },
+    areaServed: 'FR',
+  };
+
   return (
     <>
+      <JsonLd data={schema} />
       <Header />
       <main className="bg-happi-darker">
 

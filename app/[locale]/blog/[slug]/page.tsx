@@ -1624,9 +1624,22 @@ export default async function BlogArticlePage({
     inLanguage: locale === 'fr' ? 'fr-FR' : 'en-US',
   };
 
+  const blogUrl = locale === 'fr' ? `${BASE}/blog` : `${BASE}/en/blog`;
+  const homeUrl = locale === 'fr' ? BASE : `${BASE}/en`;
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: locale === 'fr' ? 'Accueil' : 'Home', item: homeUrl },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: blogUrl },
+      { '@type': 'ListItem', position: 3, name: article.title, item: articleUrl },
+    ],
+  };
+
   return (
     <>
       <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <ArticleLayout
         article={article as Article}
         sources={sources}
