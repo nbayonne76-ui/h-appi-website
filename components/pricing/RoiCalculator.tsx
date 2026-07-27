@@ -38,7 +38,8 @@ function Slider({ label, hint, value, min, max, step, display, onChange }: Slide
           step={step}
           value={value}
           onChange={(e) => onChange(Number(e.target.value))}
-          className="w-full h-1.5 rounded-full appearance-none cursor-pointer"
+          aria-label={`${label} ${hint}`.trim()}
+          className="range-thumb-happi w-full h-1.5 rounded-full appearance-none cursor-pointer"
           style={{
             background: `linear-gradient(to right, #3B82F6 ${pct}%, #334155 ${pct}%)`,
           }}

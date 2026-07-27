@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -13,6 +13,29 @@ export default function Header() {
   const [isMobileProductOpen, setIsMobileProductOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations('header');
+  const productMenuRef = useRef<HTMLDivElement>(null);
+
+  // Let keyboard and mouse users close the Product dropdown the same way they'd
+  // expect: Escape, or a click anywhere outside it (it previously only closed on hover-out).
+  useEffect(() => {
+    if (!isProductOpen) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsProductOpen(false);
+    };
+    const onClickOutside = (e: MouseEvent) => {
+      if (productMenuRef.current && !productMenuRef.current.contains(e.target as Node)) {
+        setIsProductOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('mousedown', onClickOutside);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.removeEventListener('mousedown', onClickOutside);
+    };
+  }, [isProductOpen]);
 
   const mainNav = [
     { name: t('nav.about'), href: '/a-propos' as const },
@@ -65,6 +88,7 @@ export default function Header() {
 
             {/* Product dropdown */}
             <div
+              ref={productMenuRef}
               className="relative"
               onMouseEnter={() => setIsProductOpen(true)}
               onMouseLeave={() => setIsProductOpen(false)}
