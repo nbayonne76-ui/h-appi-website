@@ -138,10 +138,10 @@ export function ContactModal() {
           </div>
           <button
             onClick={() => setOpen(false)}
-            className="text-happi-muted hover:text-white transition-colors ml-4 mt-0.5 flex-shrink-0"
+            className="w-9 h-9 rounded-lg bg-happi-surface hover:bg-happi-border/50 flex items-center justify-center text-happi-muted hover:text-white transition-colors ml-4 flex-shrink-0"
             aria-label={t.close}
           >
-            <X size={20} />
+            <X size={18} />
           </button>
         </div>
 

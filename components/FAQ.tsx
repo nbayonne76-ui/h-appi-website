@@ -34,6 +34,9 @@ export default function FAQ() {
               <div className="glass-card rounded-xl border border-happi-border overflow-hidden hover:border-happi-blue/30 transition-colors">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-panel-${index}`}
+                  id={`faq-trigger-${index}`}
                   className="w-full flex items-center justify-between p-5 text-left hover:bg-white/[0.03] transition-colors"
                 >
                   <span className="font-medium pr-4 text-sm">
@@ -47,7 +50,12 @@ export default function FAQ() {
                   />
                 </button>
                 <CollapseContent isOpen={openIndex === index}>
-                  <div className="px-5 pb-5 text-happi-muted leading-relaxed text-sm">
+                  <div
+                    id={`faq-panel-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-trigger-${index}`}
+                    className="px-5 pb-5 text-happi-muted leading-relaxed text-sm"
+                  >
                     {t(`items.${index}.answer`)}
                   </div>
                 </CollapseContent>
