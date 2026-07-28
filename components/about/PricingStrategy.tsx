@@ -1,9 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { FadeInUp } from '@/components/ui/Animate';
-import { ArrowRight } from 'lucide-react';
 
 export default function PricingStrategy() {
   const locale = useLocale();
@@ -42,18 +40,6 @@ export default function PricingStrategy() {
           <p className="text-happi-muted">
             {fr ? 'moins cher que le marché, à qualité égale.' : 'cheaper than the market, same quality.'}
           </p>
-        </FadeInUp>
-
-        <FadeInUp delay={0.18} className="mt-14">
-          <Link
-            href="/playbook#modele"
-            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
-          >
-            {fr ? "D'où viennent ces chiffres ?" : 'Where do these numbers come from?'}
-            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
-              {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
-            </span>
-          </Link>
         </FadeInUp>
 
       </div>

@@ -3,7 +3,6 @@
 import { useLocale } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
 import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import { openContactModal } from '@/components/ui/ContactModal';
 import { ArrowRight } from 'lucide-react';
@@ -103,10 +102,10 @@ export default function CrmContent() {
           </div>
         </section>
 
-        {/* ── Highlights + playbook link ── */}
+        {/* ── Highlights ── */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-happi-darker">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="flex flex-wrap justify-center gap-2 mb-10">
+            <div className="flex flex-wrap justify-center gap-2">
               {highlights.map((h) => (
                 <span
                   key={h.fr}
@@ -116,15 +115,6 @@ export default function CrmContent() {
                 </span>
               ))}
             </div>
-            <Link
-              href="/playbook#crm"
-              className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
-            >
-              {fr ? 'Tu veux les 16 modules, les intégrations et le détail sécurité ?' : 'Want all 16 modules, integrations and the security detail?'}
-              <span className="text-happi-blue font-medium inline-flex items-center gap-1">
-                {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
-              </span>
-            </Link>
           </div>
         </section>
 

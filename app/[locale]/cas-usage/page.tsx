@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -73,19 +71,6 @@ export default async function CasUsagePage({ params }: { params: Promise<{ local
             <BotDemo fr={fr} />
           </div>
         </section>
-
-        {/* ── Lien playbook ── */}
-        <div className="text-center pb-16 px-4">
-          <Link
-            href="/playbook"
-            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
-          >
-            {fr ? 'Tu veux tous les chiffres et les détails ?' : 'Want every number and detail?'}
-            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
-              {fr ? 'Le playbook complet' : 'The full playbook'} <ArrowRight size={13} />
-            </span>
-          </Link>
-        </div>
 
         <CTASection />
       </main>

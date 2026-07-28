@@ -13,7 +13,6 @@ const ROUTES = [
   { path: '/crm',          changeFrequency: 'monthly' as const, priority: 0.85 },
   { path: '/tarifs',       changeFrequency: 'monthly' as const, priority: 0.85 },
   { path: '/cas-usage',    changeFrequency: 'monthly' as const, priority: 0.8 },
-  { path: '/playbook',     changeFrequency: 'monthly' as const, priority: 0.8 },
   { path: '/faq',          changeFrequency: 'monthly' as const, priority: 0.75 },
   { path: '/blog',         changeFrequency: 'weekly'  as const, priority: 0.75 },
   { path: '/a-propos',     changeFrequency: 'monthly' as const, priority: 0.7 },

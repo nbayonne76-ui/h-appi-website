@@ -1,9 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { FadeInUp } from '@/components/ui/Animate';
-import { ArrowRight } from 'lucide-react';
 
 export default function UpsellModel() {
   const locale = useLocale();
@@ -40,18 +38,6 @@ export default function UpsellModel() {
               ? 'Aucun engagement. Vous n\'activez que ce qui a une valeur prouvée sur vos propres données.'
               : 'No commitment. You only activate what has proven value on your own data.'}
           </p>
-        </FadeInUp>
-
-        <FadeInUp delay={0.18} className="mt-12">
-          <Link
-            href="/playbook#modele"
-            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
-          >
-            {fr ? 'Comment fonctionnent les 4 phases ?' : 'How do the 4 phases work?'}
-            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
-              {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
-            </span>
-          </Link>
         </FadeInUp>
 
       </div>

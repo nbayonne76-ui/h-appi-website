@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { Phone, Calendar, MessageSquare, Mic, Clock, Zap, ArrowRight } from 'lucide-react';
+import { Phone, Calendar, MessageSquare, Mic, Clock, Zap } from 'lucide-react';
 import SecretaryCTA from '@/components/secretary/SecretaryCTA';
 import LogoWall from '@/components/ui/LogoWall';
 import { JsonLd } from '@/components/ui/JsonLd';
@@ -217,19 +216,6 @@ export default async function SecretaryPage({
             </div>
           </div>
         </section>
-
-        {/* ── Lien playbook ── */}
-        <div className="text-center py-16 px-4 border-t border-happi-border">
-          <Link
-            href="/playbook#secretaire"
-            className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
-          >
-            {fr ? "L'impact avant/après, les cas d'usage et la FAQ complète ?" : 'Before/after impact, use cases and the full FAQ?'}
-            <span className="text-happi-blue font-medium inline-flex items-center gap-1">
-              {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
-            </span>
-          </Link>
-        </div>
 
         {/* ── Final CTA ── */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-happi-border">

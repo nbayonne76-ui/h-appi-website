@@ -17,7 +17,6 @@ export default function Header() {
   const mainNav = [
     { name: t('nav.about'), href: '/a-propos' as const },
     { name: t('nav.useCases'), href: '/cas-usage' as const },
-    { name: t('nav.playbook'), href: '/playbook' as const },
   ];
 
   const productNav = [

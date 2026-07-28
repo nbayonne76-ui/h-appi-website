@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -69,18 +68,6 @@ export default async function SecuritePage({ params }: { params: Promise<{ local
                   <span className="text-xs text-happi-muted">{label}</span>
                 </div>
               ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <Link
-                href="/playbook#securite"
-                className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
-              >
-                {fr ? 'Tu veux le détail des certifications, du RGPD et la FAQ complète ?' : 'Want the full certifications, GDPR detail and FAQ?'}
-                <span className="text-happi-blue font-medium inline-flex items-center gap-1">
-                  {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
-                </span>
-              </Link>
             </div>
           </div>
         </section>

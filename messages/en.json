@@ -10,8 +10,7 @@
       "atelier": "Studio",
       "dropos": "DropOS",
       "secretary": "Secretary",
-      "product": "Product",
-      "playbook": "Playbook"
+      "product": "Product"
     },
     "cta": "Request a Demo"
   },
@@ -373,8 +372,8 @@
         "title": "Product",
         "links": [
           {
-            "label": "Playbook",
-            "href": "/playbook"
+            "label": "CRM",
+            "href": "/crm"
           },
           {
             "label": "Use Cases",
@@ -1289,10 +1288,6 @@
     "secretaryAgent": {
       "title": "AI Secretary Agent - Live Demo",
       "description": "Chat with our AI secretary agent: real-time intent detection, appointment booking with conversation memory, auto-generated call analysis card."
-    },
-    "playbook": {
-      "title": "Playbook - H'appi | Details, sectors & ROI",
-      "description": "The full detail behind H'appi's use cases: sectors covered, the Mobilier de France rollout, platform mechanics and ROI math."
     }
   },
   "aboutSubNav": {

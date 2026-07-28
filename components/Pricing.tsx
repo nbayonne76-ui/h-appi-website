@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, ArrowRight, Info } from 'lucide-react';
+import { Mail, Info } from 'lucide-react';
 import { openContactModal } from '@/components/ui/ContactModal';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -77,19 +77,6 @@ export default function Pricing() {
               </StaggerItem>
             ))}
           </Stagger>
-          <div className="text-center">
-            <Link
-              href="/playbook#modele"
-              className="inline-flex items-center gap-1.5 text-happi-muted hover:text-white text-sm transition-colors"
-            >
-              {fr
-                ? 'Pourquoi on est 50 à 70% moins chers, et comment se passe le déploiement ?'
-                : 'Why we\'re 50 to 70% cheaper, and how the rollout works?'}
-              <span className="text-happi-blue font-medium inline-flex items-center gap-1">
-                {fr ? 'Le playbook' : 'The playbook'} <ArrowRight size={13} />
-              </span>
-            </Link>
-          </div>
         </div>
       </section>
 
