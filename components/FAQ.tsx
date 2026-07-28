@@ -43,6 +43,7 @@ export default function FAQ() {
                     {t(`items.${index}.question`)}
                   </span>
                   <ChevronDown
+                    aria-hidden="true"
                     className={`text-happi-blue flex-shrink-0 transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}

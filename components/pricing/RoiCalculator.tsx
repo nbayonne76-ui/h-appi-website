@@ -39,13 +39,14 @@ function Slider({ label, hint, value, min, max, step, display, onChange }: Slide
           value={value}
           onChange={(e) => onChange(Number(e.target.value))}
           aria-label={`${label} ${hint}`.trim()}
-          className="range-thumb-happi w-full h-1.5 rounded-full appearance-none cursor-pointer"
+          aria-valuetext={display}
+          className="happi-range w-full h-1.5 rounded-full appearance-none cursor-pointer"
           style={{
             background: `linear-gradient(to right, #3B82F6 ${pct}%, #334155 ${pct}%)`,
           }}
         />
       </div>
-      <div className="flex justify-between text-[10px] text-happi-muted/50 mt-1">
+      <div className="flex justify-between text-[10px] text-happi-muted mt-1">
         <span>{min}</span>
         <span>{max}</span>
       </div>
@@ -75,7 +76,7 @@ function ResultCard({ icon, value, label, sub, highlight }: ResultCardProps) {
         {value}
       </div>
       <div className="text-happi-muted text-xs mt-1 leading-snug">{label}</div>
-      {sub && <div className="text-happi-muted/50 text-[10px] mt-1 uppercase tracking-wide">{sub}</div>}
+      {sub && <div className="text-happi-muted/80 text-[10px] mt-1 uppercase tracking-wide">{sub}</div>}
     </div>
   );
 }

@@ -156,40 +156,50 @@ body::before {
   /* ─── Themed range slider thumb ──────────────────────────────────────────── */
   /* Without this, <input type="range"> falls back to the browser's default    */
   /* (usually light gray) thumb, which clashes with the dark theme.            */
-  .range-thumb-happi::-webkit-slider-thumb {
+  .happi-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     border-radius: 9999px;
-    background: var(--happi-blue);
-    border: 2px solid var(--happi-dark);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    background: #ffffff;
+    border: 3px solid var(--happi-blue);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: transform 0.15s ease;
   }
 
-  .range-thumb-happi::-webkit-slider-thumb:hover {
+  .happi-range::-webkit-slider-thumb:hover {
     transform: scale(1.15);
   }
 
-  .range-thumb-happi::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
+  .happi-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
     border-radius: 9999px;
-    background: var(--happi-blue);
-    border: 2px solid var(--happi-dark);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    background: #ffffff;
+    border: 3px solid var(--happi-blue);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: transform 0.15s ease;
   }
 
-  .range-thumb-happi::-moz-range-thumb:hover {
+  .happi-range::-moz-range-thumb:hover {
     transform: scale(1.15);
   }
 
-  .range-thumb-happi::-moz-range-track {
+  .happi-range::-moz-range-track {
     background: transparent;
+  }
+
+  .happi-range:focus-visible::-webkit-slider-thumb {
+    outline: 2px solid var(--happi-blue);
+    outline-offset: 2px;
+  }
+
+  .happi-range:focus-visible::-moz-range-thumb {
+    outline: 2px solid var(--happi-blue);
+    outline-offset: 2px;
   }
 }
 

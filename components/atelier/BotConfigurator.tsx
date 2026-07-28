@@ -351,6 +351,9 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                   key={i}
                   layout
                   onClick={() => i < step && goToStep(i)}
+                  disabled={i >= step}
+                  aria-label={fr ? `Aller à l'étape ${i + 1}` : `Go to step ${i + 1}`}
+                  aria-current={i === step ? 'step' : undefined}
                   whileTap={i < step ? { scale: 0.88 } : {}}
                   animate={i === step ? { scale: direction > 0 ? [1, 1.1, 1] : [1, 0.88, 1.06, 1] } : { scale: 1 }}
                   transition={{ duration: 0.35 }}
@@ -375,7 +378,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                 </motion.button>
               ))}
               <div className="flex-1" />
-              <span className="text-[11px] text-happi-muted/40">
+              <span className="text-[11px] text-happi-muted">
                 {fr ? `Étape ${step + 1} / ${TOTAL_STEPS}` : `Step ${step + 1} of ${TOTAL_STEPS}`}
               </span>
             </div>
@@ -445,7 +448,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                           <div className={`text-sm font-semibold leading-tight transition-colors ${sel ? 'text-white' : 'text-happi-muted group-hover:text-white'}`}>
                             {fr ? s.fr : s.en}
                           </div>
-                          <div className="text-[11px] text-happi-muted/50 mt-0.5 leading-snug truncate">
+                          <div className="text-[11px] text-happi-muted mt-0.5 leading-snug truncate">
                             {fr ? s.descFr : s.descEn}
                           </div>
                         </div>
@@ -951,7 +954,8 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                           whileTap={{ scale: 0.9 }}
                           transition={{ duration: 0.2 }}
                           onClick={() => setShowForm(false)}
-                          className="text-happi-muted hover:text-white transition-colors text-lg leading-none flex-shrink-0"
+                          aria-label={fr ? 'Fermer' : 'Close'}
+                          className="w-8 h-8 rounded-lg flex items-center justify-center text-happi-muted hover:text-white hover:bg-white/5 transition-colors text-lg leading-none flex-shrink-0"
                         >✕</motion.button>
                       </div>
                     </div>

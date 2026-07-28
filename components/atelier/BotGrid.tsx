@@ -686,7 +686,7 @@ function LeadForm({
               </div>
               <button
                 onClick={onClose}
-                className="text-happi-muted hover:text-white transition-colors flex-shrink-0 mt-0.5"
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-happi-muted hover:text-white hover:bg-white/5 transition-colors flex-shrink-0 -mt-1 -mr-1"
                 aria-label="Close"
               >
                 <X size={16} />
