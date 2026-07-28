@@ -91,12 +91,16 @@ export default function HomeFAQ({ fr }: { fr: boolean }) {
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`home-faq-panel-${i}`}
+                  id={`home-faq-trigger-${i}`}
                   className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
                 >
                   <span className={`font-semibold text-sm leading-snug ${isOpen ? 'text-white' : 'text-happi-muted'}`}>
                     {fr ? faq.qFr : faq.qEn}
                   </span>
                   <div
+                    aria-hidden="true"
                     className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
                       isOpen ? 'bg-happi-blue/20 text-happi-blue' : 'bg-happi-darker text-happi-muted'
                     }`}
@@ -113,7 +117,12 @@ export default function HomeFAQ({ fr }: { fr: boolean }) {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                     >
-                      <div className="px-6 pb-5">
+                      <div
+                        id={`home-faq-panel-${i}`}
+                        role="region"
+                        aria-labelledby={`home-faq-trigger-${i}`}
+                        className="px-6 pb-5"
+                      >
                         <p className="text-happi-muted text-sm leading-relaxed border-t border-happi-border/40 pt-4">
                           {fr ? faq.aFr : faq.aEn}
                         </p>

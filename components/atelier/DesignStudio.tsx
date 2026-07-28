@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Palette, LayoutGrid, Type, Boxes, ArrowRight, CheckCircle2, Loader2, Sparkles } from 'lucide-react';
+import { Palette, LayoutGrid, Type, Boxes, ArrowRight, CheckCircle2, Loader2, Sparkles, ChevronDown } from 'lucide-react';
 import TiltCard from '@/components/ui/TiltCard';
 import { generateDesignOptions } from '@/lib/design-agents/orchestrator';
 import type {
@@ -85,15 +85,22 @@ function Field({
   return (
     <label className="flex flex-col gap-1.5">
       <span className="text-xs font-semibold text-happi-muted">{label}</span>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="bg-happi-dark border border-happi-border rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-happi-blue/60 transition-colors appearance-none cursor-pointer"
-      >
-        {options.map((o) => (
-          <option key={o.value} value={o.value}>{o.label}</option>
-        ))}
-      </select>
+      <div className="relative">
+        <select
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="w-full bg-happi-dark border border-happi-border rounded-xl pl-3.5 pr-9 py-2.5 text-sm text-white outline-none focus:border-happi-blue/60 transition-colors appearance-none cursor-pointer"
+        >
+          {options.map((o) => (
+            <option key={o.value} value={o.value}>{o.label}</option>
+          ))}
+        </select>
+        <ChevronDown
+          aria-hidden="true"
+          size={16}
+          className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-happi-muted"
+        />
+      </div>
     </label>
   );
 }
