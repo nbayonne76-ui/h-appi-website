@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import { openContactModal } from '@/components/ui/ContactModal';
@@ -13,6 +13,8 @@ export default function Header() {
   const [isMobileProductOpen, setIsMobileProductOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations('header');
+  const locale = useLocale();
+  const fr = locale !== 'en';
   const productMenuRef = useRef<HTMLDivElement>(null);
 
   // Let keyboard and mouse users close the Product dropdown the same way they'd
@@ -62,7 +64,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2" aria-label="H'appi — Accueil">
+            <Link href="/" className="flex items-center space-x-2" aria-label={fr ? "H'appi — Accueil" : "H'appi — Home"}>
               <div className="w-10 h-10 bg-gradient-to-br from-happi-blue to-happi-green rounded-lg flex items-center justify-center">
                 <span className="text-white text-2xl font-bold">H</span>
               </div>
@@ -152,7 +154,7 @@ export default function Header() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white p-1"
-              aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-label={isMenuOpen ? (fr ? 'Fermer le menu' : 'Close menu') : (fr ? 'Ouvrir le menu' : 'Open menu')}
               aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

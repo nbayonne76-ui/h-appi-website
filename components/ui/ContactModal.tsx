@@ -227,7 +227,7 @@ export function ContactModal() {
                   <button
                     type="button"
                     onClick={() => setMessageOpen(true)}
-                    className="w-full flex items-center justify-between gap-2 bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-left text-happi-muted/50 hover:border-happi-blue/40 hover:text-happi-muted transition-all"
+                    className="w-full flex items-center justify-between gap-2 bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-left text-happi-muted hover:border-happi-blue/40 hover:text-white transition-all"
                   >
                     <span className="truncate">{t.messageCollapsedEmpty}</span>
                     <Pencil size={13} className="flex-shrink-0 opacity-60" />
@@ -260,7 +260,7 @@ export function ContactModal() {
                 )}
               </button>
 
-              <p className="text-xs text-happi-muted/60 text-center">{t.required}</p>
+              <p className="text-xs text-happi-muted text-center">{t.required}</p>
             </form>
           )}
         </div>

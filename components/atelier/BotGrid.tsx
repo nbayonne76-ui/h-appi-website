@@ -528,7 +528,7 @@ function ChatModal({
           <button
             onClick={onClose}
             className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center text-happi-muted hover:text-white flex-shrink-0"
-            aria-label="Close"
+            aria-label={fr ? 'Fermer' : 'Close'}
           >
             <X size={14} />
           </button>
@@ -687,7 +687,7 @@ function LeadForm({
               <button
                 onClick={onClose}
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-happi-muted hover:text-white hover:bg-white/5 transition-colors flex-shrink-0 -mt-1 -mr-1"
-                aria-label="Close"
+                aria-label={fr ? 'Fermer' : 'Close'}
               >
                 <X size={16} />
               </button>
