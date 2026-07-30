@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useSpring, useTransform, useMotionValue } from 'framer-motion';
 import { Check, Sparkles, ArrowLeft, Zap, Clock, MessageCircle, Loader2 } from 'lucide-react';
 import AnimatedMesh from '@/components/ui/AnimatedMesh';
@@ -244,6 +244,23 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
   const [sent, setSent]             = useState(false);
   const [loading, setLoading]       = useState(false);
   const [direction, setDirection]   = useState(1); // 1 = forward, -1 = back
+  const firstInputRef               = useRef<HTMLInputElement>(null);
+  const previouslyFocusedRef        = useRef<HTMLElement | null>(null);
+
+  // Escape-to-close + initial focus + focus-return, matching the pattern
+  // already used by ContactModal / ExitIntentPopup for this site's other modals.
+  useEffect(() => {
+    if (!showForm) return;
+    previouslyFocusedRef.current = document.activeElement as HTMLElement;
+    const focusTimer = setTimeout(() => firstInputRef.current?.focus(), 100);
+    const onKeyDown = (e: KeyboardEvent) => { if (e.key === 'Escape') setShowForm(false); };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      clearTimeout(focusTimer);
+      document.removeEventListener('keydown', onKeyDown);
+      previouslyFocusedRef.current?.focus();
+    };
+  }, [showForm]);
 
   const sectorData    = SECTORS.find(s => s.id === cfg.sector);
   const color         = sectorData?.color ?? '#4F46E5';
@@ -586,7 +603,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                         ? `Options adaptées à votre secteur (${cfg.features.length}/4)`
                         : `Options tailored to your industry (${cfg.features.length}/4)`}
                     </p>
-                    <span className="text-[11px] text-happi-muted/40">{fr ? 'Optionnel' : 'Optional'}</span>
+                    <span className="text-[11px] text-happi-muted">{fr ? 'Optionnel' : 'Optional'}</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2.5">
                     {sectorFeatures.map((f, i) => {
@@ -789,8 +806,8 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                     className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl"
                     style={{ borderLeft: '2px solid transparent' }}
                   >
-                    <div className="text-[10px] font-bold text-happi-muted/30 w-5 flex-shrink-0">{String(i + 1).padStart(2, '0')}</div>
-                    <div className="text-[11px] text-happi-muted/40 w-14 flex-shrink-0 leading-tight">{slot.label}</div>
+                    <div className="text-[10px] font-bold text-happi-muted w-5 flex-shrink-0">{String(i + 1).padStart(2, '0')}</div>
+                    <div className="text-[11px] text-happi-muted w-14 flex-shrink-0 leading-tight">{slot.label}</div>
                     <div className="flex-1 min-w-0">
                       <AnimatePresence mode="wait">
                         {slot.value ? (
@@ -895,7 +912,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                     exit={{ opacity: 0 }}
                     className="flex items-center justify-center py-8"
                   >
-                    <p className="text-[11px] text-happi-muted/40 text-center leading-relaxed">
+                    <p className="text-[11px] text-happi-muted text-center leading-relaxed">
                       {fr ? 'Choisissez un secteur\npour voir votre bot en action' : 'Pick an industry\nto see your bot in action'}
                     </p>
                   </motion.div>
@@ -905,7 +922,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
               {cfg.sector && cfg.goal && (
                 <div className="px-4 pb-4">
                   <div className="bg-happi-dark rounded-xl px-3 py-2 flex items-center gap-2 border border-happi-border/40">
-                    <span className="text-[11px] text-happi-muted/30 flex-1">{fr ? 'Votre message…' : 'Your message…'}</span>
+                    <span className="text-[11px] text-happi-muted flex-1">{fr ? 'Votre message…' : 'Your message…'}</span>
                     <div className="w-5 h-5 rounded-lg flex items-center justify-center" style={{ background: color }}>
                       <span className="text-white text-[10px] font-bold">↑</span>
                     </div>
@@ -936,6 +953,9 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
               transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               className="w-full sm:max-w-md glass-card rounded-t-3xl sm:rounded-3xl overflow-hidden"
               style={{ borderTopWidth: '2px', borderTopColor: color }}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="bot-configurator-modal-title"
             >
               <AnimatePresence mode="wait">
                 {!sent ? (
@@ -945,7 +965,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: `${color}25` }}>{icon}</div>
                           <div>
-                            <div className="text-white font-bold text-sm">{name}</div>
+                            <div id="bot-configurator-modal-title" className="text-white font-bold text-sm">{name}</div>
                             <div className="text-happi-muted text-xs mt-0.5">{fr ? 'Configuration complète ✓' : 'Config complete ✓'}</div>
                           </div>
                         </div>
@@ -973,6 +993,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                         ].map((field, i) => (
                           <motion.input
                             key={field.key}
+                            ref={i === 0 ? firstInputRef : undefined}
                             required
                             type={field.type}
                             placeholder={field.placeholder}
@@ -999,7 +1020,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                             {loading ? (fr ? 'Envoi…' : 'Sending…') : (fr ? 'Construire mon bot' : 'Build my bot')}
                           </motion.button>
                         </MagneticButton>
-                        <p className="text-[11px] text-happi-muted/40 text-center">{fr ? 'Aucun engagement · Réponse sous 24h · Gratuit' : 'No commitment · Reply within 24h · Free'}</p>
+                        <p className="text-[11px] text-happi-muted text-center">{fr ? 'Aucun engagement · Réponse sous 24h · Gratuit' : 'No commitment · Reply within 24h · Free'}</p>
                       </form>
                     </div>
                   </motion.div>
