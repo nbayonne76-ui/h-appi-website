@@ -31,8 +31,13 @@ export function FloatingCTA() {
         visible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
       } ${expanded ? 'px-5 py-3.5 rounded-2xl' : 'w-14 h-14 rounded-full justify-center'}`}
     >
-      {/* Pulsing ring */}
-      <span className="absolute inset-0 rounded-full bg-happi-blue animate-ping opacity-15 pointer-events-none" />
+      {/* Pulsing ring — radius must track the button's own shape, else the
+         ping flashes a circle past the corners of the expanded pill */}
+      <span
+        className={`absolute inset-0 bg-happi-blue animate-ping opacity-15 pointer-events-none ${
+          expanded ? 'rounded-2xl' : 'rounded-full'
+        }`}
+      />
       <Calendar size={20} className="flex-shrink-0 relative z-10" />
       {expanded && (
         <span className="relative z-10 whitespace-nowrap">

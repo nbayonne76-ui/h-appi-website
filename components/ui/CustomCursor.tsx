@@ -23,6 +23,12 @@ export default function CustomCursor() {
   const glowY = useSpring(rawY, { stiffness: 60, damping: 18 });
 
   useEffect(() => {
+    // Skip entirely on touch/coarse-pointer devices — mouse-driven cursor
+    // dressing has no target there, and iOS/Android fire synthetic mouse
+    // events ~300ms after tap that would otherwise flash the dot/ring at
+    // the tap point.
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
     setMounted(true);
 
     const move = (e: MouseEvent) => {
