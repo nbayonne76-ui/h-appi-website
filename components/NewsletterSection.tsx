@@ -36,6 +36,7 @@ export default function NewsletterSection() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
           className="rounded-2xl border border-happi-border bg-happi-surface p-8 md:p-10 text-center"
+          aria-live="polite"
         >
           {/* Icon */}
           <div className="w-12 h-12 rounded-2xl bg-happi-blue/10 border border-happi-blue/20 flex items-center justify-center mx-auto mb-5">

@@ -123,15 +123,16 @@ function FlipCard({ card, fr }: { card: Card; fr: boolean }) {
       >
         {/* Front — le problème */}
         <div
-          className="absolute inset-0 rounded-2xl p-6 flex flex-col [backface-visibility:hidden] border"
+          aria-hidden={flipped}
+          className="absolute inset-0 rounded-2xl p-4 sm:p-6 flex flex-col overflow-hidden [backface-visibility:hidden] border"
           style={{ background: `${card.color}0d`, borderColor: `${card.color}30` }}
         >
-          <span className="text-4xl mb-4">{card.emoji}</span>
+          <span className="text-3xl sm:text-4xl mb-2 sm:mb-4">{card.emoji}</span>
           <p className="text-white font-bold text-sm mb-2">{fr ? card.sector : card.sectorEn}</p>
           <p className="text-happi-muted text-sm leading-snug flex-1">
             {fr ? card.problem : card.problemEn}
           </p>
-          <div className="mt-4">
+          <div className="mt-2 sm:mt-4">
             <div className="text-3xl font-extrabold" style={{ color: card.color }}>
               {card.metric}
             </div>
@@ -144,7 +145,8 @@ function FlipCard({ card, fr }: { card: Card; fr: boolean }) {
 
         {/* Back — la solution */}
         <div
-          className="absolute inset-0 rounded-2xl p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] border"
+          aria-hidden={!flipped}
+          className="absolute inset-0 rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center text-center overflow-hidden [backface-visibility:hidden] border"
           style={{ background: `${card.color}1a`, borderColor: `${card.color}50`, transform: 'rotateY(180deg)' }}
         >
           <span className="text-3xl mb-4">🤖</span>

@@ -126,6 +126,7 @@ export default function SecretaryAgent({ fr }: { fr: boolean }) {
             </label>
             <button
               onClick={() => setVip((v) => !v)}
+              aria-pressed={vip}
               className={`flex items-center gap-2.5 rounded-xl border px-3.5 py-2.5 text-left transition-colors ${vip ? 'border-amber-400/50 bg-amber-400/10' : 'border-happi-border'}`}
             >
               <Star size={14} className={vip ? 'text-amber-400' : 'text-happi-muted'} fill={vip ? 'currentColor' : 'none'} />

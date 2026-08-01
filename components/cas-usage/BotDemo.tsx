@@ -39,7 +39,7 @@ export function BotDemo({ fr }: { fr?: boolean }) {
           <div className="flex items-center gap-1 flex-shrink-0">
             <button
               onClick={() => { setKey((k) => k + 1); setErrored(false); }}
-              className="p-1.5 -m-1.5 rounded-md text-happi-muted hover:text-white hover:bg-white/5 transition-colors"
+              className="p-2.5 -m-2.5 rounded-md text-happi-muted hover:text-white hover:bg-white/5 transition-colors"
               title={fr ? 'Recharger' : 'Reload'}
               aria-label={fr ? 'Recharger la démo' : 'Reload the demo'}
             >
@@ -49,7 +49,7 @@ export function BotDemo({ fr }: { fr?: boolean }) {
               href={BOT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 -m-1.5 rounded-md text-happi-muted hover:text-happi-blue hover:bg-white/5 transition-colors"
+              className="p-2.5 -m-2.5 rounded-md text-happi-muted hover:text-happi-blue hover:bg-white/5 transition-colors"
               title={fr ? 'Ouvrir dans un onglet' : 'Open in new tab'}
               aria-label={fr ? 'Ouvrir la démo dans un nouvel onglet' : 'Open the demo in a new tab'}
             >
