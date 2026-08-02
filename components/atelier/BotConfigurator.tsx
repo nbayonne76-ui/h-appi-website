@@ -981,7 +981,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                             initial={{ opacity: 0, x: -12 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: i * 0.07, duration: 0.3 }}
-                            className="bg-happi-dark border border-happi-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-happi-muted/40 outline-none focus:border-happi-blue/60 transition-colors"
+                            className="bg-happi-dark border border-happi-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-happi-muted/40 outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-colors"
                           />
                         ))}
                         <MagneticButton strength={0.2}>

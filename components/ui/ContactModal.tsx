@@ -114,17 +114,19 @@ export function ContactModal() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+      className="fixed inset-0 z-[100] overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-label={t.title}
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm"
         onClick={() => setOpen(false)}
       />
 
+      {/* Scroll wrapper — keeps the card centered when it fits, scrollable when it doesn't */}
+      <div className="relative min-h-full flex items-center justify-center p-4 py-8">
       {/* Modal card */}
       <div className="relative w-full max-w-lg bg-happi-darker rounded-2xl border border-happi-border shadow-2xl shadow-black/50 animate-scale-in overflow-hidden">
         {/* Gradient top bar */}
@@ -264,6 +266,7 @@ export function ContactModal() {
             </form>
           )}
         </div>
+      </div>
       </div>
     </div>
   );

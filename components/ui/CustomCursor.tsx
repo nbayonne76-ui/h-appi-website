@@ -23,6 +23,11 @@ export default function CustomCursor() {
   const glowY = useSpring(rawY, { stiffness: 60, damping: 18 });
 
   useEffect(() => {
+    // Skip on touch devices — there's no hovering pointer to track, and a
+    // synthesized mouse event from a tap would otherwise leave the cursor
+    // dot/ring/glow parked at the last-tapped element.
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
     setMounted(true);
 
     const move = (e: MouseEvent) => {
