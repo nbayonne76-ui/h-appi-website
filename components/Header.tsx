@@ -153,7 +153,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white p-1"
+              className="text-white p-2.5 -m-2.5"
               aria-label={isMenuOpen ? (fr ? 'Fermer le menu' : 'Close menu') : (fr ? 'Ouvrir le menu' : 'Open menu')}
               aria-expanded={isMenuOpen}
             >

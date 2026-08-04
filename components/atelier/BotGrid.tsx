@@ -496,10 +496,22 @@ function ChatModal({
   const name    = fr ? bot.nameFr    : bot.nameEn;
   const pioneer = fr ? bot.pioneerFr : bot.pioneerEn;
   const showCTA = !isTyping && currentOpts.length === 0 && messages.length > 1;
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Match the site's modal convention (ContactModal, ExitIntentPopup): focus
+  // the close button on open, restore focus to the trigger element on close.
+  useEffect(() => {
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    closeButtonRef.current?.focus();
+    return () => { previouslyFocused?.focus(); };
+  }, []);
 
   return (
     <div
       className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bot-chat-modal-title"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
@@ -520,14 +532,15 @@ function ChatModal({
             {bot.icon}
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-sm font-bold text-white leading-tight truncate">{name}</div>
+            <div id="bot-chat-modal-title" className="text-sm font-bold text-white leading-tight truncate">{name}</div>
             <div className="text-[10px] font-semibold mt-0.5" style={{ color: bot.color }}>
               {pioneer}
             </div>
           </div>
           <button
+            ref={closeButtonRef}
             onClick={onClose}
-            className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center text-happi-muted hover:text-white flex-shrink-0"
+            className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center text-happi-muted hover:text-white flex-shrink-0"
             aria-label={fr ? 'Fermer' : 'Close'}
           >
             <X size={14} />
@@ -656,6 +669,22 @@ function LeadForm({
   const [form, setForm] = useState({ prenom: '', entreprise: '', email: '' });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const successHeadingRef = useRef<HTMLHeadingElement>(null);
+
+  // Match the site's modal convention (ContactModal, ExitIntentPopup): focus
+  // the close button on open, restore focus to the trigger element on close.
+  useEffect(() => {
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    closeButtonRef.current?.focus();
+    return () => { previouslyFocused?.focus(); };
+  }, []);
+
+  // Move focus to the confirmation so screen-reader users hear it — the
+  // success panel replaces the form instead of updating it in place.
+  useEffect(() => {
+    if (sent) successHeadingRef.current?.focus();
+  }, [sent]);
 
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -668,6 +697,9 @@ function LeadForm({
   return (
     <div
       className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label={fr ? 'Adapter ce bot à mon secteur' : 'Adapt this bot to my sector'}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div className="w-full sm:max-w-sm bg-happi-surface border border-happi-border rounded-t-2xl sm:rounded-2xl p-6 flex flex-col gap-4">
@@ -685,8 +717,9 @@ function LeadForm({
                 </p>
               </div>
               <button
+                ref={closeButtonRef}
                 onClick={onClose}
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-happi-muted hover:text-white hover:bg-white/5 transition-colors flex-shrink-0 -mt-1 -mr-1"
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-happi-muted hover:text-white hover:bg-white/5 transition-colors flex-shrink-0 -mt-1 -mr-1"
                 aria-label={fr ? 'Fermer' : 'Close'}
               >
                 <X size={16} />
@@ -736,7 +769,7 @@ function LeadForm({
             <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center text-2xl">
               ✓
             </div>
-            <h3 className="text-white font-bold text-base">
+            <h3 ref={successHeadingRef} tabIndex={-1} className="text-white font-bold text-base outline-none">
               {fr ? 'Message reçu !' : 'Message received!'}
             </h3>
             <p className="text-happi-muted text-sm leading-relaxed max-w-xs">
