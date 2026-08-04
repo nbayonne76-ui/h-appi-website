@@ -113,7 +113,6 @@ function FlipCard({ card, fr }: { card: Card; fr: boolean }) {
     <button
       onClick={() => setFlipped((f) => !f)}
       className="relative w-full aspect-[4/5] [perspective:1200px] text-left"
-      aria-label={fr ? card.sector : card.sectorEn}
       aria-pressed={flipped}
     >
       <motion.div
@@ -123,6 +122,7 @@ function FlipCard({ card, fr }: { card: Card; fr: boolean }) {
       >
         {/* Front — le problème */}
         <div
+          aria-hidden={flipped}
           className="absolute inset-0 rounded-2xl p-6 flex flex-col [backface-visibility:hidden] border"
           style={{ background: `${card.color}0d`, borderColor: `${card.color}30` }}
         >
@@ -144,6 +144,7 @@ function FlipCard({ card, fr }: { card: Card; fr: boolean }) {
 
         {/* Back — la solution */}
         <div
+          aria-hidden={!flipped}
           className="absolute inset-0 rounded-2xl p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] border"
           style={{ background: `${card.color}1a`, borderColor: `${card.color}50`, transform: 'rotateY(180deg)' }}
         >

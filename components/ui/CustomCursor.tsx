@@ -23,6 +23,12 @@ export default function CustomCursor() {
   const glowY = useSpring(rawY, { stiffness: 60, damping: 18 });
 
   useEffect(() => {
+    // Touch devices fire a single synthetic mousemove/mouseover on first tap
+    // (for :hover emulation) but no further mousemove, so the ring/dot would
+    // otherwise get stuck floating over whatever was tapped first. Skip
+    // entirely on coarse pointers (touchscreens).
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
     setMounted(true);
 
     const move = (e: MouseEvent) => {

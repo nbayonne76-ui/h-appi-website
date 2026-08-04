@@ -65,6 +65,7 @@ export function ContactModal() {
   const t = copy[locale === 'en' ? 'en' : 'fr'];
   const firstInputRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     _openFn = () => {
@@ -77,7 +78,26 @@ export function ContactModal() {
   }, []);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setOpen(false); return; }
+      if (e.key !== 'Tab' || !cardRef.current) return;
+
+      // Keep Tab/Shift+Tab cycling inside the dialog — nothing behind the
+      // backdrop is reachable by keyboard while it's open (WAI-ARIA Dialog pattern).
+      const focusable = cardRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
     if (open) {
       document.addEventListener('keydown', onKey);
       document.body.style.overflow = 'hidden';
@@ -126,7 +146,7 @@ export function ContactModal() {
       />
 
       {/* Modal card */}
-      <div className="relative w-full max-w-lg bg-happi-darker rounded-2xl border border-happi-border shadow-2xl shadow-black/50 animate-scale-in overflow-hidden">
+      <div ref={cardRef} className="relative w-full max-w-lg bg-happi-darker rounded-2xl border border-happi-border shadow-2xl shadow-black/50 animate-scale-in overflow-hidden">
         {/* Gradient top bar */}
         <div className="h-1 bg-gradient-to-r from-happi-blue to-happi-green" />
 
@@ -227,7 +247,7 @@ export function ContactModal() {
                   <button
                     type="button"
                     onClick={() => setMessageOpen(true)}
-                    className="w-full flex items-center justify-between gap-2 bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-left text-happi-muted/50 hover:border-happi-blue/40 hover:text-happi-muted transition-all"
+                    className="w-full flex items-center justify-between gap-2 bg-happi-surface border border-happi-border rounded-lg px-3 py-2.5 text-sm text-left text-happi-muted hover:border-happi-blue/40 hover:text-white transition-all"
                   >
                     <span className="truncate">{t.messageCollapsedEmpty}</span>
                     <Pencil size={13} className="flex-shrink-0 opacity-60" />
@@ -260,7 +280,7 @@ export function ContactModal() {
                 )}
               </button>
 
-              <p className="text-xs text-happi-muted/60 text-center">{t.required}</p>
+              <p className="text-xs text-happi-muted text-center">{t.required}</p>
             </form>
           )}
         </div>
