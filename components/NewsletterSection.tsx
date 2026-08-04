@@ -90,7 +90,7 @@ export default function NewsletterSection() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={fr ? 'votre@email.com' : 'your@email.com'}
                 required
-                className="flex-1 bg-happi-darker border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none focus:border-happi-blue/50 transition-colors"
+                className="flex-1 bg-happi-darker border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 focus:outline-none focus:border-happi-blue/50 focus:ring-1 focus:ring-happi-blue/30 transition-colors"
               />
               <button
                 type="submit"

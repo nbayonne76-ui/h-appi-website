@@ -89,7 +89,7 @@ function Field({
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full bg-happi-dark border border-happi-border rounded-xl pl-3.5 pr-9 py-2.5 text-sm text-white outline-none focus:border-happi-blue/60 transition-colors appearance-none cursor-pointer"
+          className="w-full bg-happi-dark border border-happi-border rounded-xl pl-3.5 pr-9 py-2.5 text-sm text-white outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-colors appearance-none cursor-pointer"
         >
           {options.map((o) => (
             <option key={o.value} value={o.value}>{o.label}</option>

@@ -121,7 +121,7 @@ export default function SecretaryAgent({ fr }: { fr: boolean }) {
               <input
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
-                className="bg-happi-dark border border-happi-border rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-happi-blue/60 transition-colors"
+                className="bg-happi-dark border border-happi-border rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-colors"
               />
             </label>
             <button
@@ -223,7 +223,7 @@ export default function SecretaryAgent({ fr }: { fr: boolean }) {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder={fr ? 'Écrivez comme si vous appeliez…' : 'Type as if you were calling…'}
-                  className="flex-1 bg-happi-dark border border-happi-border rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 transition-colors"
+                  className="flex-1 bg-happi-dark border border-happi-border rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-colors"
                 />
                 <button
                   type="submit"

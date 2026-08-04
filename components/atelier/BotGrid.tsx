@@ -732,14 +732,14 @@ function LeadForm({
                 placeholder={fr ? 'Prénom' : 'First name'}
                 value={form.prenom}
                 onChange={(e) => setForm((f) => ({ ...f, prenom: e.target.value }))}
-                className="bg-happi-dark border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 transition-colors"
+                className="bg-happi-dark border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-colors"
               />
               <input
                 required
                 placeholder={fr ? 'Entreprise' : 'Company'}
                 value={form.entreprise}
                 onChange={(e) => setForm((f) => ({ ...f, entreprise: e.target.value }))}
-                className="bg-happi-dark border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 transition-colors"
+                className="bg-happi-dark border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-colors"
               />
               <input
                 required
@@ -747,7 +747,7 @@ function LeadForm({
                 placeholder={fr ? 'Email professionnel' : 'Work email'}
                 value={form.email}
                 onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                className="bg-happi-dark border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 transition-colors"
+                className="bg-happi-dark border border-happi-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-happi-muted/50 outline-none focus:border-happi-blue/60 focus:ring-1 focus:ring-happi-blue/30 transition-colors"
               />
               <button
                 type="submit"
