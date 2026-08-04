@@ -4,7 +4,6 @@ import ProblemSolution from '@/components/ProblemSolution';
 import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
 import ComparisonTable from '@/components/ComparisonTable';
-import HomeFAQ from '@/components/HomeFAQ';
 import NewsletterSection from '@/components/NewsletterSection';
 import GuaranteeStrip from '@/components/GuaranteeStrip';
 import CTASection from '@/components/CTASection';
@@ -50,7 +49,6 @@ export default async function Home() {
         </section>
 
         <LiveChatDemo fr={fr} />
-        <HomeFAQ fr={fr} />
         <NewsletterSection />
         <GuaranteeStrip fr={fr} />
         <CTASection />
