@@ -125,6 +125,28 @@ body::before {
     animation: ticker-scroll 35s linear infinite;
   }
 
+  /* ─── LogoWall marquee rows ──────────────────────────────────────────────── */
+  .marquee-row {
+    animation: marquee 28s linear infinite;
+    width: max-content;
+  }
+
+  .marquee-row-reverse {
+    animation: marquee-reverse 28s linear infinite;
+    width: max-content;
+  }
+
+  /* Pause auto-scrolling marquees on hover/focus so content moving for more    */
+  /* than 5s can actually be read (WCAG 2.2.2 Pause, Stop, Hide).               */
+  .ticker-track:hover,
+  .ticker-track:focus-within,
+  .marquee-row:hover,
+  .marquee-row:focus-within,
+  .marquee-row-reverse:hover,
+  .marquee-row-reverse:focus-within {
+    animation-play-state: paused;
+  }
+
   .gradient-bg {
     background:
       radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.15), transparent),
