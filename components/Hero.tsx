@@ -186,7 +186,7 @@ export default function Hero() {
 
               {/* Floating Stats */}
               <motion.div
-                className="absolute -top-6 -right-6 bg-happi-surface rounded-lg shadow-lg shadow-black/20 p-4 border border-happi-border"
+                className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 bg-happi-surface rounded-lg shadow-lg shadow-black/20 p-4 border border-happi-border"
                 initial={{ opacity: 0, scale: prefersReduced ? 1 : 0.8, y: prefersReduced ? 0 : 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.6, ease: 'backOut' }}
@@ -196,7 +196,7 @@ export default function Hero() {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-6 -left-6 bg-happi-surface rounded-lg shadow-lg shadow-black/20 p-4 border border-happi-border"
+                className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 bg-happi-surface rounded-lg shadow-lg shadow-black/20 p-4 border border-happi-border"
                 initial={{ opacity: 0, scale: prefersReduced ? 1 : 0.8, y: prefersReduced ? 0 : -10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.75, ease: 'backOut' }}
