@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Check, X, Minus } from 'lucide-react';
 
 type CellValue = 'yes' | 'no' | 'partial' | string;
@@ -99,6 +99,8 @@ function Cell({ value, highlight }: { value: CellValue; highlight?: boolean }) {
 }
 
 export default function ComparisonTable({ fr }: { fr: boolean }) {
+  const prefersReduced = useReducedMotion();
+
   const headers = [
     { label: fr ? 'Critère' : 'Criteria', sub: '' },
     { label: fr ? 'Agence classique' : 'Traditional agency', sub: '' },
@@ -112,10 +114,10 @@ export default function ComparisonTable({ fr }: { fr: boolean }) {
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: prefersReduced ? 0 : 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: prefersReduced ? 0.3 : 0.5 }}
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1.5 bg-happi-green/10 text-happi-green rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-happi-green/20">
@@ -137,10 +139,10 @@ export default function ComparisonTable({ fr }: { fr: boolean }) {
 
         {/* Table */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: prefersReduced ? 0 : 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: prefersReduced ? 0.3 : 0.5, delay: 0.1 }}
           className="rounded-2xl border border-happi-border overflow-hidden"
         >
           {/* Horizontally scrollable on narrow viewports instead of squeezing 4 columns */}

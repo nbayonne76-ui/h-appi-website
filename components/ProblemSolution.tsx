@@ -87,7 +87,7 @@ export default function ProblemSolution() {
 
         <FadeInUp className="text-center mt-12" delay={0.2}>
           <a
-            href="#features"
+            href="#demo"
             className="inline-flex items-center text-happi-blue font-medium hover:text-happi-blue/80 transition-colors"
           >
             {t('cta')}
