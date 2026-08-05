@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
 import { X, Send, CheckCircle2, AlertCircle, Loader2, Pencil } from 'lucide-react';
+import { useFocusTrap } from '@/lib/useFocusTrap';
 
 // Module-level reference — set when ContactModal mounts, called by openContactModal()
 let _openFn: (() => void) | null = null;
@@ -77,26 +78,11 @@ export function ContactModal() {
     return () => { _openFn = null; };
   }, []);
 
+  useFocusTrap(cardRef, open);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') { setOpen(false); return; }
-      if (e.key !== 'Tab' || !cardRef.current) return;
-
-      // Keep Tab/Shift+Tab cycling inside the dialog — nothing behind the
-      // backdrop is reachable by keyboard while it's open (WAI-ARIA Dialog pattern).
-      const focusable = cardRef.current.querySelectorAll<HTMLElement>(
-        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
-      );
-      if (focusable.length === 0) return;
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+      if (e.key === 'Escape') setOpen(false);
     };
     if (open) {
       document.addEventListener('keydown', onKey);

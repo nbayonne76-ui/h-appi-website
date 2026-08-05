@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Calendar, Hammer, Key } from 'lucide-react';
 
 const steps = [
@@ -43,16 +43,18 @@ const steps = [
 ];
 
 export default function HowItWorks({ fr }: { fr: boolean }) {
+  const prefersReduced = useReducedMotion();
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-happi-darker">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: prefersReduced ? 0 : 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: prefersReduced ? 0.3 : 0.5 }}
           className="text-center mb-14"
         >
           <span className="inline-block px-4 py-1.5 bg-happi-blue/10 text-happi-blue rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-happi-blue/20">
@@ -82,10 +84,10 @@ export default function HowItWorks({ fr }: { fr: boolean }) {
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 28 }}
+                initial={{ opacity: 0, y: prefersReduced ? 0 : 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.45, delay: i * 0.12, ease: 'easeOut' }}
+                transition={{ duration: prefersReduced ? 0.3 : 0.45, delay: i * 0.12, ease: 'easeOut' }}
                 className="relative flex flex-col items-center text-center"
               >
                 {/* Icon circle */}

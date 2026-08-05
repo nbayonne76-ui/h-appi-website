@@ -7,6 +7,7 @@ import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import TiltCard from '@/components/ui/TiltCard';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { FadeInUp } from '@/components/ui/Animate';
+import { useFocusTrap } from '@/lib/useFocusTrap';
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -246,6 +247,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
   const [direction, setDirection]   = useState(1); // 1 = forward, -1 = back
   const firstInputRef               = useRef<HTMLInputElement>(null);
   const previouslyFocusedRef        = useRef<HTMLElement | null>(null);
+  const cardRef                     = useRef<HTMLDivElement>(null);
 
   // Escape-to-close + initial focus + focus-return, matching the pattern
   // already used by ContactModal / ExitIntentPopup for this site's other modals.
@@ -261,6 +263,8 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
       previouslyFocusedRef.current?.focus();
     };
   }, [showForm]);
+
+  useFocusTrap(cardRef, showForm);
 
   const sectorData    = SECTORS.find(s => s.id === cfg.sector);
   const color         = sectorData?.color ?? '#4F46E5';
@@ -947,6 +951,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
             onClick={e => { if (e.target === e.currentTarget) setShowForm(false); }}
           >
             <motion.div
+              ref={cardRef}
               initial={{ opacity: 0, y: 40, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 30, scale: 0.97 }}

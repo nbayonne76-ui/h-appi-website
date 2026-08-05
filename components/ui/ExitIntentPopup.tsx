@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, TrendingDown, Clock, ArrowRight } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { openContactModal } from '@/components/ui/ContactModal';
+import { useFocusTrap } from '@/lib/useFocusTrap';
 
 const STORAGE_KEY = 'happi_exit_popup_seen';
 
@@ -14,6 +15,9 @@ export function ExitIntentPopup() {
   const fr = locale !== 'en';
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previouslyFocused = useRef<HTMLElement | null>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useFocusTrap(cardRef, show);
 
   const dismiss = useCallback(() => {
     setShow(false);
@@ -93,7 +97,7 @@ export function ExitIntentPopup() {
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
             className="fixed inset-0 z-[101] flex items-center justify-center px-4"
           >
-            <div className="bg-happi-dark border border-happi-border rounded-3xl p-8 max-w-md w-full relative shadow-2xl shadow-black/50">
+            <div ref={cardRef} className="bg-happi-dark border border-happi-border rounded-3xl p-8 max-w-md w-full relative shadow-2xl shadow-black/50">
 
               {/* Close */}
               <button

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Gift, Code2, Globe, Zap } from 'lucide-react';
 
 const items = [
@@ -31,12 +31,14 @@ const items = [
 ];
 
 export default function GuaranteeStrip({ fr }: { fr: boolean }) {
+  const prefersReduced = useReducedMotion();
+
   return (
     <motion.section
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: prefersReduced ? 0 : 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: prefersReduced ? 0.3 : 0.5 }}
       className="py-10 px-4 sm:px-6 lg:px-8 bg-happi-dark border-y border-happi-border/50"
     >
       <div className="max-w-5xl mx-auto">
