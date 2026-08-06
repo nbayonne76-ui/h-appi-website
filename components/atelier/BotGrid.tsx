@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight } from 'lucide-react';
 import TiltCard from '@/components/ui/TiltCard';
+import { getContrastText } from '@/lib/contrastText';
 
 type DemoOption = {
   label: string;
@@ -430,8 +431,8 @@ function BotCard({
             onClick={onDemo}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
-            className="w-full py-2.5 rounded-xl text-xs font-semibold text-white flex items-center justify-center gap-2"
-            style={{ background: bot.color }}
+            className="w-full py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2"
+            style={{ background: bot.color, color: getContrastText(bot.color) }}
           >
             {fr ? 'Voir en action' : 'See it in action'}
             <motion.span whileHover={{ x: 3 }} transition={{ type: 'spring', stiffness: 300 }}>
@@ -578,8 +579,8 @@ function ChatModal({
                   className="flex items-start gap-2 justify-end"
                 >
                   <div
-                    className="rounded-xl rounded-tr-sm px-3 py-2.5 text-sm text-white leading-relaxed max-w-[85%]"
-                    style={{ background: bot.color }}
+                    className="rounded-xl rounded-tr-sm px-3 py-2.5 text-sm leading-relaxed max-w-[85%]"
+                    style={{ background: bot.color, color: getContrastText(bot.color) }}
                   >
                     {msg.text}
                   </div>
@@ -644,8 +645,8 @@ function ChatModal({
           {showCTA && (
             <button
               onClick={onGetBot}
-              className="w-full py-3 rounded-xl text-sm font-bold text-white transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
-              style={{ background: bot.color }}
+              className="w-full py-3 rounded-xl text-sm font-bold transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
+              style={{ background: bot.color, color: getContrastText(bot.color) }}
             >
               {fr ? 'Obtenir ce bot pour mon secteur' : 'Get this bot for my sector'}
               <ArrowRight size={15} />

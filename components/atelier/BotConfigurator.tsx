@@ -7,6 +7,7 @@ import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import TiltCard from '@/components/ui/TiltCard';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { FadeInUp } from '@/components/ui/Animate';
+import { getContrastText } from '@/lib/contrastText';
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -479,7 +480,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                               className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
                               style={{ background: s.color }}
                             >
-                              <Check size={10} className="text-white" strokeWidth={3} />
+                              <Check size={10} style={{ color: getContrastText(s.color) }} strokeWidth={3} />
                             </motion.div>
                           )}
                         </AnimatePresence>
@@ -529,7 +530,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                               className="absolute top-3 right-3 w-5 h-5 rounded-full flex items-center justify-center"
                               style={{ background: color }}
                             >
-                              <Check size={10} className="text-white" strokeWidth={3} />
+                              <Check size={10} style={{ color: getContrastText(color) }} strokeWidth={3} />
                             </motion.div>
                           )}
                         </AnimatePresence>
@@ -584,7 +585,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                               className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                               style={{ background: color }}
                             >
-                              <Check size={12} className="text-white" strokeWidth={3} />
+                              <Check size={12} style={{ color: getContrastText(color) }} strokeWidth={3} />
                             </motion.div>
                           )}
                         </AnimatePresence>
@@ -656,8 +657,8 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                         onClick={() => goToStep(4)}
                         whileHover={{ scale: 1.04 }}
                         whileTap={{ scale: 0.96 }}
-                        className="px-6 py-2.5 rounded-xl text-sm font-bold text-white flex items-center gap-2"
-                        style={{ background: color, boxShadow: `0 4px 16px ${color}40` }}
+                        className="px-6 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2"
+                        style={{ background: color, color: getContrastText(color), boxShadow: `0 4px 16px ${color}40` }}
                       >
                         {fr ? 'Continuer' : 'Continue'}
                         <motion.span whileHover={{ x: 4 }} transition={{ type: 'spring', stiffness: 300 }}>→</motion.span>
@@ -898,7 +899,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                         transition={{ delay: i * 0.12, duration: 0.3 }}
                         className="flex items-start gap-2 justify-end"
                       >
-                        <div className="rounded-xl rounded-tr-sm px-3 py-2 text-[11px] text-white leading-relaxed max-w-[88%]" style={{ background: color }}>{msg.text}</div>
+                        <div className="rounded-xl rounded-tr-sm px-3 py-2 text-[11px] leading-relaxed max-w-[88%]" style={{ background: color, color: getContrastText(color) }}>{msg.text}</div>
                         <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10 text-[10px] mt-0.5">👤</div>
                       </motion.div>
                     )
@@ -924,7 +925,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
                   <div className="bg-happi-dark rounded-xl px-3 py-2 flex items-center gap-2 border border-happi-border/40">
                     <span className="text-[11px] text-happi-muted flex-1">{fr ? 'Votre message…' : 'Your message…'}</span>
                     <div className="w-5 h-5 rounded-lg flex items-center justify-center" style={{ background: color }}>
-                      <span className="text-white text-[10px] font-bold">↑</span>
+                      <span className="text-[10px] font-bold" style={{ color: getContrastText(color) }}>↑</span>
                     </div>
                   </div>
                 </div>

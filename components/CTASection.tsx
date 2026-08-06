@@ -84,7 +84,7 @@ export default function CTASection({ hidePricing = false }: { hidePricing?: bool
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <MagneticButton
                 onClick={openContactModal}
-                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-white text-happi-blue rounded-lg hover:shadow-xl transition-all font-medium"
+                className="btn-shimmer inline-flex items-center justify-center px-8 py-3.5 bg-white text-happi-blue-strong rounded-lg hover:shadow-xl transition-all font-medium"
               >
                 <MessageCircle className="mr-2" size={18} />
                 {t('ctaPrimary')}
