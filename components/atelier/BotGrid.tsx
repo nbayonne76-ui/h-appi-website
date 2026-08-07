@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight } from 'lucide-react';
 import TiltCard from '@/components/ui/TiltCard';
+import { useTabTrap } from '@/components/ui/useTabTrap';
 
 type DemoOption = {
   label: string;
@@ -497,6 +498,9 @@ function ChatModal({
   const pioneer = fr ? bot.pioneerFr : bot.pioneerEn;
   const showCTA = !isTyping && currentOpts.length === 0 && messages.length > 1;
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useTabTrap(modalRef, true);
 
   // Match the site's modal convention (ContactModal, ExitIntentPopup): focus
   // the close button on open, restore focus to the trigger element on close.
@@ -515,6 +519,7 @@ function ChatModal({
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
+        ref={modalRef}
         className="w-full sm:max-w-md flex flex-col rounded-t-2xl sm:rounded-2xl overflow-hidden border border-happi-border"
         style={{
           background: '#0B1220',
@@ -671,6 +676,9 @@ function LeadForm({
   const [loading, setLoading] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const successHeadingRef = useRef<HTMLHeadingElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useTabTrap(modalRef, true);
 
   // Match the site's modal convention (ContactModal, ExitIntentPopup): focus
   // the close button on open, restore focus to the trigger element on close.
@@ -702,7 +710,7 @@ function LeadForm({
       aria-label={fr ? 'Adapter ce bot à mon secteur' : 'Adapt this bot to my sector'}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="w-full sm:max-w-sm bg-happi-surface border border-happi-border rounded-t-2xl sm:rounded-2xl p-6 flex flex-col gap-4">
+      <div ref={modalRef} className="w-full sm:max-w-sm bg-happi-surface border border-happi-border rounded-t-2xl sm:rounded-2xl p-6 flex flex-col gap-4">
         {!sent ? (
           <>
             <div className="flex items-start justify-between gap-3">

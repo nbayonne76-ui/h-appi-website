@@ -7,6 +7,7 @@ import AnimatedMesh from '@/components/ui/AnimatedMesh';
 import TiltCard from '@/components/ui/TiltCard';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { FadeInUp } from '@/components/ui/Animate';
+import { useTabTrap } from '@/components/ui/useTabTrap';
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -246,6 +247,9 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
   const [direction, setDirection]   = useState(1); // 1 = forward, -1 = back
   const firstInputRef               = useRef<HTMLInputElement>(null);
   const previouslyFocusedRef        = useRef<HTMLElement | null>(null);
+  const modalRef                    = useRef<HTMLDivElement>(null);
+
+  useTabTrap(modalRef, showForm);
 
   // Escape-to-close + initial focus + focus-return, matching the pattern
   // already used by ContactModal / ExitIntentPopup for this site's other modals.
@@ -255,9 +259,11 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
     const focusTimer = setTimeout(() => firstInputRef.current?.focus(), 100);
     const onKeyDown = (e: KeyboardEvent) => { if (e.key === 'Escape') setShowForm(false); };
     document.addEventListener('keydown', onKeyDown);
+    document.body.style.overflow = 'hidden';
     return () => {
       clearTimeout(focusTimer);
       document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = '';
       previouslyFocusedRef.current?.focus();
     };
   }, [showForm]);
@@ -951,6 +957,7 @@ export default function BotConfigurator({ fr }: { fr: boolean }) {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 30, scale: 0.97 }}
               transition={{ type: 'spring', stiffness: 260, damping: 24 }}
+              ref={modalRef}
               className="w-full sm:max-w-md glass-card rounded-t-3xl sm:rounded-3xl overflow-hidden"
               style={{ borderTopWidth: '2px', borderTopColor: color }}
               role="dialog"
