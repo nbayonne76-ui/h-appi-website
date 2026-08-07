@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, TrendingDown, Clock, ArrowRight } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { openContactModal } from '@/components/ui/ContactModal';
+import { useTabTrap } from '@/components/ui/useTabTrap';
 
 const STORAGE_KEY = 'happi_exit_popup_seen';
 
@@ -14,6 +15,9 @@ export function ExitIntentPopup() {
   const fr = locale !== 'en';
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previouslyFocused = useRef<HTMLElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  useTabTrap(dialogRef, show);
 
   const dismiss = useCallback(() => {
     setShow(false);
@@ -47,6 +51,7 @@ export function ExitIntentPopup() {
 
     previouslyFocused.current = document.activeElement as HTMLElement;
     closeButtonRef.current?.focus();
+    document.body.style.overflow = 'hidden';
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') dismiss();
@@ -55,6 +60,7 @@ export function ExitIntentPopup() {
 
     return () => {
       document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = '';
       previouslyFocused.current?.focus();
     };
   }, [show, dismiss]);
@@ -93,7 +99,7 @@ export function ExitIntentPopup() {
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
             className="fixed inset-0 z-[101] flex items-center justify-center px-4"
           >
-            <div className="bg-happi-dark border border-happi-border rounded-3xl p-8 max-w-md w-full relative shadow-2xl shadow-black/50">
+            <div ref={dialogRef} className="bg-happi-dark border border-happi-border rounded-3xl p-8 max-w-md w-full relative shadow-2xl shadow-black/50">
 
               {/* Close */}
               <button

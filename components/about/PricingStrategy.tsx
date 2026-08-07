@@ -27,7 +27,7 @@ export default function PricingStrategy() {
           <p className="text-happi-muted text-xs uppercase tracking-widest mb-3">
             {fr ? 'Chez une agence classique' : 'At a traditional agency'}
           </p>
-          <p className="text-2xl md:text-3xl font-bold text-happi-muted/50 mb-12">
+          <p className="text-2xl md:text-3xl font-bold text-happi-muted mb-12">
             {fr ? 'Seulement 30 à 40% du budget va au vrai développement' : 'Only 30 to 40% of the budget goes to real development'}
           </p>
 

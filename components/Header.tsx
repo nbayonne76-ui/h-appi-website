@@ -163,7 +163,7 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-3 bg-happi-dark border-t border-happi-border/50">
+          <div className="md:hidden py-4 space-y-3 bg-happi-dark border-t border-happi-border/50 max-h-[calc(100vh-4rem)] overflow-y-auto">
             {mainNav.map((item) => (
               <Link
                 key={item.name}
